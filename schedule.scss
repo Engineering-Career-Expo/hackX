@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap');
+
+@font-face{
+  font-family: Monad;
+  src: url(/storage/emulated/0/Download/Monad.otf);
+}   
+@font-face{
+  font-family:Gilroy-Regular;
+  src: url(/storage/emulated/0/Download/Gilroy-Regular.woff);
+}
+
+@mixin type($type, $txtcolor, $size, $bottom) {
+	font-family: $type;
+	color: $txtcolor;
+	font-size: $size;
+	margin-bottom: $bottom;
+}
+@mixin shape($line-color, $b-width, $b-length, $b-padding) {
+	background: $line-color;
+	border: $b-width;
+	width: $b-length;
+	height: $b-padding;
+}
+$txtpad: 0px 30px;
+$txtpadr: 40px 70px;
+$word-width: 70%;
+$word-widthr: 38%;
+$m-height: 100%;
+$marginn: 0px;
+$paddinng: 0px;
+$ltop-margin: 35px;
+$lbot-margin: -40px;
+$l-left-margin: 17px;
+$btop-margin: -60px;
+$b-left-margin: 12px;
+$tlbot-margin: -47px;
+$tbtop-margin: -67px;
+$fontG: "Gilroy-Regular";
+$fontM: "Monad";
+
+html{
+	margin: $marginn;
+	padding: $paddinng;
+	min-height: $m-height;
+}
+body{
+	height: 100%;
+}
+.line, .linee, .ttline{
+	@include shape(#E5193B, 1px solid #E5193B, 0.1%, 30px);
+	margin-top: $ltop-margin;
+	margin-bottom: $lbot-margin;
+	margin-left: $l-left-margin;
+}
+.tline{
+	@include shape(#E5193B, 1px solid #E5193B, 0.1%, 30px);
+	margin-top: $ltop-margin;
+	margin-bottom: $tlbot-margin;
+	margin-left: $l-left-margin;
+}
+.tbox{
+	@include shape(#E5193B, 1px solid #E5193B, 3.5%, 10px);
+	margin-top: $tbtop-margin;
+	margin-left: $b-left-margin;
+}
+.box, .boxx, .ttbox{
+	@include shape(#E5193B, 1px solid #E5193B, 3.5%, 10px);
+	margin-top: $btop-margin;
+	margin-left: $b-left-margin;
+}
+p{
+	padding: $txtpad;
+	width: $word-width;
+	margin-left: $b-left-margin;
+	@include type($fontG, black, 13px, 42px);
+}
+header{
+	@include type($fontG, #E5193B, 38px, 20px);
+}
+span{
+	@include type($fontG, #E5193B, 17px, 0px);
+}
+.long{
+	display: none;
+}
+
+@media screen and (min-width: 480px) {
+	header{
+		@include type("Monad", #E5193B, 20px, -20px);
+		margin-top: 10%;
+		margin-bottom: 0%;
+		margin-left: 1.2%;
+	}
+	body{
+		background: #262A35;
+	}
+	p{
+		padding: $txtpadr;
+		width: $word-widthr;
+		margin-top: 2%;
+		color: #E5E5E5;
+		margin-bottom: 5%;
+	}
+	.box, .tbox, .ttbox{
+		@include shape(#E5193B, 1px solid #E5193B, 2%, 15px);
+		margin-left: 50%;
+		margin-bottom: 0%;
+	}
+	.linee{
+		margin-left: 47%;
+		margin-bottom: -10%;
+		transform: rotate(-90deg);
+	}
+	.line{
+		margin-left: 47%;
+		margin-bottom: -12%;
+		transform: rotate(-90deg);
+	}
+	.tline, .ttline{
+		margin-left: 55%;
+		margin-bottom: -9.7%;
+		transform: rotate(90deg);
+	}
+	.tbox, .ttbox{
+		margin-top: -15%;
+	}
+	.boxx{
+		@include shape(#E5193B, 1px solid #E5193B, 2%, 15px);
+		margin-left: 50%;
+		margin-bottom: -0%;
+		margin-top: 7%;
+	}
+	.box{
+		margin-top: 9.5%;
+	}
+	.right{
+		float: right;
+		margin-bottom: 3%;
+	}
+	.txt{
+		padding: 40px;
+	}
+	.long{
+		display: block;
+		margin-left: 2%;
+		margin-top: -63%;
+		@include shape(#E5193B, 0.2px solid #E5193B, 0.1%, 800px);
+	}
+}
