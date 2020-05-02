@@ -1,3 +1,0 @@
-# hackX
-
-Run npm install
