@@ -1,15 +1,16 @@
 // abstract
-@import "./abstract/mixins";
-@import "./abstract/variables";
+@import 'sass/abstract/mixins';
+@import 'sass/abstract/variables';
 
 // base
-@import "./base/base";
-@import "./base/typography";
-@import "./base/utilities";
+@import 'sass/base/base';
+@import 'sass/base/typography';
+@import 'sass/base/utilities';
 
 // layout
 
+
 // components
-@import "./layout/footer";
+
 
 // pages
