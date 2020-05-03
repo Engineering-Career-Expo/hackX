@@ -12,30 +12,56 @@
         </script>
 	</head>
 	<body>
-		<section>
-  <nav>
-   <div class="ecx"><span class="e">E</span>
-                      <span class="x">C</span>
-                    <span class="c">X</span>
-       </div>
-    <div class="nav_links">
-      <div class="what">What's that?</div>
-      <div class="de">Details</div>
-      <div class="men">Mentors & speakers</div>
-      <div class="reg">REGISTER</div>
-      <div class="log">LOGIN</div>
-   </div>
-  </nav>
-</section>  
-        <br>
+		<nav id="top_nav" class="mynav">
+  			<div class="desktop-nav">
+  				<ul>
+  					<li>
+  						<div class="ecx">
+  							<span class="e">E</span>
+            				<span class="x">C</span>
+            				<span class="c">X</span>
+        				</div>
+        			</li>
+        			<li><span class="what"><a href="#">What's that?</a></span></li>
+      				<li><span class="de"><a href="#">Details</a></span></li>
+      				<li><span class="men"><a href="#">Mentors & speakers</a></span></li>
+   					<li><div class="reg">REGISTER</div></li>
+      				<li><div class="log">LOGIN</div></li>
+      					<!--<div class="ham" id="myham" onclick="myFunction()"> 
+							<a href="javascript:void(0);" class="icon">&#9776;</a>
+      					</div>-->
+      			</ul>
+    		</div>
+    		<div class="mobile-nav">
+    			<div class="ecx">
+  					<span class="e">E</span>
+            		<span class="x">C</span>
+            		<span class="c">X</span>
+        		</div>
+        		<span class="right">
+    				<button href="#" class="reg">REGISTER</button>
+    				<span class="dd">
+    					<img src="img/menu.svg" class="menu">
+    					<div class="dd-content">
+      						<a href="#" class="norm">What's that?</a>
+    						<a href="#" class="norm">Details</a>
+    						<a href="#" class="norm">Mentors & speakers</a>
+    						<a href="#" class="log">LOGIN</a>
+    					</div>
+   					</span>
+   				</span>
+   			</div>
+  		</nav>
         <main>
+        	<div data-include="header"></div>
+
             <div class="form-container">
 				<form>
 					<h2>Registeration <span class="count">2 0f 2</span></h2>
 					<legend>Username</legend>
-					<input type="text" name="Username" placeholder="Username">
+					<input type="text" name="Username" placeholder="Username" required>
 					<legend>Track</legend>
-					<input type="text" name="Track" placeholder="Track" list="track-list" required><img src="option.svg" class="option">
+					<input type="text" name="Track" placeholder="Track" list="track-list" required><img src="img/option.svg" class="option">
 					<datalist id="track-list">
 						<option>Front-end</option>
 						<option>Back-end</option>
@@ -45,9 +71,9 @@
 						<option>Design</option>
 					</datalist>
 					<legend>Age</legend>
-					<input type="text" name="Age" placeholder="Age"><img src="calendar.png" class="age">
+					<input type="text" name="Age" placeholder="Age"><img src="img/calendar.png" class="age" required>
 					<legend>Institution</legend>
-					<input type="text" name="Institution" placeholder="Institution" list="inst-list" required><img src="option.svg" class="option">
+					<input type="text" name="Institution" placeholder="Institution" list="inst-list" required><img src="img/option.svg" class="option">
 					<datalist id="inst-list">
 						<option>YABATECH</option>
 						<option>University of Ibadan</option>
@@ -71,7 +97,7 @@
 				<br>
 				<br>
 				<span>
-					<input type='checkbox'/>	
+					<input type='checkbox' required/>	
 					<label for="html">
 				 I have read and agreed to the terms and condition of the Privacy policy of this competition</label>
 				</span>
@@ -82,10 +108,8 @@
 				<button><span class="btn-cnt">Competition Guidelines</span></button>
 			</div>
         </main>
-        <div data-include="header"></div>
-
     
-    
+   
     
     
     

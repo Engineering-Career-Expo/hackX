@@ -17,21 +17,46 @@
 
 <body>
     <div data-include="header"></div>
-    <nav>
-        <span class="ecx"><span class="e">E</span>
-                      <span class="x">C</span>
-                    <span class="c">X</span>
-       </span>
-       <span class="nav_links">
-       	   <button class="reg register" href="#">REGISTER</button>
-       	   <img src="menu.svg" class="menu">
-      <div class="what">What's that?</div>
-      <div class="de">Details</div>
-      <div class="men">Mentors & speakers</div>
-      <div class="reg">REGISTER</div>
-      <div class="log">LOGIN</div>
-        </span>
-    </nav>
+    <nav id="top_nav" class="mynav">
+  			<div class="desktop-nav">
+  				<ul>
+  					<li>
+  						<div class="ecx">
+  							<span class="e">E</span>
+            				<span class="x">C</span>
+            				<span class="c">X</span>
+        				</div>
+        			</li>
+        			<li><span class="what"><a href="#">What's that?</a></span></li>
+      				<li><span class="de"><a href="#">Details</a></span></li>
+      				<li><span class="men"><a href="#">Mentors & speakers</a></span></li>
+   					<li><div class="reg">REGISTER</div></li>
+      				<li><div class="log">LOGIN</div></li>
+      					<!--<div class="ham" id="myham" onclick="myFunction()"> 
+							<a href="javascript:void(0);" class="icon">&#9776;</a>
+      					</div>-->
+      			</ul>
+    		</div>
+    		<div class="mobile-nav">
+    			<div class="ecx">
+  					<span class="e">E</span>
+            		<span class="x">C</span>
+            		<span class="c">X</span>
+        		</div>
+        		<span class="right">
+    				<button href="#" class="reg">REGISTER</button>
+    				<span class="dd">
+    					<img src="img/menu.svg" class="menu">
+    					<div class="dd-content">
+      						<a href="#" class="norm">What's that?</a>
+    						<a href="#" class="norm">Details</a>
+    						<a href="#" class="norm">Mentors & speakers</a>
+    						<a href="#" class="log">LOGIN</a>
+    					</div>
+   					</span>
+   				</span>
+   			</div>
+  		</nav>
     <main>
         <div class="call-to-action">
 				        <h1>HACK<span class="X">X </span><br><span class="hack">HACKATHON </span></h1>
@@ -42,10 +67,10 @@
 				        <span class="venue"><span class="head">Venue:</span> University of Lagos</span>
 				        </div>
             	<div class="image-1">
-            	    <img src="laptop.svg">
+            	    <img src="img/laptop.svg">
             	</div>
             	<div class="image-2">
-            	    <img src="location.svg">
+            	    <img src="img/location.svg">
             	</div>
             	<div class="location">
             	    <div class="Venue">
