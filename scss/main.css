@@ -46,7 +46,9 @@ footer {
           box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font-weight: 100;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 21px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   padding: 25px 120px;
@@ -63,25 +65,12 @@ footer {
   margin-right: auto;
 }
 
-.e {
-  color: #1071f3;
-}
-
-.c {
-  color: #f2a702;
-}
-
-.x {
-  color: #e5193b;
-}
-
 .ecx {
-  font-family: "Monoton", cursive;
+  font-family: Monoton;
   font-style: normal;
   font-weight: normal;
-  font-size: 28px;
-  line-height: 37px;
-  cursor: default;
+  font-size: 36px;
+  line-height: 56px;
 }
 
 .footer-top .buttons {
@@ -125,6 +114,12 @@ footer {
   margin-top: -10px;
 }
 
+.footer-bottom .footer-icons a img {
+  width: 24px;
+  height: 24px;
+  margin-right: 15px;
+}
+
 .footer-bottom .footer-copyright p {
   display: inline-block;
   margin-left: 65px;
@@ -158,6 +153,7 @@ footer {
     margin-bottom: 35px;
   }
   .footer-top .buttons a button {
+    color: rgba(255, 255, 255, 0.6);
     margin: 10px 0;
     text-transform: uppercase;
     width: 120px;
@@ -169,17 +165,22 @@ footer {
   }
   .footer-top .footer-links a {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 15px;
   }
   .footer .footer-bottom {
     display: initial;
+    margin-top: 20px;
   }
   .footer-bottom .footer-icons {
     margin-top: -10px;
     margin-bottom: 15px;
   }
-  .footer-bottom .footer-icons a {
-    display: inline-block;
+  .footer-bottom .footer-icons a img {
+    text-align: center;
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    margin-top: 13px;
   }
   .footer-bottom .footer-copyright {
     display: -webkit-box;
