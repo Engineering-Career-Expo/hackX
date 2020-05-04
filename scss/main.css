@@ -104,6 +104,7 @@ footer {
 
 .footer .footer-bottom .footer-icons {
   margin-right: auto;
+  margin-left: -6.5px;
 }
 
 .footer-bottom .footer-icons a {
@@ -171,9 +172,8 @@ footer {
     display: initial;
     margin-top: 20px;
   }
-  .footer-bottom .footer-icons {
-    margin-top: -10px;
-    margin-bottom: 15px;
+  .footer .footer-bottom .footer-icons {
+    margin: -10px auto 15px 28px;
   }
   .footer-bottom .footer-icons a img {
     text-align: center;
