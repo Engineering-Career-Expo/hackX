@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 18px;
+}
+
+body, html {
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: Monad;
+  src: url(../../fonts/Monad.otf);
+}
+
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(../../fonts/Gilroy-Regular.woff);
+}
+
+.u-padding-none {
+  padding: 0;
+}
+
+.u-margin-none {
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */
