@@ -7,7 +7,8 @@
         "abstract/_variables.scss",
         "base/_base.scss",
         "base/_typography.scss",
-        "base/_utilities.scss"
+        "base/_utilities.scss",
+        "pages/_about.scss"
     ],
     "names": [],
     "file": "main.css"
