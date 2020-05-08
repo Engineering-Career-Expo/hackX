@@ -91,7 +91,7 @@ footer {
   display: inline-block;
   line-height: 1.8;
   text-decoration: none;
-  color: #E5E5E5;
+  color: rgba(255, 255, 255, 0.6);
   margin-left: 15px;
 }
 
@@ -124,7 +124,7 @@ footer {
 .footer-bottom .footer-copyright p {
   display: inline-block;
   margin-left: 65px;
-  color: #E5E5E5;
+  color: rgba(255, 255, 255, 0.4);
 }
 
 .footer-bottom .footer-copyright p span {

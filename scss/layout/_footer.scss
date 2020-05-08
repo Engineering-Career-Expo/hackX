@@ -51,7 +51,7 @@ footer {
   display: inline-block;
   line-height: 1.8;
   text-decoration: none;
-  color: $color-white;
+  color: $color-gray-light;
   margin-left: 15px;
 }
 
@@ -82,7 +82,7 @@ footer {
 .footer-bottom .footer-copyright p {
   display: inline-block;
   margin-left: 65px;
-  color: $color-white;
+  color: $color-gray-dark;
 }
 
 .footer-bottom .footer-copyright p span {
@@ -101,10 +101,12 @@ footer {
     padding: 30px 10px 30px 10px;
     text-align: center;
   }
+
   .footer-top {
     display: initial;
     vertical-align: middle;
   }
+
   .footer .footer-top .ecxx {
     margin-bottom: 9px;
   }
@@ -117,6 +119,7 @@ footer {
     visibility: initial;
     margin-bottom: 35px;
   }
+
   .footer-top .buttons a button {
     color: rgba(255, 255, 255, 0.6);
     margin: 10px 0;
@@ -138,9 +141,11 @@ footer {
     display: initial;
     margin-top: 20px;
   }
+
   .footer .footer-bottom .footer-icons {
     margin: -10px auto 15px 28px;
   }
+
   .footer-bottom .footer-icons a img {
     display: inline-block;
     text-align: center;
@@ -149,9 +154,11 @@ footer {
     margin-right: 15px;
     margin-top: 13px;
   }
+
   .footer-bottom .footer-copyright {
     display: flex;
   }
+
   .footer-bottom .footer-copyright p {
     margin: auto;
   }
