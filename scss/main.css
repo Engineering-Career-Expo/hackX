@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap");
 *,
 *::after,
 *::before {
@@ -32,5 +33,873 @@ body, html {
 
 .u-margin-none {
   margin: 0;
+}
+
+@font-face {
+  font-family: Monad;
+  src: url(../../../fonts/Monad.otf);
+}
+
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(../../fonts/Gilroy-Regular.woff);
+}
+
+html, body {
+  width: 100%;
+  margin: 0;
+  background: white;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.mini-nav {
+  display: none;
+}
+
+@media (max-width: 300px) {
+  body {
+    width: 100%;
+  }
+  main {
+    width: 100%;
+  }
+  nav {
+    width: 100%;
+  }
+  .mini-nav {
+    width: 90%;
+    margin: 8% 5%;
+    display: block;
+  }
+  .mobile-nav, .desktop-nav {
+    display: none;
+  }
+  /* ECX */
+  .e {
+    color: #1071F3;
+  }
+  .c {
+    color: #E5193B;
+  }
+  .x {
+    color: #F2A702;
+  }
+  .ecx {
+    display: inline;
+    font-family: 'Monoton', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10vw;
+    vertical-align: middle;
+    line-height: 37px;
+  }
+  .dd-content {
+    padding: 2% 0 2% 0;
+    position: absolute;
+    margin-top: 12%;
+    width: 70%;
+    margin-left: -60%;
+    background: white;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+  .dd:hover > .dd-content {
+    height: 180px;
+    opacity: 1;
+    -webkit-box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.3);
+  }
+  .dd-content > ul > li > a {
+    margin-bottom: 4%;
+  }
+  .dd-content > a {
+    display: block;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 5vw;
+    line-height: 21px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .image-1 img, .image-2 img {
+    display: none;
+  }
+  .right {
+    float: right;
+  }
+  .right {
+    display: inline-block;
+    margin: 4%;
+  }
+  .menu {
+    float: right;
+    margin: 2%;
+    width: 100%;
+  }
+  .reg {
+    float: left;
+    width: 100%;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: red;
+    color: white;
+    vertical-align: middle;
+    margin-bottom: 3%;
+  }
+  .log {
+    margin-top: 3%;
+    width: 100%;
+    color: red;
+    border: 1.5px solid red;
+    vertical-align: middle;
+  }
+  .norm {
+    padding: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.15vw;
+    color: black;
+    margin-bottom: 1%;
+    line-height: 21px;
+    color: #262A35;
+  }
+  a:hover {
+    background: rgba(220, 0, 0, 0.2);
+    color: red;
+  }
+  .image-1, .image-2, .location {
+    display: none;
+  }
+  .call-to-action {
+    width: 80%;
+    padding: 6% 5% 5% 7%;
+    float: left;
+  }
+  .call-to-action h1 {
+    width: 100%;
+    text-align: left;
+    font-family: Monad, san-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.5vw;
+    color: #000000;
+  }
+  .lte {
+    margin-top: 2%;
+    padding-left: 2%;
+    font-size: 4.2vw;
+    text-align: left;
+    font-family: Poppins, serif;
+    font-weight: 500;
+    color: #000000;
+    padding-bottom: 3%;
+  }
+  .quote {
+    text-align: left;
+    font-family: Poppins, serif;
+    font-weight: 500;
+    font-size: 5vw;
+    color: #F2A702;
+  }
+  .learn {
+    width: 60%;
+    height: 38px;
+    margin-top: 15%;
+    margin-bottom: 0;
+    margin-right: 4%;
+    display: inline block;
+    font-family: Monad, sans-serif;
+    font-size: 5vw;
+    color: white;
+    background: #262A35;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 15%;
+    opacity: .8;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .learn:hover {
+    width: 62%;
+    height: 40px;
+    opacity: 1;
+  }
+  .date, .venue {
+    margin-top: 8%;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: 5.6vw;
+    line-height: 2.8;
+    font-weight: 400;
+    color: #000000;
+  }
+  .head {
+    color: #E5193B;
+    font-size: 6vw;
+  }
+  img {
+    float: right;
+  }
+  .txt {
+    margin-top: 4px;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 500px) {
+  nav {
+    width: 90%;
+    margin: 5%;
+  }
+  .mobile-nav {
+    width: 100%;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  /* ECX */
+  .e {
+    color: #1071F3;
+  }
+  .c {
+    color: #E5193B;
+  }
+  .x {
+    color: #F2A702;
+  }
+  .ecx {
+    display: inline;
+    font-family: 'Monoton', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 2.5vw;
+    vertical-align: middle;
+    line-height: 37px;
+  }
+  .dd-content {
+    padding: 2% 0 2% 0;
+    position: absolute;
+    margin-top: 12%;
+    margin-left: -7%;
+    width: 55%;
+    background: white;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+  .dd:hover > .dd-content {
+    height: 150px;
+    opacity: 1;
+    -webkit-box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.3);
+  }
+  .dd-content > ul > li > a {
+    margin-bottom: 4%;
+  }
+  .dd-content > a {
+    display: block;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.8vw;
+    line-height: 21px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .norm {
+    padding: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.15vw;
+    color: black;
+    margin-bottom: 1%;
+    line-height: 21px;
+    color: #262A35;
+  }
+  .right {
+    width: 50%;
+    float: right;
+  }
+  .reg {
+    float: left;
+    width: 70%;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: red;
+    color: white;
+    vertical-align: middle;
+    margin: 1% 0 0.5% 0;
+  }
+  .menu {
+    float: right;
+    margin: 6%;
+  }
+  .log {
+    width: 100%;
+    color: red;
+    border: 1.5px solid red;
+    vertical-align: middle;
+  }
+  a:hover {
+    background: rgba(220, 0, 0, 0.2);
+    color: red;
+  }
+  .image-1, .image-2, .location {
+    display: none;
+  }
+  .call-to-action {
+    width: 80%;
+    padding: 6% 5% 5% 7%;
+    float: left;
+  }
+  .call-to-action h1 {
+    width: 100%;
+    text-align: left;
+    font-family: Monad, san-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 11.7vw;
+    color: #000000;
+  }
+  /*.register {
+		width: 40%;
+		height: 40px;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 20%;
+		margin-right: 4%;
+		display: inline block;
+		font-family: Gilroy-Medium;
+		font-size: 15px;
+		color: white;
+		background: #FA0048;
+		border: none;
+		border-radius: 3px;
+	}*/
+  .main {
+    width: 90%;
+    margin: 5%;
+  }
+  .lte {
+    margin-top: 2%;
+    padding-left: 2%;
+    font-size: 3.1vw;
+    text-align: left;
+    font-family: Poppins, serif;
+    font-weight: 500;
+    color: #000000;
+    padding-bottom: 3%;
+  }
+  .quote {
+    text-align: left;
+    font-family: Poppins, serif;
+    font-weight: 500;
+    font-size: 4vw;
+    color: #F2A702;
+  }
+  .learn {
+    width: 49%;
+    height: 40px;
+    margin-top: 15%;
+    margin-bottom: 0;
+    margin-right: 4%;
+    display: inline block;
+    font-family: Monad, sans-serif;
+    font-size: 4vw;
+    color: white;
+    background: #262A35;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 15%;
+    opacity: .8;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .learn:hover {
+    width: 50%;
+    height: 43px;
+    opacity: 1;
+  }
+  .date, .venue {
+    margin-top: 8%;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: 5vw;
+    line-height: 1.9;
+    font-weight: 400;
+    color: #000000;
+  }
+  .head {
+    color: #E5193B;
+    font-size: 5.3vw;
+  }
+  img {
+    float: right;
+  }
+  .txt {
+    margin-top: 4px;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 501px) and (max-width: 768px) {
+  nav {
+    width: 80%;
+    margin: 10%;
+  }
+  .mobile-nav {
+    width: 100%;
+  }
+  .desktop-nav {
+    display: none;
+  }
+  /* ECX */
+  .e {
+    color: #1071F3;
+  }
+  .c {
+    color: #E5193B;
+  }
+  .x {
+    color: #F2A702;
+  }
+  .ecx {
+    display: inline;
+    font-family: 'Monoton', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 3.8vw;
+    vertical-align: middle;
+  }
+  .dd-content {
+    padding: 2% 0 2% 0;
+    position: absolute;
+    margin-top: 12%;
+    margin-left: -3%;
+    width: 50%;
+    background: white;
+    height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+  }
+  .dd:hover > .dd-content {
+    height: 230px;
+    opacity: 1;
+    -webkit-box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.3);
+  }
+  .dd-content > a {
+    display: block;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.6vw;
+    line-height: 21px;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 6%;
+  }
+  .norm {
+    padding: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.15vw;
+    color: black;
+    margin-bottom: 1%;
+    line-height: 21px;
+    color: #262A35;
+  }
+  .right {
+    width: 45%;
+    float: right;
+  }
+  .reg {
+    float: left;
+    width: 60%;
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    background: red;
+    color: white;
+    vertical-align: middle;
+    margin: 1% 0 0.5% 0;
+  }
+  .menu {
+    float: right;
+    width: 15%;
+    margin: 2% 7%;
+  }
+  .log {
+    width: 100%;
+    color: red;
+    border: 1.5px solid red;
+    vertical-align: middle;
+  }
+  a:hover {
+    background: rgba(220, 0, 0, 0.2);
+    color: red;
+  }
+  .image-1, .image-2, .location {
+    display: none;
+  }
+  .call-to-action {
+    width: 80%;
+    padding: 6% 5% 5% 7%;
+    float: left;
+  }
+  .call-to-action h1 {
+    width: 100%;
+    text-align: left;
+    font-family: Monad, san-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 10vw;
+    color: #000000;
+  }
+  .main {
+    width: 90%;
+    margin: 5%;
+  }
+  .lte {
+    margin-top: 2%;
+    padding-left: 2%;
+    font-size: 15px;
+    text-align: left;
+    font-family: Poppins, serif;
+    font-weight: 500;
+    font-size: 2.3vw;
+    color: #000000;
+    padding-bottom: 3%;
+  }
+  .quote {
+    text-align: left;
+    font-family: Poppins, serif;
+    font-weight: 500;
+    font-size: 3.2vw;
+    color: #F2A702;
+  }
+  .learn {
+    width: 46%;
+    height: 46px;
+    margin-top: 10%;
+    margin-right: 4%;
+    display: inline block;
+    font-family: Monad, sans-serif;
+    font-size: 15px;
+    color: white;
+    background: #262A35;
+    border: none;
+    border-radius: 3px;
+    margin-bottom: 15%;
+    opacity: .8;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .learn:hover {
+    width: 48%;
+    height: 49px;
+    opacity: 1;
+  }
+  .date, .venue {
+    margin-top: 3%;
+    font-family: Gilroy-Regular;
+    line-height: 1.6;
+    font-size: 3.5vw;
+    font-weight: 400;
+    color: #000000;
+  }
+  .head {
+    color: #E5193B;
+  }
+  img {
+    float: right;
+  }
+  .txt {
+    margin-top: 4px;
+    vertical-align: middle;
+  }
+}
+
+@media (min-width: 769px) {
+  nav {
+    margin-top: 4%;
+    font-family: "Baloo Da 2";
+    font-weight: bold;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1vw;
+    line-height: 21px;
+    color: #262A35;
+  }
+  .desktop-nav {
+    width: 86%;
+    margin: 7% 4% 6% 9%;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  ul {
+    width: 92%;
+    margin: 0 8% 0 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  ul li {
+    text-align: center;
+    color: #262A35;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  .what, .de, .men, .reg, .log {
+    padding: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.15vw;
+    line-height: 21px;
+    color: #262A35;
+  }
+  .reg {
+    width: 70%;
+    background-color: red;
+    color: white;
+    vertical-align: middle;
+    height: 40px;
+  }
+  .log {
+    width: 70%;
+    height: 40px;
+    border: 1.5px solid red;
+    vertical-align: middle;
+  }
+  .e {
+    color: #1071F3;
+  }
+  .c {
+    color: #F2A702;
+  }
+  .x {
+    color: #E5193B;
+  }
+  .ecx {
+    font-family: 'Monoton', cursive;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.4vw;
+    line-height: 37px;
+  }
+  .register {
+    display: none;
+  }
+  .hero {
+    width: 80%;
+    margin: 10%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: repeat(2, 1fr);
+    grid-gap: none;
+  }
+  .hero div:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .hero div:nth-child(2) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .hero div:nth-child(3) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .hero div:nth-child(4) {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2 / 3;
+  }
+  .Venue {
+    width: 50%;
+    text-align: left;
+    float: left;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: 1.5vw;
+    line-height: 1.6;
+    font-weight: 540;
+    color: #000000;
+  }
+  .head {
+    color: #E5193B;
+    font-size: 1.6vw;
+    font-weight: 700;
+    font-family: Gilroy-Bold, sans-serif;
+  }
+  .Date {
+    width: 50%;
+    float: right;
+    text-align: left;
+    font-family: Gilroy-Bold, sans-serif;
+    font-size: 1.5vw;
+    line-height: 1.6;
+    font-weight: 540;
+    color: #000000;
+  }
+  .menu {
+    display: none;
+  }
+  .image-1 > img {
+    float: right;
+  }
+  .image-1 {
+    display: inline-block;
+    padding-right: 6%;
+  }
+  .location {
+    display: block;
+  }
+  .image-2 {
+    display: inline-block;
+    margin-top: 3%;
+    float: left;
+  }
+  .location {
+    padding-top: 15%;
+    padding-left: 16%;
+    margin-top: 3%;
+  }
+  .image-1, .location {
+    float: right;
+  }
+  .call-to-action {
+    padding: 0 2% 0 5%;
+    float: left;
+  }
+  .call-to-action h1 {
+    width: 100%;
+    margin-bottom: 3%;
+    text-align: left;
+    font-family: Monad, san-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 4.5vw;
+    color: #000000;
+  }
+  .register {
+    width: 40%;
+    height: 40px;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 20%;
+    margin-right: 4%;
+    display: inline block;
+    font-family: Gilroy-bold;
+    font-size: 15px;
+    color: white;
+    background: #FA0048;
+    border: none;
+    border-radius: 3px;
+  }
+  main {
+    width: 90%;
+    margin: 5%;
+  }
+  .lte {
+    padding-left: 2%;
+    font-size: 1.4vw;
+    text-align: left;
+    font-family: Poppins, serif;
+    font-weight: 500;
+    color: #000000;
+    padding-bottom: 3%;
+  }
+  .quote {
+    text-align: left;
+    font-family: Poppins, serif;
+    font-weight: 500;
+    font-size: 1.9vw;
+    color: #F2A702;
+  }
+  .learn {
+    display: block;
+    width: 34%;
+    height: 40px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 4%;
+    font-family: Monad, sans-serif;
+    font-size: 15px;
+    color: white;
+    background: #262A35;
+    border: none;
+    border-radius: 3px;
+    opacity: .8;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .learn:hover {
+    opacity: 1;
+    width: 35%;
+    height: 42px;
+  }
+  .date, .venue {
+    display: none;
+  }
+  .btn-cnt {
+    font-family: Gilroy-Medium;
+    font-size: 18px;
+    color: #000000;
+  }
 }
 /*# sourceMappingURL=main.css.map */
