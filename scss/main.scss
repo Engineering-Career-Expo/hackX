@@ -1,16 +1,15 @@
 // abstract
-@import '../scss/abstract/mixins';
-@import '../scss/abstract/variables';
+@import "../scss/abstract/mixins";
+@import "../scss/abstract/variables";
 
 // base
-@import '../scss/base/base';
-@import '../scss/base/typography';
-@import '../scss/base/utilities';
+@import "../scss/base/base";
+@import "../scss/base/typography";
+@import "../scss/base/utilities";
 
 // layout
 
-
 // components
-
-@import '../scss/component/hero';
+@import "./layout/footer";
+@import "../scss/component/hero";
 // pages
