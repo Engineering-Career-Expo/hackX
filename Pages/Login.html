@@ -26,22 +26,30 @@
 		</div>
 		<section class="one">
 			<p class="come">Welcome Back</p>
-			<p class="head"><b>LOGIN</b></p>
+			<p class="head">LOGIN</p>
 			<div class="all">
-			<div class="page">
 				<form action="#" target="_blank" method="post">
-					<label for="mail"><b>Email</b></label><br>
-						<input type="text" id="mail" name="email" placeholder="Email" required><i class="fa fa-envelope"></i><br>
-					<label for="pword"><b>Password</b></label><br>
-						<input type="password" id="pword" name="pword" placeholder="password"><i id="pass" class="fa fa-fw fa-eye-slash" onclick="viewPassword()"></i><br>
+				<div class="page">
+						<label for="mail">Email</label><br>
+						<div class="fmail">
+							<input type="text" id="mail" name="email" placeholder="Email" required><i class="fa fa-envelope"></i><br>
+						</div>
+						<label for="pword">Password</label><br>
+						<div class="fpword">
+							<input type="password" id="pword" name="pword" placeholder="••••••••"><i id="pass" class="fa fa-fw fa-eye-slash" onclick="viewPassword()"></i><br>
+						</div>
+				</div>
 					<div class="btn">
 						<button class="log">Sign In<span class="arrow">&#10132</span></button>
 						<button class="sign">Sign Up</button><br>
 					</div>
-						<input type="checkbox" name="check"><label for="check">I have read and agreed to the terms and conditions
-						and Privacy Policy of HackX.</label>
+						<label class="container">I have read and agreed to the terms and conditions 
+						and privacy policy of HackX
+						<input type="checkbox">
+						<span class="checkmark"></span>
+						</label>
+						
 				</form>
-			</div>
 			<div class="foot">
 				<p class="end">HACK<span class="hx">X</span><br><span class="blue">HACKATHON</span><br>2020</p>
 				<button class="guide">Competition Guidelines</button>
