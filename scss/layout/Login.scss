@@ -11,6 +11,7 @@
 $color-r: #E5193B;
 $color-w: #E5E5E5;
 $fontG: "Gilroy-Regular";
+$fontGM: "Gilroy-Medium";
 $fontM: "Monad";
 @mixin cbbbo($colorr, $bg, $borderr, $b-radius, $out) {
 	color: $colorr;
@@ -123,33 +124,44 @@ nav{
 }
 .come{
 	font-size: 25px;
-	font-weight: bold;
 	font-family: $fontG;
 }
 .head{
 	font-family: $fontG;
 	margin-bottom: 20%;
 }
+.page{
+	padding-right: 6px;
+}
 label[for=mail], label[for=pword]{
-	font-family: $fontG;
+	font-family: $fontGM;
 }
 ::placeholder{
 	color: rgba(0, 0, 0, 0.3);
 }
+.fmail, .fpword{
+	display: flex;
+	padding-left: 10px;
+}
+.fmail{
+	padding-right: 3px;
+}
 i{
-	margin-left: -30px;
 	color: rgba(0, 0, 0, 0.3);
+	margin-top: 13px;
+	margin-left: -25px;
 }
 input[type=text], input[type=password] {
 	@include cbbbo(none, rgba(196, 196, 196, 0.4), none, 10px, none);
-	padding: 10px;
-	width: 90%;
+	padding: 15px;
+	width: 100%;
 	margin-bottom: 4%;
+	margin-left: -10px;
 }
 .log{
 	@include cbbbo(white, $color-r, none, 10px, none);
 	padding: 10px;
-	width: 97%;
+	width: 100%;
 	margin-bottom: 4%;
 	margin-top: 8%;
 	font-family: $fontG;
@@ -164,7 +176,7 @@ input[type=text], input[type=password] {
 .sign{
 	@include cbbbo($color-r, pink, none, 10px, none);
 	padding: 10px;
-	width: 97%;
+	width: 100%;
 	margin-bottom: 10%;
 	font-family: $fontG;
 }
@@ -172,9 +184,55 @@ input[type=text], input[type=password] {
 	color: pink;
 	background: $color-r;
 }
-label[for=check]{
-	font-family: $fontG;
+.container{
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
 	font-size: 14px;
+	-webkit-user-select: none;
+	user-select: none;
+}
+.container input{
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0px;
+	width: 0px;
+}
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: $color-w;
+	border-radius: 4px;
+}
+.container input:checked ~ .checkmark {
+	background-color: $color-r;
+}
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+.container .checkmark:after{
+	margin-left: 5px;
+	margin-top: 2px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+.agree{
+	
 }
 .foot{
 	display: none;
@@ -231,7 +289,7 @@ label[for=check]{
 		width: 71%;
 	}
 	.log, .sign{
-		width: 44%;
+		width: 45%;
 	}
 	.sign{
 		margin-top: 0px;
