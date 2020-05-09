@@ -1,0 +1,118 @@
+body{
+		margin:0;
+		padding:0;
+		font-family:"Baloo Da 2";
+		}
+.first{
+		margin:.5pc auto .3pc auto;
+		widt:100%;
+		display:flex;
+		justify-content:space-between;
+		background-color:#f4f4f4;
+		border-bottom:1px solid #dbdbdb;
+		}
+.sep{
+		width:60%;
+		display:flex;
+		justify-content:flex-end;
+		}
+.ecx{
+		padding:10px;
+		text-align:center;
+		font-size:25px;
+		align-self: center;
+		}
+.reg1{
+		padding:7px;
+		text-align:center;
+		font-size:20px;
+		align-self: center;
+		background-color:red;
+		color:white;
+		}
+.ham{
+		font-size:25px;
+		width:10%;
+		padding:10px;
+		text-align:center;
+		align-self:center;
+		}
+.second{
+		width:0px;
+		height:0px;
+		transition:height 1s ease;
+		overflow:hidden;
+		background-color:#f4f4f4;
+		}
+.about{
+		text-align:center;
+		padding:10px;
+		}
+.ment{
+		text-align:center;
+		padding:10px;
+		}
+.sch{
+		text-align:center;
+		padding:10px;
+		}
+.reg2{
+		text-align:center;
+		padding:10px;
+		}
+.log{
+		text-align:center;
+		padding:10px;
+		}
+.reg2{
+		background-color:red;
+		color:white;
+		padding:10px;
+		width:30%;
+		margin:.3pc auto;
+		}	
+.about, .ment, .sch, .reg2, .log{
+		margin:.3pc auto;
+		}
+.log{
+		border:2px solid red;
+		padding:10px;
+		width:30%;
+		}	
+a:link{
+		color:black;
+		text-decoration:none;
+		}		
+a:hover{
+		font-weight:bolder;
+		}		
+		
+
+
+@media(min-width:768px){
+nav{
+		margin:.5pc auto;
+		display:flex;
+		}
+.second{
+		width:60%;
+		height:auto;
+		display:flex;
+		justify-content: space-evenly;
+		}		
+.sep{
+		display:none;
+		}		
+.about, .ment, .sch, .reg2, .log{
+		align-self:center;
+		}	
+.ecx{
+		margin-left:-6pc;
+		}	
+.reg2, .log{
+		width:auto;
+		margin:auto;
+		padding:7px;
+		}		
+	}
+
