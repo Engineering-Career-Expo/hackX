@@ -69,14 +69,6 @@
   font-size: 18px;
 }
 
-.numbers {
-  font-family: $default-font-family;
-  color: $color-white;
-  font-weight: 600;
-  font-size: 24px;
-  margin-right: 5px;
-}
-
 .ideas {
   font-family: $default-font-family;
   color: $color-white;
@@ -90,6 +82,20 @@
   color: $color-white;
   font-weight: 400;
   font-size: 14px;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex svg {
+  z-index: 10;
+  position: absolute;
+}
+
+.flex h4 {
+  position: relative;
+  margin-left: 20px;
 }
 
 @include breakpoint(xs) {
@@ -115,9 +121,28 @@
   .stuff-container {
     display: block;
   }
-  .numbers {
-    color: $color-gray-dark;
-    font-size: 48px;
+
+  .flex .two {
+    margin-left: 33px;
+    margin-top: 14px;
+    width: 56px;
+    height: 36px;
+  }
+
+  .flex .one {
+    margin-left: 108px;
+    margin-top: 7px;
+    width: 38px;
+    height: 54px;
+  }
+
+  .flex svg path {
+    fill: black;
+  }
+
+  .flex h4 {
+    margin: auto;
+    padding: 18px;
   }
 
   .ideas {
