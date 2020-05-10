@@ -124,20 +124,21 @@ nav{
 }
 .come{
 	font-size: 25px;
-	font-family: $fontG;
+	font-family: $fontGM;
 }
 .head{
-	font-family: $fontG;
+	font-family: $fontGM;
 	margin-bottom: 20%;
 }
 .page{
-	padding-right: 6px;
+	padding-right: 8px;
 }
 label[for=mail], label[for=pword]{
 	font-family: $fontGM;
 }
 ::placeholder{
 	color: rgba(0, 0, 0, 0.3);
+	font-family: $fontG;
 }
 .fmail, .fpword{
 	display: flex;
@@ -164,7 +165,7 @@ input[type=text], input[type=password] {
 	width: 100%;
 	margin-bottom: 4%;
 	margin-top: 8%;
-	font-family: $fontG;
+	font-family: $fontGM;
 }
 .log:active{
 	color: $color-r;
@@ -178,62 +179,58 @@ input[type=text], input[type=password] {
 	padding: 10px;
 	width: 100%;
 	margin-bottom: 10%;
-	font-family: $fontG;
+	font-family: $fontGM;
 }
 .sign:active{
 	color: pink;
 	background: $color-r;
 }
 .container{
-	display: block;
-	position: relative;
+ 	display: block;
+ 	position: relative;
 	padding-left: 35px;
-	margin-bottom: 12px;
+ 	margin-bottom: 12px;
 	cursor: pointer;
 	font-size: 14px;
-	-webkit-user-select: none;
-	user-select: none;
-}
-.container input{
+	font-family: $fontG;
+ 	-webkit-user-select: none;
+ }
+ .container input{
 	position: absolute;
 	opacity: 0;
 	cursor: pointer;
 	height: 0px;
 	width: 0px;
-}
-.checkmark {
+ }
+ .checkmark{
 	position: absolute;
 	top: 0;
 	left: 0;
 	height: 20px;
 	width: 20px;
-	background-color: $color-w;
-	border-radius: 4px;
-}
-.container input:checked ~ .checkmark {
+ 	background-color: $color-w;
+ 	border-radius: 5px;
+ }
+ .container input:checked ~ .checkmark{
 	background-color: $color-r;
-}
-.checkmark:after {
-	content: "";
-	position: absolute;
-	display: none;
-}
-.container input:checked ~ .checkmark:after {
-	display: block;
-}
-.container .checkmark:after{
-	margin-left: 5px;
-	margin-top: 2px;
+ }
+ .checkmark::after{
+ 	content: "";
+ 	position: absolute;
+ 	display: none;
+ }
+ .container input:checked ~ .checkmark::after {
+ 	display: block;
+ }
+ .container .checkmark::after{
+ 	margin-left: 7px;
+ 	margin-top: 2px;
 	width: 5px;
-	height: 10px;
-	border: solid white;
-	border-width: 0 3px 3px 0;
-	-webkit-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-.agree{
-	
-}
+	height: 14px;
+ 	border: solid white;
+ 	border-width: 0 1px 1px 0;
+ 	transform: rotate(45deg);
+ }
 .foot{
 	display: none;
 }
