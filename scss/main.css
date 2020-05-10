@@ -1083,279 +1083,139 @@ a {
 }
 
 .about {
-  margin: 0;
-  padding: 0;
+  padding: 8px;
 }
 
-.about-hackx img {
-  width: 100%;
-  height: 400px;
-}
-
-.hackx-def {
-  text-align: center;
-  padding: 20px;
-  padding-bottom: 25px;
-}
-
-.hackx-def h1 {
-  font-family: "Gilroy-Bold", serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 59px;
-  margin-bottom: 18px;
-}
-
-.hackx-def p {
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 27px;
-  max-width: 850px;
+.about .container {
+  max-width: 920px;
   margin: 0 auto;
-  text-align: left;
-}
-
-.eligible {
-  position: relative;
-  text-align: center;
-  margin-bottom: -26px;
-}
-
-.center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.eligible img {
-  width: 100vw;
-  height: 320px;
-}
-
-.eligible .center h1 {
-  color: #fff;
-  font-family: "Gilroy-Bold", serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 48px;
-  text-transform: capitalize;
-}
-
-.eligible-text {
-  max-width: 850px;
-  margin: 0 auto;
-  font-family: "Poppins", sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-}
-
-.container {
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.bullet {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  margin-top: 20px;
-  margin-bottom: 45px;
-}
-
-.bullet span {
-  margin-left: 50px;
-  font-family: "Poppins", sans-serif;
-  font-size: 18px;
-}
-
-.list-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 350px 400px 1fr;
-      grid-template-columns: 1fr 350px 400px 1fr;
-}
-
-.list-container .first {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-}
-
-.list-container .second {
-  -ms-grid-column: 3;
-  -ms-grid-column-span: 1;
-  grid-column: 3 / 4;
-}
-
-.list-container ul li {
-  font-family: "Poppins", sans-serif;
-  list-style-image: url(../../pages/dot.svg);
-  font-size: 15px;
   margin-top: 30px;
 }
 
-.hide {
-  display: none;
-}
-
-.babcock {
-  margin-left: 550px;
-}
-
-.babcock ul li {
+.about-text {
+  text-align: center;
   font-family: "Poppins", sans-serif;
-  font-size: 15px;
-  margin-top: 12px;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  color: #1071f3;
 }
 
-.criteria img {
-  height: initial;
-  margin-top: 40px;
+.what {
+  margin-bottom: 220px;
 }
 
-.criteria-box {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr 350px 80px 350px 1fr;
-      grid-template-columns: 1fr 350px 80px 350px 1fr;
-  background-color: #f4f4f4;
-  margin-top: 0;
-  padding-top: 30px;
-  padding-bottom: 60px;
+.what img {
+  float: left;
+  margin-right: 91px;
 }
 
-.criteria-box .first {
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 1;
-  grid-column: 2 / 3;
-}
-
-.criteria-box .second {
-  -ms-grid-column: 4;
-  -ms-grid-column-span: 1;
-  grid-column: 4 / 5;
-}
-
-.criteria-box ul li {
+.what .text h2 {
   font-family: "Poppins", sans-serif;
-  list-style-image: url(../../pages/dot.svg);
-  font-size: 18px;
-  margin-top: 20px;
+  color: #1071f3;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 20px;
 }
 
-.bottom {
-  padding: 70px;
-  padding-bottom: 134px;
-}
-
-.icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 60px;
-  margin-left: 95px;
-}
-
-.icons .single p {
+.what .text p {
   font-family: "Poppins", sans-serif;
-  width: 200px;
+  font-style: normal;
   font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
 }
 
-.click-btns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.how img {
+  float: right;
+  margin-left: 89px;
 }
 
-.click-btns a button {
+.how .text h2 {
   font-family: "Poppins", sans-serif;
-  color: #e5e5e5;
-  font-size: 18px;
-  border-radius: 5px;
-  margin-left: 40px;
-  width: 332px;
-  height: 56px;
-  border: none;
-  outline: none;
+  color: #1071f3;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 20px;
 }
 
-.apply-btn {
-  background-color: #e5193b;
+.how .text p {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
 }
 
-.login-btn {
-  background-color: #f2a702;
+.how {
+  margin-bottom: 200px;
+}
+
+.criteria {
+  visibility: hidden;
 }
 
 @media (max-width: 767px) {
-  .hackx-def h1 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    line-height: initial;
+  .about {
+    padding: 0px;
   }
-  .about-hackx img {
-    width: 100%;
-    height: 255px;
-    margin-bottom: 30px;
-  }
-  .eligible {
-    position: relative;
-    text-align: center;
-    margin-bottom: 100px;
-  }
-  .eligible img {
-    width: auto;
-    height: 88px;
-  }
-  .eligible .center h1 {
+  .about-text {
     font-size: 24px;
-    margin-top: 100px;
-    line-height: initial;
-    padding: 0;
+    margin-bottom: 20px;
   }
-  .eligible-text {
-    padding: 20px;
+  .container .what img {
+    width: 100%;
+    margin-bottom: 11px;
   }
-  .bullet {
-    margin-top: 15px;
-    margin-bottom: 25px;
+  .container .how img {
+    width: 100%;
+    margin-bottom: 11px;
   }
-  .bullet span {
-    margin-left: 50px;
-  }
-  .container .bullet .img {
-    margin-left: 10px;
-  }
-  .list-container {
-    display: block;
-    max-width: 250px;
+  .text {
+    max-width: 335px;
     margin: 0 auto;
   }
-  .hide {
-    display: inherit;
+  .about .container {
+    max-width: 360px;
+    margin: 0 auto;
+    margin-top: 10px;
   }
-  .babcock {
-    display: none;
+  .what {
+    margin-bottom: 55px;
   }
-  .criteria img {
-    height: none;
-    margin-top: 20px;
+  .what .text h2 {
+    margin-bottom: 8px;
+  }
+  .how .text h2 {
+    margin-bottom: 8px;
+  }
+  .how {
+    margin-bottom: 70px;
+  }
+  .criteria {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 90px;
+  }
+  .criteria-btn {
+    visibility: initial;
+    width: 202px;
+    height: 50px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    background-color: #1071f3;
+    color: #e5e5e5;
+    border-radius: 5px;
   }
 }
 /*# sourceMappingURL=main.css.map */
