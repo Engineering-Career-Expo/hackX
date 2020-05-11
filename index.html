@@ -1,25 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Register</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/register.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-2.2.4.js">
+        </script>
+	</head>
+	<body>
+	<div data-include="header"></div>
+    <nav id="top_nav" class="mynav">
+  			<div class="desktop-nav">
+  				<ul>
+  					<li>
+  						<div class="ecx">
+  							<span class="e">E</span>
+            				<span class="x">C</span>
+            				<span class="c">X</span>
+        				</div>
+        			</li>
+        			<li><span class="what"><a href="#">What's that?</a></span></li>
+      				<li><span class="de"><a href="#">Details</a></span></li>
+      				<li><span class="men"><a href="#">Mentors & speakers</a></span></li>
+   					<li><div class="reg">REGISTER</div></li>
+      				<li><div class="log">LOGIN</div></li>
+      			</ul>
+    		</div>
+    		<div class="mobile-nav">
+    			<div class="ecx">
+  					<span class="e">E</span>
+            		<span class="x">C</span>
+            		<span class="c">X</span>
+        		</div>
+        		<div class="right">
+    				<button href="#" class="reg">REGISTER</button>
+    				<div class="dd">
+    					<img src="img/menu.svg" class="menu img" id="open">
+    					<div class="dd-content" id="content">
+      						<a href="#" class="norm">What's that?</a>
+    						<a href="#" class="norm">Details</a>
+    						<a href="#" class="norm">Mentors & speakers</a>
+    						<a href="#" class="log">LOGIN</a>
+    					</div>
+					</div>
+				</div>
+			</div>
+			<div class="mini-nav">
+    			<div class="ecx">
+  					<span class="e">E</span>
+            		<span class="x">C</span>
+            		<span class="c">X</span>
+        		</div>
+        		<div class="right">
+    				<div class="dd">
+    					<img src="img/menu.svg" class="menu">
+    					<div class="dd-content">
+      						<a href="#" class="norm">What's that?</a>
+    						<a href="#" class="norm">Details</a>
+							<a href="#" class="norm">Mentors & speakers</a>
+							<a href="#" class="reg">REGISTER</a>
+    						<a href="#" class="log">LOGIN</a>
+    					</div>
+					</div>
+				</div>
+   			</div>   
+  		</nav>
+        <main>
+        	<div data-include="header"></div>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-
-    <link rel="stylesheet" href="css/main.css" />
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
-
-    <title>HackX</title>
-  </head>
-
-  <body>
-    <div data-include="header"></div>
-
+            <div class="form-container">
+				<form>
+					<h2>Registeration <span class="count">2 0f 2</span></h2>
+					<legend>Username</legend>
+					<input type="text" name="Username" placeholder="Username" required>
+					<legend>Track</legend>
+					<input type="text" name="Track" placeholder="Track" list="track-list" required><img src="img/option.svg" class="option">
+					<datalist id="track-list">
+						<option>Front-end</option>
+						<option>Back-end</option>
+						<option>Python</option>
+						<option>Android</option>
+						<option>UI/UX</option>
+						<option>Design</option>
+					</datalist>
+					<legend>Age</legend>
+					<input type="text" name="Age" placeholder="Age"><img src="img/option.svg" class="option" required>
+					<legend>Institution</legend>
+					<input type="text" name="Institution" placeholder="Institution" list="inst-list" required><img src="img/option.svg" class="option">
+					<datalist id="inst-list">
+						<option>YABATECH</option>
+						<option>University of Ibadan</option>
+						<option>Obafemi Awolowo University</option>
+						<option>University of Lagos</option>
+						<option>University of Ilorin</option>
+						<option>Convenant University</option>
+						<option>Babcock/Bells University</option>
+						<option>Ibadan polytechnic</option>
+						<option>Federal University of Technology, Akure</option>
+						<option>Federal University of Agriculture, Abeokuta</option>
+						<option>Kwara State University</option>
+						<option>Lagos State University</option>
+						<option>Adekunle Ajasin University, Akungba</option>
+						<option>University of Ado-ekiti</option>
+					</datalist>
+				</form>
+				<button class="previous-btn" href="reg1.html"><img src="img/arrow-left.png" class="arrow arrow1"><span class="btn-txt">Previous</span></button>
+				<button type="submit"  class="signup-btn"><span class="btn-txt">Sign Up</span><img src="img/arrow-right.png" class="arrow arrow2"></button>
+				<br>
+				<br>
+				<br>
+				<span>
+					<input type='checkbox' required/>	
+					<label for="html">
+				 I have read and agreed to the terms and condition of the Privacy policy of this competition</label>
+				</span>
+			</div>
+			<br>
+			<div class="call-to-action">
+				<h1>HACK<span class="X">X</span> <span class="hack">HACKATHON</span> 2019</h1>
+				<button><span class="btn-cnt">Competition Guidelines</span></button>
+			</div>
+        </main>
+    </body>
+</html>
     <script src="js/main.js"></script>
   </body>
 </html>
