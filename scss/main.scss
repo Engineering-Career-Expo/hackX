@@ -10,8 +10,11 @@
 // layout
 
 // components
-@import "./layout/footer";
 @import "../scss/component/hero";
 @import "../scss/component/about";
 @import "./component/goal";
+@import "./component/contact";
+@import "./layout/footer";
+
+
 // pages
