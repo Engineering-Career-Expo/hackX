@@ -2,7 +2,7 @@
   
 @font-face{
   font-family:Gilroy-Regular;
-  src: url(/storage/emulated/0/Download/Gilroy-Regular.woff);
+  src: url(Gilroy-Regular.woff);
 }
 $fontG: "Gilroy-Regular";
 $fontGM: "Gilroy-Medium";
@@ -31,7 +31,7 @@ body{
 	line-height: 25px;
 }
 .image_two{
-	background-image: url(/storage/emulated/0/hackXx/hackX/assets/images/criteria.png);
+	background-image: url(/assets/images/criteria.png);
 	background-position: center;
 	background-size: cover;
 	background-repeat:no-repeat;
