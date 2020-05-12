@@ -8,10 +8,11 @@
 @import "../scss/base/utilities";
 
 // layout
-
+@import "../scss/layout/Login";
 // components
 @import "./layout/footer";
 @import "../scss/component/hero";
 @import "../scss/component/about";
 @import "./component/goal";
 // pages
+@import "../scss/layout/about";
