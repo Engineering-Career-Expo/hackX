@@ -63,7 +63,7 @@ body{
 	font-size: 14px;
 	font-family: $fontGM;
 	list-style-type: none;
-	padding: 20px;
+	padding: 25px;
 }
 .text_two__list li{
 	padding-bottom: 25px;
@@ -89,8 +89,7 @@ body{
 		margin-bottom: 50px;
 	}
 	.text_one p{
-		font-size: 6px;
-		line-height: 10px;
+		line-height: 35px;
 	}
 	.image_two{
 		height: 180px;
@@ -101,24 +100,13 @@ body{
 		font-size: 48px;
 	}
 	.text_two{
-		padding: 0px 150px;
-		font-size: 12px;
+		padding: 0px 150px;	
 		margin-top: 50px;
 	}
-	.text_two__first{
-		font-size: 6px;
-	}
-	.text_two__paragraph{
-		font-size: 18px;
-	}
 	.text_two__list{
-		font-size: 4px;
 		display: grid;
 		grid-template-columns: auto auto;
 		grid-column-gap: 40px;
-	}
-	.text_two__wrap{
-		font-size: 12px;
 	}
 	.text_two__list li{
 		margin-bottom: 10px;
