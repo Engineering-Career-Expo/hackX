@@ -2,11 +2,11 @@
 
 @font-face{
   font-family: Monad;
-  src: url(Monad.otf);
+  src: url(/storage/emulated/0/Download/Monad.otf);
 }   
 @font-face{
   font-family:Gilroy-Regular;
-  src: url(Gilroy-Regular.woff);
+  src: url(/storage/emulated/0/Download/Gilroy-Regular.woff);
 }
 $color-r: #E5193B;
 $color-w: #E5E5E5;
@@ -118,48 +118,48 @@ nav{
 .menulist:hover .list{
 	display: block;
 }
-.one{
+.login_section{
 	padding: 30px;
 	margin-top: -30px;
 }
-.come{
+.login_txt__come{
 	font-size: 25px;
 	font-family: $fontGM;
 }
-.head{
+.login_txt__head{
 	font-family: $fontGM;
 	margin-bottom: 20%;
 }
-.page{
+.login_main__page{
 	padding-right: 8px;
 }
-label[for=mail], label[for=pword]{
+.login_main__email, .login_main__password{
 	font-family: $fontGM;
 }
 ::placeholder{
 	color: rgba(0, 0, 0, 0.3);
 	font-family: $fontG;
 }
-.fmail, .fpword{
+.login_main__fmail, .login_main__fpword{
 	display: flex;
 	padding-left: 10px;
 }
-.fmail{
+.login_main__fmail{
 	padding-right: 3px;
 }
-i{
+.fa-envelope, #pass{
 	color: rgba(0, 0, 0, 0.3);
 	margin-top: 13px;
 	margin-left: -25px;
 }
-input[type=text], input[type=password] {
+#mail, #pword{
 	@include cbbbo(none, rgba(196, 196, 196, 0.4), none, 10px, none);
 	padding: 15px;
 	width: 100%;
 	margin-bottom: 4%;
 	margin-left: -10px;
 }
-.log{
+.login_btn__log{
 	@include cbbbo(white, $color-r, none, 10px, none);
 	padding: 10px;
 	width: 100%;
@@ -167,25 +167,25 @@ input[type=text], input[type=password] {
 	margin-top: 8%;
 	font-family: $fontGM;
 }
-.log:active{
+.login_btn__log:active{
 	color: $color-r;
 	background: none;
 }
-.arrow{
+.login_btn__arrow{
 	padding-left: 20px;
 }
-.sign{
+.login_btn__sign{
 	@include cbbbo($color-r, pink, none, 10px, none);
 	padding: 10px;
 	width: 100%;
 	margin-bottom: 10%;
 	font-family: $fontGM;
 }
-.sign:active{
+.login_btn__sign:active{
 	color: pink;
 	background: $color-r;
 }
-.container{
+.checkbox_container{
  	display: block;
  	position: relative;
 	padding-left: 35px;
@@ -195,14 +195,14 @@ input[type=text], input[type=password] {
 	font-family: $fontG;
  	-webkit-user-select: none;
  }
- .container input{
+ .checkbox_container input{
 	position: absolute;
 	opacity: 0;
 	cursor: pointer;
 	height: 0px;
 	width: 0px;
  }
- .checkmark{
+ .checkbox_container__checkmark{
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -211,18 +211,18 @@ input[type=text], input[type=password] {
  	background-color: $color-w;
  	border-radius: 5px;
  }
- .container input:checked ~ .checkmark{
+ .checkbox_container input:checked ~ .checkbox_container__checkmark{
 	background-color: $color-r;
  }
- .checkmark::after{
+ .checkbox_container__checkmark::after{
  	content: "";
  	position: absolute;
  	display: none;
  }
- .container input:checked ~ .checkmark::after {
+ .checkbox_container input:checked ~ .checkbox_container__checkmark::after {
  	display: block;
  }
- .container .checkmark::after{
+ .checkbox_container .checkbox_container__checkmark::after{
  	margin-left: 7px;
  	margin-top: 2px;
 	width: 5px;
@@ -231,7 +231,7 @@ input[type=text], input[type=password] {
  	border-width: 0 1px 1px 0;
  	transform: rotate(45deg);
  }
-.foot{
+.login_foot{
 	display: none;
 }
 @media screen and (min-width: 768px) {
@@ -240,10 +240,10 @@ input[type=text], input[type=password] {
 		padding: 0px;
 		height: 100%;
 	}
-	.foot{
+	.login_foot{
 		display: block;
 	}
-	.all{
+	.login_main{
 		display: flex;
 		justify-content: space-evenly;
 		padding: 0px 100px;
@@ -271,37 +271,28 @@ input[type=text], input[type=password] {
 	.menulist:hover .list{
 		display: flex;
 	}
-	.come{
+	.login_txt__come{
 		display: none;
 	}
-	.head{
+	.login_txt__head{
 		margin-bottom: 4%;
 		padding-left: 100px;
 	}
-	input[type=text], input[type=password], {
+	#mail, #pword{
 		width: 60%;
 	}
-	.btn{
+	.login_btn{
 		display:inline-block;
-		width: 71%;
+		width: 70%;
 	}
-	.log, .sign{
+	.login_btn__log, .login_btn__sign{
 		width: 45%;
 	}
-	.sign{
-		margin-top: 0px;
+	.login_btn__sign{
 		background: white;
+		padding: 11px;
 	}
-	input[type=checkbox], label[for=check] {
-		display: flex;
-	}
-	label[for=check] {
-		margin-left: 25px;
-	}
-	input[type=checkbox] {
-		margin-bottom: -15px;
-	}
-	.end{
+	.login_foot__end{
 		font-family: $fontM;
 		font-size: 50px;
 		text-align: center;
@@ -309,21 +300,21 @@ input[type=text], input[type=password] {
 		margin-top: -50px;
 		margin-right: -60px;
 	}
-	.guide{
+	.login_foot__guide{
 		@include cbbbo(black, white, 1px solid $color-r, 6%, none);
 		margin-left: 80px;
 		padding: 15px;
 		font-size: 10px;
 		font-family: $fontG;
 	}
-	.guide:active{
+	.login_foot__guide:active{
 		color: $color-w;
 		background: $color-r;
 	}
-	.hx{
+	.login_foot__hx{
 		color: #F2A702;
 	}
-	.blue{
+	.login_foot__blue{
 		color: #1071F3;
 	}
 }
