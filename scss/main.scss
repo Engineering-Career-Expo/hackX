@@ -8,10 +8,12 @@
 @import "../scss/base/utilities";
 
 // layout
-// components
+
 @import "./layout/footer";
+// components
+
 @import "../scss/component/hero";
 @import "../scss/component/about";
 @import "./component/goal";
 // pages
-@import '../scss/schedule.scss"
+@import '../scss/schedule.scss";
