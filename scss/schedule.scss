@@ -2,11 +2,11 @@
 
 @font-face{
   font-family: Monad;
-  src: url(Monad.otf);
+  src: url(/storage/emulated/0/Download/Monad.otf);
 }   
 @font-face{
   font-family:Gilroy-Regular;
-  src: url(Gilroy-Regular.woff);
+  src: url(/storage/emulated/0/Download/Gilroy-Regular.woff);
 }
 
 $color-primary: #E5193B;
@@ -25,7 +25,7 @@ html, body{
 body{
 	background: $color-white;
 }
-header{
+.schedule_head{
 	text-align: center;
 	letter-spacing: 2px;
 	font-size: 30px;
@@ -33,45 +33,46 @@ header{
 	font-family: $default-font-family;
 	color: $color-primary;
 }
-.all{
-	padding: 0px 20px;
+.schedule_all{
+	padding: 0px 10px;
 	display: flex;
-	margin-top: 6%;
+	margin-top: 30px;
+	margin-left: 10px;
 }
-.txt{
-	padding: 10px 20px;
+.schedule_txt{
+	padding: 0px 20px;
 }
-span{
+.schedule_txt__head{
 	font-size: 18px;
 	color: $color-primary;
 	font-family: $default-font-family-detail;
 }
-p{
+#schedule_txt__paragraph, #schedule_txt__short,
+#schedule_txt__demo, #schedule_txt__on{
 	font-size: 14px;
-	margin-top: 2%;
+	margin-top: 6px;
 	font-family: $default-font-family-detail;
 	width: 80%;
-	margin-bottom: 10%;
+	margin-bottom: 30px;
 }
 .line, .tline{
 	width: 2px;
 	height: 30px;
 	background: $color-primary;
-	margin-left: 40%;
-	
+	margin-left: 6px;
 }
 .box, .tbox{
 	width: 14px;
 	height: 14px;
 	background: $color-primary;
-	margin-top: -60%;
+	margin-top: 6px;
 }
-.shape{
+.schedule_shape{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
-	margin: -35px 0px 15px 0px;
-	padding: 20px 0px;
+	margin: -40px 0px 20px 0px;
+	padding: 0px 0px;
 }
 @media screen and (min-width: 768px) {
 	html{
@@ -82,71 +83,53 @@ p{
 	body{
 		background: $color-grey;
 	}
-	p{
+	#schedule_txt__paragraph, #schedule_txt__short,
+	#schedule_txt__demo, #schedule_txt__on{
 		color: #ffffff;
 	}
-	header{
+	.schedule_head{
 		font-size: 36px;
-		margin-top: 0%;
-		margin-left: 5px;
+		margin-left: 1%;
 	}
-	span{
-		font-size: 8px;
-	}
-	.all{
+	.schedule_all{
 		display: block;
-		padding: 100px;
-		padding-top: 0px;
+		padding: 0px 110px;
+	}
+	.schedule_txt{
+		display: flex;
+		flex-direction: column;
+		margin-top: -670px;
 	}
 	.right{
-		margin-left: 54%;
+		margin-left: 55%;
 	}
-	.left span{
-		font-size: 8px;	
+	#schedule_txt__short, #schedule_txt__demo{
+		width: 40%;
 	}
-	#short{
-		width: 48%;
-		margin-bottom: -3%;
+	#schedule_txt__paragraph, #schedule_txt__short,
+	#schedule_txt__demo, #schedule_txt__on{
+		margin-top: 0px;
 	}
-	#demo{
-		width: 48%;
-		margin-bottom:-2%;
+	.schedule_shape{
+		padding: 10px 0px;
+		margin-left: 50%;
 	}
-	#on{
-		margin-bottom: -6%;
-	}
-	.shape{
-		display:inline-block;
-		padding-left: 50%;
-	}
-	.shape p{
-		margin-bottom: 80px;
-	}
-	.txt p{
-		margin-top: -2px;
-		margin-bottom: 0px;
-		width: 70%;
-	}
-	.txt{
-		padding: 0px;
-		margin-top: -75%;
+	#schedule_shape__combineShape{
+		margin-bottom: 75px;
 	}
 	.line{
-		margin-left: -30px;
+		margin: 0px 0px -27px -25px;
 		transform: rotate(-90deg);
 	}
-	.box, .tbox{
-		margin-top: -23px;
-	}
 	.tline{
-		margin-left: 40px;
+		margin: 0px 0px -27px 35px;
 		transform: rotate(90deg);
 	}
 	.long{
 		width: 2px;
-		height: 800px;
-		margin-left: 1.5%;
-		margin-top: -96%;
+		height: 900px;
+		margin-left: 2%;
+		margin-top: -880px;
 		background: $color-primary;
 	}
 }
