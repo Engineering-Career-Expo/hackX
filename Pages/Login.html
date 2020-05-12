@@ -1,59 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" intial-scale="1.0">
-		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" type="text/css" href="Login.css">
-		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script type="text/javascript" src="Login.js"></script>
-		<title>Login</title>
-	</head>
-	<body>
-		<div class="navbarr">
-			<h1 class="ecx"><span class="e">E</span><span class="c">C</span><span class="x">X</span></h1>
-			<div class="upsign"><a href="#">SIGN IN</a></div>
-		</div>
-		<div class="menulist">
-			<nav><button class="menu">&#9776;</button></nav>
-			<div class="list">
-				<div class="abt"><a href="#"><b>ABOUT</b></a></div>
-				<div class="men"><a href="#"><b>MENTORS</b></a></div>
-				<div class="sch"><a href="#"><b>SCHEDULE</b></a></div>
-				<div class="reg"><a href="#"><b>REGISTER</b></a></div>
-				<div class="logg"><a href="#"><b>LOGIN</b></a></div>
-			</div><br><br>
-		</div>
-		<section class="one">
-			<p class="come">Welcome Back</p>
-			<p class="head">LOGIN</p>
-			<div class="all">
-				<form action="#" target="_blank" method="post">
-				<div class="page">
-						<label for="mail">Email</label><br>
-						<div class="fmail">
-							<input type="text" id="mail" name="email" placeholder="Email" required><i class="fa fa-envelope"></i><br>
-						</div>
-						<label for="pword">Password</label><br>
-						<div class="fpword">
-							<input type="password" id="pword" name="pword" placeholder="••••••••"><i id="pass" class="fa fa-fw fa-eye-slash" onclick="viewPassword()"></i><br>
-						</div>
-				</div>
-					<div class="btn">
-						<button class="log">Sign In<span class="arrow">&#10132</span></button>
-						<button class="sign">Sign Up</button><br>
-					</div>
-						<label class="container">I have read and agreed to the terms and conditions 
-							and privacy policy of HackX
-							<input type="checkbox">
-							<span class="checkmark"></span>
-						</label>
-				</form>
-			<div class="foot">
-				<p class="end">HACK<span class="hx">X</span><br><span class="blue">HACKATHON</span><br>2020</p>
-				<button class="guide">Competition Guidelines</button>
-			</div>
-			</div>
-		</section>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" intial-scale="1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../scss/layout/login.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script type="text/javascript" src="Login.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <main>
+      <div class="register-form-container">
+        <form>
+          <h2>LOGIN</h2>
+          <p class="come">Welcome Back</p>
+          <legend>Email</legend>
+          <input type="text" name="Email" placeholder="Email" required /><i
+            class="fa fa-envelope"
+          ></i>
+          <legend>Password</legend>
+          <input
+            type="password"
+            name="	Password"
+            placeholder="*********"
+            required
+          /><i
+            id="pass"
+            class="fa fa-fw fa-eye-slash"
+            onclick="viewPassword()"
+          ></i>
+        </form>
+
+        <button type="submit" class="signup-btn">
+          <span class="btn-txt">Sign In</span>
+        </button>
+      </div>
+      <br />
+      <div class="register-call-to-action">
+        <h1>
+          HACK<span class="X">X</span> <span class="hack">HACKATHON</span> 2019
+        </h1>
+        <button><span class="btn-cnt">Competition Guidelines</span></button>
+      </div>
+    </main>
+  </body>
 </html>
