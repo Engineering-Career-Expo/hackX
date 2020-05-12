@@ -1,6 +1,7 @@
 body{
 		margin:0;
 		padding:0;
+<<<<<<< HEAD
 		}
 .first{
 		margin:0pc auto .3pc auto;
@@ -11,6 +12,17 @@ body{
 nav{
 		font-family:"poppins", sans-serif;
 		color:#262A35;
+=======
+		font-family:"Baloo Da 2";
+		}
+.first{
+		margin:.5pc auto .3pc auto;
+		widt:100%;
+		display:flex;
+		justify-content:space-between;
+		background-color:#f4f4f4;
+		border-bottom:1px solid #dbdbdb;
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 		}
 .sep{
 		width:60%;
@@ -20,13 +32,19 @@ nav{
 .ecx{
 		padding:10px;
 		text-align:center;
+<<<<<<< HEAD
 		align-self: center;
 		margin-bottom:-.3pc;
+=======
+		font-size:25px;
+		align-self: center;
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 		}
 .reg1{
 		padding:7px;
 		text-align:center;
 		font-size:20px;
+<<<<<<< HEAD
 		align-self:center;
 		background-color:#e5193b;
 		color:white;
@@ -35,6 +53,14 @@ nav{
 		}
 .ham{
 		font-size:30px;
+=======
+		align-self: center;
+		background-color:red;
+		color:white;
+		}
+.ham{
+		font-size:25px;
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 		width:10%;
 		padding:10px;
 		text-align:center;
@@ -45,6 +71,10 @@ nav{
 		height:0px;
 		transition:height 1s ease;
 		overflow:hidden;
+<<<<<<< HEAD
+=======
+		background-color:#f4f4f4;
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 		}
 .about{
 		text-align:center;
@@ -67,11 +97,16 @@ nav{
 		padding:10px;
 		}
 .reg2{
+<<<<<<< HEAD
 		background-color:#E5193B;
+=======
+		background-color:red;
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 		color:white;
 		padding:10px;
 		width:30%;
 		margin:.3pc auto;
+<<<<<<< HEAD
 		border-radius:3px;
 		}	
 .about, .ment, .sch, .reg2, .log{
@@ -83,17 +118,31 @@ nav{
 		padding:10px;
 		width:30%;
 		border-radius:3px;
+=======
+		}	
+.about, .ment, .sch, .reg2, .log{
+		margin:.3pc auto;
+		}
+.log{
+		border:2px solid red;
+		padding:10px;
+		width:30%;
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 		}	
 a:link{
 		color:black;
 		text-decoration:none;
+<<<<<<< HEAD
 		}
 .reg4:link,.reg3:link{
 		color:#FFFFFF;
+=======
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 		}		
 a:hover{
 		font-weight:bolder;
 		}		
+<<<<<<< HEAD
 .reg3,.reg4{
 		color:#FFFFFF;
 		}		
@@ -101,12 +150,16 @@ a:hover{
 		color:#FA0048;
 		}
 
+=======
+		
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 
 
 @media(min-width:768px){
 nav{
 		margin:.5pc auto;
 		display:flex;
+<<<<<<< HEAD
 		justify-content:center;
 		width:95%;
 		}
@@ -115,6 +168,14 @@ nav{
 		height:auto;
 		display:flex;
 		justify-content:space-evenly;
+=======
+		}
+.second{
+		width:60%;
+		height:auto;
+		display:flex;
+		justify-content: space-evenly;
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 		}		
 .sep{
 		display:none;
@@ -123,16 +184,24 @@ nav{
 		align-self:center;
 		}	
 .ecx{
+<<<<<<< HEAD
 		margin:.5pc auto auto -7.5pc;
 		align-self:center;
+=======
+		margin-left:-6pc;
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 		}	
 .reg2, .log{
 		width:auto;
 		margin:auto;
+<<<<<<< HEAD
 		padding:4px 25px;
 		}
 .log{
 		padding:2px 28px;
+=======
+		padding:7px;
+>>>>>>> a49fcde5997ad4f1fdd56f0d806d8ed84b8744bf
 		}		
 	}
 
