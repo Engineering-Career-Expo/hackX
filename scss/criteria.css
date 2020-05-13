@@ -149,8 +149,6 @@ html, body {
 	.criteria-section .uls {
 		width: 70%;
 		display: flex;
-		z-index: 1;
-		background: #F4F4F4;
 		margin: 0 15%;
 	}
 	.criteria-section .ul1 {
