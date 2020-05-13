@@ -21,9 +21,80 @@ html, body {
 	border: 1px solid purple;
 }
 @media (max-width: 768px) {
-
+	.criteria-section-h1 {
+		width: 100%;
+		margin: 0;
+		padding: 5%;
+		text-align: center;
+		font-size: 4vw;
+		font-weight: 800;
+		font-family: Gilroy-Bold, sans-serif;
+		background-image: url(../assets/images/criteria-for-selection.png);
+		color: white;
+	}	
+	.criteria-section ul {
+		list-style-image: url('../assets/images/mobile-arrow.png');
+	}
+	.criteria-section .ul1 {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.criteria-section .ul2 {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.criteria-section .container {
+		display: block;
+		width: 100%;
+	}
+	.criteria-section .arrow {
+		display: none;
+	}
+	.criteria-section .content {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0;
+		border: 1px solid red;
+		text-align: center;
+	}
+	.criteria-section .content img {
+		transform: scale(0.4);
+		border: 1px solid red;
+	}
+	.criteria-section .content .text {
+		font-size: 4vw;
+		height: 100%;
+		border: 1px solid red;
+	}
+	.criteria-section .arrow-flow {
+		display: none;
+	}
+	.criteria-section .buttons {
+		text-align: center;
+	}
+	.criteria-section .btn1 {
+		width: 70%;
+		background-color: #fa0c0c;
+		height: 50px;
+		border: none;
+		color: white;
+	}
+	.criteria-section .btn2 {
+		width: 70%;
+		border: none;
+		background-color: #ffc916;
+		height: 50px;
+		color: white;
+	}
 }
 @media (min-width: 769px) {
+	.criteria-section {
+		width: 100%;
+		margin: 0;
+	}
 	.criteria-section-h1 {
 		width: 100%;
 		margin: 0;
@@ -46,32 +117,44 @@ html, body {
 		margin: 0;
 	}
 	.criteria-section .container {
-		width: 100%;
+		width: 90%;
+		margin: 0 5%;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
-		justify-content: center;
+		justify-content: space-evenly;
 	}
-	.criteria-section .content {
+	.criteria-section .cnt {
 		display: inline-block;
-		border: 1px solid red;
 		text-align: center;
+		width: 25%;
 	}
 	.criteria-section .scheme-image {
 		text-align: center;
 	}
 	.criteria-section .content img {
-		object-fit: contain;
+		transform: scale(0.9);
 	}
 	.criteria-section .content .text {
 		display: block;
-		text-align: left;
-		font-size: 2vw;
+		font-size: 1.7vw;
+		margin: 0;
+		padding: 0;
 	}
 	.criteria-section .arrow-flow {
-		border: 1px solid brown;
-		margin-top: 20%;
-		margin-right: 10%;
+		position: relative;
+		width: 140%;
+		margin-top: 100%;
+		margin-left: -60%;
+	}
+	.criteria-section li {
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 1.4vw;
+		margin: 6% 0;
+	}
+	.criteria-section .uls {
+		width: 80%;
+		margin: 0 10%;
 	}
 
 }
