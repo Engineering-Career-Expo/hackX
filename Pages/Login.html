@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" intial-scale="1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="../scss/layout/login.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script type="text/javascript" src="Login.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <main>
+      <div class="register-form-container">
+        <form>
+          <h2>LOGIN</h2>
+          <p class="come">Welcome Back</p>
+          <legend>Email</legend>
+          <input type="text" name="Email" placeholder="Email" required /><i
+            class="fa fa-envelope"
+          ></i>
+          <legend>Password</legend>
+          <input
+            type="password"
+            name="	Password"
+            placeholder="*********"
+            required
+          /><i
+            id="pass"
+            class="fa fa-fw fa-eye-slash"
+            onclick="viewPassword()"
+          ></i>
+        </form>
+
+        <button type="submit" class="signup-btn">
+          <span class="btn-txt">Sign In</span>
+        </button>
+      </div>
+      <br />
+      <div class="register-call-to-action">
+        <h1>
+          HACK<span class="X">X</span> <span class="hack">HACKATHON</span> 2019
+        </h1>
+        <button><span class="btn-cnt">Competition Guidelines</span></button>
+      </div>
+    </main>
+  </body>
+</html>
