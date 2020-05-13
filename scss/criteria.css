@@ -1,0 +1,77 @@
+html, body {
+	width: 100%;
+	margin: 0;
+}
+* {
+	box-sizing: border-box;
+}
+.criteria-section {
+	border: 2px solid brown;
+	min-width: 100%;
+	margin: 0;
+	padding: 8% 10%;
+}
+.criteria-section ul {
+	border: 1px solid blue;
+}
+.criteria-section .container {
+	border: 1px solid black;
+}
+.criteria-section .buttons {
+	border: 1px solid purple;
+}
+@media (max-width: 768px) {
+
+}
+@media (min-width: 769px) {
+	.criteria-section-h1 {
+		width: 100%;
+		margin: 0;
+		padding: 5%;
+		text-align: center;
+		font-size: 4vw;
+		font-weight: 800;
+		font-family: Gilroy-Bold, sans-serif;
+		background-image: url(../assets/images/criteria-for-selection.png);
+		color: white;
+	}	
+	.criteria-section .ul1 {
+		width: 50%;
+		float: left;
+		margin: 0;
+	}
+	.criteria-section .ul2 {
+		width: 50%;
+		float: right;
+		margin: 0;
+	}
+	.criteria-section .container {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
+	.criteria-section .content {
+		display: inline-block;
+		border: 1px solid red;
+		text-align: center;
+	}
+	.criteria-section .scheme-image {
+		text-align: center;
+	}
+	.criteria-section .content img {
+		object-fit: contain;
+	}
+	.criteria-section .content .text {
+		display: block;
+		text-align: left;
+		font-size: 2vw;
+	}
+	.criteria-section .arrow-flow {
+		border: 1px solid brown;
+		margin-top: 20%;
+		margin-right: 10%;
+	}
+
+}
