@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap");
+
+@font-face {
+	font-family: Gilroy-Regular;
+	src: url(Gilroy-Regular.woff);
+}
 html, body {
 	width: 100%;
 	margin: 0;
@@ -8,7 +14,7 @@ html, body {
 .criteria-section {
 	min-width: 100%;
 	margin: 0;
-	padding: 8% 10%;
+	padding: 8% 0;
 	background: #F4F4F4;
 }
 @media (max-width: 768px) {
@@ -19,25 +25,26 @@ html, body {
 		text-align: center;
 		font-size: 4vw;
 		font-weight: 800;
-		font-family: Gilroy-Bold, sans-serif;
+		font-family: Gilroy-Regular, sans-serif;
 		background-image: url(../assets/images/criteria-for-selection.png);
 		color: white;
 	}	
 	.criteria-section ul {
-		width: 100%;
-		margin: 0;
+		width: 70%;
+		margin: 0 15%;
 		padding-left: 4%;
 		list-style-image: url('../assets/images/mobile-arrow.png');
 	}
 	.criteria-section .uls {
 		width: 100%;
 		margin: 0;
+		padding-bottom: 2%;
 	}
 	.criteria-section li {
 		padding-left: 6%;
 		margin-bottom: 6.5%;
 		font-size: 3.6vw;
-		font-family: Gilroy-bold, sans-serif;
+		font-family: Gilroy-Regular, sans-serif;
 	}
 	.criteria-section .ul1 {
 		width: 100%;
@@ -52,10 +59,12 @@ html, body {
 	.criteria-section .section {
 		background: white;
 		width: 100%;
+		padding-top: 2%;
 	}
 	.criteria-section .container {
 		display: block;
-		width: 100%;
+		width: 70%;
+		margin: 0 15%;
 	}
 	.criteria-section .arrow {
 		display: none;
@@ -68,11 +77,9 @@ html, body {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
-		border: 1px solid red;
 	}
 	.criteria-section .content .scheme-image {
 		transform: scale(.87);
-		border: 1px solid red;
 		height: 70px;
 		margin: 0;
 	}
@@ -80,38 +87,52 @@ html, body {
 		font-size: 3.6vw;
 		height: 70px;
 		width: auto;
-		font-family: Gilroy-Bold, sans-serif;
+		font-family: Gilroy-Regular, sans-serif;
 		padding: 0 3%;
 		line-height: 70px;
-		border: 1px solid red;
 	}
 	.criteria-section .arrow-flow {
 		display: none;
 	}
 	.criteria-section .buttons {
 		width: 100%;
+		text-align: center;
+		padding-top: 15%;
 	}
 	.criteria-section .btn1 {
-		width: 70%;
+		width: 58%;
 		background-color: #ff0000;
-		height: 50px;
+		height: 60px;
 		border: none;
 		color: white;
+		font-size: 3vw;
+		opacity: .7;
+		transition: 1s;
+		border-radius: 5px;
 	}
 	.criteria-section .btn2 {
-		width: 70%;
+		width: 58%;
 		border: none;
 		background-color: #ffe032;
-		height: 50px;
-		margin-top: 6%;
+		height: 60px;
+		font-size: 3vw;
+		font-family: Gilroy-Regular, sans-serif;
+		margin-top: 2%;
 		color: white;
+		opacity: .7;
+		border-radius: 5px;
+		transition: 1s;
+	}
+	.criteria-section button:hover {
+		width: 60%;
+		height: 62px;
+		opacity: 1;
 	}
 }
 @media (min-width: 769px) {
 	.criteria-section {
 		width: 100%;
 		margin: 0;
-		background: beige;
 	}
 	.criteria-section-h1 {
 		width: 100%;
@@ -120,31 +141,29 @@ html, body {
 		text-align: center;
 		font-size: 4vw;
 		font-weight: 800;
-		font-family: Gilroy-Bold, sans-serif;
+		font-family: Gilroy-Regular, sans-serif;
 		background-image: url(../assets/images/criteria-for-selection.png);
 		color: white;
 	}	
+	.criteria-section .uls {
+		width: 70%;
+		background: #F4F4F4 !important;
+		margin: 0 15%;
+	}
 	.criteria-section .ul1 {
 		width: 50%;
-		background: transparent;
 		float: left;
 		margin: 0;
 	}
 	.criteria-section .ul2 {
 		width: 50%;
 		float: right;
-		background: transparent;
 		margin: 0;
 	}
 	.criteria-section li {
-		font-family: Gilroy-Bold, sans-serif;
+		font-family: Gilroy-Regular, sans-serif;
 		font-size: 1.4vw;
 		margin: 6% 0;
-	}
-	.criteria-section .uls {
-		width: 80%;
-		background: transparent;
-		margin: 0 10%;
 	}
 	.criteria-section .section {
 		width: 100%;
@@ -176,7 +195,7 @@ html, body {
 		display: block;
 		font-size: 1.55vw;
 		margin: 0;
-		font-family: Gilroy-Bold, sans-serif;
+		font-family: Gilroy-Regular, sans-serif;
 		padding: 0;
 	}
 	.criteria-section .arrow-flow {
