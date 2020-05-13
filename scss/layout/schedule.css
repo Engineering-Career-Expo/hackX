@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap");
+
 @font-face {
   font-family: Monad;
   src: url(Monad.otf);
@@ -9,7 +10,8 @@
   src: url(Gilroy-Regular.woff);
 }
 
-html, body {
+html,
+body {
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -29,6 +31,7 @@ body {
 }
 
 .schedule_all {
+  font-family: "Gilroy-Regular", sans-serif;
   padding: 0px 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -47,8 +50,10 @@ body {
   font-family: "Gilroy-Regular", serif;
 }
 
-#schedule_txt__paragraph, #schedule_txt__short,
-#schedule_txt__demo, #schedule_txt__on {
+#schedule_txt__paragraph,
+#schedule_txt__short,
+#schedule_txt__demo,
+#schedule_txt__on {
   font-size: 14px;
   margin-top: 6px;
   font-family: "Gilroy-Regular", serif;
@@ -56,14 +61,16 @@ body {
   margin-bottom: 30px;
 }
 
-.line, .tline {
+.line,
+.tline {
   width: 2px;
   height: 30px;
   background: #E5193B;
   margin-left: 6px;
 }
 
-.box, .tbox {
+.box,
+.tbox {
   width: 14px;
   height: 14px;
   background: #E5193B;
@@ -76,10 +83,10 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin: -40px 0px 20px 0px;
   padding: 0px 0px;
 }
@@ -90,59 +97,77 @@ body {
     padding: 0px;
     height: 100%;
   }
+
   body {
     background: #232732;
   }
-  #schedule_txt__paragraph, #schedule_txt__short,
-  #schedule_txt__demo, #schedule_txt__on {
+
+  #schedule_txt__paragraph,
+  #schedule_txt__short,
+  #schedule_txt__demo,
+  #schedule_txt__on {
     color: #ffffff;
   }
+
   .schedule_head {
     font-size: 36px;
     margin-left: 1%;
   }
+
   .schedule_all {
     display: block;
     padding: 0px 110px;
   }
+
   .schedule_txt {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     margin-top: -670px;
   }
+
   .right {
     margin-left: 55%;
   }
-  #schedule_txt__short, #schedule_txt__demo {
+
+  #schedule_txt__short,
+  #schedule_txt__demo {
     width: 40%;
   }
-  #schedule_txt__paragraph, #schedule_txt__short,
-  #schedule_txt__demo, #schedule_txt__on {
+
+  #schedule_txt__paragraph,
+  #schedule_txt__short,
+  #schedule_txt__demo,
+  #schedule_txt__on {
     margin-top: 0px;
     margin-bottom: 70px;
   }
+
   .schedule_shape {
     padding: 10px 0px;
     margin-left: 50%;
   }
+
   #schedule_shape__combineShape {
     margin-bottom: 75px;
   }
+
   .line {
     margin: 0px 0px -27px -25px;
     -webkit-transform: rotate(-90deg);
-            transform: rotate(-90deg);
+    transform: rotate(-90deg);
   }
+
   .tline {
     margin: 0px 0px -27px 35px;
     -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    transform: rotate(90deg);
   }
+
   .long {
     width: 2px;
     height: 1200px;
@@ -151,4 +176,5 @@ body {
     background: #E5193B;
   }
 }
-/*# sourceMappingURL=main.css.map */
+
+/*# sourceMappingURL=schedule.css.map */
