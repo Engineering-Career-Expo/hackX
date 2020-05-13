@@ -14,9 +14,6 @@ html, body {
 .criteria-section ul {
 	border: 1px solid blue;
 }
-.criteria-section .container {
-	border: 1px solid black;
-}
 .criteria-section .buttons {
 	border: 1px solid purple;
 }
