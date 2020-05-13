@@ -1,0 +1,174 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.nav-first {
+	margin: 0pc auto .3pc auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav {
+	font-family: "poppins", sans-serif;
+	color: #262A35;
+}
+
+.nav-sep {
+	width: 60%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.nav-ecx {
+	padding: 10px;
+	text-align: center;
+	align-self: center;
+	margin-bottom: -.3pc;
+}
+
+.nav-reg1 {
+	padding: 7px;
+	text-align: center;
+	font-size: 20px;
+	align-self: center;
+	background-color: #e5193b;
+	color: white;
+	transition: opacity .7s ease-out;
+	border-radius: 3px;
+	margin-right: 1.5pc;
+}
+
+.ham {
+	font-size: 30px;
+	width: 10%;
+	padding: 10px;
+	text-align: center;
+	align-self: center;
+}
+
+.nav-second {
+	width: 0px;
+	height: 0px;
+	transition: height 1s ease;
+	overflow: hidden;
+}
+
+.nav-about {
+	text-align: center;
+	padding: 10px;
+}
+
+.nav-mentor {
+	text-align: center;
+	padding: 10px;
+}
+
+.nav-schedule {
+	text-align: center;
+	padding: 10px;
+}
+
+.nav-reg2 {
+	text-align: center;
+	padding: 10px;
+}
+
+.nav-log {
+	text-align: center;
+	padding: 10px;
+}
+
+.nav-reg2 {
+	background-color: #E5193B;
+	color: white;
+	padding: 10px;
+	width: 30%;
+	margin: .3pc auto;
+	border-radius: 3px;
+}
+
+.nav-about,
+.nav-mentor,
+.nav-schedule,
+.nav-reg2,
+.nav-log {
+	font-weight: bold;
+	margin: .3pc auto;
+}
+
+.nav-log {
+	border: 2px solid #E5193B;
+	padding: 10px;
+	width: 30%;
+	border-radius: 3px;
+}
+
+a:link {
+	color: black;
+	text-decoration: none;
+}
+
+.nav-reg4:link,
+.nav-reg3:link {
+	color: #ffffff;
+}
+
+a:hover {
+	font-weight: bolder;
+}
+
+.nav-reg3,
+.nav-reg4 {
+	color: #FFFFFF;
+}
+
+.nav-log2 {
+	color: #FA0048;
+}
+
+
+
+@media(min-width:768px) {
+	nav {
+		margin: .5pc auto;
+		display: flex;
+		justify-content: center;
+		width: 95%;
+	}
+
+	.nav-second {
+		width: 70%;
+		height: auto;
+		display: flex;
+		justify-content: space-evenly;
+	}
+
+	.nav-sep {
+		display: none;
+	}
+
+	.nav-about,
+	.nav-mentor,
+	.nav-schedule,
+	.nav-reg2,
+	.nav-log {
+		align-self: center;
+	}
+
+	.nav-ecx {
+		margin: .5pc auto auto -7.5pc;
+		align-self: center;
+	}
+
+	.nav-nav-reg2,
+	.nav-log {
+		width: auto;
+		margin: auto;
+		padding: 4px 25px;
+	}
+
+	.nav-log {
+		padding: 2px 28px;
+	}
+}

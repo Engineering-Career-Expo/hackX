@@ -10,8 +10,9 @@
 // layout
 @import "./layout/footer";
 // components
-
+@import "./component/navbar";
 @import "../scss/component/hero";
+@import "./component/mentor";
 @import "../scss/component/about";
 @import "./component/goal";
 // pages
