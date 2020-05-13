@@ -37,21 +37,9 @@ html {
   margin: 0;
 }
 
-<<<<<<< HEAD
 footer {
   bottom: 0;
-=======
-@font-face {
-  font-family: Monad;
-  src: url(Monad.otf);
->>>>>>> Omotayewo-Loginn
 }
-
-@font-face {
-  font-family: Gilroy-Regular;
-  src: url(Gilroy-Regular.woff);
-}
-
 html,
 body {
   margin: 0px;
@@ -73,7 +61,6 @@ body {
   font-family: "Gilroy-Medium";
 }
 
-<<<<<<< HEAD
 .register {
   background-color: #e5193b;
   color: #e5e5e5;
@@ -90,7 +77,6 @@ body {
   text-decoration: none;
   color: #cccccc;
   margin-left: 15px;
-=======
 .login-text {
   font-family: "Gilroy-Medium";
   margin-bottom: 20%;
@@ -118,7 +104,6 @@ label[for=pword] {
 ::-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
   font-family: "Gilroy-Regular";
->>>>>>> Omotayewo-Loginn
 }
 
 ::placeholder {
@@ -157,12 +142,10 @@ input[type=password] {
   margin-left: -10px;
 }
 
-<<<<<<< HEAD
 .footer-bottom .footer-copyright p {
   display: inline-block;
   margin-left: 65px;
   color: #a5a5a5;
-=======
 .log {
   color: white;
   background: #E5193B;
@@ -174,7 +157,6 @@ input[type=password] {
   margin-bottom: 4%;
   margin-top: 8%;
   font-family: "Gilroy-Medium";
->>>>>>> Omotayewo-Loginn
 }
 
 .log:active {
@@ -214,20 +196,12 @@ input[type=password] {
   -webkit-user-select: none;
 }
 
-<<<<<<< HEAD
-html,
-body {
-  width: 100%;
-  margin: 0;
-  background: white;
-=======
 .container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 0px;
   width: 0px;
->>>>>>> Omotayewo-Loginn
 }
 
 .checkmark {
@@ -250,7 +224,6 @@ body {
   display: none;
 }
 
-<<<<<<< HEAD
 @media (max-width: 300px) {
   body {
     width: 100%;
@@ -702,7 +675,6 @@ body {
     opacity: 1;
     -webkit-box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.3);
             box-shadow: 2px 4px 8px 2px rgba(0, 0, 0, 0.3);
-=======
 .container input:checked ~ .checkmark::after {
   display: block;
 }
@@ -728,11 +700,9 @@ body {
     margin: 0px;
     padding: 0px;
     height: 100%;
->>>>>>> Omotayewo-Loginn
   }
   .foot {
     display: block;
-<<<<<<< HEAD
     padding: 5px;
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -753,7 +723,6 @@ body {
     margin-bottom: 1%;
     line-height: 21px;
     color: #262a35;
-=======
   }
   .all {
     display: -webkit-box;
@@ -763,7 +732,6 @@ body {
     -ms-flex-pack: space-evenly;
     justify-content: space-evenly;
     padding: 0px 100px;
->>>>>>> Omotayewo-Loginn
   }
   .navbarr,
   .menulist {
@@ -774,7 +742,6 @@ body {
   }
   .upsign,
   .menu {
-<<<<<<< HEAD
     float: right;
     width: 15%;
     margin: 2% 7%;
@@ -896,11 +863,9 @@ body {
   .desktop-nav ul {
     width: 92%;
     margin: 0 8% 0 0;
-=======
     display: none;
   }
   .list {
->>>>>>> Omotayewo-Loginn
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -919,7 +884,6 @@ body {
   .logg {
     padding: 10px;
   }
-<<<<<<< HEAD
   .desktop-nav ul li {
     text-align: center;
     color: #262a35;
@@ -973,19 +937,11 @@ body {
     font-size: 2.4vw;
     line-height: 37px;
   }
-  .register {
-=======
-  .menulist:hover .list {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
+  
   .come {
->>>>>>> Omotayewo-Loginn
     display: none;
   }
   .head {
-<<<<<<< HEAD
     color: #e5193b;
     font-size: 1.6vw;
     font-weight: 700;
@@ -1003,10 +959,8 @@ body {
   }
   .menu {
     display: none;
-=======
     margin-bottom: 4%;
     padding-left: 100px;
->>>>>>> Omotayewo-Loginn
   }
   input[type=text],
   input[type=password] {
@@ -1024,17 +978,15 @@ body {
     margin-top: 0px;
     background: white;
   }
-<<<<<<< HEAD
   .image-1,
   .location {
     float: right;
-=======
-  input[type=checkbox],
+  }
+  input[type='checkbox'],
   label[for=check] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
->>>>>>> Omotayewo-Loginn
   }
   label[for=check] {
     margin-left: 25px;
@@ -1042,7 +994,6 @@ body {
   input[type=checkbox] {
     margin-bottom: -15px;
   }
-<<<<<<< HEAD
   .register {
     width: 40%;
     height: 40px;
@@ -1057,7 +1008,7 @@ body {
     background: #fa0048;
     border: none;
     border-radius: 3px;
-=======
+  }
   .end {
     font-family: "Monad";
     font-size: 50px;
@@ -1067,7 +1018,6 @@ body {
     align-self: center;
     margin-top: -50px;
     margin-right: -60px;
->>>>>>> Omotayewo-Loginn
   }
   .guide {
     color: black;
@@ -1084,7 +1034,6 @@ body {
     color: #E5E5E5;
     background: #E5193B;
   }
-<<<<<<< HEAD
   .quote {
     text-align: left;
     font-family: Poppins, serif;
@@ -1122,13 +1071,12 @@ body {
     font-family: Gilroy-Medium;
     font-size: 18px;
     color: #000000;
-=======
+  }
   .hx {
     color: #F2A702;
   }
   .blue {
     color: #1071F3;
->>>>>>> Omotayewo-Loginn
   }
 }
 
