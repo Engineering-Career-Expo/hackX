@@ -6,10 +6,10 @@ html, body {
 	box-sizing: border-box;
 }
 .criteria-section {
-	border: 2px solid brown;
 	min-width: 100%;
 	margin: 0;
 	padding: 8% 10%;
+	background: #F4F4F4;
 }
 @media (max-width: 768px) {
 	.criteria-section-h1 {
@@ -24,7 +24,20 @@ html, body {
 		color: white;
 	}	
 	.criteria-section ul {
+		width: 100%;
+		margin: 0;
+		padding-left: 4%;
 		list-style-image: url('../assets/images/mobile-arrow.png');
+	}
+	.criteria-section .uls {
+		width: 100%;
+		margin: 0;
+	}
+	.criteria-section li {
+		padding-left: 6%;
+		margin-bottom: 6.5%;
+		font-size: 3.6vw;
+		font-family: Gilroy-bold, sans-serif;
 	}
 	.criteria-section .ul1 {
 		width: 100%;
@@ -33,8 +46,12 @@ html, body {
 	}
 	.criteria-section .ul2 {
 		width: 100%;
-		margin: 0;
+		margin: 7% 0;
 		padding: 0;
+	}
+	.criteria-section .section {
+		background: white;
+		width: 100%;
 	}
 	.criteria-section .container {
 		display: block;
@@ -43,32 +60,40 @@ html, body {
 	.criteria-section .arrow {
 		display: none;
 	}
-	.criteria-section .content {
+	.criteria-section .cnt {
 		display: block;
 		width: 100%;
-		height: auto;
-		margin: 0;
+		height: 70px;
+		margin: 8% 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
 		border: 1px solid red;
-		text-align: center;
 	}
-	.criteria-section .content img {
-		transform: scale(0.4);
+	.criteria-section .content .scheme-image {
+		transform: scale(.87);
 		border: 1px solid red;
+		height: 70px;
+		margin: 0;
 	}
 	.criteria-section .content .text {
-		font-size: 4vw;
-		height: 100%;
+		font-size: 3.6vw;
+		height: 70px;
+		width: auto;
+		font-family: Gilroy-Bold, sans-serif;
+		padding: 0 3%;
+		line-height: 70px;
 		border: 1px solid red;
 	}
 	.criteria-section .arrow-flow {
 		display: none;
 	}
 	.criteria-section .buttons {
-		text-align: center;
+		width: 100%;
 	}
 	.criteria-section .btn1 {
 		width: 70%;
-		background-color: #fa0c0c;
+		background-color: #ff0000;
 		height: 50px;
 		border: none;
 		color: white;
@@ -76,8 +101,9 @@ html, body {
 	.criteria-section .btn2 {
 		width: 70%;
 		border: none;
-		background-color: #ffc916;
+		background-color: #ffe032;
 		height: 50px;
+		margin-top: 6%;
 		color: white;
 	}
 }
@@ -85,6 +111,7 @@ html, body {
 	.criteria-section {
 		width: 100%;
 		margin: 0;
+		background: beige;
 	}
 	.criteria-section-h1 {
 		width: 100%;
@@ -99,18 +126,37 @@ html, body {
 	}	
 	.criteria-section .ul1 {
 		width: 50%;
+		background: transparent;
 		float: left;
 		margin: 0;
 	}
 	.criteria-section .ul2 {
 		width: 50%;
 		float: right;
+		background: transparent;
 		margin: 0;
+	}
+	.criteria-section li {
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 1.4vw;
+		margin: 6% 0;
+	}
+	.criteria-section .uls {
+		width: 80%;
+		background: transparent;
+		margin: 0 10%;
+	}
+	.criteria-section .section {
+		width: 100%;
+		margin: 0;
+		background: white;
+		padding-top: 10%;
 	}
 	.criteria-section .container {
 		width: 90%;
-		margin: 0 5%;
+		margin: 8% 0 0 7%;
 		display: flex;
+		padding-top: 7%;
 		flex-direction: row;
 		flex-wrap: nowrap;
 		justify-content: space-between;
@@ -138,15 +184,6 @@ html, body {
 		width: 140%;
 		margin-top: 100%;
 		margin-left: -130%;
-	}
-	.criteria-section li {
-		font-family: Gilroy-Bold, sans-serif;
-		font-size: 1.4vw;
-		margin: 6% 0;
-	}
-	.criteria-section .uls {
-		width: 80%;
-		margin: 0 10%;
 	}
 	.criteria-section .buttons {
 		text-align: center;
