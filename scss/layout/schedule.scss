@@ -109,6 +109,7 @@ body{
 	#schedule_txt__paragraph, #schedule_txt__short,
 	#schedule_txt__demo, #schedule_txt__on{
 		margin-top: 0px;
+		margin-bottom: 70px;
 	}
 	.schedule_shape{
 		padding: 10px 0px;
@@ -127,9 +128,9 @@ body{
 	}
 	.long{
 		width: 2px;
-		height: 900px;
+		height: 1200px;
 		margin-left: 2%;
-		margin-top: -880px;
+		margin-top: -1100px;
 		background: $color-primary;
 	}
 }
