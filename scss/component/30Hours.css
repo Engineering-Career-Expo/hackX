@@ -1,107 +1,153 @@
-body{
-		padding:0;
-		margin:0;
-		font-family:"poppins";
-		background-color:#f4f4f4;
-		}
-.fab{
-		font-size:40px;
-		color:#E5193B;
-		}
-.one{
-		padding:10px;
-		}
-.one,.first,.second,.third,.fourth,.three,.train1{
-		text-align:center;
-		}
-.one,.thirty,.hours,.of,.train0,.mentor,.meet,.name{
-		font-weight:bold;
-		margin:auto;
-		}
-.thirty{
-		font-size:50px;
-		color:#E5193B;
-		}
-.hours,.of{
-		font-size:25px;
-		}
-.first,.second,.third,.fourth{
-		margin-top:1pc;
-		padding:15px;
-		width:50%;
-		margin:1pc auto 3pc auto;
-		}
-.tracks{
-		font-size:23px;
-		margin-bottom:.8pc;
-		}
-.part1,.part2{
-		padding:10px;
-		margin:1pc auto auto auto;
-		}
-.part2{
-		width:60%;
-		margin-bottom:3.5pc;
-		}
-.mentor{
-		font-size:30px;
-		color:#E5193B;
-		}
-.img2{
-		width:100%;
-		margin:auto;
-		}
-.img02{
-		width:100%;
-  	}
-.train1{
-		width:90%;
-		margin:auto;
-		}  	
-.name{
-		font-size:16px;
-		margin:auto auto 1.5pc auto;
-		}  	
-  	
-  	
-  	
-@media (min-width:768px){
-.train0{
-		width:40%;
-		}		
-.two{
-		width:75%;
-		display:flex;
-		justify-content:space-evenly;
-		align-self:center;
-		margin:auto;
-		}
-.first,.second,.third,.fourth{
-		width:17%;
-		padding:18px;
-		}
-.part2{
-		display:flex;
-		align-self:center;
-		width:40%;
-		margin-bottom:.5pc;
-		}
-.img02{
-		width:100%;
-		}
-.train1{
-		align-self:center;
-		padding-left:10px;
-		widt:150%;
-		}
-.four{
-		width:70%;
-		display:flex;
-		flex-wrap:wrap;
-		margin:-1.7pc auto auto auto;
-		}
-.name{
-		margin-bottom:.5pc;
-		}
-	}  	
-  	
+body {
+	padding: 0;
+	margin: 0;
+	font-family: "poppins";
+
+
+}
+
+.fab {
+	font-size: 40px;
+	color: #E5193B;
+}
+
+.one {
+	padding: 10px;
+}
+
+.one,
+.first,
+.second,
+.third,
+.fourth,
+.three,
+.train1 {
+	text-align: center;
+}
+
+.one,
+.thirty,
+.hours,
+.of,
+.train0,
+.mentor,
+.meet,
+.name {
+	font-weight: bold;
+	margin: auto;
+}
+
+.thirty {
+	font-size: 6rem;
+	color: #E5193B;
+}
+
+.hours,
+.of {
+	font-size: 25px;
+}
+
+.first,
+.second,
+.third,
+.fourth {
+	margin-top: 1pc;
+	padding: 15px;
+	width: 50%;
+	margin: 1pc auto 3pc auto;
+}
+
+.tracks {
+	font-size: 23px;
+	margin-bottom: .8pc;
+}
+
+.part1,
+.part2 {
+	padding: 10px;
+	margin: 1pc auto auto auto;
+}
+
+.part2 {
+	width: 60%;
+	margin-bottom: 3.5pc;
+}
+
+.mentor {
+	font-size: 30px;
+	color: #E5193B;
+}
+
+.img2 {
+	width: 100%;
+	margin: auto;
+}
+
+.img02 {
+	width: 100%;
+}
+
+.train1 {
+	width: 90%;
+	margin: auto;
+}
+
+.name {
+	font-size: 16px;
+	margin: auto auto 1.5pc auto;
+}
+
+
+
+@media (min-width:768px) {
+
+
+	.train0 {
+		width: 40%;
+	}
+
+	.two {
+		width: 75%;
+		display: flex;
+		justify-content: space-evenly;
+		align-self: center;
+		margin: auto;
+	}
+
+	.first,
+	.second,
+	.third,
+	.fourth {
+		width: 17%;
+		padding: 18px;
+	}
+
+	.part2 {
+		display: flex;
+		align-self: center;
+		width: 40%;
+		margin-bottom: .5pc;
+	}
+
+	.img02 {
+		width: 100%;
+	}
+
+	.train1 {
+		align-self: center;
+		padding-left: 10px;
+		widt: 150%;
+	}
+
+
+	.four {
+		width: 70%;
+		display: flex;
+		flex-wrap: wrap;
+		margin: -1.7pc auto auto auto;
+	}
+
+	.name {
+		margin-bottom: .5pc;
+	}
+}
