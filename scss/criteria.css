@@ -133,6 +133,7 @@ html, body {
 	.criteria-section {
 		width: 100%;
 		margin: 0;
+		padding-bottom: 0;
 	}
 	.criteria-section-h1 {
 		width: 100%;
@@ -147,18 +148,16 @@ html, body {
 	}	
 	.criteria-section .uls {
 		width: 70%;
-		background: #F4F4F4 !important;
+		display: flex;
+		z-index: 1;
+		background: #F4F4F4;
 		margin: 0 15%;
 	}
 	.criteria-section .ul1 {
 		width: 50%;
-		float: left;
-		margin: 0;
 	}
 	.criteria-section .ul2 {
 		width: 50%;
-		float: right;
-		margin: 0;
 	}
 	.criteria-section li {
 		font-family: Gilroy-Regular, sans-serif;
@@ -166,14 +165,14 @@ html, body {
 		margin: 6% 0;
 	}
 	.criteria-section .section {
+		display: block;
 		width: 100%;
 		margin: 0;
 		background: white;
-		padding-top: 10%;
 	}
 	.criteria-section .container {
-		width: 90%;
-		margin: 8% 0 0 7%;
+		width: 80%;
+		margin: 8% 0 0 10%;
 		display: flex;
 		padding-top: 7%;
 		flex-direction: row;
@@ -206,8 +205,9 @@ html, body {
 	}
 	.criteria-section .buttons {
 		text-align: center;
-		width: 90%;
-		margin: 7% 5%;
+		width: 80%;
+		margin: 7% 10%;
+		padding-bottom: 8%;
 	}
 	.criteria-section .btn1 {
 		width: 35%;
