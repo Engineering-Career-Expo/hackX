@@ -152,6 +152,8 @@ i {
 	}
 
 	.register-form-container input[type="text"],
+	.register-form-container input[type="email"],
+	.register-form-container input[type="number"],
 	.register-form-container input[type="password"] {
 		/* Rectangle 63 */
 		width: 100%;
@@ -309,6 +311,8 @@ i {
 	}
 
 	.register-form-container input[type="text"],
+	.register-form-container input[type="email"],
+	.register-form-container input[type="number"],
 	.register-form-container input[type="password"] {
 		/* Rectangle 63 */
 		width: 100%;
@@ -454,6 +458,8 @@ i {
 	}
 
 	.register-form-container input[type="text"],
+	.register-form-container input[type="email"],
+	.register-form-container input[type="number"],
 	.register-form-container input[type="password"] {
 		/* Rectangle 63 */
 		width: 100%;
@@ -632,6 +638,8 @@ i {
 }
 
 .register-form-container input[type="text"],
+.register-form-container input[type="email"],
+.register-form-container input[type="number"],
 .register-form-container input[type="password"] {
 	/* Rectangle 63 */
 	width: 100%;
@@ -710,9 +718,9 @@ i {
 }
 
 .register-form-container .arrow2 {
-	margin-top: 8px;
+	margin-top: 4px;
 	margin-left: 12px;
-	margin-right: -20px;
+	margin-right: 20px;
 }
 
 .register-form-container .option {
