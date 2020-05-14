@@ -10,16 +10,6 @@
   src: url(../../fonts/Gilroy-Regular.woff);
 }
 
-html,
-body {
-  width: 100%;
-  margin: 0;
-  background: white;
-}
-
-* {
-  box-sizing: border-box;
-}
 
 .norm {
   padding: 6px;
@@ -33,10 +23,7 @@ body {
   color: #262a35;
 }
 
-a:hover {
-  background: rgba(220, 0, 0, 0.2);
-  color: red;
-}
+
 
 .image-1,
 .image-2,
@@ -113,19 +100,15 @@ a:hover {
   color: #000000;
 }
 
-.head {
+.hero-head {
   color: #e5193b;
   font-size: 6vw;
 }
 
-img {
+div img {
   float: right;
 }
 
-.txt {
-  margin-top: 4px;
-  vertical-align: middle;
-}
 
 .image-1,
 .image-2,
@@ -164,7 +147,7 @@ img {
 		border: none;
 		border-radius: 3px;
 	}*/
-.main {
+.hero-main {
   width: 90%;
   margin: 5%;
 }
@@ -222,19 +205,15 @@ img {
   color: #000000;
 }
 
-.head {
+.hero-head {
   color: #e5193b;
   font-size: 5.3vw;
 }
 
-img {
+div img {
   float: right;
 }
 
-.txt {
-  margin-top: 4px;
-  vertical-align: middle;
-}
 
 
 
@@ -261,7 +240,7 @@ img {
   color: #000000;
 }
 
-.main {
+.hero-main {
   width: 90%;
   margin: 5%;
 }
@@ -319,18 +298,15 @@ img {
   color: #000000;
 }
 
-.head {
+.hero-head {
   color: #e5193b;
 }
 
-img {
+div img {
   float: right;
 }
 
-.txt {
-  margin-top: 4px;
-  vertical-align: middle;
-}
+
 
 
 @media (min-width: 769px) {
@@ -376,7 +352,7 @@ img {
     color: #000000;
   }
 
-  .head {
+  .hero-head {
     color: #e5193b;
     font-size: 1.6vw;
     font-weight: 700;
@@ -444,23 +420,8 @@ img {
     color: #000000;
   }
 
-  .register {
-    width: 40%;
-    height: 40px;
-    margin-top: 0;
-    margin-bottom: 0;
-    margin-left: 20%;
-    margin-right: 4%;
-    display: inline block;
-    font-family: Gilroy-bold;
-    font-size: 15px;
-    color: white;
-    background: #fa0048;
-    border: none;
-    border-radius: 3px;
-  }
 
-  main {
+  .hero-main {
     width: 90%;
     margin: 5%;
   }

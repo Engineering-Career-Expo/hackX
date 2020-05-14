@@ -1,19 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap');
 
-html,
-body {
-    width: 100%;
-    margin: 0;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.mentors-main {
-    margin: 2rem 0;
-}
-
 @media (max-width: 300px) {
     .mentor-h1 {
         text-align: center;
