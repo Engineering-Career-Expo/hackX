@@ -52,13 +52,14 @@
 .hours-third,
 .hours-fourth {
 	margin-top: 1pc;
-	padding: 15px;
 	width: 50%;
+	padding: 0;
 	margin: 1pc auto 3pc auto;
 }
 
 .hours-tracks {
-	font-size: 23px;
+	font-size: 25px;
+	margin-left: 2rem;
 	margin-bottom: .8pc;
 }
 
@@ -83,6 +84,10 @@
 	margin: auto;
 }
 
+.hours-img {
+	width: 60%;
+}
+
 .hours-img02 {
 	width: 100%;
 }
@@ -100,7 +105,15 @@
 
 
 @media (min-width:768px) {
+	.hours-body {
+		overflow-x: hidden;
+	}
 
+	.hours-tracks {
+		font-size: 20px;
+		margin-left: 1rem;
+		margin-bottom: .8pc;
+	}
 
 	.hours-train0 {
 		width: 40%;
@@ -131,6 +144,10 @@
 
 	.hours-img02 {
 		width: 100%;
+	}
+
+	.hours-second {
+		margin: 1pc auto;
 	}
 
 	.hours-train1 {
