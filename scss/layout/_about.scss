@@ -5,6 +5,10 @@
 	src: url(Gilroy-Regular.woff);
 }
 
+html {
+	overflow-x: initial !important;
+}
+
 html,
 body {
 	margin: 0px;
