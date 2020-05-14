@@ -27,6 +27,8 @@ html, body {
 		font-weight: 800;
 		font-family: Gilroy-Regular, sans-serif;
 		background-image: url(../assets/images/criteria-for-selection.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
 		color: white;
 	}	
 	.criteria-section ul {
@@ -129,7 +131,107 @@ html, body {
 		opacity: 1;
 	}
 }
-@media (min-width: 769px) {
+@media (min-width: 769px) and (max-width: 1100px) {
+	.criteria-section {
+		width: 100%;
+		margin: 0;
+		padding-bottom: 0;
+	}
+	.criteria-section-h1 {
+		width: 100%;
+		margin: 0;
+		padding: 5%;
+		text-align: center;
+		font-size: 4.4vw;
+		font-weight: 800;
+		font-family: Gilroy-Regular, sans-serif;
+		background-image: url(../assets/images/criteria-for-selection.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		color: white;
+	}	
+	.criteria-section .uls {
+		width: 70%;
+		display: flex;
+		margin: 0 15%;
+	}
+	.criteria-section .ul1 {
+		width: 50%;
+	}
+	.criteria-section .ul2 {
+		width: 50%;
+	}
+	.criteria-section li {
+		font-family: Gilroy-Regular, sans-serif;
+		font-size: 1.8vw;
+		margin: 6% 0;
+	}
+	.criteria-section .section {
+		display: block;
+		width: 100%;
+		margin: 0;
+		background: white;
+	}
+	.criteria-section .container {
+		width: 80%;
+		margin: 8% 0 0 10%;
+		display: flex;
+		padding-top: 7%;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+	}
+	.criteria-section .cnt {
+		display: inline-block;
+		text-align: center;
+		width: 25%;
+	}
+	.criteria-section .scheme-image {
+		text-align: center;
+	}
+	.criteria-section .content img {
+		transform: scale(0.9);
+	}
+	.criteria-section .content .text {
+		display: block;
+		font-size: 1.85vw;
+		margin: 0;
+		font-family: Gilroy-Regular, sans-serif;
+		padding: 0;
+	}
+	.criteria-section .arrow-flow {
+		position: relative;
+		width: 140%;
+		margin-top: 100%;
+		margin-left: -130%;
+	}
+	.criteria-section .buttons {
+		text-align: center;
+		width: 80%;
+		margin: 7% 10%;
+		padding-bottom: 8%;
+	}
+	.criteria-section .btn1 {
+		width: 35%;
+		background-color: #fa0c0c;
+		height: 50px;
+		margin-right: 5%;
+		border-radius: 5px;
+		font-size: 1.9vw;
+		border: none;
+		color: white;
+	}
+	.criteria-section .btn2 {
+		width: 35%;
+		border: none;
+		font-size: 1.9vw;
+		border-radius: 5px;
+		background-color: #ffc916;
+		height: 50px;
+		color: white;
+	}
+}
+@media (min-width: 1101px) {
 	.criteria-section {
 		width: 100%;
 		margin: 0;
@@ -144,6 +246,8 @@ html, body {
 		font-weight: 800;
 		font-family: Gilroy-Regular, sans-serif;
 		background-image: url(../assets/images/criteria-for-selection.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
 		color: white;
 	}	
 	.criteria-section .uls {
