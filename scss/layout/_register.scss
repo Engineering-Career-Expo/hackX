@@ -16,13 +16,35 @@ body {
 	margin: 0;
 }
 
-body {
-	padding: 0;
-	margin-top: 9%;
-}
-
 * {
 	box-sizing: border-box;
+}
+
+::-webkit-input-placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	font-family: "Gilroy-Regular";
+}
+
+:-ms-input-placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	font-family: "Gilroy-Regular";
+}
+
+::-ms-input-placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	font-family: "Gilroy-Regular";
+}
+
+
+::placeholder {
+	color: rgba(0, 0, 0, 0.3);
+	font-family: "Gilroy-Regular";
+}
+
+i {
+	color: rgba(0, 0, 0, 0.3);
+	margin-top: 13px;
+	margin-left: -25px;
 }
 
 .register-form-container .arrow {
@@ -50,10 +72,16 @@ body {
 	color: red;
 }
 
+.come {
+	display: none;
+}
+
 @media (max-width: 300px) {
 	body {
 		width: 100%;
 	}
+
+
 
 	main {
 		width: 100%;
@@ -96,7 +124,7 @@ body {
 		padding-left: 5px;
 		margin-bottom: 2rem;
 		font-family: Gilroy-Bold, sans-serif;
-		font-size: 24px;
+		font-size: 30px;
 		line-height: 28px;
 		font-weight: 400;
 		color: #000000;
@@ -123,7 +151,8 @@ body {
 		color: #000000;
 	}
 
-	.register-form-container input[type="text"] {
+	.register-form-container input[type="text"],
+	.register-form-container input[type="password"] {
 		/* Rectangle 63 */
 		width: 100%;
 		padding: 10px;
@@ -171,6 +200,12 @@ body {
 		border: 0.5px solid #FA0048;
 	}
 
+	i {
+		color: rgba(0, 0, 0, 0.3);
+		margin-top: 13px;
+		margin-left: -25px;
+	}
+
 	.register-form-container .signup-btn {
 		width: 100%;
 		height: 50px;
@@ -207,9 +242,9 @@ body {
 	}
 
 	.register-form-container .option {
-		position: absolute;
+		// position: absolute;
 		display: inline block;
-		margin-top: 6%;
+		margin: -4rem 2rem;
 		right: 14%;
 	}
 
@@ -223,6 +258,10 @@ body {
 
 @media (min-width: 301px) and (max-width: 500px) {
 	.register-call-to-action {
+		display: none;
+	}
+
+	.come {
 		display: none;
 	}
 
@@ -269,7 +308,8 @@ body {
 		color: #000000;
 	}
 
-	.register-form-container input[type="text"] {
+	.register-form-container input[type="text"],
+	.register-form-container input[type="password"] {
 		/* Rectangle 63 */
 		width: 100%;
 		padding: 10px;
@@ -393,6 +433,10 @@ body {
 		color: #000000;
 	}
 
+	.come {
+		font-size: 25px;
+	}
+
 	.register-form-container legend {
 		margin-bottom: 10px;
 		font-family: Gilroy-Bold, sans-serif;
@@ -409,7 +453,8 @@ body {
 		color: #000000;
 	}
 
-	.register-form-container input[type="text"] {
+	.register-form-container input[type="text"],
+	.register-form-container input[type="password"] {
 		/* Rectangle 63 */
 		width: 100%;
 		padding: 10px;
@@ -586,7 +631,8 @@ body {
 	color: #000000;
 }
 
-.register-form-container input[type="text"] {
+.register-form-container input[type="text"],
+.register-form-container input[type="password"] {
 	/* Rectangle 63 */
 	width: 100%;
 	padding: 10px;
@@ -675,4 +721,3 @@ body {
 	margin-top: 1.5%;
 	right: 50%;
 }
-

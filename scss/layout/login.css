@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap");
-
 @font-face {
   font-family: Monad;
   src: url(Monad.otf);
@@ -10,8 +9,7 @@
   src: url(Gilroy-Regular.woff);
 }
 
-html,
-body {
+html, body {
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -19,6 +17,125 @@ body {
 
 body {
   background: none;
+}
+
+.e {
+  color: #1071F3;
+}
+
+.c {
+  color: #F2A702;
+}
+
+.x {
+  color: #E5193B;
+}
+
+.ecx {
+  font-family: 'Monoton', cursive;
+  font-style: normal;
+  font-weight: normal;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.navbarr {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  height: 60px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 30px;
+}
+
+.upsign {
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-family: 'Poppins', san-serif;
+}
+
+.upsign a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  background: #E5193B;
+  padding: 6px 8px;
+  color: #E5E5E5;
+  outline: none;
+}
+
+.upsign a:active {
+  color: #E5193B;
+  background: white;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.menu {
+  color: rgba(0, 0, 0, 0.6);
+  background: none;
+  border: none;
+  outline: none;
+  margin-top: -50px;
+  margin-right: 20px;
+  height: 40px;
+  font-size: 25px;
+}
+
+.menu:active {
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.menulist {
+  display: block;
+  position: relative;
+}
+
+.list {
+  display: none;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  background: #E5E5E5;
+}
+
+.list a {
+  color: black;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+}
+
+.list a:active {
+  color: #E5E5E5;
+  background: #E5193B;
+}
+
+.abt, .men, .sch, .reg, .logg {
+  padding: 8px;
+}
+
+.abt:active, .men:active, .sch:active,
+.reg:active, .logg:active {
+  color: #E5E5E5;
+  background: #E5193B;
+}
+
+.menulist:hover .list {
+  display: block;
 }
 
 .one {
@@ -40,8 +157,7 @@ body {
   padding-right: 8px;
 }
 
-label[for=mail],
-label[for=pword] {
+label[for=mail], label[for=pword] {
   font-family: "Gilroy-Medium";
 }
 
@@ -65,8 +181,7 @@ label[for=pword] {
   font-family: "Gilroy-Regular";
 }
 
-.fmail,
-.fpword {
+.fmail, .fpword {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,8 +198,7 @@ i {
   margin-left: -25px;
 }
 
-input[type=text],
-input[type=password] {
+input[type=text], input[type=password] {
   color: none;
   background: rgba(196, 196, 196, 0.4);
   border: none;
@@ -164,7 +278,7 @@ input[type=password] {
   border-radius: 5px;
 }
 
-.container input:checked~.checkmark {
+.container input:checked ~ .checkmark {
   background-color: #E5193B;
 }
 
@@ -174,7 +288,7 @@ input[type=password] {
   display: none;
 }
 
-.container input:checked~.checkmark::after {
+.container input:checked ~ .checkmark::after {
   display: block;
 }
 
@@ -186,7 +300,7 @@ input[type=password] {
   border: solid white;
   border-width: 0 1px 1px 0;
   -webkit-transform: rotate(45deg);
-  transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .foot {
@@ -194,124 +308,94 @@ input[type=password] {
 }
 
 @media screen and (min-width: 768px) {
-
-  html,
-  body {
+  html, body {
     margin: 0px;
     padding: 0px;
     height: 100%;
   }
-
   .foot {
     display: block;
   }
-
   .all {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: space-evenly;
-    -ms-flex-pack: space-evenly;
-    justify-content: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
     padding: 0px 100px;
   }
-
-  .navbarr,
-  .menulist {
+  .navbarr, .menulist {
     padding-top: 30px;
   }
-
   .navbarr {
     padding-left: 100px;
   }
-
-  .upsign,
-  .menu {
+  .upsign, .menu {
     display: none;
   }
-
   .list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
     width: 95%;
     margin-top: -80px;
     background: none;
   }
-
-  .list a,
-  .abt,
-  .men,
-  .sch,
-  .reg,
-  .logg {
+  .list a, .abt, .men,
+  .sch, .reg, .logg {
     padding: 10px;
   }
-
   .menulist:hover .list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-
   .come {
     display: none;
   }
-
   .head {
     margin-bottom: 4%;
     padding-left: 100px;
   }
-
-  input[type=text],
-  input[type=password] {
+  input[type=text], input[type=password] {
     width: 60%;
   }
-
   .btn {
     display: inline-block;
     width: 71%;
   }
-
-  .log,
-  .sign {
+  .log, .sign {
     width: 45%;
   }
-
   .sign {
     margin-top: 0px;
     background: white;
   }
-
-  input[type=checkbox],
-  label[for=check] {
+  input[type=checkbox], label[for=check] {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-
   label[for=check] {
     margin-left: 25px;
   }
-
   input[type=checkbox] {
     margin-bottom: -15px;
   }
-
   .end {
     font-family: "Monad";
     font-size: 50px;
     text-align: center;
     -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
+        -ms-grid-row-align: center;
+        align-self: center;
     margin-top: -50px;
     margin-right: -60px;
   }
-
   .guide {
     color: black;
     background: white;
@@ -323,19 +407,15 @@ input[type=password] {
     font-size: 10px;
     font-family: "Gilroy-Regular";
   }
-
   .guide:active {
     color: #E5E5E5;
     background: #E5193B;
   }
-
   .hx {
     color: #F2A702;
   }
-
   .blue {
     color: #1071F3;
   }
 }
-
 /*# sourceMappingURL=main.css.map */

@@ -19,6 +19,7 @@ function myfunc1() {
   second[0].style.height = "325px";
   second[0].style.width = "auto";
   myham[0].innerHTML = "X";
+  s;
   a++;
 
   if (a % 2 === 0) {

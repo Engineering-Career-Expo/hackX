@@ -4,17 +4,25 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" intial-scale="1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="../scss/layout/login.css" />
+    <link rel="stylesheet" type="text/css" href="../scss/layout/register.css" />
     <link
       rel="stylesheet"
       type="text/css"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <script type="text/javascript" src="Login.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <link rel="stylesheet" href="../scss/main.css" />
     <title>Login</title>
   </head>
   <body>
     <main>
+      <div data-include="navbar"></div>
+
       <div class="register-form-container">
         <form>
           <h2>LOGIN</h2>
@@ -27,7 +35,7 @@
           <input
             type="password"
             name="	Password"
-            placeholder="*********"
+            placeholder="•••••••••"
             required
           /><i
             id="pass"
@@ -48,5 +56,8 @@
         <button><span class="btn-cnt">Competition Guidelines</span></button>
       </div>
     </main>
+    <!-- <div data-include="footer"></div> -->
+
+    <script type="text/javascript" src="../js/main.js"></script>
   </body>
 </html>
