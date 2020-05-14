@@ -11,8 +11,11 @@
 @import "./layout/footer";
 // components
 
+@import "./component/navbar";
 @import "../scss/component/hero";
+@import "./component/mentor";
 @import "../scss/component/about";
+@import "../scss/layout/contact";
+@import "../scss/component/30Hours";
 @import "./component/goal";
 // pages
-@import '../scss/schedule.scss";
