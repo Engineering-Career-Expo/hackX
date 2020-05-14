@@ -17,7 +17,236 @@ html, body {
 	padding: 8% 0;
 	background: #F4F4F4;
 }
-@media (max-width: 768px) {
+@media (max-width: 399px) {
+	.criteria-section-h1 {
+		width: 100%;
+		margin: 0;
+		padding: 4%;
+		text-align: center;
+		font-size: 6vw;
+		font-weight: 800;
+		font-family: Gilroy-Regular, sans-serif;
+		background-image: url(../assets/images/criteria-for-selection.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		color: white;
+	}	
+	.criteria-section ul {
+		width: 80%;
+		margin: 0 10%;
+		padding-left: 4%;
+		list-style-image: url('../assets/images/mobile-arrow.png');
+	}
+	.criteria-section .uls {
+		width: 100%;
+		margin: 0;
+		padding-bottom: 2%;
+	}
+	.criteria-section li {
+		padding-left: 6%;
+		margin-bottom: 6.5%;
+		font-size: 5.5vw;
+		font-family: Gilroy-Regular, sans-serif;
+	}
+	.criteria-section .ul1 {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.criteria-section .ul2 {
+		width: 100%;
+		margin: 7% 0;
+		padding: 0;
+	}
+	.criteria-section .section {
+		background: white;
+		width: 100%;
+		padding-top: 2%;
+	}
+	.criteria-section .container {
+		display: block;
+		width: 90%;
+		margin: 0 5%;
+	}
+	.criteria-section .arrow {
+		display: none;
+	}
+	.criteria-section .cnt {
+		display: block;
+		width: 100%;
+		height: 70px;
+		margin: 8% 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+	.criteria-section .content .scheme-image {
+		transform: scale(.56);
+		height: 70px;
+		margin: 0;
+	}
+	.criteria-section .content .text {
+		font-size: 4.7vw;
+		height: 70px;
+		width: auto;
+		font-weight: 700;
+		font-family: Gilroy-Regular, sans-serif;
+		padding: 0 3%;
+		line-height: 70px;
+	}
+	.criteria-section .arrow-flow {
+		display: none;
+	}
+	.criteria-section .buttons {
+		width: 100%;
+		text-align: center;
+		padding-top: 15%;
+	}
+	.criteria-section .btn1 {
+		width: 60%;
+		background-color: #ff0000;
+		height: 57px;
+		border: none;
+		color: white;
+		font-size: 6vw;
+		opacity: .7;
+		transition: 1s;
+		border-radius: 5px;
+	}
+	.criteria-section .btn2 {
+		width: 60%;
+		border: none;
+		background-color: #ffe032;
+		height: 57px;
+		font-size: 6vw;
+		font-family: Gilroy-Regular, sans-serif;
+		margin-top: 2%;
+		color: white;
+		opacity: .7;
+		border-radius: 5px;
+		transition: 1s;
+	}
+	.criteria-section button:hover {
+		width: 64%;
+		height: 59px;
+		opacity: 1;
+	}
+}
+@media (min-width: 400px) and (max-width: 500px) {
+	.criteria-section-h1 {
+		width: 100%;
+		margin: 0;
+		padding: 5%;
+		text-align: center;
+		font-size: 5.7vw;
+		font-weight: 800;
+		font-family: Gilroy-Regular, sans-serif;
+		background-image: url(../assets/images/criteria-for-selection.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+		color: white;
+	}	
+	.criteria-section ul {
+		width: 70%;
+		margin: 0 15%;
+		padding-left: 4%;
+		list-style-image: url('../assets/images/mobile-arrow.png');
+	}
+	.criteria-section .uls {
+		width: 100%;
+		margin: 0;
+		padding-bottom: 2%;
+	}
+	.criteria-section li {
+		padding-left: 6%;
+		margin-bottom: 6.5%;
+		font-size: 4.2vw;
+		font-family: Gilroy-Regular, sans-serif;
+	}
+	.criteria-section .ul1 {
+		width: 100%;
+		margin: 0;
+		padding: 0;
+	}
+	.criteria-section .ul2 {
+		width: 100%;
+		margin: 7% 0;
+		padding: 0;
+	}
+	.criteria-section .section {
+		background: white;
+		width: 100%;
+		padding-top: 2%;
+	}
+	.criteria-section .container {
+		display: block;
+		width: 70%;
+		margin: 0 15%;
+	}
+	.criteria-section .arrow {
+		display: none;
+	}
+	.criteria-section .cnt {
+		display: block;
+		width: 100%;
+		height: 70px;
+		margin: 8% 0;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+	}
+	.criteria-section .content .scheme-image {
+		transform: scale(.87);
+		height: 70px;
+		margin: 0;
+	}
+	.criteria-section .content .text {
+		font-size: 4vw;
+		height: 70px;
+		width: auto;
+		font-family: Gilroy-Regular, sans-serif;
+		padding: 0 3%;
+		line-height: 70px;
+	}
+	.criteria-section .arrow-flow {
+		display: none;
+	}
+	.criteria-section .buttons {
+		width: 100%;
+		text-align: center;
+		padding-top: 15%;
+	}
+	.criteria-section .btn1 {
+		width: 58%;
+		background-color: #ff0000;
+		height: 60px;
+		border: none;
+		color: white;
+		font-size: 3.8vw;
+		opacity: .7;
+		transition: 1s;
+		border-radius: 5px;
+	}
+	.criteria-section .btn2 {
+		width: 58%;
+		border: none;
+		background-color: #ffe032;
+		height: 60px;
+		font-size: 3.8vw;
+		font-family: Gilroy-Regular, sans-serif;
+		margin-top: 2%;
+		color: white;
+		opacity: .7;
+		border-radius: 5px;
+		transition: 1s;
+	}
+	.criteria-section button:hover {
+		width: 60%;
+		height: 62px;
+		opacity: 1;
+	}
+}
+@media (min-width: 501px) and (max-width: 768px) {
 	.criteria-section-h1 {
 		width: 100%;
 		margin: 0;
