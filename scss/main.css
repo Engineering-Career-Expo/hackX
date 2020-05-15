@@ -2978,22 +2978,22 @@ body {
 
 ::-webkit-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
-  font-family: "Gilroy-Regular";
+  font-family: Gilroy-Bold, sans-serif;
 }
 
 :-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
-  font-family: "Gilroy-Regular";
+  font-family: Gilroy-Bold, sans-serif;
 }
 
 ::-ms-input-placeholder {
   color: rgba(0, 0, 0, 0.3);
-  font-family: "Gilroy-Regular";
+  font-family: Gilroy-Bold, sans-serif;
 }
 
 ::placeholder {
   color: rgba(0, 0, 0, 0.3);
-  font-family: "Gilroy-Regular";
+  font-family: Gilroy-Bold, sans-serif;
 }
 
 i {
@@ -3202,7 +3202,7 @@ i {
     clear: right;
   }
   .register-form-container h2 {
-    padding-left: 5px;
+    padding: 0 0 2rem 0;
     font-family: Gilroy-bold, sans-serif;
     font-size: 24px;
     font-weight: 600;

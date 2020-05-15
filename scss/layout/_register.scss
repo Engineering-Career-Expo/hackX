@@ -22,23 +22,23 @@ body {
 
 ::-webkit-input-placeholder {
 	color: rgba(0, 0, 0, 0.3);
-	font-family: "Gilroy-Regular";
+	font-family: Gilroy-Bold, sans-serif;
 }
 
 :-ms-input-placeholder {
 	color: rgba(0, 0, 0, 0.3);
-	font-family: "Gilroy-Regular";
+	font-family: Gilroy-Bold, sans-serif;
 }
 
 ::-ms-input-placeholder {
 	color: rgba(0, 0, 0, 0.3);
-	font-family: "Gilroy-Regular";
+	font-family: Gilroy-Bold, sans-serif;
 }
 
 
 ::placeholder {
 	color: rgba(0, 0, 0, 0.3);
-	font-family: "Gilroy-Regular";
+	font-family: Gilroy-Bold, sans-serif;
 }
 
 i {
@@ -277,7 +277,7 @@ i {
 	}
 
 	.register-form-container h2 {
-		padding-left: 5px;
+		padding: 0 0 2rem 0;
 		font-family: Gilroy-bold, sans-serif;
 		font-size: 24px;
 		font-weight: 600;
@@ -591,140 +591,141 @@ i {
 		font-size: 1.4vw;
 		color: #000000;
 	}
-.register-form-container {
-	display: block;
-	width: 48%;
-	border: none;
-	padding: 1% 4%;
-	margin: 8% 0 8% 8%;
-	height: auto;
-	float: left;
-}
 
-.register-form-container h2 {
-	font-family: Gilroy-Bold, sans-serif;
-	margin-bottom: 2rem;
-	font-weight: 600;
-	font-size: 24px;
-	line-height: 28px;
-	font-weight: 400;
-	color: #000000;
-}
+	.register-form-container {
+		display: block;
+		width: 48%;
+		border: none;
+		padding: 1% 4%;
+		margin: 8% 0 8% 8%;
+		height: auto;
+		float: left;
+	}
 
-.register-form-container .count {
-	margin-left: 10px;
-	font-family: Gilroy-Bold, sans-serif;
-	font-weight: 500;
-	font-size: 18px;
-	color: #000000;
-}
+	.register-form-container h2 {
+		font-family: Gilroy-Bold, sans-serif;
+		margin-bottom: 2rem;
+		font-weight: 600;
+		font-size: 24px;
+		line-height: 28px;
+		font-weight: 400;
+		color: #000000;
+	}
 
-.register-form-container legend {
-	margin-bottom: 10px;
-	font-family: Gilroy-Bold, sans-serif;
-	font-weight: 500;
-	font-size: 22px;
-	color: #000000;
-}
+	.register-form-container .count {
+		margin-left: 10px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-weight: 500;
+		font-size: 18px;
+		color: #000000;
+	}
 
-.register-form-container label {
-	margin-top: 7%;
-	font-family: Gilroy-Bold, sans-serif;
-	font-weight: 500;
-	font-size: 22px;
-	color: #000000;
-}
+	.register-form-container legend {
+		margin-bottom: 10px;
+		font-family: Gilroy-Bold, sans-serif;
+		font-weight: 500;
+		font-size: 22px;
+		color: #000000;
+	}
 
-.register-form-container input[type="text"],
-.register-form-container input[type="email"],
-.register-form-container input[type="number"],
-.register-form-container input[type="password"] {
-	/* Rectangle 63 */
-	width: 100%;
-	padding: 10px;
-	border: none;
-	height: 59px;
-	margin-bottom: 9%;
-	font-family: Gilroy-Bold, sans-serif;
-	font-size: 20px;
-	color: #232732;
-	line-height: 16px;
-	background: rgba(196, 196, 196, 0.2);
-	border-radius: 5px;
-	transition: 1s;
-}
+	.register-form-container label {
+		margin-top: 7%;
+		font-family: Gilroy-Bold, sans-serif;
+		font-weight: 500;
+		font-size: 22px;
+		color: #000000;
+	}
 
-.register-form-container input:hover {
-	border: 1px solid red;
-}
+	.register-form-container input[type="text"],
+	.register-form-container input[type="email"],
+	.register-form-container input[type="number"],
+	.register-form-container input[type="password"] {
+		/* Rectangle 63 */
+		width: 100%;
+		padding: 10px;
+		border: none;
+		height: 59px;
+		margin-bottom: 9%;
+		font-family: Gilroy-Bold, sans-serif;
+		font-size: 20px;
+		color: #232732;
+		line-height: 16px;
+		background: rgba(196, 196, 196, 0.2);
+		border-radius: 5px;
+		transition: 1s;
+	}
 
-.register-form-container input:focus {
-	outline: none;
-}
+	.register-form-container input:hover {
+		border: 1px solid red;
+	}
 
-.register-form-container .previous-btn {
-	width: 46%;
-	height: 50px;
-	float: left;
-	display: block;
-	font-family: Poppins, sans-serif;
-	font-size: 1.47vw;
-	color: #FA0048;
-	background: transparent;
-	border: none;
-	border-radius: 4px;
-	transition: 1s;
-}
+	.register-form-container input:focus {
+		outline: none;
+	}
 
-.register-form-container button:focus {
-	outline: none;
-}
+	.register-form-container .previous-btn {
+		width: 46%;
+		height: 50px;
+		float: left;
+		display: block;
+		font-family: Poppins, sans-serif;
+		font-size: 1.47vw;
+		color: #FA0048;
+		background: transparent;
+		border: none;
+		border-radius: 4px;
+		transition: 1s;
+	}
 
-.register-form-container .previous-btn:hover {
-	border: 0.5px solid #FA0048;
-}
+	.register-form-container button:focus {
+		outline: none;
+	}
 
-.register-form-container .signup-btn {
-	width: 46%;
-	height: 50px;
-	float: right;
-	display: block;
-	font-family: Poppins, sans-serif;
-	font-size: 1.47vw;
-	color: white;
-	background: #FA0048;
-	border: none;
-	border-radius: 4px;
-}
+	.register-form-container .previous-btn:hover {
+		border: 0.5px solid #FA0048;
+	}
 
-.register-form-container .txt {
-	margin-top: 4px;
-	vertical-align: center;
-}
+	.register-form-container .signup-btn {
+		width: 46%;
+		height: 50px;
+		float: right;
+		display: block;
+		font-family: Poppins, sans-serif;
+		font-size: 1.47vw;
+		color: white;
+		background: #FA0048;
+		border: none;
+		border-radius: 4px;
+	}
 
-.register-form-container .age {
-	position: absolute;
-	display: inline block;
-	margin-top: 4%;
-	right: 50%;
-}
+	.register-form-container .txt {
+		margin-top: 4px;
+		vertical-align: center;
+	}
 
-.register-form-container .arrow1 {
-	margin-top: 8px;
-	margin-left: -20px;
-	margin-right: 20px;
-}
+	.register-form-container .age {
+		position: absolute;
+		display: inline block;
+		margin-top: 4%;
+		right: 50%;
+	}
 
-.register-form-container .arrow2 {
-	margin-top: 4px;
-	margin-left: 12px;
-	margin-right: 20px;
-}
+	.register-form-container .arrow1 {
+		margin-top: 8px;
+		margin-left: -20px;
+		margin-right: 20px;
+	}
 
-.register-form-container .option {
-	position: absolute;
-	display: inline block;
-	margin-top: 1.5%;
-	right: 50%;
-}
+	.register-form-container .arrow2 {
+		margin-top: 4px;
+		margin-left: 12px;
+		margin-right: 20px;
+	}
+
+	.register-form-container .option {
+		position: absolute;
+		display: inline block;
+		margin-top: 1.5%;
+		right: 50%;
+	}
 }
