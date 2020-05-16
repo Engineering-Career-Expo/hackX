@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap");
-
 @font-face {
   font-family: Monad;
   src: url(Monad.otf);
@@ -17,164 +16,193 @@ body {
   height: 100%;
 }
 
-body {
-  background: #E5E5E5;
-}
-
-.schedule_head {
-  text-align: center;
-  letter-spacing: 2px;
-  font-size: 30px;
-  padding-top: 6px;
-  font-family: "Poppins", sans-serif;
-  color: #E5193B;
-}
-
-.schedule_all {
-  font-family: "Gilroy-Regular", sans-serif;
-  padding: 0px 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 30px;
-  margin-left: 10px;
-}
-
-.schedule_txt {
-  padding: 0px 20px;
-}
-
-.schedule_txt__head {
-  font-size: 18px;
-  color: #E5193B;
-  font-family: "Gilroy-Regular", serif;
-}
-
-#schedule_txt__paragraph,
-#schedule_txt__short,
-#schedule_txt__demo,
-#schedule_txt__on {
-  font-size: 14px;
-  margin-top: 6px;
-  font-family: "Gilroy-Regular", serif;
-  width: 80%;
-  margin-bottom: 30px;
-}
-
-.line,
-.tline {
-  width: 2px;
-  height: 30px;
-  background: #E5193B;
-  margin-left: 6px;
-}
-
-.box,
-.tbox {
-  width: 14px;
-  height: 14px;
-  background: #E5193B;
-  margin-top: 6px;
-}
-
-.schedule_shape {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -ms-flex-pack: distribute;
-  justify-content: space-around;
-  margin: -40px 0px 20px 0px;
-  padding: 0px 0px;
-}
-
-@media screen and (min-width: 768px) {
-  html {
-    margin: 0px;
-    padding: 0px;
-    height: 100%;
-  }
-
+@media (max-width: 768px) {
   body {
-    background: #232732;
+    background: #E5E5E5;
   }
-
+  .schedule_head {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 30px;
+    padding-top: 6px;
+    font-family: "Poppins", sans-serif;
+    color: #E5193B;
+  }
+  .schedule_all {
+    padding: 0px 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 30px;
+    margin-left: 10px;
+  }
+  .schedule_txt {
+    padding: 0px 20px;
+  }
+  .schedule_txt__head {
+    font-size: 18px;
+    color: #E5193B;
+    font-family: "Gilroy-Regular", serif;
+  }
   #schedule_txt__paragraph,
   #schedule_txt__short,
   #schedule_txt__demo,
   #schedule_txt__on {
-    color: #ffffff;
+    font-size: 14px;
+    margin-top: 6px;
+    font-family: "Gilroy-Regular", serif;
+    width: 80%;
+    margin-bottom: 30px;
   }
-
-  .schedule_head {
-    font-size: 36px;
-    margin-left: 1%;
+  .line,
+  .tline {
+    width: 2px;
+    height: 30px;
+    background: #E5193B;
+    margin-left: 6px;
   }
-
-  .schedule_all {
-    display: block;
-    padding: 0px 110px;
+  .box,
+  .tbox {
+    width: 14px;
+    height: 14px;
+    background: #E5193B;
+    margin-top: 6px;
   }
-
-  .schedule_txt {
+  .schedule_shape {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-top: -670px;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin: -40px 0px 20px 0px;
+    padding: 0px 0px;
   }
-
-  .right {
-    margin-left: 55%;
+  .schedule_mobile {
+    display: block;
   }
-
-  #schedule_txt__short,
-  #schedule_txt__demo {
-    width: 40%;
-  }
-
-  #schedule_txt__paragraph,
-  #schedule_txt__short,
-  #schedule_txt__demo,
-  #schedule_txt__on {
-    margin-top: 0px;
-    margin-bottom: 70px;
-  }
-
-  .schedule_shape {
-    padding: 10px 0px;
-    margin-left: 50%;
-  }
-
-  #schedule_shape__combineShape {
-    margin-bottom: 75px;
-  }
-
-  .line {
-    margin: 0px 0px -27px -25px;
-    -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-  }
-
-  .tline {
-    margin: 0px 0px -27px 35px;
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-  }
-
-  .long {
-    width: 2px;
-    height: 1200px;
-    margin-left: 2%;
-    margin-top: -1100px;
-    background: #E5193B;
+  .schedule_desktop {
+    display: none;
   }
 }
 
+@media (min-width: 769px) {
+  html {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+  }
+  body {
+    background: #232732;
+  }
+  .schedule_mobile {
+    display: none;
+  }
+  .schedule_desktop {
+    display: block;
+  }
+  .schedule_head {
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 36px;
+    padding-top: 6px;
+    font-family: "Poppins", sans-serif;
+    color: #E5193B;
+  }
+  .schedule_title {
+    display: inline-block;
+    color: #E5193B;
+    font-family: "Gilroy-Regular", serif;
+    font-size: 2.9vw;
+  }
+  .schedule_txt {
+    color: whitesmoke;
+    font-size: 1.9vw;
+  }
+  .p1 {
+    width: 60.5%;
+    margin: 8% 0;
+  }
+  .right {
+    float: right;
+    clear: right;
+  }
+  .left {
+    float: left;
+    clear: left;
+  }
+  .rgt > .line {
+    border: 1px solid #E5193B;
+    width: 50px;
+    height: .5px;
+    margin-top: 10%;
+    vertical-align: middle;
+    margin-right: 20%;
+  }
+  .lft > .line {
+    border: 1px solid #E5193B;
+    width: 50px;
+    margin-top: 10%;
+    height: .5px;
+    vertical-align: middle;
+    margin-left: 20%;
+  }
+  .box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: #E5193B;
+  }
+  .rgt {
+    float: left;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 20%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .lft {
+    float: right;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 20%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .right .cnt {
+    margin-left: 5%;
+    display: inline-block;
+    width: 70%;
+    margin-top: -1.5%;
+  }
+  .left .cnt {
+    margin-right: 5%;
+    margin-top: -1.5%;
+    display: inline-block;
+    width: 70%;
+  }
+  .long {
+    width: 2px;
+    height: 150vw;
+    margin-left: 50%;
+    top: 0;
+    background: #E5193B;
+    position: absolute;
+  }
+}
 /*# sourceMappingURL=schedule.css.map */
