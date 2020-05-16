@@ -1,17 +1,25 @@
 // abstract
-@import '../scss/abstract/mixins';
-@import '../scss/abstract/variables';
+@import "../scss/abstract/mixins";
+@import "../scss/abstract/variables";
 
 // base
-@import '../scss/base/base';
-@import '../scss/base/typography';
-@import '../scss/base/utilities';
+@import "../scss/base/base";
+@import "../scss/base/typography";
+@import "../scss/base/utilities";
 
 // layout
 @import '../scss/layout/schedule';
+@import "./layout/footer";
+@import "./layout/about";
 
 // components
 
-
+@import "./component/navbar";
+@import "../scss/component/hero";
+@import "./component/mentor";
+@import "../scss/component/about";
+@import "../scss/layout/contact";
+@import "../scss/component/30Hours";
+@import "./component/goal";
 // pages
-
+@import "./layout/register";

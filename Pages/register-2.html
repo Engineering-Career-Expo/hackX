@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../scss/main.css" />
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+  </head>
+  <body>
+    <nav>
+      <section class="nav-first">
+        <div class="nav-ecx">
+          <a href="/index.html"> <img class="nax-ecx1" src="../assets/ECX.svg" alt="ECX_LOGO" /></a>
+         </div>
+        <div class="nav-sep">
+          <div class="nav-reg1"><a class="nav-reg4" href="/Pages/register.html">REGISTER</a></div>
+          <div class="ham"><span class="myham">&#9776;</span></div>
+        </div>
+      </section>
+
+      <section class="nav-second">
+        <div class="nav-about"><a href="/Pages/About.html">About</a></div>
+        <div class="nav-mentor"><a href="#mentors">Mentors</a></div>
+        <div class="nav-schedule"><a href="">Schedule</a></div>
+        <div class="nav-schedule">
+          <a href=".#contact">Contact</a>
+        </div>
+        <div class="nav-reg2">
+          <a class="nav-reg3" href="/Pages/register.html">REGISTER</a>
+        </div>
+        <div class="nav-log">
+          <a class="nav-log2" href="/Pages/Login.html">LOGIN</a>
+        </div>
+      </section>
+    </nav>
+    <main>
+      <div class="register-form-container">
+        <form>
+          <h2>Registeration <span class="count">2 0f 2</span></h2>
+          <legend>Username</legend>
+          <input type="text" name="Username" placeholder="Username" required />
+          <legend>Track</legend>
+          <input
+            type="text"
+            name="Track"
+            placeholder="Track"
+            list="track-list"
+            required
+          />
+          <!-- <img src="assets/images/option.svg" class="option" /> -->
+          <datalist id="track-list">
+            <option>Front-end</option>
+            <option>Back-end</option>
+            <option>Python</option>
+            <option>Android</option>
+            <option>UI/UX</option>
+            <option>Design</option>
+          </datalist>
+          <legend>Age</legend>
+          <input type="number" name="Age" placeholder="Age" />
+          <!-- <img
+            src="assets/images/option.svg"
+            class="option"
+            required
+          /> -->
+          <legend>Institution</legend>
+          <input
+            type="text"
+            name="Institution"
+            placeholder="Institution"
+            list="inst-list"
+            required
+          />
+          <!-- <img src="assets/images/option.svg" class="option" /> -->
+          <datalist id="inst-list">
+            <option>YABATECH</option>
+            <option>University of Ibadan</option>
+            <option>Obafemi Awolowo University</option>
+            <option>University of Lagos</option>
+            <option>University of Ilorin</option>
+            <option>Convenant University</option>
+            <option>Babcock/Bells University</option>
+            <option>Ibadan polytechnic</option>
+            <option>Federal University of Technology, Akure</option>
+            <option>Federal University of Agriculture, Abeokuta</option>
+            <option>Kwara State University</option>
+            <option>Lagos State University</option>
+            <option>Adekunle Ajasin University, Akungba</option>
+            <option>University of Ado-ekiti</option>
+          </datalist>
+        </form>
+        <button class="previous-btn" href="reg1.html">
+          <img
+            src="../assets/images/arrow-left.png"
+            class="arrow arrow1"
+          /><span class="btn-txt">Previous</span>
+        </button>
+        <button type="submit" class="signup-btn">
+          <span class="btn-txt">Sign Up</span
+          ><img src="../assets/images/arrow-right.png" class="arrow arrow2" />
+        </button>
+        <br />
+        <br />
+        <br />
+        <span>
+          <input type="checkbox" required />
+          <label for="html">
+            I have read and agreed to the terms and condition of the Privacy
+            policy of this competition</label
+          >
+        </span>
+      </div>
+      <br />
+      <div class="register-call-to-action">
+        <h1>
+          HACK<span class="X">X</span> <span class="hack">HACKATHON</span> 2019
+        </h1>
+        <button><span class="btn-cnt">Competition Guidelines</span></button>
+      </div>
+    </main>
+  </body>
+</html>

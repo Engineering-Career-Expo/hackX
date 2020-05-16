@@ -1,0 +1,137 @@
+.about {
+  padding: 8px;
+}
+
+.about .container {
+  max-width: 920px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.about-text {
+  text-align: center;
+  font-family: $default-font-family;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 54px;
+  color: $color-secondary;
+}
+
+.what {
+  margin-bottom: 220px;
+}
+
+.what img {
+  float: left;
+  margin-right: 91px;
+}
+
+.what .text h2 {
+  font-family: $default-font-family;
+  color: $color-secondary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+.what .text p {
+  font-family: $default-font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.how img {
+  float: right;
+  margin-left: 89px;
+}
+
+.how .text h2 {
+  font-family: $default-font-family;
+  color: $color-secondary;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 20px;
+}
+
+.how .text p {
+  font-family: $default-font-family;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.how {
+  margin-bottom: 200px;
+}
+
+.criteria {
+  visibility: hidden;
+}
+
+@include breakpoint(xs) {
+  .about {
+    padding: 0px;
+  }
+  .about-text {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .container .what img {
+    width: 100%;
+    margin-bottom: 11px;
+  }
+  .container .how img {
+    width: 100%;
+    margin-bottom: 11px;
+  }
+  .text {
+    max-width: 335px;
+    margin: 0 auto;
+  }
+  .about .container {
+    max-width: 360px;
+    margin: 0 auto;
+    margin-top: 10px;
+  }
+  .what {
+    margin-bottom: 55px;
+  }
+
+  .what .text h2 {
+    margin-bottom: 8px;
+  }
+
+  .how .text h2 {
+    margin-bottom: 8px;
+  }
+
+  .how {
+    margin-bottom: 70px;
+  }
+
+  .criteria {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+  }
+
+  .criteria-btn {
+    visibility: initial;
+    width: 202px;
+    height: 50px;
+    font-size: 14px;
+    font-family: $default-font-family;
+    border: none;
+    background-color: $color-secondary;
+    color: $color-white;
+    border-radius: 5px;
+  }
+}
