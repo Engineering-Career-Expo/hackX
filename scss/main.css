@@ -2134,7 +2134,7 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
+  .schedule_body {
     background: #E5E5E5;
   }
   .schedule_head {
