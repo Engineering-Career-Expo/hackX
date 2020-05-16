@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap');
 
-@font-face {
+@font-face{
   font-family: Monad;
   src: url(Monad.otf);
-}
-
-@font-face {
-  font-family: Gilroy-Regular;
+}   
+@font-face{
+  font-family:Gilroy-Regular;
   src: url(Gilroy-Regular.woff);
 }
 
@@ -18,13 +17,11 @@ sans-serif;
 $default-font-family-detail: 'Gilroy-Regular',
 serif;
 
-html,
-body {
+html, body {
   margin: 0px;
   padding: 0px;
   height: 100%;
 }
-
 @media (max-width: 768px) {
   body {
     background: $color-white;
@@ -56,10 +53,8 @@ body {
     font-family: $default-font-family-detail;
   }
 
-  #schedule_txt__paragraph,
-  #schedule_txt__short,
-  #schedule_txt__demo,
-  #schedule_txt__on {
+  #schedule_txt__paragraph, #schedule_txt__short,
+#schedule_txt__demo, #schedule_txt__on {
     font-size: 14px;
     margin-top: 6px;
     font-family: $default-font-family-detail;
@@ -67,20 +62,18 @@ body {
     margin-bottom: 30px;
   }
 
-  .line,
-  .tline {
+  .line, .tline {
     width: 2px;
     height: 30px;
     background: $color-primary;
     margin-left: 6px;
   }
 
-  .box,
-  .tbox {
+  .box, .tbox {
     width: 14px;
     height: 14px;
     background: $color-primary;
-    margin-top: 6px;
+    margin-top: 3px;
   }
 
   .schedule_shape {
@@ -99,24 +92,23 @@ body {
     display: none;
   }
 }
-
 @media (min-width: 769px) {
   html {
     margin: 0px;
     padding: 0px;
     width: 100%;
   }
-
-  body {
-    background: $color-grey;
-  }
-
   .schedule_mobile {
     display: none;
   }
 
+  .schedule_all{
+  	padding: 0px 30px
+  }
   .schedule_desktop {
     display: block;
+    background: $color-grey;
+    margin-top: 15%;
   }
 
   .schedule_head {
@@ -130,11 +122,10 @@ body {
 
   .schedule_title {
     display: inline-block;
-    color: $color-primary;
+    color: #E5193B;
     font-family: $default-font-family-detail;
     font-size: 2.9vw;
   }
-
   .schedule_txt {
     color: whitesmoke;
     font-size: 1.9vw;
@@ -155,20 +146,20 @@ body {
     clear: left;
   }
 
-  .rgt>.line {
+  .rgt > .line {
     border: 1px solid $color-primary;
     width: 50px;
-    height: .5px;
+    height: 0.5px;
     margin-top: 10%;
     vertical-align: middle;
     margin-right: 20%;
   }
 
-  .lft>.line {
+  .lft > .line {
     border: 1px solid $color-primary;
     width: 50px;
     margin-top: 10%;
-    height: .5px;
+    height: 0.5px;
     vertical-align: middle;
     margin-left: 20%;
   }
@@ -212,10 +203,9 @@ body {
 
   .long {
     width: 2px;
-    height: 150vw;
-    margin-left: 50%;
-    top: 0;
+    height: 140vw;
+    margin-left: 0%;
+    margin-top: -4%;
     background: $color-primary;
-    position: absolute;
   }
 }

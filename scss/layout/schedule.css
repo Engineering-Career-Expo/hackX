@@ -9,8 +9,7 @@
   src: url(Gilroy-Regular.woff);
 }
 
-html,
-body {
+html, body {
   margin: 0px;
   padding: 0px;
   height: 100%;
@@ -44,29 +43,25 @@ body {
     color: #E5193B;
     font-family: "Gilroy-Regular", serif;
   }
-  #schedule_txt__paragraph,
-  #schedule_txt__short,
-  #schedule_txt__demo,
-  #schedule_txt__on {
+  #schedule_txt__paragraph, #schedule_txt__short,
+  #schedule_txt__demo, #schedule_txt__on {
     font-size: 14px;
     margin-top: 6px;
     font-family: "Gilroy-Regular", serif;
     width: 80%;
     margin-bottom: 30px;
   }
-  .line,
-  .tline {
+  .line, .tline {
     width: 2px;
     height: 30px;
     background: #E5193B;
     margin-left: 6px;
   }
-  .box,
-  .tbox {
+  .box, .tbox {
     width: 14px;
     height: 14px;
     background: #E5193B;
-    margin-top: 6px;
+    margin-top: 3px;
   }
   .schedule_shape {
     display: -webkit-box;
@@ -95,14 +90,16 @@ body {
     padding: 0px;
     width: 100%;
   }
-  body {
-    background: #232732;
-  }
   .schedule_mobile {
     display: none;
   }
+  .schedule_all {
+    padding: 0px 30px;
+  }
   .schedule_desktop {
     display: block;
+    background: #232732;
+    margin-top: 15%;
   }
   .schedule_head {
     text-align: center;
@@ -137,7 +134,7 @@ body {
   .rgt > .line {
     border: 1px solid #E5193B;
     width: 50px;
-    height: .5px;
+    height: 0.5px;
     margin-top: 10%;
     vertical-align: middle;
     margin-right: 20%;
@@ -146,7 +143,7 @@ body {
     border: 1px solid #E5193B;
     width: 50px;
     margin-top: 10%;
-    height: .5px;
+    height: 0.5px;
     vertical-align: middle;
     margin-left: 20%;
   }
@@ -198,11 +195,10 @@ body {
   }
   .long {
     width: 2px;
-    height: 150vw;
-    margin-left: 50%;
-    top: 0;
+    height: 140vw;
+    margin-left: 0%;
+    margin-top: -4%;
     background: #E5193B;
-    position: absolute;
   }
 }
 /*# sourceMappingURL=schedule.css.map */
