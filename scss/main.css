@@ -152,7 +152,7 @@ nav {
 .nav-schedule,
 .nav-reg2,
 .nav-log {
-  font-weight: bold;
+  font-weight: 500;
   margin: .3pc auto;
 }
 
@@ -2134,7 +2134,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
+  .schedule_body {
+    font-family: "Poppins", sans-serif;
     background: #E5E5E5;
   }
   .schedule_head {
@@ -2235,11 +2236,11 @@ body {
     display: inline-block;
     color: #E5193B;
     font-family: "Gilroy-Regular", serif;
-    font-size: 2.9vw;
+    font-size: 2vw;
   }
   .schedule_txt {
     color: whitesmoke;
-    font-size: 1.9vw;
+    font-size: 1.5vw;
   }
   .p1 {
     width: 60.5%;
@@ -2317,7 +2318,7 @@ body {
   }
   .long {
     width: 2px;
-    height: 110vw;
+    height: 90vw;
     margin-left: 0%;
     background: #E5193B;
   }

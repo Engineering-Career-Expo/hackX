@@ -26,7 +26,8 @@ body {
 }
 
 @media (max-width: 768px) {
-  body {
+  .schedule_body {
+    font-family: "Poppins", sans-serif;
     background: $color-white;
   }
 
@@ -134,12 +135,12 @@ body {
     display: inline-block;
     color: #E5193B;
     font-family: $default-font-family-detail;
-    font-size: 2.9vw;
+    font-size: 2vw;
   }
 
   .schedule_txt {
     color: whitesmoke;
-    font-size: 1.9vw;
+    font-size: 1.5vw;
   }
 
   .p1 {
@@ -214,7 +215,7 @@ body {
 
   .long {
     width: 2px;
-    height: 110vw;
+    height: 90vw;
     margin-left: 0%;
 
     background: $color-primary;
