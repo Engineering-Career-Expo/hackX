@@ -8,27 +8,21 @@
 @import "../scss/base/utilities";
 
 // layout
-<<<<<<< HEAD
-=======
-@import '../scss/layout/schedule';
+@import './layout/navbar';
 @import "./layout/footer";
-@import "./layout/about";
->>>>>>> 6eb72ecfaa18061a62918cbbc3b4cc05b022b51b
+
 
 // components
 
-@import "./component/navbar";
-@import "../scss/component/hero";
-<<<<<<< HEAD
-@import "../scss/layout/schedule.scss";
+@import "./component/hero";
+@import "./component/about";
+@import "./component/30Hours";
+@import "./component/contact";
+@import "./component/goal";
+@import "./component/mentor";
+@import "./component/schedule";
+
 
 // pages
-=======
-@import "./component/mentor";
-@import "../scss/component/about";
-@import "../scss/layout/contact";
-@import "../scss/component/30Hours";
-@import "./component/goal";
-// pages
 @import "./layout/register";
->>>>>>> 6eb72ecfaa18061a62918cbbc3b4cc05b022b51b
+@import "./layout/about";
