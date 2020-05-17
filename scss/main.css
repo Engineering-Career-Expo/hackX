@@ -253,6 +253,7 @@ footer {
   font-size: 14px;
   padding: 25px 120px;
   margin-top: 80px;
+  display: inline-block;
 }
 
 .footer-top {
