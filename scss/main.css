@@ -785,6 +785,9 @@ div img {
     margin-top: 3%;
     float: left;
   }
+  .hero .image-2 img {
+    float: left;
+  }
   .location {
     padding-top: 15%;
     padding-left: 16%;
@@ -873,6 +876,7 @@ div img {
 
 .about-text {
   text-align: center;
+  display: block;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -945,6 +949,7 @@ div img {
   }
   .about-text {
     font-size: 24px;
+    display: block;
     margin-bottom: 20px;
   }
   .container .what img {
@@ -3819,5 +3824,8 @@ body {
     height: 50px;
     color: white;
   }
+}
+.about-text {
+  display: block;
 }
 /*# sourceMappingURL=main.css.map */
