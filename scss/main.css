@@ -1267,6 +1267,7 @@ body {
   .link-to-dashboard {
     width: 100%;
     margin: 3% 0;
+    height: auto;
     background: white;
     padding-top: 11%;
   }
@@ -1367,6 +1368,7 @@ body {
     font-size: 2vw;
     font-family: Poppins, sans-serif;
     color: grey;
+    resize: none;
     padding-top: 2.5%;
     padding-left: 4%;
     outline: none;
@@ -1501,6 +1503,7 @@ body {
     font-family: Poppins, sans-serif;
     color: grey;
     padding-top: 2.5%;
+    resize: none;
     padding-left: 4%;
     outline: none;
     -webkit-transition: 1s;
