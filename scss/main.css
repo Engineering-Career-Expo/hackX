@@ -1182,11 +1182,10 @@ body {
     margin: 3rem 0;
     background: #faf9f9;
     padding-top: 10%;
-    height: 1000px;
   }
   .contact-form {
     width: 90%;
-    margin: 0 5%;
+    margin: 5%;
   }
   .contact-heading {
     margin: 5% auto;
@@ -1237,6 +1236,7 @@ body {
     padding-top: 2.5%;
     padding-left: 4%;
     outline: none;
+    resize: none;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1277,7 +1277,7 @@ body {
     height: auto;
     border: none;
     background: transparent;
-    font-size: 12vw;
+    font-size: 10vw;
     font-weight: 600;
     color: black;
     text-align: center;
