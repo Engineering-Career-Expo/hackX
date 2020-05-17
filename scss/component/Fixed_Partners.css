@@ -1,0 +1,162 @@
+.mySlides{
+		background-color:transparent;
+		position:relative;
+		font-family:Poppins;
+		}
+	img{
+		width : 100%;
+		height : 30vh;
+		}
+	.container{
+		margin : auto;
+		position : relative;
+		width : 100%;
+		}
+	.circles{
+		text-align : center;
+		}
+	.prev, .next {
+		cursor: pointer;
+		position: absolute;
+		top: 40%;
+		width: auto;
+		margin-top: -22px;
+		padding: 16px;
+		color:#000;
+		font-size:30px;
+		transition: 0.6s ease;
+		border-radius: 0 3px 3px 0;
+		user-select: none;
+	}
+	.next{
+		right : 0;
+		}
+	.prev:hover, .next:hover {
+	background-color: transparent;
+	opacity : 0.5;
+	color:#FFF;
+	}
+	.dot {
+		cursor: pointer;
+		height: .3rem;
+		width: .3rem;
+		margin: 0px 2px;
+		top : -2rem;
+		border : 1px solid #E5193B;
+		background-color:orange;
+		border-radius: 50%;
+		display: inline-block;
+		transition: background-color 0.6s ease;
+	}
+	
+	#active, .dot:hover {
+		background-color:#E5193B;
+	}
+	.text{
+		position: absolute;
+		bottom: 8px;
+		width:100%;
+		text-align:center;
+		}
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 1.5s;
+		animation-name: fade;
+		animation-duration: 1.5s;
+	}
+	
+	@-webkit-keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+	}
+	
+	@keyframes fade {
+		from {opacity: .4} 
+		to {opacity: 1}
+	}
+.myimg1{
+		display:flex;
+		flex-wrap:wrap;
+		width:85%;
+		margin:auto;
+		}
+.myim > div{
+		width:30%;
+		}
+.img001{
+		width:32%;
+		height:140px;
+   background-image:url(../assets/images/about.png);
+   background-size:cover;
+   background-repeat:no-repeat;
+   margin:.5pc auto;
+		}
+.img002{
+		width:32%;
+		height:140px;
+   background-image:url(../assets/images/hero.png);
+   background-size:cover;
+   background-repeat:no-repeat;
+   margin:.5pc auto;
+		}
+.img003{
+		width:32%;
+		height:140px;
+   background-image:url(../assets/images/criteria2.png);
+   background-size:cover;
+   background-repeat:no-repeat;
+   margin:.5pc auto;
+		}
+.img004{
+		width:32%;
+		height:140px;
+   background-image:url(../assets/images/criteria.png);
+   background-size:cover;
+   background-repeat:no-repeat;
+   margin:.5pc auto;
+		}
+.img005{
+		width:32%;
+		height:140px;
+   background-image:url(../assets/images/criteria2.png);
+   background-size:cover;
+   background-repeat:no-repeat;
+   margin:.5pc auto;
+		}
+.img006{
+		width:32%;
+		height:140px;
+   background-image:url(../assets/images/criteria.png);
+   background-size:cover;
+   background-repeat:no-repeat;
+   margin:.5pc auto;
+		}
+.partner_topic1{
+		width:max-content;
+		text-align:center;
+		position: absolute;
+ 		margin:1pc auto auto 29%;
+ 		color:#E5193B;
+ 		font-size:20px;
+		}
+.partner_topic2{
+ 		position: absolute;
+ 		margin:0pc auto auto 39%;
+ 		color:#E5193B;
+ 		font-size:20px;
+ 		}
+.myimg0{
+		display:none;
+		}
+
+
+@media(min-width:768px){
+.myimg0{
+		display:block;
+		width:80%;
+		margin:auto;
+		}		
+.container{
+		display:none;
+		}	
+	}
