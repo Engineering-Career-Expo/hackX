@@ -1,9 +1,8 @@
+//navbar
 
-
-//nav
-var myham = document.getElementsByClassName("myham");
-var second = document.getElementsByClassName("nav-second");
-var reg1 = document.getElementsByClassName("nav-reg1");
+var myham = document.getElementsByClassName("navbar_myham");
+var second = document.getElementsByClassName("navbar_second");
+var reg1 = document.getElementsByClassName("navbar_reg1");
 
 myham[0].addEventListener("click", myfunc1);
 var a = 0;
