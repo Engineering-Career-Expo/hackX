@@ -41,12 +41,7 @@ html {
   margin: 0;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.nav-first {
+.navbar_first {
   margin: 0pc auto .3pc auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -59,34 +54,36 @@ body {
 nav {
   font-family: "poppins", sans-serif;
   color: #262A35;
+  font-size: 13px;
+  padding: 5px 35px;
 }
 
-.nav-sep {
+.navbar_sep {
   width: 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.nav-ecx {
+.navbar_ecx {
   padding: 10px;
   text-align: center;
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   margin-bottom: -.3pc;
 }
 
-.nav-reg1 {
+.navbar_reg1 {
   padding: 7px;
   text-align: center;
-  font-size: 20px;
+  font-size: 14px;
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background-color: #e5193b;
   color: white;
   -webkit-transition: opacity .7s ease-out;
@@ -95,17 +92,17 @@ nav {
   margin-right: 1.5pc;
 }
 
-.ham {
-  font-size: 30px;
-  width: 20%;
+.navbar_ham {
+  font-size: 25px;
+  width: 10%;
   padding: 10px;
   text-align: center;
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.nav-second {
+.navbar_second {
   width: 0px;
   height: 0px;
   -webkit-transition: height 1s ease;
@@ -113,50 +110,47 @@ nav {
   overflow: hidden;
 }
 
-.nav-about {
+.navbar_about {
   text-align: center;
   padding: 10px;
 }
 
-.nav-ment {
+.navbar_ment {
   text-align: center;
   padding: 10px;
 }
 
-.nav-schedule {
+.navbar_sch {
   text-align: center;
   padding: 10px;
 }
 
-.nav-reg2 {
+.navbar_reg2 {
   text-align: center;
   padding: 10px;
 }
 
-.nav-log {
+.navbar_log {
   text-align: center;
   padding: 10px;
 }
 
-.nav-reg2 {
+.navbar_reg2 {
   background-color: #E5193B;
   color: white;
   padding: 10px;
   width: 30%;
   margin: .3pc auto;
   border-radius: 3px;
+  font-size: 12.5px;
 }
 
-.nav-about,
-.nav-mentor,
-.nav-schedule,
-.nav-reg2,
-.nav-log {
-  font-weight: 500;
+.navbar_about, .navbar_ment, .navbar_sch, .navbar_reg2, .navbar_log {
+  font-weight: bold;
   margin: .3pc auto;
 }
 
-.nav-log {
+.navbar_log {
   border: 2px solid #E5193B;
   padding: 10px;
   width: 30%;
@@ -168,8 +162,7 @@ a {
   text-decoration: none;
 }
 
-.nav-reg4,
-.nav-reg3 {
+.navbar_reg4, .navbar_reg3 {
   color: #FFFFFF;
 }
 
@@ -177,13 +170,13 @@ a:hover {
   font-weight: bolder;
 }
 
-.nav-reg3,
-.nav-reg4 {
+.navbar_reg3, .navbar_reg4 {
   color: #FFFFFF;
 }
 
-.nav-log2 {
+.navbar_log2 {
   color: #FA0048;
+  font-size: 12.5px;
 }
 
 @media (min-width: 768px) {
@@ -197,7 +190,7 @@ a:hover {
             justify-content: center;
     width: 95%;
   }
-  .nav-second {
+  .navbar_second {
     width: 70%;
     height: auto;
     display: -webkit-box;
@@ -207,31 +200,26 @@ a:hover {
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
   }
-  .nav-sep {
+  .navbar_sep {
     display: none;
   }
-  .about,
-  .nav-mentor,
-  .nav-sch,
-  .nav-reg2,
-  .nav-log {
+  .navbar_about, .navbar_ment, .navbar_sch, .navbar_reg2, .navbar_log {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .nav-ecx {
+  .navbar_ecx {
     margin: .5pc auto auto -7.5pc;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .nav-reg2,
-  .nav-log {
+  .navbar_reg2, .navbar_log {
     width: auto;
     margin: auto;
     padding: 4px 25px;
   }
-  .nav-log {
+  .navbar_log {
     padding: 2px 28px;
   }
 }
@@ -253,7 +241,6 @@ footer {
   font-size: 14px;
   padding: 25px 120px;
   margin-top: 80px;
-  display: inline-block;
 }
 
 .footer-top {
@@ -785,9 +772,6 @@ div img {
     margin-top: 3%;
     float: left;
   }
-  .hero .image-2 img {
-    float: left;
-  }
   .location {
     padding-top: 15%;
     padding-left: 16%;
@@ -876,7 +860,6 @@ div img {
 
 .about-text {
   text-align: center;
-  display: block;
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -949,7 +932,6 @@ div img {
   }
   .about-text {
     font-size: 24px;
-    display: block;
     margin-bottom: 20px;
   }
   .container .what img {
@@ -1188,10 +1170,11 @@ body {
     margin: 3rem 0;
     background: #faf9f9;
     padding-top: 10%;
+    height: 1000px;
   }
   .contact-form {
     width: 90%;
-    margin: 5%;
+    margin: 0 5%;
   }
   .contact-heading {
     margin: 5% auto;
@@ -1242,7 +1225,6 @@ body {
     padding-top: 2.5%;
     padding-left: 4%;
     outline: none;
-    resize: none;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1273,7 +1255,6 @@ body {
   .link-to-dashboard {
     width: 100%;
     margin: 3% 0;
-    height: auto;
     background: white;
     padding-top: 11%;
   }
@@ -1284,7 +1265,7 @@ body {
     height: auto;
     border: none;
     background: transparent;
-    font-size: 10vw;
+    font-size: 12vw;
     font-weight: 600;
     color: black;
     text-align: center;
@@ -1374,7 +1355,6 @@ body {
     font-size: 2vw;
     font-family: Poppins, sans-serif;
     color: grey;
-    resize: none;
     padding-top: 2.5%;
     padding-left: 4%;
     outline: none;
@@ -1509,7 +1489,6 @@ body {
     font-family: Poppins, sans-serif;
     color: grey;
     padding-top: 2.5%;
-    resize: none;
     padding-left: 4%;
     outline: none;
     -webkit-transition: 1s;
