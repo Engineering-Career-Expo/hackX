@@ -8,9 +8,21 @@
 @import "../scss/base/utilities";
 
 // layout
+@import './layout/navbar';
+@import "./layout/footer";
+
 
 // components
-@import "./layout/footer";
-@import "../scss/component/hero";
+
+@import "./component/hero";
+@import "./component/about";
+@import "./component/30Hours";
+@import "./component/contact";
+@import "./component/goal";
+@import "./component/mentor";
+@import "./component/schedule";
+
+
 // pages
-@import "./page/about";
+@import "./layout/register";
+@import "./layout/about";
