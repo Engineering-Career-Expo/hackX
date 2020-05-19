@@ -863,7 +863,6 @@ div img {
   font-style: normal;
   font-weight: 600;
   font-size: 36px;
-  line-height: 54px;
   color: #1071f3;
 }
 
@@ -930,8 +929,7 @@ div img {
     padding: 0px;
   }
   .about-text {
-    font-size: 24px;
-    margin-bottom: 20px;
+    display: none;
   }
   .container .what img {
     width: 100%;
@@ -941,7 +939,7 @@ div img {
     width: 100%;
     margin-bottom: 11px;
   }
-  .text {
+  .content-text {
     max-width: 335px;
     margin: 0 auto;
   }
@@ -952,6 +950,16 @@ div img {
   }
   .what {
     margin-bottom: 55px;
+  }
+  .what::before {
+    content: "About";
+    display: block;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    color: #1071f3;
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 32px;
   }
   .what .text h2 {
     margin-bottom: 8px;
