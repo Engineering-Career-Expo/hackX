@@ -1,13 +1,17 @@
+const config = require("config");
 const express = require("express");
 const router = express.Router()
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
-const User = require('../model/user');
-const contact = require('../model/contact');
+const { User, validate } = require('../model/user');
+const { contact, validateContact } = require('../model/contact');
 
 //routes
 
 router.post('/signup',(req, res)=>{
+	const { error } = validate(req.body);
+  	if (error) return res.status(400).send(error.details[0].message);
+    
     const{name, username, email, number, slackAccount, age, track, institution, password} = req.body;
 	  let inputData = new User({
 	  	name: name,
@@ -22,17 +26,20 @@ router.post('/signup',(req, res)=>{
 	  });
 	  inputData.save()
 	  	.then(doc =>{
-	  		console.log(doc);
+	  		//console.log(doc);
 	  		res.json("Successfully Signed Up");
 	  		
 	  	})
 	  	.catch(err=>{
-	  		console.log(err);
+	  		//console.log(err);
 	  		res.json("Failed to signup")
 	  	})
 });
 
 router.post('/contact',(req, res)=>{
+	const { error } = validateContact(req.body);
+  	if (error) return res.status(400).send(error.details[0].message);
+
     const{email, name, message} = req.body;
 	  contacts = new contact({
 	  	email: email,
@@ -41,27 +48,27 @@ router.post('/contact',(req, res)=>{
 	  });
 	  contacts.save()
 	  	.then(doc =>{
-	  		console.log(doc);
+	  		//console.log(doc);
 	  		res.json("Successfully Saved Contact");
 	  	})
 	  	.catch(err=>{
-	  		console.log(err);
+	  		//console.log(err);
 	  		res.json("Failed to Save Contact")
 	  	})
 });
 
 // authetication of the login and getuser  
-let secret='ecx-unilag'; 
+// let secret='ecx-unilag'; 
 //middleware to check if the authetification is correct
 
 let checkToken = (req, res, next)=>{
 	try{
-		let token = req.headers['authorization'];
+		let token = req.headers["x-access-token"] || req.headers['authorization'];
 		if (token.startsWith('Bearer')){
 			token = token.slice(7, token.length);
 		}
 		if (token){
-			jwt.verify(token, secret, (err, decoded)=>{
+			jwt.verify(token, config.get("secret"), (err, decoded)=>{
 				if(err){
 					return res.json('Token is not valid');
 				}else{
@@ -84,14 +91,14 @@ router.post('/login',(req, res)=>{
 			})
 			.then(doc=>{
 				let index = doc[0];
-				console.log(index);
+				//console.log(index);
 				bcrypt.compare(password,index.password).then((result) => {
 					if( index.email == email && result ){
-						let token_pass = jwt.sign({email: email},
-							secret, {expiresIn: '24h'});
+						let token_pass = jwt.sign({email: email, isAdmin: this.isAdmin},
+							config.get("secret"), {expiresIn: '24h'});
+						res.header("x-auth-token", token_pass)
 						res.json({  
 							message:"Authentication Successful",
-							token: token_pass
 						});
 					}else{
 						res.json( "Login Incorrect" );
@@ -111,7 +118,7 @@ router.get('/getuser', checkToken, (req, res)=>{
 		})
 		.then(doc=>{
 			let index = doc[0];
-			console.log(doc);
+			//console.log(doc);
 			let name = index.name;
 			let username = index.username;
 			let email = index.email;
@@ -140,20 +147,20 @@ router.get('/getuser', checkToken, (req, res)=>{
 //delete path details
 router.delete('/deleteuser', checkToken, (req, res)=>{
     const{username} = req.body;
-    console.log(req.body)
+   // console.log(req.body)
 		  User
 			.findOneAndRemove({
 				username: username
 			})
 			.then(doc=>{
-				console.log(doc);
+				//console.log(doc);
 				res.json(
 					username + ' has been deleted.'	
 		    	);
 			})
 			.catch(err=>{
 				res.json("Unable to delete " + username);
-				console.log(err)
+				//console.log(err)
 			})
 	  	
 	  });		
@@ -165,7 +172,7 @@ router.delete('/deleteContact', checkToken, (req, res)=>{
 				email: email
 			})
 			.then(doc=>{
-				console.log(doc);
+				//console.log(doc);
 				res.json(
 					email + ' has been deleted.'
 					
@@ -173,7 +180,7 @@ router.delete('/deleteContact', checkToken, (req, res)=>{
 			})
 			.catch(err=>{
 				res.json("Unable to delete contact");
-				console.log(err)
+				//console.log(err)
 			})
 	  	
 	  });		
@@ -189,7 +196,7 @@ router.put('/updateuser', checkToken, (req, res)=>{
 				username: username,
 			}, {new: true})
 			.then(doc=>{
-				console.log(doc);
+				//console.log(doc);
 				let user = doc.username;
 				res.json(
 					user + ' has been updated Successfully.'	
@@ -208,7 +215,7 @@ router.put('/updateuser', checkToken, (req, res)=>{
 				password: bcrypt.hashSync(password, bcrypt.genSaltSync(10))
 			}, {new: true})
 			.then(doc=>{
-				console.log(doc);
+				//console.log(doc);
 				res.json(
 					'Password has been updated Successfully.'	
 		    	);
@@ -224,7 +231,7 @@ router.get('/alluser', checkToken, (req, res)=>{
 			User
 			.find()
 			.then(doc=>{
-				console.log(doc);	
+				//console.log(doc);	
 				res.json({
 					doc
 				})
@@ -243,7 +250,7 @@ router.get('/getContacts', checkToken, (req, res)=>{
 		})
 		.then(doc=>{
 			let index = doc[0];
-			console.log(doc);
+			//console.log(doc);
 			res.json({
 				index
 	    	});
@@ -259,7 +266,7 @@ router.get('/getAllContacts/', checkToken, (req, res)=>{
 	  	contact
 			.find()
 			.then(doc=>{
-				console.log(doc);	
+				//console.log(doc);	
 				res.json({
 					doc
 				})
