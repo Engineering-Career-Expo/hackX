@@ -486,9 +486,9 @@ footer {
   font-size: 6vw;
 }
 
-div img {
+/*div img {
   float: right;
-}
+}*/
 
 .image-1,
 .image-2,
@@ -591,9 +591,9 @@ div img {
   font-size: 5.3vw;
 }
 
-div img {
+/*div img {
   float: right;
-}
+}*/
 
 .image-1,
 .image-2,
@@ -680,9 +680,9 @@ div img {
   color: #e5193b;
 }
 
-div img {
+/*div img {
   float: right;
-}
+}*/
 
 @media (min-width: 769px) {
   .hero {
@@ -3714,11 +3714,11 @@ body {
     color: white;
   }
   .criteria-section .uls {
-    width: 70%;
+    width: 74%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 15%;
+    margin: 0 13%;
   }
   .criteria-section .ul1 {
     width: 50%;
@@ -3739,7 +3739,7 @@ body {
   }
   .criteria-section .container {
     width: 80%;
-    margin: 8% 0 0 10%;
+    margin: 8% 10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3752,32 +3752,39 @@ body {
         flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+        justify-content: space-between;
   }
   .criteria-section .content-cnt {
     display: inline-block;
     text-align: center;
-    width: 25%;
+    width: 19%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid blue;
   }
-  .criteria-section .scheme-image {
+  .criteria-section .cri-image {
     text-align: center;
+    margin-bottom: 1%;
   }
-  .criteria-section .content img {
+  .criteria-section .cri-content .cri-image > img {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  .criteria-section .content .text {
+  .criteria-section  .cri-content .text {
     display: block;
     font-size: 1.55vw;
     margin: 0;
+    width: 100%;
+    border: 1px solid red;
     font-family: Gilroy-Regular, sans-serif;
     padding: 0;
   }
   .criteria-section .arrow-flow {
     position: relative;
-    width: 45%;
-    margin-top: 50%;
-    margin-left: -180%;
+    width: 180%;
+    border: 1px solid brown;
+    margin-top: 130%;
+    margin-right: 0%;
   }
   .criteria-section .buttons {
     text-align: center;
