@@ -3276,13 +3276,13 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .criteria-section .content .scheme-image {
+  .criteria-section .cri-content .scheme-image {
     -webkit-transform: scale(0.56);
             transform: scale(0.56);
     height: 70px;
     margin: 0;
   }
-  .criteria-section .content .text {
+  .criteria-section .cri-content .text {
     font-size: 4.6vw;
     height: 70px;
     width: auto;
@@ -3401,13 +3401,13 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .criteria-section .content .scheme-image {
+  .criteria-section .cri-content .scheme-image {
     -webkit-transform: scale(0.87);
             transform: scale(0.87);
     height: 70px;
     margin: 0;
   }
-  .criteria-section .content .text {
+  .criteria-section .cri-content .text {
     font-size: 4vw;
     height: 70px;
     width: auto;
@@ -3527,13 +3527,13 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .criteria-section .content .scheme-image {
+  .criteria-section .cri-content .scheme-image {
     -webkit-transform: scale(0.87);
             transform: scale(0.87);
     height: 70px;
     margin: 0;
   }
-  .criteria-section .content .text {
+  .criteria-section .cri-content .text {
     font-size: 3.6vw;
     height: 70px;
     width: auto;
@@ -3650,11 +3650,11 @@ body {
   .criteria-section .scheme-image {
     text-align: center;
   }
-  .criteria-section .content img {
+  .criteria-section .cri-image img {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  .criteria-section .content .text {
+  .criteria-section .cri-content .text {
     display: block;
     font-size: 1.85vw;
     margin: 0;
@@ -3663,9 +3663,9 @@ body {
   }
   .criteria-section .arrow-flow {
     position: relative;
-    width: 50%;
-    margin-top: 100%;
-    margin-left: -130%;
+    width: 180%;
+    margin-top: 130%;
+    margin-right: 0%;
   }
   .criteria-section .buttons {
     text-align: center;
@@ -3760,7 +3760,6 @@ body {
     width: 19%;
     display: flex;
     flex-direction: column;
-    border: 1px solid blue;
   }
   .criteria-section .cri-image {
     text-align: center;
@@ -3775,14 +3774,12 @@ body {
     font-size: 1.55vw;
     margin: 0;
     width: 100%;
-    border: 1px solid red;
     font-family: Gilroy-Regular, sans-serif;
     padding: 0;
   }
   .criteria-section .arrow-flow {
     position: relative;
     width: 180%;
-    border: 1px solid brown;
     margin-top: 130%;
     margin-right: 0%;
   }
