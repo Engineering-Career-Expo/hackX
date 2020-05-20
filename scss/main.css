@@ -3283,7 +3283,7 @@ body {
     margin: 0;
   }
   .criteria-section .content .text {
-    font-size: 4.7vw;
+    font-size: 4.6vw;
     height: 70px;
     width: auto;
     font-weight: 700;
@@ -3411,6 +3411,7 @@ body {
     font-size: 4vw;
     height: 70px;
     width: auto;
+    float: left;
     font-family: Gilroy-Regular, sans-serif;
     padding: 0 3%;
     line-height: 70px;
@@ -3420,6 +3421,7 @@ body {
   }
   .criteria-section .buttons {
     width: 100%;
+    margin-top: 6%;
     text-align: center;
     padding-top: 15%;
   }
@@ -3773,9 +3775,9 @@ body {
   }
   .criteria-section .arrow-flow {
     position: relative;
-    width: 140%;
-    margin-top: 100%;
-    margin-left: -130%;
+    width: 45%;
+    margin-top: 50%;
+    margin-left: -180%;
   }
   .criteria-section .buttons {
     text-align: center;
