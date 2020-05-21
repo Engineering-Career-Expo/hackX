@@ -78,11 +78,13 @@
 
 @include breakpoint(xs) {
   .about {
-    padding: 0px;
+    margin: 2px;
   }
+
   .about-text {
     display: none;
   }
+
   .about-what::before {
     content: "About";
     display: block;
@@ -98,19 +100,23 @@
     width: 100%;
     margin-bottom: 11px;
   }
+
   .about-container .about-how img {
     width: 100%;
     margin-bottom: 11px;
   }
+
   .text-content {
     max-width: 335px;
     margin: 0 auto;
   }
+
   .about .about-container {
     max-width: 360px;
     margin: 0 auto;
     margin-top: 10px;
   }
+
   .about-what {
     margin-bottom: 55px;
   }
