@@ -54,7 +54,7 @@ html {
 nav {
   font-family: "poppins", sans-serif;
   color: #262A35;
-  font-size: 13px;
+  font-size: 15px;
   padding: 5px 35px;
 }
 
@@ -145,8 +145,12 @@ nav {
   font-size: 12.5px;
 }
 
-.navbar_about, .navbar_ment, .navbar_sch, .navbar_reg2, .navbar_log {
-  font-weight: bold;
+.navbar_about,
+.navbar_ment,
+.navbar_sch,
+.navbar_reg2,
+.navbar_log {
+  font-weight: 500;
   margin: .3pc auto;
 }
 
@@ -162,7 +166,8 @@ a {
   text-decoration: none;
 }
 
-.navbar_reg4, .navbar_reg3 {
+.navbar_reg4,
+.navbar_reg3 {
   color: #FFFFFF;
 }
 
@@ -170,7 +175,8 @@ a:hover {
   font-weight: bolder;
 }
 
-.navbar_reg3, .navbar_reg4 {
+.navbar_reg3,
+.navbar_reg4 {
   color: #FFFFFF;
 }
 
@@ -203,7 +209,11 @@ a:hover {
   .navbar_sep {
     display: none;
   }
-  .navbar_about, .navbar_ment, .navbar_sch, .navbar_reg2, .navbar_log {
+  .navbar_about,
+  .navbar_ment,
+  .navbar_sch,
+  .navbar_reg2,
+  .navbar_log {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -214,7 +224,8 @@ a:hover {
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .navbar_reg2, .navbar_log {
+  .navbar_reg2,
+  .navbar_log {
     width: auto;
     margin: auto;
     padding: 4px 25px;
