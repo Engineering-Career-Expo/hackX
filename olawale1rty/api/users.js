@@ -12,12 +12,16 @@ router.post('/signup',(req, res)=>{
 	const { error } = validate(req.body);
   	if (error) return res.status(400).send(error.details[0].message);
     
-    const{firstname, lastname, email, password} = req.body;
+    const{firstname, lastname, email, password, username, track, age, institution} = req.body;
 	  let inputData = new User({
 	  	firstname: firstname,
 		lastname: lastname,
 		email: email,
 	  	password: bcrypt.hashSync(password, bcrypt.genSaltSync(10)),
+	  	username: username,
+	  	track: track,
+	  	age: age,
+	  	institution: institution
 	  });
 	  inputData.save()
 	  	.then(doc =>{
@@ -106,10 +110,10 @@ router.post('/login',(req, res)=>{
 });
 
 router.get('/getuser', checkToken, (req, res)=>{
-    const{lastname} = req.body;	  
+    const{username} = req.body;	  
 	  User
 		.find({
-			lastname: lastname
+			username: username
 		})
 		.then(doc=>{
 			let index = doc[0];
@@ -117,10 +121,18 @@ router.get('/getuser', checkToken, (req, res)=>{
 			let firstname = index.firstname;
 			let lastname = index.lastname;
 			let email = index.email;
+			let username = index.username;
+			let track = index.track;
+			let age = index.age;
+			let institution = index.institution;
 			res.json({
 				firstname,
 				lastname,
-				email,			
+				email,	
+				username,
+				track,
+				age,
+				institution		
 	    	});
 		})
 		.catch(err=>{
@@ -130,20 +142,20 @@ router.get('/getuser', checkToken, (req, res)=>{
 
 //delete path details
 router.delete('/deleteuser', checkToken, (req, res)=>{
-    const{lastname} = req.body;
+    const{username} = req.body;
    // console.log(req.body)
 		  User
 			.findOneAndRemove({
-				lastname: lastname
+				username: username
 			})
 			.then(doc=>{
 				//console.log(doc);
 				res.json(
-					lastname + ' has been deleted.'	
+					username + ' has been deleted.'	
 		    	);
 			})
 			.catch(err=>{
-				res.json("Unable to delete " + lastname);
+				res.json("Unable to delete " + username);
 				//console.log(err)
 			})
 	  	
@@ -170,18 +182,18 @@ router.delete('/deleteContact', checkToken, (req, res)=>{
 	  });		
 // update path details
 router.put('/updateuser', checkToken, (req, res)=>{
-    const{email, password, lastname} = req.body;  
+    const{email, password, username} = req.body;  
 	  if(password == undefined){
 		//query for the username
 		  User
 			.findOneAndUpdate({
 				email: email
 			}, {
-				lastname: lastname,
+				username: username,
 			}, {new: true})
 			.then(doc=>{
 				//console.log(doc);
-				let user = doc.lastname;
+				let user = doc.username;
 				res.json(
 					user + ' has been updated Successfully.'	
 		    	);
