@@ -12,16 +12,11 @@ router.post('/signup',(req, res)=>{
 	const { error } = validate(req.body);
   	if (error) return res.status(400).send(error.details[0].message);
     
-    const{name, username, email, number, slackAccount, age, track, institution, password} = req.body;
+    const{firstname, lastname, email, password} = req.body;
 	  let inputData = new User({
-	  	name: name,
-		username: username,
+	  	firstname: firstname,
+		lastname: lastname,
 		email: email,
-		number: number,
-		slackAccount: slackAccount,
-		age: age,
-		track: track,
-		institution: institution,
 	  	password: bcrypt.hashSync(password, bcrypt.genSaltSync(10)),
 	  });
 	  inputData.save()
@@ -111,32 +106,21 @@ router.post('/login',(req, res)=>{
 });
 
 router.get('/getuser', checkToken, (req, res)=>{
-    const{username} = req.body;	  
+    const{lastname} = req.body;	  
 	  User
 		.find({
-			username: username
+			lastname: lastname
 		})
 		.then(doc=>{
 			let index = doc[0];
 			//console.log(doc);
-			let name = index.name;
-			let username = index.username;
+			let firstname = index.firstname;
+			let lastname = index.lastname;
 			let email = index.email;
-			let number = index.number;
-			let slackAccount = index.slackAccount;
-			let age = index.age;
-			let track = index.track;
-			let institution = index.institution;
 			res.json({
-				name,
-				username,
-				email,
-				number,
-				slackAccount,
-				age,
-				track,
-				institution
-				
+				firstname,
+				lastname,
+				email,			
 	    	});
 		})
 		.catch(err=>{
@@ -146,20 +130,20 @@ router.get('/getuser', checkToken, (req, res)=>{
 
 //delete path details
 router.delete('/deleteuser', checkToken, (req, res)=>{
-    const{username} = req.body;
+    const{lastname} = req.body;
    // console.log(req.body)
 		  User
 			.findOneAndRemove({
-				username: username
+				lastname: lastname
 			})
 			.then(doc=>{
 				//console.log(doc);
 				res.json(
-					username + ' has been deleted.'	
+					lastname + ' has been deleted.'	
 		    	);
 			})
 			.catch(err=>{
-				res.json("Unable to delete " + username);
+				res.json("Unable to delete " + lastname);
 				//console.log(err)
 			})
 	  	
@@ -186,18 +170,18 @@ router.delete('/deleteContact', checkToken, (req, res)=>{
 	  });		
 // update path details
 router.put('/updateuser', checkToken, (req, res)=>{
-    const{email, password, username} = req.body;  
+    const{email, password, lastname} = req.body;  
 	  if(password == undefined){
 		//query for the username
 		  User
 			.findOneAndUpdate({
 				email: email
 			}, {
-				username: username,
+				lastname: lastname,
 			}, {new: true})
 			.then(doc=>{
 				//console.log(doc);
-				let user = doc.username;
+				let user = doc.lastname;
 				res.json(
 					user + ' has been updated Successfully.'	
 		    	);

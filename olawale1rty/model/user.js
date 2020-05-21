@@ -4,13 +4,13 @@ const validator = require('validator');
 let ObjectId = mongoose.Schema.ObjectId;
 
 let ecxSchema = new mongoose.Schema({
-		name: {
+		firstname: {
 		    type: String,
 		    required: true,
 		    minlength: 3,
 		    maxlength: 50
 		},
-		username: {
+		lastname: {
 		    type: String,
 		    required: true,
 		    minlength: 3,
@@ -27,36 +27,6 @@ let ecxSchema = new mongoose.Schema({
 				return validator.isEmail(value)
 			}
 		},
-		number: {
-		    type: Number,
-		    required: true,
-		    minlength: 13,
-		    maxlength: 17
-		},
-		slackAccount: {
-		    type: String,
-		    required: true,
-		    minlength: 3,
-		    maxlength: 50
-		},
-		age: {
-		    type: Number,
-		    required: true,
-		    minlength: 1,
-		    maxlength: 4
-		},
-		track: {
-		    type: String,
-		    required: true,
-		    minlength: 3,
-		    maxlength: 255
-		},
-		institution: {
-		    type: String,
-		    required: true,
-		    minlength: 3,
-		    maxlength: 255
-		},
 		password: {
 		    type: String,
 		    required: true,
@@ -72,15 +42,11 @@ User = mongoose.model('ecx',ecxSchema), mongoose.set('useFindAndModify', false)
 
 function validateUser(user) {
   const schema = Joi.object().keys({
-    name: Joi.string().min(3).max(50).required(),
-    username: Joi.string().alphanum().min(3).max(50).required(),
+    firstname: Joi.string().min(3).max(50).required(),
+    lastname: Joi.string().alphanum().min(3).max(50).required(),
     email: Joi.string().min(5).max(255).required().email(),
-    number: Joi.number().min(13).required(),
-    slackAccount: Joi.string().min(3).max(50).required(),
-    age: Joi.number().integer().min(1).required(),
-    track: Joi.string().min(3).max(255).required(),
-    institution: Joi.string().min(3).max(255).required(),
-    password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).min(3).max(255).required()
+    password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).min(3).max(255).required(),
+    confirmPassword: Joi.ref('password')
   });
 
   return schema.validate(user)
