@@ -486,9 +486,9 @@ footer {
   font-size: 6vw;
 }
 
-/*div img {
+div img {
   float: right;
-}*/
+}
 
 .image-1,
 .image-2,
@@ -591,9 +591,9 @@ footer {
   font-size: 5.3vw;
 }
 
-/*div img {
+div img {
   float: right;
-}*/
+}
 
 .image-1,
 .image-2,
@@ -680,9 +680,9 @@ footer {
   color: #e5193b;
 }
 
-/*div img {
+div img {
   float: right;
-}*/
+}
 
 @media (min-width: 769px) {
   .hero {
@@ -851,7 +851,7 @@ footer {
   padding: 8px;
 }
 
-.about .container {
+.about .about-container {
   max-width: 920px;
   margin: 0 auto;
   margin-top: 30px;
@@ -867,16 +867,16 @@ footer {
   color: #1071f3;
 }
 
-.what {
+.about-what {
   margin-bottom: 220px;
 }
 
-.what img {
+.about-what img {
   float: left;
   margin-right: 91px;
 }
 
-.what .text h2 {
+.about-what .text-content h2 {
   font-family: "Poppins", sans-serif;
   color: #1071f3;
   font-style: normal;
@@ -886,7 +886,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.what .text p {
+.about-what .text-content p {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -894,12 +894,12 @@ footer {
   line-height: 21px;
 }
 
-.how img {
+.about-how img {
   float: right;
   margin-left: 89px;
 }
 
-.how .text h2 {
+.about-how .text-content h2 {
   font-family: "Poppins", sans-serif;
   color: #1071f3;
   font-style: normal;
@@ -909,7 +909,7 @@ footer {
   margin-bottom: 20px;
 }
 
-.how .text p {
+.about-how .text-content p {
   font-family: "Poppins", sans-serif;
   font-style: normal;
   font-weight: normal;
@@ -917,11 +917,11 @@ footer {
   line-height: 21px;
 }
 
-.how {
+.about-how {
   margin-bottom: 200px;
 }
 
-.criteria {
+.about-criteria {
   visibility: hidden;
 }
 
@@ -930,39 +930,50 @@ footer {
     padding: 0px;
   }
   .about-text {
-    font-size: 24px;
-    margin-bottom: 20px;
+    display: none;
   }
-  .container .what img {
+  .about-what::before {
+    content: "About";
+    display: block;
+    text-align: center;
+    font-size: 28.5px;
+    font-weight: 500;
+    color: #1071f3;
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 27px;
+  }
+  .about-container .about-what img {
     width: 100%;
     margin-bottom: 11px;
   }
-  .container .how img {
+  .about-container .about-how img {
     width: 100%;
     margin-bottom: 11px;
   }
-  .text {
+  .text-content {
     max-width: 335px;
     margin: 0 auto;
   }
-  .about .container {
+  .about .about-container {
     max-width: 360px;
     margin: 0 auto;
     margin-top: 10px;
   }
-  .what {
+  .about-what {
     margin-bottom: 55px;
   }
-  .what .text h2 {
+  .about-what .text-content h2 {
+    font-size: 25px;
     margin-bottom: 8px;
   }
-  .how .text h2 {
+  .about-how .text-content h2 {
     margin-bottom: 8px;
+    font-size: 25px;
   }
-  .how {
+  .about-how {
     margin-bottom: 70px;
   }
-  .criteria {
+  .about-criteria {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -971,7 +982,7 @@ footer {
             justify-content: center;
     margin-bottom: 90px;
   }
-  .criteria-btn {
+  .about-criteria-btn {
     visibility: initial;
     width: 202px;
     height: 50px;
@@ -3276,14 +3287,14 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .criteria-section .cri-content .scheme-image {
+  .criteria-section .content .scheme-image {
     -webkit-transform: scale(0.56);
             transform: scale(0.56);
     height: 70px;
     margin: 0;
   }
-  .criteria-section .cri-content .text {
-    font-size: 4.6vw;
+  .criteria-section .content .text {
+    font-size: 4.7vw;
     height: 70px;
     width: auto;
     font-weight: 700;
@@ -3401,17 +3412,16 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .criteria-section .cri-content .scheme-image {
+  .criteria-section .content .scheme-image {
     -webkit-transform: scale(0.87);
             transform: scale(0.87);
     height: 70px;
     margin: 0;
   }
-  .criteria-section .cri-content .text {
+  .criteria-section .content .text {
     font-size: 4vw;
     height: 70px;
     width: auto;
-    float: left;
     font-family: Gilroy-Regular, sans-serif;
     padding: 0 3%;
     line-height: 70px;
@@ -3421,7 +3431,6 @@ body {
   }
   .criteria-section .buttons {
     width: 100%;
-    margin-top: 6%;
     text-align: center;
     padding-top: 15%;
   }
@@ -3527,13 +3536,13 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .criteria-section .cri-content .scheme-image {
+  .criteria-section .content .scheme-image {
     -webkit-transform: scale(0.87);
             transform: scale(0.87);
     height: 70px;
     margin: 0;
   }
-  .criteria-section .cri-content .text {
+  .criteria-section .content .text {
     font-size: 3.6vw;
     height: 70px;
     width: auto;
@@ -3650,11 +3659,11 @@ body {
   .criteria-section .scheme-image {
     text-align: center;
   }
-  .criteria-section .cri-image img {
+  .criteria-section .content img {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  .criteria-section .cri-content .text {
+  .criteria-section .content .text {
     display: block;
     font-size: 1.85vw;
     margin: 0;
@@ -3663,9 +3672,9 @@ body {
   }
   .criteria-section .arrow-flow {
     position: relative;
-    width: 180%;
-    margin-top: 130%;
-    margin-right: 0%;
+    width: 50%;
+    margin-top: 100%;
+    margin-left: -130%;
   }
   .criteria-section .buttons {
     text-align: center;
@@ -3714,11 +3723,11 @@ body {
     color: white;
   }
   .criteria-section .uls {
-    width: 74%;
+    width: 70%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 13%;
+    margin: 0 15%;
   }
   .criteria-section .ul1 {
     width: 50%;
@@ -3739,7 +3748,7 @@ body {
   }
   .criteria-section .container {
     width: 80%;
-    margin: 8% 10%;
+    margin: 8% 0 0 10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3752,36 +3761,32 @@ body {
         flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-        justify-content: space-between;
+            justify-content: space-between;
   }
   .criteria-section .content-cnt {
     display: inline-block;
     text-align: center;
-    width: 19%;
-    display: flex;
-    flex-direction: column;
+    width: 25%;
   }
-  .criteria-section .cri-image {
+  .criteria-section .scheme-image {
     text-align: center;
-    margin-bottom: 1%;
   }
-  .criteria-section .cri-content .cri-image > img {
+  .criteria-section .content img {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  .criteria-section  .cri-content .text {
+  .criteria-section .content .text {
     display: block;
     font-size: 1.55vw;
     margin: 0;
-    width: 100%;
     font-family: Gilroy-Regular, sans-serif;
     padding: 0;
   }
   .criteria-section .arrow-flow {
     position: relative;
-    width: 180%;
-    margin-top: 130%;
-    margin-right: 0%;
+    width: 140%;
+    margin-top: 100%;
+    margin-left: -130%;
   }
   .criteria-section .buttons {
     text-align: center;

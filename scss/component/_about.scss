@@ -2,7 +2,7 @@
   padding: 8px;
 }
 
-.about .container {
+.about .about-container {
   max-width: 920px;
   margin: 0 auto;
   margin-top: 30px;
@@ -18,16 +18,16 @@
   color: $color-secondary;
 }
 
-.what {
+.about-what {
   margin-bottom: 220px;
 }
 
-.what img {
+.about-what img {
   float: left;
   margin-right: 91px;
 }
 
-.what .text h2 {
+.about-what .text-content h2 {
   font-family: $default-font-family;
   color: $color-secondary;
   font-style: normal;
@@ -37,7 +37,7 @@
   margin-bottom: 20px;
 }
 
-.what .text p {
+.about-what .text-content p {
   font-family: $default-font-family;
   font-style: normal;
   font-weight: normal;
@@ -45,12 +45,12 @@
   line-height: 21px;
 }
 
-.how img {
+.about-how img {
   float: right;
   margin-left: 89px;
 }
 
-.how .text h2 {
+.about-how .text-content h2 {
   font-family: $default-font-family;
   color: $color-secondary;
   font-style: normal;
@@ -60,7 +60,7 @@
   margin-bottom: 20px;
 }
 
-.how .text p {
+.about-how .text-content p {
   font-family: $default-font-family;
   font-style: normal;
   font-weight: normal;
@@ -68,11 +68,11 @@
   line-height: 21px;
 }
 
-.how {
+.about-how {
   margin-bottom: 200px;
 }
 
-.criteria {
+.about-criteria {
   visibility: hidden;
 }
 
@@ -81,49 +81,61 @@
     padding: 0px;
   }
   .about-text {
-    font-size: 24px;
-    margin-bottom: 20px;
+    display: none;
   }
-  .container .what img {
+  .about-what::before {
+    content: "About";
+    display: block;
+    text-align: center;
+    font-size: 28.5px;
+    font-weight: 500;
+    color: $color-secondary;
+    font-family: $default-font-family;
+    margin-bottom: 27px;
+  }
+
+  .about-container .about-what img {
     width: 100%;
     margin-bottom: 11px;
   }
-  .container .how img {
+  .about-container .about-how img {
     width: 100%;
     margin-bottom: 11px;
   }
-  .text {
+  .text-content {
     max-width: 335px;
     margin: 0 auto;
   }
-  .about .container {
+  .about .about-container {
     max-width: 360px;
     margin: 0 auto;
     margin-top: 10px;
   }
-  .what {
+  .about-what {
     margin-bottom: 55px;
   }
 
-  .what .text h2 {
+  .about-what .text-content h2 {
+    font-size: 25px;
     margin-bottom: 8px;
   }
 
-  .how .text h2 {
+  .about-how .text-content h2 {
     margin-bottom: 8px;
+    font-size: 25px;
   }
 
-  .how {
+  .about-how {
     margin-bottom: 70px;
   }
 
-  .criteria {
+  .about-criteria {
     display: flex;
     justify-content: center;
     margin-bottom: 90px;
   }
 
-  .criteria-btn {
+  .about-criteria-btn {
     visibility: initial;
     width: 202px;
     height: 50px;
