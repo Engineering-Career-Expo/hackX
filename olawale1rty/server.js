@@ -1,3 +1,4 @@
+const config = require("config");
 const express = require('express');
 const app = express();
 const cors = require('cors');
@@ -6,6 +7,12 @@ app.use(express.urlencoded({exteneded:true}));
 app.use(cors());
 const port = process.env.PORT || 8080;
 require('./database');
+
+//use config module to get the privatekey, if no private key set, end the application
+if (!config.get("secret")) {
+  console.error("FATAL ERROR: secret is not defined.");
+  process.exit(1);
+}
 
 //logging details
 const logger = require('morgan');
