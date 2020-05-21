@@ -251,7 +251,6 @@ footer {
   font-family: "Poppins", sans-serif;
   font-size: 14px;
   padding: 25px 120px;
-  margin-top: 80px;
 }
 
 .footer-top {
@@ -498,9 +497,9 @@ footer {
   font-size: 6vw;
 }
 
-div img {
+/*div img {
   float: right;
-}
+}*/
 
 .image-1,
 .image-2,
@@ -603,9 +602,9 @@ div img {
   font-size: 5.3vw;
 }
 
-div img {
+/*div img {
   float: right;
-}
+}*/
 
 .image-1,
 .image-2,
@@ -692,9 +691,9 @@ div img {
   color: #e5193b;
 }
 
-div img {
+/*div img {
   float: right;
-}
+}*/
 
 @media (min-width: 769px) {
   .hero {
@@ -3288,14 +3287,14 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .criteria-section .content .scheme-image {
+  .criteria-section .cri-content .scheme-image {
     -webkit-transform: scale(0.56);
             transform: scale(0.56);
     height: 70px;
     margin: 0;
   }
-  .criteria-section .content .text {
-    font-size: 4.7vw;
+  .criteria-section .cri-content .text {
+    font-size: 4.6vw;
     height: 70px;
     width: auto;
     font-weight: 700;
@@ -3413,16 +3412,17 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .criteria-section .content .scheme-image {
+  .criteria-section .cri-content .scheme-image {
     -webkit-transform: scale(0.87);
             transform: scale(0.87);
     height: 70px;
     margin: 0;
   }
-  .criteria-section .content .text {
+  .criteria-section .cri-content .text {
     font-size: 4vw;
     height: 70px;
     width: auto;
+    float: left;
     font-family: Gilroy-Regular, sans-serif;
     padding: 0 3%;
     line-height: 70px;
@@ -3432,6 +3432,7 @@ body {
   }
   .criteria-section .buttons {
     width: 100%;
+    margin-top: 6%;
     text-align: center;
     padding-top: 15%;
   }
@@ -3537,13 +3538,13 @@ body {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
   }
-  .criteria-section .content .scheme-image {
+  .criteria-section .cri-content .scheme-image {
     -webkit-transform: scale(0.87);
             transform: scale(0.87);
     height: 70px;
     margin: 0;
   }
-  .criteria-section .content .text {
+  .criteria-section .cri-content .text {
     font-size: 3.6vw;
     height: 70px;
     width: auto;
@@ -3660,11 +3661,11 @@ body {
   .criteria-section .scheme-image {
     text-align: center;
   }
-  .criteria-section .content img {
+  .criteria-section .cri-image img {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  .criteria-section .content .text {
+  .criteria-section .cri-content .text {
     display: block;
     font-size: 1.85vw;
     margin: 0;
@@ -3673,9 +3674,9 @@ body {
   }
   .criteria-section .arrow-flow {
     position: relative;
-    width: 50%;
-    margin-top: 100%;
-    margin-left: -130%;
+    width: 180%;
+    margin-top: 130%;
+    margin-right: 0%;
   }
   .criteria-section .buttons {
     text-align: center;
@@ -3724,11 +3725,11 @@ body {
     color: white;
   }
   .criteria-section .uls {
-    width: 70%;
+    width: 74%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 15%;
+    margin: 0 13%;
   }
   .criteria-section .ul1 {
     width: 50%;
@@ -3749,7 +3750,7 @@ body {
   }
   .criteria-section .container {
     width: 80%;
-    margin: 8% 0 0 10%;
+    margin: 8% 10%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -3762,32 +3763,36 @@ body {
         flex-wrap: nowrap;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
-            justify-content: space-between;
+        justify-content: space-between;
   }
   .criteria-section .content-cnt {
     display: inline-block;
     text-align: center;
-    width: 25%;
+    width: 19%;
+    display: flex;
+    flex-direction: column;
   }
-  .criteria-section .scheme-image {
+  .criteria-section .cri-image {
     text-align: center;
+    margin-bottom: 1%;
   }
-  .criteria-section .content img {
+  .criteria-section .cri-content .cri-image > img {
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }
-  .criteria-section .content .text {
+  .criteria-section  .cri-content .text {
     display: block;
     font-size: 1.55vw;
     margin: 0;
+    width: 100%;
     font-family: Gilroy-Regular, sans-serif;
     padding: 0;
   }
   .criteria-section .arrow-flow {
     position: relative;
-    width: 140%;
-    margin-top: 100%;
-    margin-left: -130%;
+    width: 180%;
+    margin-top: 130%;
+    margin-right: 0%;
   }
   .criteria-section .buttons {
     text-align: center;
