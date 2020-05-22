@@ -237,6 +237,7 @@ a:hover {
 
 footer {
   bottom: 0;
+  display: inline-block;
 }
 
 .footer {
@@ -1247,6 +1248,7 @@ body {
     outline: none;
     -webkit-transition: 1s;
     transition: 1s;
+    resize: none;
   }
   .contact-textarea:hover {
     border: 1px solid red;
@@ -1274,7 +1276,8 @@ body {
   }
   .link-to-dashboard {
     width: 100%;
-    margin: 3% 0;
+    display: block;
+    margin: 3% 0 10% 0;
     background: white;
     padding-top: 11%;
   }
@@ -1284,7 +1287,7 @@ body {
     width: 100%;
     height: auto;
     border: none;
-    background: transparent;
+    background: white;
     font-size: 12vw;
     font-weight: 600;
     color: black;
@@ -1299,6 +1302,7 @@ body {
     height: 45px;
     margin-right: 14%;
     border-radius: 8px;
+    margin-bottom: 9%;
     border: none;
     background: #E5193B;
     font-size: 4.6vw;
@@ -1328,6 +1332,7 @@ body {
   .contact-form {
     width: 60%;
     margin: 0 20%;
+    display: block;
   }
   .contact-heading {
     margin: 5% auto;
@@ -1380,6 +1385,7 @@ body {
     outline: none;
     -webkit-transition: 1s;
     transition: 1s;
+    resize: none;
   }
   .contact-textarea:hover {
     border: 1px solid red;
@@ -1409,7 +1415,7 @@ body {
     width: 100%;
     margin: 3% 0;
     background: white;
-    padding: 2.4% 15%;
+    padding: 2.4% 15% 10% 15%;
   }
   .link-to-dashboard .span {
     float: left;
@@ -1460,6 +1466,7 @@ body {
   }
   .contact-form {
     width: 60%;
+    display: block;
     margin: 0 20%;
   }
   .contact-heading {
@@ -1513,6 +1520,7 @@ body {
     outline: none;
     -webkit-transition: 1s;
     transition: 1s;
+    resize: none;
   }
   .contact-textarea:hover {
     border: 1px solid red;
@@ -1542,7 +1550,7 @@ body {
     width: 100%;
     margin: 3% 0;
     background: white;
-    padding: 2.4% 15%;
+    padding: 2.4% 15% 10% 15%;
   }
   .link-to-dashboard .span {
     float: left;
