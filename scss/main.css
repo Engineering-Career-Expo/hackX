@@ -497,10 +497,10 @@ footer {
   font-size: 6vw;
 }
 
-div img {
+/*div img {
   float: right;
 }
-
+*/
 .image-1,
 .image-2,
 .location {
@@ -602,10 +602,10 @@ div img {
   font-size: 5.3vw;
 }
 
-div img {
+/*div img {
   float: right;
 }
-
+*/
 .image-1,
 .image-2,
 .location {
@@ -690,10 +690,10 @@ div img {
   color: #e5193b;
 }
 
-div img {
+/*div img {
   float: right;
 }
-
+*/
 @media (min-width: 769px) {
   .hero {
     width: 80%;
