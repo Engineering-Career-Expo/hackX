@@ -51,7 +51,7 @@ router.post('/contact',(req, res)=>{
 	  		res.json("Successfully Saved Contact");
 	  	})
 	  	.catch(err=>{
-	  		//console.log(err);
+	  		console.log(err);
 	  		res.json("Failed to Save Contact")
 	  	})
 });
@@ -181,7 +181,7 @@ router.delete('/deleteContact', checkToken, (req, res)=>{
 	  	
 	  });		
 // update path details
-router.put('/updateuser', checkToken, (req, res)=>{
+router.put('/updateuser', (req, res)=>{
     const{email, password, username} = req.body;  
 	  if(password == undefined){
 		//query for the username
@@ -242,16 +242,17 @@ router.get('/getContacts', checkToken, (req, res)=>{
     const{email} = req.body;	  
 	  contact
 		.find({
-			email: email
+			email: { $eq: email.toString() }
 		})
 		.then(doc=>{
-			let index = doc[0];
+			// let index = doc[0];
 			//console.log(doc);
 			res.json({
-				index
+				doc
 	    	});
 		})
 		.catch(err=>{
+			// console.log(err)
 			res.json("Unable to get contact");
 		})		
 	});		
