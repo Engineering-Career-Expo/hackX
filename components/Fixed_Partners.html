@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title></title>
-<met name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="stylesheet" href="../scss/component/Fixed_Partners.css" >
-<meta charset="utf-8">
-<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-</head>
-
-<body id="bod">
-
-<div class="myimg0">
-  <section class="myimg1">
-   <div class="partner_topic1">Partners</div>
-    <div class="img001"></div>
-    <div class="img002"></div>
-    <div class="img003"></div>
-    <div class="img004"></div>
-    <div class="img005"></div>
-    <div class="img006"></div>
-  </section>
-</div>
-					
-
-	<div class="container">
-		<div class="mySlides fade">
-		<div class="partner_topic2">Partners</div>
-		<div class="img_contain">
-			<img src="../assets/images/partner-one.png" id="imgSlide">
-			</div>
-			<!--Dots/circles-->
-			<div class="text" id="text">
-				<span class="dot" onclick="currentSlide(0)" ></span>
-				<span class="dot" onclick="currentSlide(1)"></span>
-				<span class="dot" onclick="currentSlide(2)"></span>
-				<span class="dot" onclick="currentSlide(3)"></span>
-				<span class="dot" onclick="currentSlide(4)"></span>
-				<span class="dot" onclick="currentSlide(5)"></span>
-				
-			</div>
-		</div>
-		
-		<!--Next and previous buttons-->
-		<a class="prev"  onclick="plus(-1)">&#10094;</a>
-		<a class="next" onclick="plus(1)">&#10095;</a>
-	</div>
-	
-
-<script src="../js/Fixed_Partners.js"></script>
-
-</body>
+    <head>
+        <title></title>
+        <met name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Fixed_Partners.css" >
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class="bod" id="bod">
+            <div class="myimg0" id="partner-comp">
+                <section class="myimg1">
+                    <div class="partner_topic1">
+     	                Partners
+                    </div>
+                    <div class="img001"></div>
+                    <div class="img002"></div>
+                    <div class="img003"></div>
+                    <div class="img004"></div>
+                    <div class="img005"></div>
+                    <div class="img006"></div>
+                </section>
+            </div>
+            <div class="container" id="partner-mob">
+                <div class="mySlides fade">
+                    <div class="partner_topic2">
+                        Partners
+                    </div>
+                    <div class="img_contain">
+                        <img src="images/partner-one.png" id="imgSlide">
+                    </div>
+      
+                    <!--Dots/circles-->
+                    <div class="text" id="text">
+                        <span class="dot" onclick="currentSlide(0)" ></span>
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
+                        <span class="dot" onclick="currentSlide(4)"></span>
+                        <span class="dot" onclick="currentSlide(5)"></span>
+                    </div>
+                    <!--Next and previous buttons-->
+                    <a class="prev"  onclick="plus(-1)">
+                        <img src="images/next icon.svg">
+                    </a>
+                    <a class="next" onclick="plus(1)">
+                        <img src="images/next icon.svg">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <script src="Fixed_Partners.js"></script>
+    </body>
 </html>
