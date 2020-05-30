@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="assets/ECX.svg" type="image/x-icon" />
-
-   <script src='js/main.js'></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="scss/main.css" />
     <title>HackX</title>
   </head>
@@ -452,22 +451,25 @@
     </div>
   </div>
   <section class="contact-main" id='contact'>
-    <form class="contact-form">
+
+    <form class="contact-form" >
       <h1 class="contact-heading">CONTACT</h1>
       <h6 class="contact-details">Do you want to partner or sponsor?</h6>
       <input
         class="contact-input-text"
         type="text"
         name="name"
+        id='name'
         placeholder="Name"
       />
       <input
         type="email"
         name="email"
+        id='email'
         class="contact-input-text"
         placeholder="Email"
       />
-      <textarea class="contact-textarea" placeholder="Message"></textarea>
+      <textarea id='message' class="contact-textarea" placeholder="Message"></textarea>
       <input class="contact-submit" type="submit" value="SEND" />
     </form>
     <div class="link-to-dashboard">
