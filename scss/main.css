@@ -28,11 +28,6 @@ html {
   src: url(../../fonts/Monad.otf);
 }
 
-@font-face {
-  font-family: Gilroy-Bold;
-  src: url(../../fonts/Gilroy-Regular.woff);
-}
-
 .u-padding-none {
   padding: 0;
 }
@@ -397,11 +392,6 @@ footer {
 @font-face {
   font-family: Monad;
   src: url(../../../fonts/Monad.otf);
-}
-
-@font-face {
-  font-family: Gilroy-Bold;
-  src: url(../../fonts/Gilroy-Regular.woff);
 }
 
 .norm {
@@ -1006,120 +996,69 @@ div img {
 }
 
 .hours-body {
-  padding: 0;
-  margin: 0;
   font-family: "poppins";
 }
 
-.hours-fab {
-  font-size: 40px;
-  color: #E5193B;
-}
-
-.hours-one {
+.one30 {
   padding: 10px;
 }
 
-.hours-one,
-.hours-first,
-.hours-second,
-.hours-third,
-.hours-fourth,
-.hours-three,
-.hours-train1 {
+.one30,
+.first30,
+.second30,
+.third30,
+.fourth30 {
   text-align: center;
 }
 
-.hours-one,
-.hours-thirty,
-.hours-hours,
-.hours-of,
-.hours-train0,
-.hours-mentor,
-.hours-meet,
-.hours-name {
+.one30,
+.thirty_30,
+.hours_30,
+.of_30,
+.train0_30 {
   font-weight: bold;
   margin: auto;
 }
 
-.hours-thirty {
-  font-size: 6rem;
+.thirty_30 {
+  font-size: 5rem;
   color: #E5193B;
 }
 
-.hours-hours,
-.hours-of {
-  font-size: 25px;
+.hours_30,
+.of_30 {
+  font-size: 35px;
 }
 
-.hours-first,
-.hours-second,
-.hours-third,
-.hours-fourth {
+.first30,
+.second30,
+.third30,
+.fourth30 {
   margin-top: 1pc;
+  padding: 15px;
   width: 50%;
-  padding: 0;
   margin: 1pc auto 3pc auto;
 }
 
-.hours-tracks {
-  font-size: 25px;
-  margin-left: 2rem;
+.tracks30 {
+  font-size: 23px;
   margin-bottom: .8pc;
+  margin-left: 3rem;
 }
 
-.hours-part1,
-.hours-part2 {
-  padding: 10px;
-  margin: 1pc auto auto auto;
+.partners_img {
+  width: 50%;
 }
 
-.hours-part2 {
-  width: 60%;
-  margin-bottom: 3.5pc;
-}
-
-.hours-mentor {
-  font-size: 30px;
-  color: #E5193B;
-}
-
-.hours-img2 {
-  width: 100%;
-  margin: auto;
-}
-
-.hours-img {
-  width: 60%;
-}
-
-.hours-img02 {
-  width: 100%;
-}
-
-.hours-train1 {
-  width: 90%;
-  margin: auto;
-}
-
-.hours-name {
-  font-size: 16px;
-  margin: auto auto 1.5pc auto;
+.two30 {
+  display: none;
 }
 
 @media (min-width: 768px) {
-  .hours-body {
-    overflow-x: hidden;
-  }
-  .hours-tracks {
-    font-size: 20px;
-    margin-left: 1rem;
-    margin-bottom: .8pc;
-  }
-  .hours-train0 {
+  .train0_30 {
     width: 40%;
   }
-  .hours-two {
+  .two30 {
     width: 75%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1131,58 +1070,30 @@ div img {
         align-self: center;
     margin: auto;
   }
-  .hours-first,
-  .hours-second,
-  .hours-third,
-  .hours-fourth {
+  .first30,
+  .second30,
+  .third30,
+  .fourth30 {
     width: 17%;
     padding: 18px;
   }
-  .hours-part2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-item-align: center;
-        align-self: center;
-    width: 40%;
-    margin-bottom: .5pc;
-  }
-  .hours-img02 {
-    width: 100%;
-  }
-  .hours-second {
-    margin: 1pc auto;
-  }
-  .hours-train1 {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    padding-left: 10px;
-    widt: 150%;
-  }
-  .hours-four {
-    width: 70%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    margin: -1.7pc auto auto auto;
-  }
-  .hours-name {
-    margin-bottom: .5pc;
-  }
 }
 
-html,
-body {
-  width: 100%;
-  margin: 0;
+.success,
+.error {
+  color: white;
+  width: 60%;
+  padding: 5px;
+  margin-top: 3rem;
+  margin: 2rem auto;
 }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+.success {
+  background: green;
+}
+
+.error {
+  background: #E5193B;
 }
 
 @media (max-width: 500px) {
@@ -1190,7 +1101,7 @@ body {
     margin: 3rem 0;
     background: #faf9f9;
     padding-top: 10%;
-    height: 100%;
+    height: 150%;
   }
   .contact-form {
     width: 90%;
@@ -2129,11 +2040,6 @@ body {
   src: url(Monad.otf);
 }
 
-@font-face {
-  font-family: Gilroy-Regular;
-  src: url(Gilroy-Regular.woff);
-}
-
 html,
 body {
   margin: 0px;
@@ -2334,22 +2240,6 @@ body {
 @font-face {
   font-family: Monad;
   src: url(../fonts/Monad.otf);
-}
-
-@font-face {
-  font-family: Gilroy-Bold;
-  src: url(../fonts/Gilroy-Regular.woff);
-}
-
-html,
-body {
-  width: 100%;
-  margin: 0;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 ::-webkit-input-placeholder {
@@ -2984,20 +2874,8 @@ i {
   }
 }
 
-@font-face {
-  font-family: Gilroy-Regular;
-  src: url(Gilroy-Regular.woff);
-}
-
 html {
   overflow-x: initial !important;
-}
-
-html,
-body {
-  margin: 0px;
-  padding: 0px;
-  height: 100%;
 }
 
 .about-body {
@@ -3203,22 +3081,6 @@ body {
     -ms-grid-column-span: 1;
     grid-area: 6/2/7/3;
   }
-}
-
-@font-face {
-  font-family: Gilroy-Regular;
-  src: url(Gilroy-Regular.woff);
-}
-
-html,
-body {
-  width: 100%;
-  margin: 0;
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .criteria-section {

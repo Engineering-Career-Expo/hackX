@@ -1,20 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap");
 
-@font-face {
-	font-family: Gilroy-Regular;
-	src: url(Gilroy-Regular.woff);
-}
 
 html {
 	overflow-x: initial !important;
 }
 
-html,
-body {
-	margin: 0px;
-	padding: 0px;
-	height: 100%;
-}
+
 
 .about-body {
 	background: #E5E5E5;
@@ -238,22 +229,12 @@ body {
 	}
 }
 
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Monoton&family=Poppins:wght@500&display=swap");
 
-@font-face {
-	font-family: Gilroy-Regular;
-	src: url(Gilroy-Regular.woff);
-}
 
-html,
-body {
-	width: 100%;
-	margin: 0;
-}
-
-* {
-	box-sizing: border-box;
-}
 
 .criteria-section {
 	min-width: 100%;

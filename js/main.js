@@ -1,10 +1,8 @@
 //navbar
-
 var myham = document.getElementsByClassName("navbar_myham");
 var second = document.getElementsByClassName("navbar_second");
 var reg1 = document.getElementsByClassName("navbar_reg1");
 
-myham[0].addEventListener("click", myfunc1);
 var a = 0;
 function myfunc1() {
   reg1[0].style.opacity = "0";
@@ -21,3 +19,49 @@ function myfunc1() {
     reg1[0].style.opacity = "1";
   }
 }
+myham[0].addEventListener("click", myfunc1);
+
+//contact
+const contactForm = document.querySelector(".contact-form");
+
+const showAlert = (message, className) => {
+  const div = document.createElement("div");
+  div.className = `alert ${className}`;
+  div.appendChild(document.createTextNode(message));
+  const container = document.querySelector(".contact-main");
+  container.insertBefore(div, contactForm);
+
+  setTimeout(function () {
+    document.querySelector(".alert").remove();
+  }, 3000);
+};
+
+const formEvent = contactForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const name = document.querySelector("#name").value;
+  const email = document.querySelector("#email").value;
+  const message = document.querySelector("#message").value;
+  const contactInfo = await { name, email, message };
+  if (name === "" || email === "" || message === "") {
+    showAlert("Please Fill All Fields", "error");
+  } else {
+    createContact(contactInfo);
+  }
+});
+const createContact = async (contactInfo) => {
+  axios
+    .post("http://localhost:8080/contact", contactInfo)
+    .then((response) => {
+      response.data;
+      if (response.status == "200") {
+        showAlert("Contact Saved", "success");
+      } else {
+        showAlert("Something Went Wrong. Try Again Later", "error");
+      }
+
+      console.log(status.status);
+    })
+
+    .catch((error) => console.error(error));
+};
