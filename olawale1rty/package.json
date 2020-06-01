@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "keywords": [
     "hackx",
@@ -20,14 +20,17 @@
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "bcrypt": "^4.0.1",
+    "chai": "^4.2.0",
     "config": "^3.3.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "joi": "^14.3.1",
     "jsonwebtoken": "^8.5.1",
+    "mocha": "^7.2.0",
     "mongodb": "^3.5.6",
     "mongoose": "^5.9.10",
     "morgan": "^1.10.0",
+    "supertest": "^4.0.2",
     "validator": "^13.0.0"
   }
 }
