@@ -14,11 +14,11 @@ const showAlert_signup_1 = (message, className) => {
   }, 3000);
 };
 
-let first_name = '';
-let last_name = '';
-let signup_email = '';
-let password = '';
-let confirm_password = '';
+let first_name = "";
+let last_name = "";
+let signup_email = "";
+let password = "";
+let confirm_password = "";
 const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
   // event.preventDefault();
 
@@ -27,18 +27,31 @@ const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
   signup_email = document.querySelector("#signup_email").value;
   password = document.querySelector("#password").value;
   confirm_password = document.querySelector("#confirm_password").value;
-  const signupInfo = await { first_name, last_name, signup_email, password, confirm_password };
-  if (first_name === "" || last_name === "" || signup_email === "" || password === "" || confirm_password === "") {
+  const signupInfo = await {
+    first_name,
+    last_name,
+    signup_email,
+    password,
+    confirm_password,
+  };
+  if (
+    first_name === "" ||
+    last_name === "" ||
+    signup_email === "" ||
+    password === "" ||
+    confirm_password === ""
+  ) {
     showAlert_signup_1("Please Fill All Fields", "error");
   } else {
-    localStorage.setItem('first_name', first_name);
-    localStorage.setItem('last_name', last_name);
-    localStorage.setItem('signup_email', signup_email);
-    localStorage.setItem('password', password);
-    localStorage.setItem('confirm_password', confirm_password);
+    if (password != confirm_password) {
+      showAlert_signup_1("Passwords Don't Match", "error");
+    }
+    localStorage.setItem("first_name", first_name);
+    localStorage.setItem("last_name", last_name);
+    localStorage.setItem("signup_email", signup_email);
+    localStorage.setItem("password", password);
+    localStorage.setItem("confirm_password", confirm_password);
     // console.log('success')
     // createContact(contactInfo);
   }
 });
-
-
