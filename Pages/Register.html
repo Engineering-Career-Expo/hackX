@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Register</title>
     <link rel="stylesheet" href="../scss/main.css" />
     <link
@@ -47,7 +48,7 @@
     
     <main>
       <div class="register-form-container">
-        <form>
+        <form class="signup">
           <h2>Registeration</h2>
           <legend>First name</legend>
           <input
@@ -55,18 +56,20 @@
             name="FirstName"
             placeholder="First Name"
             required
+            id="first_name"
           />
           <legend>Last name</legend>
-          <input type="text" name="LastName" placeholder="Last Name" required />
+          <input type="text" name="LastName" id="last_name" placeholder="Last Name" required />
           <legend>Email</legend>
-          <input type="email" name="email" placeholder="Email" />
+          <input type="email" name="email" id="signup_email" placeholder="Email" />
           <legend>Password</legend>
-          <input type="password" name="password" placeholder="•••••••••" />
+          <input type="password" id="password" name="password" placeholder="•••••••••" />
           <legend>Confirm Password</legend>
           <input
             type="password"
             name="confirm-password"
             placeholder="•••••••••"
+            id="confirm_password"
           />
         </form>
         <button class="previous-btn">
@@ -99,5 +102,7 @@
         <button><span class="btn-cnt">Competition Guidelines</span></button>
       </div>
     </main>
+
+    <script src="../js/signup.js"></script>
   </body>
 </html>

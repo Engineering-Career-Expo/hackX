@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Register</title>
     <link rel="stylesheet" href="../scss/main.css" />
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
@@ -48,10 +49,10 @@
     
     <main>
       <div class="register-form-container">
-        <form>
+        <form class="signup_2">
           <h2>Registeration <span class="count">2 0f 2</span></h2>
           <legend>Username</legend>
-          <input type="text" name="Username" placeholder="Username" required />
+          <input type="text" name="Username" placeholder="Username" id="username" required />
           <legend>Track</legend>
           <input
             type="text"
@@ -59,6 +60,7 @@
             placeholder="Track"
             list="track-list"
             required
+            id="track"
           />
           <!-- <img src="assets/images/option.svg" class="option" /> -->
           <datalist id="track-list">
@@ -70,7 +72,7 @@
             <option>Design</option>
           </datalist>
           <legend>Age</legend>
-          <input type="number" name="Age" placeholder="Age" />
+          <input type="number" name="Age" id="age" placeholder="Age" />
           <!-- <img
             src="assets/images/option.svg"
             class="option"
@@ -83,6 +85,7 @@
             placeholder="Institution"
             list="inst-list"
             required
+            id="institution"
           />
           <!-- <img src="assets/images/option.svg" class="option" /> -->
           <datalist id="inst-list">
@@ -131,5 +134,7 @@
         <button><span class="btn-cnt">Competition Guidelines</span></button>
       </div>
     </main>
+
+    <script src="../js/signup_2.js"></script>
   </body>
 </html>
