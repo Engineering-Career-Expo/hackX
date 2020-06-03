@@ -42,10 +42,11 @@ const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
     confirm_password === ""
   ) {
     showAlert_signup_1("Please Fill All Fields", "error");
-  } else {
-    if (password != confirm_password) {
-      showAlert_signup_1("Passwords Don't Match", "error");
-    }
+  } else if (password != confirm_password) {
+    showAlert_signup_1("Passwords Don't Match", "error");
+  } 
+  else {
+    window.location.assign("../Pages/Register-2.html");
     localStorage.setItem("first_name", first_name);
     localStorage.setItem("last_name", last_name);
     localStorage.setItem("signup_email", signup_email);

@@ -5,6 +5,10 @@
   src: url(../../../fonts/Monad.otf);
 }
 
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(../../fonts/Gilroy-Regular.woff);
+}
 
 
 .norm {
@@ -60,6 +64,10 @@
   font-weight: 500;
   font-size: 5vw;
   color: #f2a702;
+}
+
+.learn a {
+  color: white;
 }
 
 .learn {
