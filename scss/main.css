@@ -394,6 +394,11 @@ footer {
   src: url(../../../fonts/Monad.otf);
 }
 
+@font-face {
+  font-family: Gilroy-Bold;
+  src: url(../../fonts/Gilroy-Regular.woff);
+}
+
 .norm {
   padding: 6px;
   font-family: "Poppins", sans-serif;
@@ -445,6 +450,10 @@ footer {
   font-weight: 500;
   font-size: 5vw;
   color: #f2a702;
+}
+
+.learn a {
+  color: white;
 }
 
 .learn {
@@ -1096,6 +1105,10 @@ div img {
   background: #E5193B;
 }
 
+.link-to-dashboard a {
+  color: white;
+}
+
 @media (max-width: 500px) {
   .contact-main {
     margin: 3rem 0;
@@ -1337,7 +1350,6 @@ div img {
     outline: none;
   }
   .link-to-dashboard .button {
-    float: right;
     width: 35%;
     cursor: pointer;
     height: 60px;
@@ -1470,7 +1482,6 @@ div img {
     outline: none;
   }
   .link-to-dashboard .button {
-    float: right;
     width: 35%;
     cursor: pointer;
     height: 60px;
