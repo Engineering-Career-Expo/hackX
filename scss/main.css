@@ -2015,7 +2015,6 @@ div img {
     grid-gap: 35px;
   }
   .content {
-    width: 45%;
     height: 100%;
     border: none;
     float: right;
@@ -2041,7 +2040,6 @@ div img {
   }
   .image {
     width: 55%;
-    height: 100%;
     border: none;
   }
 }
