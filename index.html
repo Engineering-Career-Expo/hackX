@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="shortcut icon" href="assets/ECX.svg" type="image/x-icon" />
-
-   <script src='js/main.js'></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="scss/main.css" />
     <title>HackX</title>
   </head>
@@ -38,7 +37,7 @@
     <div class="hero">
       <div class="call-to-action">
         <h1>
-          HACK<span class="X">X </span><br /><span class="hack"
+          hack<span class="X">X </span><br /><span class="hack"
             >HACKATHON
           </span>
         </h1>
@@ -49,7 +48,7 @@
             future</q
           ></span
         ><br />
-        <button class="learn" href="#">LEARN MORE</button><br />
+        <button class="learn" ><a href='/Pages/About.html'>LEARN MORE</a></button><br />
         <span class="date"><span class="head">Date: </span> 15-08-2020</span
         ><br />
         <span class="venue"
@@ -200,42 +199,46 @@
     </div>
   </div>
   <section class="hours-body">
-    <section class="hours-one">
-      <div class="hours-thirty">30</div>
-      <div class="hours-hours">HOURS</div>
-      <div class="hours-of">OF...</div>
-      <div class="hours-train0">
-        DESIGNING / BUILDING / CODING /HACKING/ <br />
-        NETWORKING / MENTORS / COMPETITIONS /COFEE/ <br />
-        TEA /FOOD /SNACKS /SWAGS
+    <section class="one30">
+      <div class="thirty_30">30</div>
+      <div class="hours_30">HOURS</div>
+      <div class="of_30">OF...</div>
+      <div class="train0_30">
+        DESIGNING /BUILDING/CODING /HACKING / NETWORKING /MENTORS /COMPETITIONS
+        /COFEE /TEA /FOOD /SNACKS /SWAGS
       </div>
     </section>
 
-    <section class="hours-two">
-      <article class="hours-first">
-        <div class="hours-img1">
-          <img src="assets/images/target.png" class="hours-img"  alt="">
-       
-        <div class="hours-tracks">5&nbsp;&nbsp;TRACKS</div>
+    <section class="two30">
+      <article class="first30">
+        <div class="img30">
+          <img class="partners_img" src="../assets/images/target.png" />
+        </div>
+        <div class="tracks30">5&nbsp;TRACKS</div>
       </article>
 
-      <article class="hours-second">
-        <div class="hours-img1">
-          <img src="assets/images/coffee.png" alt="" class="hours-img"></div>
-        
-        <div class="hours-tracks">4&nbsp;&nbsp;SECTORS</div>
+      <article class="second30">
+        <div class="img30">
+          <img class="partners_img" src="../assets/images/coffee.png" />
+        </div>
+        <div class="tracks30">4&nbsp;SECTORS</div>
       </article>
 
-      <article class="hours-third">
-        <div class="hours-img1">
-          <img class="hours-img" src="assets/images/git-pull-request.png" alt="">        
-        <div class="hours-tracks">CODE</div>
+      <article class="third30">
+        <div class="img30">
+          <img
+            class="partners_img"
+            src="../assets/images/git-pull-request.png"
+          />
+        </div>
+        <div class="tracks30">CODE</div>
       </article>
 
-      <article class="hours-fourth">
-        <div class="hours-img1">
-          <img class="hours-img" src="assets/images/codesandbox.png" alt="">        
-        <div class="hours-tracks">DEPLOY</div>
+      <article class="fourth30">
+        <div class="img30">
+          <img class="partners_img" src="../assets/images/codesandbox.png" />
+        </div>
+        <div class="tracks30">DEPLOY</div>
       </article>
     </section>
   </section>
@@ -448,27 +451,30 @@
     </div>
   </div>
   <section class="contact-main" id='contact'>
-    <form class="contact-form">
+
+    <form class="contact-form" >
       <h1 class="contact-heading">CONTACT</h1>
       <h6 class="contact-details">Do you want to partner or sponsor?</h6>
       <input
         class="contact-input-text"
         type="text"
         name="name"
+        id='name'
         placeholder="Name"
       />
       <input
         type="email"
         name="email"
+        id='email'
         class="contact-input-text"
         placeholder="Email"
       />
-      <textarea class="contact-textarea" placeholder="Message"></textarea>
+      <textarea id='message' class="contact-textarea" placeholder="Message"></textarea>
       <input class="contact-submit" type="submit" value="SEND" />
     </form>
     <div class="link-to-dashboard">
       <button class="span">SEE YOU SOON!</button>
-      <button class="button" href="#">go to dashboard</button>
+      <button class="button"> <a href="/Pages/Login.html">go to dashboard</a></button>
     </div>
   </section>
   <footer class="footer">
