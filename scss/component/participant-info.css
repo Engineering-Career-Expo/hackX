@@ -1,10 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
-div {
+html, body {
+    width: 100%;
+    margin: 0;
+}
+.participant-info {
+    width: 80%;
+    margin: 0;
+    padding: 8%;
+}
+.participant-info .head {
+    width: 80%;
+    padding: 15px;
     background: rgba(0, 128, 251, 0.3);
 }
 button {
     background: #1071F3;
     color: white;
     text-transform: uppercase;
+    float: right;
     font-family: 'Montserrat', sans-serif;
 }
