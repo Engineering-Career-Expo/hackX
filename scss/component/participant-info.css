@@ -2,21 +2,75 @@
 html, body {
     width: 100%;
     margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
 }
 .participant-info {
-    width: 80%;
+    width: 100%;
     margin: 0;
     padding: 8%;
+    border: 1px solid red;
 }
 .participant-info .head {
-    width: 80%;
-    padding: 15px;
-    background: rgba(0, 128, 251, 0.3);
+    width: 100%;
+    padding: 24px 20px;
+    background: rgba(48, 152, 250, 0.3);
+    border: 3px solid #1071F3;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5;
+    border-radius: 4px;
+    text-align: right;
 }
-button {
+.participant-info .response-bar {
+    width: 100%;
+    height: 46px;
+    display: block;
+    border: 1px solid chocolate;
+    margin: 0.8% 0;
+}
+.participant-info .response-bar .circles {
+
+}
+.participant-info .next {
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    /*padding: 10px 20px;*/
     background: #1071F3;
     color: white;
+    border: none;
     text-transform: uppercase;
     float: right;
+    font-family: 'Montserrat', sans-serif;
+    transition: .6s ease-out;
+}
+.participant-info .next:hover {
+    width: 107px;
+    height: 44px;
+}
+.participant-info .reply {
+    display: block;
+    width: 100%;
+    border: 1px solid pink;
+}
+.participant-info .reply .contestant-bio {
+    width: 100%;
+    text-align: left;
+    margin: 0.5% 0;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.participant-info .reply .bio-textarea {
+    width: 90%;
+    background: whitesmoke;
+    height: 400px;
+    padding: 4% 0.5%;
+    border-radius: 8px;
+    margin: 0.5% 5%;
+    border: none;
+    resize: none;
+    text-align: left;
     font-family: 'Montserrat', sans-serif;
 }
