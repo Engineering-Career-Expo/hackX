@@ -1,0 +1,40 @@
+.issue {
+  float: left;
+  background-color: white;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.issue-top h1 {
+  font-family: $default-font-family-hero;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  color: $color-secondary;
+  letter-spacing: 2.5px;
+}
+
+.issue-top h1 span {
+  color: #ffcc00;
+}
+
+.issue-top h3,
+.issue-bottom h3 {
+  font-size: 18px;
+  font-weight: bold;
+  font-family: $default-font-family;
+  margin-bottom: 3px;
+  letter-spacing: 0.6px;
+}
+
+.issue-bottom {
+  margin-top: 13px;
+}
+
+.issue-top p,
+.issue-bottom p {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  font-family: $default-font-family;
+}

@@ -8,9 +8,8 @@
 @import "../scss/base/utilities";
 
 // layout
-@import './layout/navbar';
+@import "./layout/navbar";
 @import "./layout/footer";
-
 
 // components
 
@@ -23,8 +22,9 @@
 @import "./component/schedule";
 @import "./component/partners";
 
-
-
 // pages
 @import "./layout/register";
 @import "./layout/about";
+
+//dashboard
+@import "./dashboard/issue";
