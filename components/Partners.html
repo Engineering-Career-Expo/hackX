@@ -7,28 +7,45 @@
 <link rel="stylesheet" href="../scss/component/Partners.css" >
 <meta charset="utf-8">
 </head>
-<body id="bod">
-	<div class="container">
+<body>
+	<div id="bod">
+		<div class="myimg0" id="largeScreen">
+			<section class="myimg1">
+				<div class="partner_topic1">Partners</div>
+				<div class="img001"></div>
+				<div class="img002"></div>
+				<div class="img003"></div>
+				<div class="img004"></div>
+				<div class="img005"></div>
+				<div class="img006"></div>
+			</section>
+		</div>
+	</div>				
+	<!--small screen-->
+	<div class="container" id="smallScreen">
 		<div class="mySlides fade">
-			<img src="one.png" id="imgSlide">
-			
+			<div class="partner_topic2">Partners</div>
+			<div class="carousal-flex">
+				<a class="prev-screen"  onclick="plus(-1)"><img src="../assets/images/next icon.svg"></a>
+				<div class="img_contain">
+					<img src="../assets/images/partner-one.png" id="imgSlide">
+				</div>
+				<a class="next-screen" onclick="plus(1)"><img src="../assets/images/next icon.svg"></a>
+			</div>
 			<!--Dots/circles-->
 			<div class="text" id="text">
-				<span class="dot" onclick="currentSlide(0)" ></span>
+				<span class="dot active" onclick="currentSlide(0)" ></span>
 				<span class="dot" onclick="currentSlide(1)"></span>
 				<span class="dot" onclick="currentSlide(2)"></span>
 				<span class="dot" onclick="currentSlide(3)"></span>
 				<span class="dot" onclick="currentSlide(4)"></span>
 				<span class="dot" onclick="currentSlide(5)"></span>
-				
 			</div>
 		</div>
-		
 		<!--Next and previous buttons-->
-		<a class="prev"  onclick="plus(-1)">&#10094;</a>
-		<a class="next" onclick="plus(1)">&#10095;</a>
+		
+		
 	</div>
-	
 </body>
 <script src="../js/Partners.js"></script>
 </html>
