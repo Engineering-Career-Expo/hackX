@@ -31,7 +31,19 @@ html, body {
     margin: 0.8% 0;
 }
 .participant-info .response-bar .circles {
-
+    width: 90%;
+    padding: 0 43%;
+    float: left;
+}
+.participant-info .response-bar .dot {
+    cursor: pointer;
+    height: 1.5rem;
+    width: 1.5rem;
+    border : 2px solid #1071F3;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 .participant-info .next {
     border-radius: 4px;
