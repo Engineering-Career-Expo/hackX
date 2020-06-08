@@ -107,6 +107,18 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
 }
+.participant-info .reply .inputarea2 {
+    width: 100%;
+    background: white;
+    padding: 1% 0;
+    border-radius: 8px;
+    margin: 1% 0;
+    border: none;
+    resize: none;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
 .participant-info .reply .inputarea:hover {
     border: 2px solid #1071F3;
 }
@@ -120,7 +132,7 @@ label {
   display: inline-block;
   cursor: pointer;
   padding-left: 10%;
-  font-size: 25px;
+  font-size: 23px;
   vertical-align: bottom;
   position: relative;
 }
