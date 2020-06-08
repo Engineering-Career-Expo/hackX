@@ -75,7 +75,7 @@ html, body {
     display: none;
 }
 .active, .dot:hover {
-    border: 2px solid blue;
+    border: 2px solid #1071F3;
   }  
 .participant-info .next:hover, .participant-info .prev:hover {
     border: none;
@@ -106,4 +106,39 @@ html, body {
     text-align: left;
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
+}
+
+
+
+input[type=checkbox] {
+    display: none;
+}
+
+label {
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 25px;
+  position:relative;
+}
+
+input[type=checkbox] + label:after {
+    font-family: 'Material Icons';
+    content: "";
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 0;
+    border: 2px solid #1071F3;
+    border-radius: 2px;
+}
+
+input[type=checkbox]:checked + label:after {
+    content: "\E5CA";
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 16px;
+    background: #1071F3;
+    border-color: #1071F3;
 }
