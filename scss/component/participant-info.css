@@ -80,7 +80,7 @@ html, body {
 .participant-info .next:hover, .participant-info .prev:hover {
     border: none;
     outline: none;
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 .participant-info .reply {
     display: block;
@@ -107,7 +107,9 @@ html, body {
     font-family: 'Montserrat', sans-serif;
     font-size: 1em;
 }
-
+.participant-info .reply .inputarea:hover {
+    border: 2px solid #1071F3;
+}
 
 
 input[type=checkbox] {
@@ -117,16 +119,18 @@ input[type=checkbox] {
 label {
   display: inline-block;
   cursor: pointer;
-  padding-left: 25px;
-  position:relative;
+  padding-left: 10%;
+  font-size: 25px;
+  vertical-align: bottom;
+  position: relative;
 }
 
 input[type=checkbox] + label:after {
     font-family: 'Material Icons';
     content: "";
     display: inline-block;
-    width: 16px;
-    height: 16px;
+    width: 24px;
+    height: 24px;
     position: absolute;
     left: 0;
     border: 2px solid #1071F3;
@@ -136,9 +140,17 @@ input[type=checkbox] + label:after {
 input[type=checkbox]:checked + label:after {
     content: "\E5CA";
     color: #fff;
-    font-size: 16px;
+    font-size: 24px;
     text-align: center;
-    line-height: 16px;
+    line-height: 24px;
     background: #1071F3;
     border-color: #1071F3;
+}
+.contestant-description {
+    width: 100%;
+    margin: 3% 0;
+    padding: 3% 5%;
+    border: 1.5px solid #1071F3;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
 }
