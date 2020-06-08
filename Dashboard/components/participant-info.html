@@ -14,19 +14,50 @@
         </div>
         <div class="response-bar">
             <div class="circles">
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
-                <div class="dot"></div>
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <button class="prev" id="prev" onclick="plusSlides(-1)">PREVIOUS</button>
+                <button class="next" id="finish">FINISH</button>
+                <button class="next" id="next" onclick="plusSlides(1)">NEXT</button>
             </div>
-            <button class="next">next</button>
         </div>
-        <div class="reply">
-            <header class="contestant-bio"><b>BIO</b></header>
-            <textarea class="bio-textarea">
-                write something about yourself
-            </textarea>
-        </div>
+        <div class="infoSlide">
+            <div class="reply">
+                <header class="contestant-bio"><b>BIO</b></header>
+                <textarea class="inputarea">
+                    write something about yourself
+                </textarea>
+            </div>
+          </div>
+        
+          <div class="infoSlide">
+            <div class="reply">
+                <header class="contestant-bio"><b>WHICH OF THE FOLLOWING DESCRIBES YOU BEST</b></header>
+                <form class="inputarea">
+                    write something about yourself
+                </form>
+            </div>
+          </div>
+        
+          <div class="infoSlide">
+            <div class="reply">
+                <header class="contestant-bio"><b>WHICH OF THE FOLLOWING DESCRIBES YOU BEST</b></header>
+                <form class="inputarea">
+                    write something about yourself
+                </form>
+            </div>
+          </div>
+          <div class="infoSlide">
+            <div class="reply">
+                <header class="contestant-bio"><b>WHICH OF THE FOLLOWING DESCRIBES YOU BEST</b></header>
+                <form class="inputarea">
+                    write something about yourself
+                </form>
+            </div>
+          </div>
     </div>
+    <script src="../../js/participant-info.js"></script>
 </body>
 </html>
