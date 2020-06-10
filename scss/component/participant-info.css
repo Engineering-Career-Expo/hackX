@@ -65,8 +65,9 @@ html, body {
 }
 .participant-info .prev {
     width: 130px;
-    background: rgba(255, 206, 0, 1);
+    background: rgb(255,235,153);
     float: left;
+    color: rgb(216,204,151);
 }
 .participant-info .next {
     float: right;
@@ -122,47 +123,95 @@ html, body {
 .participant-info .reply .inputarea:hover {
     border: 2px solid #1071F3;
 }
-
-
-input[type=checkbox] {
-    display: none;
+/*the checkbox for the track selection*/
+.contestant-description {
+    width: 100%;
+    margin: 3% 0;
+    padding: 1.5% 4%;
+    border: 1.5px solid #1071F3;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    transition: .7s;
 }
-
-label {
+.contestant-description:hover {
+    background: #1071F3;
+    color: white;
+}
+.contestant-description label {
   display: inline-block;
   cursor: pointer;
-  padding-left: 10%;
-  font-size: 1.5vw;
+  padding-left: 8%;
+  font-size: 22px;
   vertical-align: bottom;
   position: relative;
 }
-
-input[type=checkbox] + label:after {
+.contestant-description input[type=checkbox] {
+    display: none;
+}
+.contestant-description input[type=checkbox] + label:after {
     font-family: 'Material Icons';
     content: "";
     display: inline-block;
-    width: 1.5vw;
-    height: 1.5vw;
+    width: 25px;
+    height: 25px;
     position: absolute;
     left: 0;
     border: 2px solid #1071F3;
     border-radius: 2px;
 }
-
-input[type=checkbox]:checked + label:after {
+.contestant-description:hover input[type=checkbox] + label:after {
+    background: lightgray;
+    border-radius: 4px;
+}
+.contestant-description input[type=checkbox]:checked + label:after {
     content: "\E5CA";
     color: #fff;
-    font-size: 1.5vw;
+    font-size: 26px;
     text-align: center;
-    line-height: 1,5vw;
+    line-height: 24px;
     background: #1071F3;
     border-color: #1071F3;
 }
-.contestant-description {
+.inputlink {
     width: 100%;
-    margin: 3% 0;
-    padding: 3% 5%;
-    border: 1.5px solid #1071F3;
-    border-radius: 4px;
-    font-family: 'Montserrat', sans-serif;
+    background: white;
+    margin: 0;
+    padding: 0;
+}
+.inputlink input {
+    width: 95%;
+    margin: 5% 0 2% 0;
+    background: whitesmoke;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    float: left;
+}
+.inputlink .red-circle {
+    width: 5%;
+    height: 50px;
+    display: inline-block;
+    margin: 5% 0 2% 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+    float: right;
+}
+.inputlink .red-circle div {
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    transform: translate(50%,50%);
+    border: 3px solid /*rgb(253,191,209)*/ rgb(253,191,209);
+    background: whitesmoke;
+}
+.inputlink .new-profile {
+    width: 100%;
+    padding: 1%;
+    color: rgb(140,120,38);  
+    background: rgb(255,235,153);
+    font-size: 18px;
+    border: none;  
+    border-radius: 5px;
 }
