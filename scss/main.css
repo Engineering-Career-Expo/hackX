@@ -49,7 +49,7 @@ html {
 nav {
   font-family: "poppins", sans-serif;
   color: #262A35;
-  font-size: 15px;
+  font-size: 13px;
   padding: 5px 35px;
 }
 
@@ -145,7 +145,7 @@ nav {
 .navbar_sch,
 .navbar_reg2,
 .navbar_log {
-  font-weight: 500;
+  font-weight: 400;
   margin: .3pc auto;
 }
 
@@ -496,7 +496,7 @@ footer {
   font-size: 6vw;
 }
 
-.image-1 > div img {
+div img {
   float: right;
 }
 
@@ -521,6 +521,22 @@ footer {
   font-size: 11.7vw;
   color: #000000;
 }
+
+/*.register {
+		width: 40%;
+		height: 40px;
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-left: 20%;
+		margin-right: 4%;
+		display: inline block;
+		font-family: Gilroy-Medium;
+		font-size: 15px;
+		color: white;
+		background: #FA0048;
+		border: none;
+		border-radius: 3px;
+	}*/
 .hero-main {
   width: 90%;
   margin: 5%;
@@ -585,7 +601,7 @@ footer {
   font-size: 5.3vw;
 }
 
-.image-1 > div img {
+div img {
   float: right;
 }
 
@@ -673,7 +689,7 @@ footer {
   color: #e5193b;
 }
 
-.image-1 > div img {
+div img {
   float: right;
 }
 
@@ -1153,7 +1169,6 @@ footer {
     padding-top: 2.5%;
     padding-left: 4%;
     outline: none;
-    resize: none;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1287,7 +1302,6 @@ footer {
     padding-top: 2.5%;
     padding-left: 4%;
     outline: none;
-    resize: none;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1420,7 +1434,6 @@ footer {
     padding-top: 2.5%;
     padding-left: 4%;
     outline: none;
-    resize: none;
     -webkit-transition: 1s;
     transition: 1s;
   }
@@ -1725,14 +1738,14 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .mentor-content {
+  .content {
     width: 100%;
     height: auto;
     border: none;
     float: right;
     padding-top: 1.6%;
   }
-  .mentor-content span {
+  .content span {
     text-align: left;
   }
   .mentor-name {
@@ -1805,14 +1818,14 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .mentor-content {
+  .content {
     width: 100%;
     height: auto;
     border: none;
     float: right;
     padding-top: 1.6%;
   }
-  .mentor-content span {
+  .content span {
     text-align: left;
   }
   .mentor-name {
@@ -1870,14 +1883,14 @@ footer {
         grid-template-rows: repeat(2, 1fr);
     grid-gap: 35px;
   }
-  .mentor-content {
+  .content {
     width: 100%;
     height: auto;
     border: none;
     float: right;
     padding-top: 1.6%;
   }
-  .mentor-content span {
+  .content span {
     text-align: left;
   }
   .mentor-name {
@@ -1926,6 +1939,7 @@ footer {
   .mentor {
     width: 80%;
     margin: 2% 10%;
+    height: 380px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -1934,15 +1948,15 @@ footer {
         grid-template-rows: repeat(2, 1fr);
     grid-gap: 35px;
   }
-  .mentor-content {
-    width: 39%;
+  .content {
+    width: 44%;
     height: 100%;
-    float: right;
     border: none;
+    float: right;
     padding-top: 1.6%;
     padding-left: 5%;
   }
-  .mentor-content span {
+  .content span {
     text-align: left;
   }
   .mentor-name {
@@ -1961,6 +1975,7 @@ footer {
   }
   .image {
     width: 56%;
+    height: 100%;
     border: none;
   }
 }
@@ -1999,15 +2014,14 @@ footer {
         grid-template-rows: repeat(2, 1fr);
     grid-gap: 35px;
   }
-  .mentor-content {
-    width: 40%;
+  .content {
     height: 100%;
     border: none;
     float: right;
     padding-top: 1.6%;
     padding-left: 5%;
   }
-  .mentor-content span {
+  .content span {
     text-align: left;
   }
   .mentor-name {
