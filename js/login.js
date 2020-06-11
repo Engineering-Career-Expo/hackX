@@ -23,9 +23,11 @@ const formEvent = loginForm.addEventListener("submit", async (event) => {
     userLogin(loginInfo);
   }
 });
+part = "https://hackx.netlify.app/login" 
+// Change to this to use the api locally.  "http://localhost:8080/login"
 const userLogin = async (loginInfo) => {
   axios
-    .post("http://localhost:8080/login", loginInfo)
+    .post(part, loginInfo)
     .then((response) => {
       response.data;
       if (response.status == "200") {
