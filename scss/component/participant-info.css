@@ -165,6 +165,9 @@ html, body {
     background: lightgray;
     border-radius: 4px;
 }
+.contestant-description:hover input[type=checkbox]:checked + label:after {
+    border: 1.5px solid whitesmoke;
+}
 .contestant-description input[type=checkbox]:checked + label:after {
     content: "\E5CA";
     color: #fff;
@@ -222,6 +225,7 @@ html, body {
     font-size: 18px;
     border: none;  
     border-radius: 5px;
+    cursor: pointer;
 }
 .selectarea {
     width: 100%;
