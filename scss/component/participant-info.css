@@ -14,7 +14,7 @@ html, body {
 }
 .participant-info .head {
     width: 100%;
-    margin: 0;
+    margin: 0 0 1.5% 0;
     padding: 24px 20px;
     background: rgba(48, 152, 250, 0.3);
     border: 3px solid #1071F3;
@@ -59,6 +59,7 @@ html, body {
     user-select: none;
     font-family: 'Montserrat', sans-serif;
     transition: .6s ease-out;
+    cursor: pointer;
 }
 .participant-info button {
     outline: none;
@@ -132,6 +133,7 @@ html, body {
     border-radius: 4px;
     font-family: 'Montserrat', sans-serif;
     transition: .7s;
+    color: #1071F3;
 }
 .contestant-description:hover {
     background: #1071F3;
@@ -193,6 +195,7 @@ html, body {
     outline: none;
     border-radius: 5px;
     float: left;
+    padding: 1% 5%;
 }
 .inputlink .red-circle {
     width: 5%;
@@ -208,7 +211,7 @@ html, body {
     width: 25px;
     height: 25px;
     transform: translate(50%,50%);
-    border: 3px solid /*rgb(253,191,209)*/ rgb(253,191,209);
+    border: 3px solid rgb(253,191,209);
     background: whitesmoke;
 }
 .inputlink .new-profile {
@@ -222,7 +225,7 @@ html, body {
 }
 .selectarea {
     width: 100%;
-    background: whitesmoke;
+    background: white;
     height: 400px;
     padding: 4% 0;
     border-radius: 8px;
@@ -231,5 +234,26 @@ html, body {
     resize: none;
     text-align: left;
     font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
     font-size: 1em;
+}
+.selectarea .inst {
+    float: left;
+    width: 50%;
+    margin: 0;
+}
+.selectarea .dept {
+    float: right;
+    width: 50%;
+    margin: 0;
+}
+.selectarea input {
+    width: 80%;
+    margin: 2% 0;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: whitesmoke;
+    padding: 5%;
+    border: 4px;
 }
