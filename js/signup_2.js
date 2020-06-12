@@ -46,10 +46,11 @@ const signup_2_Event = signup_btn_2.addEventListener("click", async (event) => {
     createSignup(signupInfo);
   }
 });
-
+part = "https://hackx.netlify.app/login" 
+// Change to this to use the api locally.  "http://localhost:8080/login"
 const createSignup = async (signupInfo) => {
   axios
-    .post("http://localhost:8080/signup", signupInfo)
+    .post(part, signupInfo)
     .then((response) => {
       response.data;
       if (response.status == "200") {
