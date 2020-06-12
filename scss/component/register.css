@@ -1,7 +1,3 @@
-.register-form-container .arrow {
-    vertical-align: center;
-  }
-  
   [list]::-webkit-calendar-picker-indicator {
     display: none;
   }
@@ -545,16 +541,13 @@
         font-size: 1.47vw;
         color: #FA0048;
         background: transparent;
-        border: none;
+        border: 1px solid #FA0048;
         border-radius: 4px;
         -webkit-transition: 1s;
         transition: 1s;
     }
     .register-main-container .register-form-container button:focus {
         outline: none;
-    }
-    .register-main-container .register-form-container .previous-btn:hover {
-        border: 0.5px solid #FA0048;
     }
     .register-main-container .register-form-container .signup-btn {
         width: 46%;
@@ -578,7 +571,7 @@
         cursor: pointer;
         padding-left: 40px;
         position:relative;
-        font-size: 19px;
+        font-size: 1.4vw;
         margin-bottom: 5%;
     }
     .register-main-container .register-form-container input[type=checkbox] + .policy:after {
