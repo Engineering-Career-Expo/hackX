@@ -7,19 +7,15 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Register</title>
-    <link rel="stylesheet" href="../scss/main.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    />
+    <link rel="stylesheet" href="../scss/main.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
   </head>
   <body>
     <nav>
       <section class="navbar_first">
         <div class="navbar_ecx">
           <a href="../index.html"
-            ><img class="navbar_0ecx1" src="../assets/ECX.svg" alt="ECX_LOGO"
-          /></a>
+            ><img class="navbar_0ecx1" src="../assets/ECX.svg" alt="ECX_LOGO"/></a>
         </div>
         <div class="navbar_sep">
           <div class="navbar_reg1">
@@ -32,16 +28,16 @@
       </section>
 
       <section class="navbar_second">
-        <div class="navbar_about"><a href="/index.html">Home</a></div>
-        <div class="navbar_about"><a href="Pages/About.html">About</a></div>
+        <div class="navbar_about"><a href="../index.html">Home</a></div>
+        <div class="navbar_about"><a href="About.html">About</a></div>
 
         <div class="navbar_ment">
-          <a href="/index.html#mentors">Mentors</a>
+          <a href="../index.html#mentors">Mentors</a>
         </div>
         <div class="navbar_sch">
-          <a href="/index.html#schedule">Schedule</a>
+          <a href="../index.html#schedule">Schedule</a>
         </div>
-        <div class="navbar_sch"><a href="/index.html #contact">Contact</a></div>
+        <div class="navbar_sch"><a href="../index.html #contact">Contact</a></div>
         <div class="navbar_reg2">
           <a class="navbar_reg3" href="Register.html">REGISTER</a>
         </div>
@@ -51,62 +47,29 @@
       </section>
     </nav>
 
-    <main>
+    <main class="register-main-container">
       <div class="register-form-container">
         <form class="signup">
           <h2>Registeration</h2>
           <legend>First name</legend>
-          <input
-            type="text"
-            name="FirstName"
-            placeholder="First Name"
-            required
-            id="first_name"
-          />
-          <legend>Last name</legend>
-          <input
-            type="text"
-            name="LastName"
-            id="last_name"
-            placeholder="Last Name"
-            required
-          />
+          <input type="text" name="FirstName"
+            placeholder="First Name" required id="first_name"/>
           <legend>Email</legend>
-          <input
-            type="email"
-            required
-            name="email"
-            id="signup_email"
-            placeholder="Email"
-          />
+          <input type="email" required name="email" id="signup_email" placeholder="Email"/>
           <legend>Password</legend>
-          <input
-            type="password"
-            id="password"
-            name="password"
-            placeholder="•••••••••"
-          />
-          <legend>Confirm Password</legend>
-          <input
-            type="password"
-            required
-            name="confirm-password"
-            placeholder="•••••••••"
-            id="confirm_password"
-          />
+          <input type="password" id="password" name="password" placeholder="•••••••••"/>
         </form>
+        <button class="signup-btn">
+          <span class="btn-txt">Sign Up</span>
+        </button>
         <button class="previous-btn">
-          <img src="../assets/images/arrow-right.png" class="arrow arrow2" />
-          <a href="Login.html"><span class="btn-txt">Login</span> </a>
+          <a href="Login.html"><span class="btn-txt">Sign In</span> </a>
         </button>
-        <button  class="signup-btn">
-            <span class="btn-txt"
-              >Next<img src="../assets/images/arrow-right.png"
-            /></span>
-        
-        </button>
+        <div>
+          <input type="checkbox" id="policy"/>
+          <label  for="policy" class="policy">I have read and agreed to the term and condition of the Privacy policy of this competition</label>
+        </div>
       </div>
-      <br />
       <div class="register-call-to-action">
         <h1>
           HACK<span class="X">X</span> <span class="hack">HACKATHON</span> 2019
@@ -114,7 +77,7 @@
         <button><span class="btn-cnt">Competition Guidelines</span></button>
       </div>
     </main>
-
+    <aside> <div class="device-compatibility"></div></aside>
     <script src="../js/signup.js"></script>
   </body>
 </html>

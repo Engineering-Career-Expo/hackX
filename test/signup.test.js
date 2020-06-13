@@ -1,7 +1,7 @@
 // Change the details before test.
 const assert = require('assert');
 const supertest = require('supertest');
-const app = require('../server');	
+const app = require('../olawale1rty/server');	
 
 describe('Signup Tests', function() {
 	it('Test for successfull signup connection', async ()=>{

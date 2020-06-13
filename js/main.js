@@ -49,9 +49,11 @@ const formEvent = contactForm.addEventListener("submit", async (event) => {
     createContact(contactInfo);
   }
 });
+part = "https://hackx.netlify.app/login" 
+// Change to this to use the api locally.  "http://localhost:8080/login"
 const createContact = async (contactInfo) => {
   axios
-    .post("http://localhost:8080/contact", contactInfo)
+    .post(part, contactInfo)
     .then((response) => {
       response.data;
       if (response.status == "200") {
