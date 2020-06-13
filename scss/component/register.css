@@ -7,7 +7,7 @@
   }
   
   .register-form-container input:valid {
-    color: green;
+    border-bottom: green;
   }
   
   .register-form-container input:invalid {
