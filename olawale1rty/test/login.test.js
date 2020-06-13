@@ -1,6 +1,6 @@
 const assert = require('assert');
 const supertest = require('supertest');
-const app = require('../olawale1rty/server');	
+const app = require('../server');	
 
 describe('Login Tests', function() {
 	it('Test for successfull login connection', async ()=>{

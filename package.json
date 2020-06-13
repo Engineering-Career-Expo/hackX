@@ -1,47 +1,25 @@
 {
-  "name": "hackx",
+  "name": "hackX",
   "version": "1.0.0",
-  "description": "Ecx Hackathon Competition",
-  "main": "server.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "start": "node olawale1rty/server.js",
-    "test": "mocha",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "scss": "node-sass --watch sass/main.scss -o css",
     "build": "npm run scss"
   },
-  "keywords": [
-    "hackx",
-    "ecx-unilag"
-  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bamiogunfemi/hackX.git"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bamiogunfemi/hackX/issues"
   },
   "homepage": "https://github.com/bamiogunfemi/hackX#readme",
-  "engines": {
-    "node": "12.6.0",
-    "npm": "6.9.0"
-  },
   "dependencies": {
-    "@hapi/joi": "^17.1.1",
-    "bcrypt": "^4.0.1",
-    "chai": "^4.2.0",
-    "config": "^3.3.1",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "joi": "^14.3.1",
-    "jsonwebtoken": "^8.5.1",
-    "mocha": "^7.2.0",
-    "mongodb": "^3.5.6",
-    "mongoose": "^5.9.10",
-    "morgan": "^1.10.0",
-    "node-sass": "^4.14.1",
-    "supertest": "^4.0.2",
-    "validator": "^13.0.0"
+    "node-sass": "^4.14.0"
   }
 }
