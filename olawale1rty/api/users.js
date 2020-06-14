@@ -2,7 +2,7 @@ const config = require("config");
 const express = require("express");
 const router = express.Router();
 const jwt = require("jsonwebtoken");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const { User, validate } = require("../model/user");
 const { contact, validateContact } = require("../model/contact");
 
@@ -18,9 +18,6 @@ router.post("/signup", (req, res) => {
     email,
     password,
     username,
-    track,
-    age,
-    institution,
   } = req.body;
   let inputData = new User({
     firstname: firstname,
@@ -28,9 +25,6 @@ router.post("/signup", (req, res) => {
     email: email,
     password: bcrypt.hashSync(password, bcrypt.genSaltSync(10)),
     username: username,
-    track: track,
-    age: age,
-    institution: institution,
   });
   inputData
     .save()
@@ -132,17 +126,11 @@ router.get("/getuser", checkToken, (req, res) => {
       let lastname = index.lastname;
       let email = index.email;
       let username = index.username;
-      let track = index.track;
-      let age = index.age;
-      let institution = index.institution;
       res.json({
         firstname,
         lastname,
         email,
         username,
-        track,
-        age,
-        institution,
       });
     })
     .catch((err) => {

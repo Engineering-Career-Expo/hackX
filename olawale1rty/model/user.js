@@ -39,23 +39,6 @@ let ecxSchema = new mongoose.Schema({
 		    minlength: 3,
 		    maxlength: 50
 		},
-		track: {
-		    type: String,
-		    required: true,
-		    minlength: 3,
-		    maxlength: 50
-		},
-		age: {
-		    type: Number,
-		    required: true,
-		    minlength: 2,
-		},
-		institution: {
-		    type: String,
-		    required: true,
-		    minlength: 3,
-		    maxlength: 50
-		},
 		isAdmin: Boolean
 
 
@@ -71,9 +54,6 @@ function validateUser(user) {
     password: Joi.string().pattern(new RegExp('^[a-zA-Z0-9]{3,30}$')).min(3).max(255).required(),
     confirmPassword: Joi.ref('password'),
     username: Joi.string().alphanum().min(3).max(50).required(),
-    track: Joi.string().min(3).max(50).required(),
-    age: Joi.number().integer().min(2).required(),
-    institution: Joi.string().min(3).max(50).required(),
   });
 
   return schema.validate(user)
