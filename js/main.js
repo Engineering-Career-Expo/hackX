@@ -51,7 +51,7 @@ const formEvent = contactForm.addEventListener("submit", async (event) => {
 });
 const createContact = async (contactInfo) => {
   axios
-    .post("http://localhost:8080/contact", contactInfo)
+    .post("https://hackxbackend.herokuapp.com/contact", contactInfo)
     .then((response) => {
       response.data;
       if (response.status == "200") {

@@ -25,7 +25,7 @@ const formEvent = loginForm.addEventListener("submit", async (event) => {
 });
 const userLogin = async (loginInfo) => {
   axios
-    .post("http://localhost:8080/login", loginInfo)
+    .post("https://hackxbackend.herokuapp.com/login", loginInfo)
     .then((response) => {
       response.data;
       if (response.status == "200") {

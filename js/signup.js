@@ -17,20 +17,23 @@ const showAlert_signup_1 = (message, className) => {
 let first_name = "";
 let last_name = "";
 let signup_email = "";
+let username = "";
 let password = "";
 let confirm_password = "";
 const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
-  // event.preventDefault();
+  event.preventDefault();
 
   first_name = document.querySelector("#first_name").value;
   last_name = document.querySelector("#last_name").value;
   signup_email = document.querySelector("#signup_email").value;
+  username = document.querySelector("#username").value;
   password = document.querySelector("#password").value;
   confirm_password = document.querySelector("#confirm_password").value;
   const signupInfo = await {
     first_name,
     last_name,
     signup_email,
+    username,
     password,
     confirm_password,
   };
@@ -38,6 +41,7 @@ const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
     first_name === "" ||
     last_name === "" ||
     signup_email === "" ||
+    username === "" ||
     password === "" ||
     confirm_password === ""
   ) {
@@ -46,13 +50,26 @@ const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
     showAlert_signup_1("Passwords Don't Match", "error");
   } 
   else {
-    window.location.assign("../Pages/Register-2.html");
-    localStorage.setItem("first_name", first_name);
-    localStorage.setItem("last_name", last_name);
-    localStorage.setItem("signup_email", signup_email);
-    localStorage.setItem("password", password);
-    localStorage.setItem("confirm_password", confirm_password);
-    // console.log('success')
-    // createContact(contactInfo);
+   createSignup(signupInfo);
   }
 });
+
+
+const createSignup = async (signupInfo) => {
+  axios
+    .post("https://hackxbackend.herokuapp.com/signup", signupInfo)
+    .then((response) => {
+      response.data;
+      if (response.status == "200") {
+        if (response.data == "Failed to signup") {
+          showAlert_signup_2("Signup Failed", "error");
+        } else {
+          showAlert_signup_2("Signup Successfully", "success");
+        }
+      } else {
+        showAlert_signup_2("Something Went Wrong. Try Again Later", "error");
+      }
+    })
+
+    .catch((error) => console.error(error));
+};
