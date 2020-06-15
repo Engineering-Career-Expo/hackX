@@ -43,15 +43,18 @@ function validateUser(user) {
       .required()
       .error((errors) => {
         errors.forEach((err) => {
-          switch (err.type) {
+          switch (err.code) {
+            case "string.empty":
+                err.message = "Username should not be empty!";
+                break;
             case "any.empty":
               err.message = "Name should not be empty!";
               break;
             case "string.min":
-              err.message = `Name should have at least ${err.context.limit} characters!`;
+              err.message = "Name should have at least 3 characters!";
               break;
             case "string.max":
-              err.message = `Name should have at most ${err.context.limit} characters!`;
+              err.message = "Name should have at most 50 characters!";
               break;
             case "string.base":
               err.message = "Name should be a string.";
@@ -69,18 +72,21 @@ function validateUser(user) {
       .email()
       .error((errors) => {
         errors.forEach((err) => {
-          switch (err.type) {
+          switch (err.code) {
+            case "string.empty":
+                err.message = "Username should not be empty!";
+                break;
             case "any.empty":
               err.message = "Email should not be empty!";
               break;
             case "string.min":
-              err.message = `Email should have at least ${err.context.limit} characters!`;
+              err.message = "Email should have at least 5 characters!";
               break;
             case "string.max":
-              err.message = `Email should have at most ${err.context.limit} characters!`;
+              err.message = "Email should have at most 255 characters!";
               break;
             case "string.email":
-              err.message = `${err.context.value} is not a valid e-mail`;
+              err.message = "Not a valid E-mail";
               break;
             case "string.base":
               err.message = "Email should be a string.";
@@ -97,15 +103,18 @@ function validateUser(user) {
       .required()
       .error((errors) => {
         errors.forEach((err) => {
-          switch (err.type) {
+          switch (err.code) {
+            case "string.empty":
+                err.message = "Username should not be empty!";
+                break;
             case "any.empty":
               err.message = "Message should not be empty!";
               break;
             case "string.min":
-              err.message = `Message should have at least ${err.context.limit} characters!`;
+              err.message = "Message should have at least 25 characters!";
               break;
             case "string.max":
-              err.message = `Message should have at most ${err.context.limit} characters!`;
+              err.message = "Message should have at most 500 characters!";
               break;
             case "string.base":
               err.message = "Message should be in string.";

@@ -2,7 +2,7 @@
 const signup = document.querySelector(".signup");
 const signup_btn = document.querySelector(".signup-btn");
 
-const showAlert_signup_1 = (message, className) => {
+const showAlert_signup = (message, className) => {
   const div = document.createElement("div");
   div.className = `alert ${className}`;
   div.appendChild(document.createTextNode(message));
@@ -11,43 +11,43 @@ const showAlert_signup_1 = (message, className) => {
 
   setTimeout(function () {
     document.querySelector(".alert").remove();
-  }, 3000);
+  }, 9000);
 };
 
-let first_name = "";
-let last_name = "";
-let signup_email = "";
+let firstname = "";
+let lastname = "";
+let email = "";
 let username = "";
 let password = "";
-let confirm_password = "";
+let confirmPassword = "";
 const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
   event.preventDefault();
 
-  first_name = document.querySelector("#first_name").value;
-  last_name = document.querySelector("#last_name").value;
-  signup_email = document.querySelector("#signup_email").value;
+  firstname = document.querySelector("#first_name").value;
+  lastname = document.querySelector("#last_name").value;
+  email = document.querySelector("#signup_email").value;
   username = document.querySelector("#username").value;
   password = document.querySelector("#password").value;
-  confirm_password = document.querySelector("#confirm_password").value;
+  confirmPassword = document.querySelector("#confirm_password").value;
   const signupInfo = await {
-    first_name,
-    last_name,
-    signup_email,
+    firstname,
+    lastname,
+    email,
     username,
     password,
-    confirm_password,
+    confirmPassword,
   };
   if (
-    first_name === "" ||
-    last_name === "" ||
-    signup_email === "" ||
+    firstname === "" ||
+    lastname === "" ||
+    email === "" ||
     username === "" ||
     password === "" ||
-    confirm_password === ""
+    confirmPassword === ""
   ) {
-    showAlert_signup_1("Please Fill All Fields", "error");
-  } else if (password != confirm_password) {
-    showAlert_signup_1("Passwords Don't Match", "error");
+    showAlert_signup("Please Fill All Fields", "error");
+  } else if (password != confirmPassword) {
+    showAlert_signup("Passwords Don't Match", "error");
   } 
   else {
    createSignup(signupInfo);
@@ -62,14 +62,16 @@ const createSignup = async (signupInfo) => {
       response.data;
       if (response.status == "200") {
         if (response.data == "Failed to signup") {
-          showAlert_signup_2("Signup Failed", "error");
+          showAlert_signup("Email used already. ", "error");
+        } else if(response.data == "Successfully Signed Up"){
+          showAlert_signup("Signup Successfully", "success");
+          window.location.href = 'https://hackx.netlify.app/dashboard'; 
         } else {
-          showAlert_signup_2("Signup Successfully", "success");
+          showAlert_signup(response.data, "error");
         }
       } else {
-        showAlert_signup_2("Something Went Wrong. Try Again Later", "error");
+        showAlert_signup("Something Went Wrong. Try Again Later", "error");
       }
     })
-
     .catch((error) => console.error(error));
 };

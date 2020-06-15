@@ -24,12 +24,18 @@ const formEvent = loginForm.addEventListener("submit", async (event) => {
   }
 });
 const userLogin = async (loginInfo) => {
+  // http://localhost:8080/login
   axios
     .post("https://hackxbackend.herokuapp.com/login", loginInfo)
     .then((response) => {
       response.data;
       if (response.status == "200") {
-        showLoginAlert("Login Successful", "success");
+        if (response.data == "Login Incorrect") {
+          showLoginAlert("Login Incorrect", "error");
+        } else {
+          showLoginAlert("Login Successfully", "success");
+          window.location.href = 'https://hackx.netlify.app/dashboard';
+        }
       } else {
         showLoginAlert("Something Went Wrong. Try Again Later", "error");
       }

@@ -10,7 +10,8 @@ const { contact, validateContact } = require("../model/contact");
 
 router.post("/signup", (req, res) => {
   const { error } = validate(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
+  if (error) return res.json(error.details[0].message);
+  // if (error) return res.status(400).send(error.details[0].message);
 
   const {
     firstname,
@@ -40,7 +41,8 @@ router.post("/signup", (req, res) => {
 
 router.post("/contact", (req, res) => {
   const { error } = validateContact(req.body);
-  if (error) return res.status(400).send(error.details[0].message);
+  if (error) return res.json(error.details[0].message);
+  // if (error) return res.status(400).send(error.details[0].message);
 
   const { email, name, message } = req.body;
   contacts = new contact({
@@ -104,6 +106,12 @@ router.post("/login", (req, res) => {
           res.json({
             message: "Authentication Successful",
           });
+          // const targetBaseUrl = 'https://hackx.netlify.app/dashboard';
+          // function handleRedirect() {
+          // const targetUrl = targetBaseUrl;
+          // res.redirect(targetUrl);
+          // }
+          // handleRedirect();
         } else {
           res.json("Login Incorrect");
         }
@@ -112,6 +120,31 @@ router.post("/login", (req, res) => {
     .catch((err) => {
       res.json("Login Incorrect");
     });
+});
+
+router.post("/dashboard", checkToken, (req, res) => {
+  // const { username } = req.body;
+  // User.find({
+  //   username: username,
+  // })
+  //   .then((doc) => {
+  //     let index = doc[0];
+  //     //console.log(doc);
+  //     let firstname = index.firstname;
+  //     let lastname = index.lastname;
+  //     let email = index.email;
+  //     let username = index.username;
+      res.json(
+        "You are in the dashboard"
+        // firstname,
+        // lastname,
+        // email,
+        // username,
+      // });
+    )
+    // .catch((err) => {
+    //   res.json("Incorrect username");
+    // });
 });
 
 router.get("/getuser", checkToken, (req, res) => {
