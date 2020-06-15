@@ -33,7 +33,7 @@ const showAlert = (message, className) => {
 
   setTimeout(function () {
     document.querySelector(".alert").remove();
-  }, 3000);
+  }, 9000);
 };
 
 const formEvent = contactForm.addEventListener("submit", async (event) => {
@@ -55,7 +55,13 @@ const createContact = async (contactInfo) => {
     .then((response) => {
       response.data;
       if (response.status == "200") {
-        showAlert("Contact Saved", "success");
+        if (response.data == "Failed to Save Contact") {
+          showAlert("Failed to Save Contact ", "error");
+        } else if(response.data == "Successfully Saved Contact"){
+          showAlert("Contact Saved", "success"); 
+        } else {
+          showAlert(response.data, "error");
+        }
       } else {
         showAlert("Something Went Wrong. Try Again Later", "error");
       }
