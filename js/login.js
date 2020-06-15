@@ -32,6 +32,10 @@ const userLogin = async (loginInfo) => {
       if (response.status == "200") {
         if (response.data == "Login Incorrect") {
           showLoginAlert("Login Incorrect", "error");
+        } else if (response.data == "Wrong email entered.") {
+          showLoginAlert("Wrong email entered.", "error");
+        } else if (response.data == "Password Incorrect.") {
+          showLoginAlert("Password Incorrect.", "error");
         } else {
           showLoginAlert("Login Successfully", "success");
           window.location.href = 'https://hackx.netlify.app/dashboard';

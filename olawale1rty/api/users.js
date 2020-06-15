@@ -112,13 +112,16 @@ router.post("/login", (req, res) => {
           // res.redirect(targetUrl);
           // }
           // handleRedirect();
-        } else {
+          
+        } else if ( result === false) {
+          res.json("Password Incorrect.");
+        }else {
           res.json("Login Incorrect");
         }
       });
     })
     .catch((err) => {
-      res.json("Login Incorrect");
+      res.json("Wrong email entered.");
     });
 });
 
