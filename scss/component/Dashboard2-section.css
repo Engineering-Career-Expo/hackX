@@ -165,7 +165,8 @@ button {
     text-decoration: none;
 }
 .Dashboard2-section .sectionbar .prizes {
-    
+    width: 100%;
+    margin: 0;
 }
 .prH {
     font-family: Nuito Sans, sans-serif;
