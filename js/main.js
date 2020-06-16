@@ -23,13 +23,14 @@ myham[0].addEventListener("click", myfunc1);
 
 //contact
 const contactForm = document.querySelector(".contact-form");
+const contactForm_2 = document.querySelector(".contact-input-text");
 
 const showAlert = (message, className) => {
   const div = document.createElement("div");
   div.className = `alert ${className}`;
   div.appendChild(document.createTextNode(message));
-  const container = document.querySelector(".contact-main");
-  container.insertBefore(div, contactForm);
+  const container = document.querySelector(".contact-form");
+  container.insertBefore(div, contactForm_2);
 
   setTimeout(function () {
     document.querySelector(".alert").remove();
