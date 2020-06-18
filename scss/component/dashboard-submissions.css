@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 html, body {
     width: 100%;
     margin: 0;
@@ -9,18 +11,35 @@ html, body {
     width: 100%;
     margin: 0;
     background: #E5E5E5;
+    padding-bottom: 14%;
+    color: #FFFFFF;
 }
 .dashboard-submissions header {
     width: 100%;
     margin: 0;
     background: #0080FB;
-    padding: 2.4% 0 7% 4%;
+    font-weight: 300;
+    padding: 1% 0 7% 4%;
+    font-size: 1.8vw;
+    font-family: Poppins, sans-serif;
 }
 .dashboard-submissions .submittedScreen {
     width: 80%;
-    margin: 5% 10% 0 10%;
-    padding: 4%;
+    margin: 3.5% 10% 0 10%;
+    padding: 4% 4% 2% 4%;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    color: #000000;
     background: white;
+    border-radius: 5px;
+}
+.dashboard-submissions .submittedScreen .Hello {
+    font-size: 1.6vw;
+    font-weight: 600;
+}
+.dashboard-submissions .submittedScreen .description {
+    font-weight: 1.3vw;
+    margin: 3% 0 2% 0;
 }
 .dashboard-submissions .submittedScreen hr {
     border: 1px solid rgba(0, 0, 0, 0.3);
@@ -28,15 +47,15 @@ html, body {
 .dashboard-submissions .submittedScreen .status {
     width: 100%;
     margin-top: 3%;
-    font-size: 1.47vw;
+    font-size: 1.3vw;
 }
 .dashboard-submissions .submittedScreen .status .submission-state {
     color: #3770FF;
-    margin-right: 10%;
+    margin-right: 8%;
 }
 .dashboard-submissions .submittedScreen .status .update-state {
     color: #F2A702;
-    margin-right: 10%;
+    margin-right: 8%;
 }
 .dashboard-submissions .submittedScreen .grade-status {
     color: #FA0048;
