@@ -1,0 +1,43 @@
+html, body {
+    width: 100%;
+    margin: 0;
+}
+* {
+    box-sizing: border-box;
+}
+.dashboard-submissions {
+    width: 100%;
+    margin: 0;
+    background: #E5E5E5;
+}
+.dashboard-submissions header {
+    width: 100%;
+    margin: 0;
+    background: #0080FB;
+    padding: 2.4% 0 7% 4%;
+}
+.dashboard-submissions .submittedScreen {
+    width: 80%;
+    margin: 5% 10% 0 10%;
+    padding: 4%;
+    background: white;
+}
+.dashboard-submissions .submittedScreen hr {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.dashboard-submissions .submittedScreen .status {
+    width: 100%;
+    margin-top: 3%;
+    font-size: 1.47vw;
+}
+.dashboard-submissions .submittedScreen .status .submission-state {
+    color: #3770FF;
+    margin-right: 10%;
+}
+.dashboard-submissions .submittedScreen .status .update-state {
+    color: #F2A702;
+    margin-right: 10%;
+}
+.dashboard-submissions .submittedScreen .grade-status {
+    color: #FA0048;
+}
