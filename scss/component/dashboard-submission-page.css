@@ -22,7 +22,7 @@ body {
 .dashboard-submission-page .shareDiv {
     text-align: center;
     width: 50%;
-    margin: 0 25%;
+    margin: 2% 25%;
     font-family: 'Nuito Sans', sans-serif;
 }
 .dashboard-submission-page .shareDiv .shareTxtHd {
@@ -32,8 +32,8 @@ body {
 .dashboard-submission-page .shareDiv .shareTxtcnt {
     font-size: 20px;
     font-weight: 100;
-    margin-top: 4%;
-    margin-bottom: 3.6%;
+    margin-top: 4.5%;
+    margin-bottom: 4%;
 }
 .dashboard-submission-page .shareDiv .shareImg {
     width: 44%;
