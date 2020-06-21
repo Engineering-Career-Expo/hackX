@@ -5,3 +5,115 @@ html, body {
 * {
     box-sizing: border-box;
 }
+.dashboard-submission-form .headForm {
+
+}
+font-family: Nunito Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height */
+
+
+color: #0080FB;
+
+
+
+/* hackx */
+
+
+position: absolute;
+width: 257px;
+height: 72px;
+left: 512px;
+top: 203px;
+
+font-family: Monad;
+font-style: normal;
+font-weight: 500;
+font-size: 72px;
+line-height: 72px;
+/* identical to box height */
+
+
+color: #0080FB;
+
+
+/* Submitting project to HackX */
+
+
+position: absolute;
+width: 314px;
+height: 33px;
+left: 483px;
+top: 299px;
+
+font-family: Nunito Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 24px;
+line-height: 33px;
+/* identical to box height */
+
+
+color: #000000;
+
+
+
+/* Describe your project */
+
+
+position: absolute;
+width: 171px;
+height: 25px;
+left: 196px;
+top: 429px;
+
+font-family: Nunito Sans;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 25px;
+/* identical to box height */
+
+
+color: #000000;
+
+
+/* Name */
+
+
+position: absolute;
+width: 76px;
+height: 38px;
+left: 175px;
+top: 577px;
+
+font-family: Nunito Sans;
+font-style: normal;
+font-weight: bold;
+font-size: 28px;
+line-height: 38px;
+
+color: rgba(0, 0, 0, 0.7);
+
+
+/* WHAT ARE YOU CALLING IT ?? */
+
+
+position: absolute;
+width: 223px;
+height: 17px;
+left: 176px;
+top: 623px;
+
+font-family: Montserrat;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 17px;
+/* identical to box height */
+
+
+color: rgba(0, 0, 0, 0.4);
