@@ -23,7 +23,7 @@ button:hover, input:hover {
     width: 100%;
     margin: 0;
     background: #E5E5E5;
-    padding: 5% 5% 3% 5%;
+    padding: 4% 4% 1.5% 4%;
 }
 .dashboard-submission-form .heading .headForm {
     font-family: 'Nunito Sans', Tahoma, Geneva, Verdana, sans-serif;
@@ -34,8 +34,8 @@ button:hover, input:hover {
     color: #0080FB;    
 }
 .dashboard-submission-form .heading .headMain {
-    margin: 0;
     width: 100%;
+    margin: 2% 0 7% 0;
     text-align: center;
 }
 .dashboard-submission-form .heading .headMain .Hd {
@@ -45,6 +45,7 @@ button:hover, input:hover {
     font-size: 72px;
     line-height: 72px;
     color: #0080FB;
+    margin-bottom: 2%;
 }
 .dashboard-submission-form .heading .headMain .Hd .X {
     color: rgb(255,206,0);
@@ -64,12 +65,36 @@ button:hover, input:hover {
     font-size: 18px;
     line-height: 25px; 
     color: #000000;  
+    margin-left: 8.5%;
+    list-style: url();
+}
+.dashboard-submission-form .subForm {
+    width: 100%;
+    margin: 0;
+    background: #FFFFFF;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+.dashboard-submission-form .subForm .inputCnt {
+    margin: 5%8% 0 8%;
+}
+.dashboard-submission-form .subForm .inputCnt .title {
+    display: flex;
+    flex-direction: row;
+    margin-left: 2.5%;
+    padding: 0;
+    height: auto;
 }
 .dashboard-submission-form .subForm .inputCnt .title .vertrule {
-    border: none;
-    width: 4px;
-    height: 100%;
-    background: #1071F3;
+    border: 2px solid #1071F3;
+    height: auto;
+    margin: 0;
+    top: 0;
+    visibility: hidden;
+}
+.dashboard-submission-form .subForm .inputCnt .title .vr1 {
+    visibility: visible;
 }
 .dashboard-submission-form .subForm .inputCnt .title .titleName {
     font-family: 'Nunito Sans', Tahoma, Geneva, Verdana, sans-serif;
@@ -77,6 +102,7 @@ button:hover, input:hover {
     font-weight: 1000;
     font-size: 28px;
     line-height: 38px;
+    margin: .5% 3%;
     color: rgba(0, 0, 0, 0.7);
 }
 .dashboard-submission-form .subForm .inputCnt .info {
@@ -86,6 +112,8 @@ button:hover, input:hover {
     font-size: 14px;
     line-height: 17px;
     color: rgba(0, 0, 0, 0.4);
+    display: block;
+    margin: 1% 5.5%;
 }
 .dashboard-submission-form .subForm .inputCnt .inputCount {
     font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
@@ -95,7 +123,7 @@ button:hover, input:hover {
     line-height: 17px;
     color: rgba(0, 0, 0, 0.4);
 }
-.dashboard-submission-form .subForm .inputCnt input {
+.dashboard-submission-form .subForm .inputCnt input::placeholder {
     font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-weight: 1000;
@@ -103,7 +131,24 @@ button:hover, input:hover {
     line-height: 17px;
     color: rgba(0, 0, 0, 0.4);
 }
-
+.dashboard-submission-form .subForm .inputCnt input[type="text"],
+.dashboard-submission-form .subForm .inputCnt  input[type="url"] {
+    width: 88%;
+    margin-left: 1.2%;
+    background: whitesmoke;
+    border-radius: 5px;
+    padding: 1%;
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.dashboard-submission-form .subForm .inputCnt input[type="text"]:hover,
+.dashboard-submission-form .subForm .inputCnt  input[type="url"]:hover {
+    border: 2px solid #1071F3;
+} 
 .custom-file-input {
     color: transparent; 
 } 
