@@ -147,7 +147,8 @@ button:hover, input:hover {
 }
 .dashboard-submission-form .subForm .inputCnt input[type="text"]:hover,
 .dashboard-submission-form .subForm .inputCnt  input[type="url"]:hover {
-    border: 2px solid #1071F3;
+    border: 1.5px solid #1071F3;
+    padding: .85%;
 } 
 .custom-file-input {
     color: transparent; 
