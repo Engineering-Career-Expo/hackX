@@ -22,11 +22,12 @@ button:hover, input:hover {
 .dashboard-submission-form {
     width: 100%;
     margin: 0;
+    background: #E5E5E5;
 }
 .dashboard-submission-form .heading {
     width: 100%;
     margin: 0;
-    background: #E5E5E5;
+    background: transparent;
     padding: 4% 4% 1.5% 4%;
 }
 .dashboard-submission-form .heading .headForm {
@@ -164,14 +165,31 @@ button:hover, input:hover {
     margin: 2%;
     cursor: pointer;
 }
-position: absolute;
-width: 303px;
-height: 55px;
-left: 501px;
-top: 2159px;
-
-background: rgba(16, 113, 243, 0.3);
-border-radius: 5px;
+.dashboard-submission-form .submitBtn {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 2%;
+}
+.dashboard-submission-form .submitBtn .submit {
+    width: 303px;
+    height: 55px;    
+    background: #1071F3;
+    border-radius: 5px;  
+    cursor: pointer;
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 14px;
+}
+.dashboard-submission-form .submitBtn .submit:disabled {
+    background: rgba(16, 113, 243, 0.3);
+    color: white;
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 14px;
+}
 @media (min-width: 1px) and (max-width: 299px) {
     .dashboard-submission-form {
         display: none;
@@ -277,6 +295,15 @@ border-radius: 5px;
         margin: 2%;
         padding: 5%;
     } 
+    .dashboard-submission-form .submitBtn .submit {
+        width: 220px;
+        height: 45px;    
+        font-size: 4vw;
+        padding: 4%;
+    }
+    .dashboard-submission-form .submitBtn .submit:disabled {
+        font-size: 4vw;
+    }
 }
 @media (min-width: 401px) and (max-width: 570px) {
     .dashboard-submission-form .subForm .inputCnt .title {
@@ -310,6 +337,15 @@ border-radius: 5px;
         margin: 5%;
         padding: 3%;
     } 
+    .dashboard-submission-form .submitBtn .submit {
+        width: 280px;
+        height: 50px;    
+        font-size: 3vw;
+        padding: 3%;
+    }
+    .dashboard-submission-form .submitBtn .submit:disabled {
+        font-size: 3vw;
+    }
 }
 @media (min-width: 570px) and (max-width: 768px) {
     .dashboard-submission-form .subForm .inputCnt input[type="text"],
@@ -325,5 +361,5 @@ border-radius: 5px;
         border: 1.5px solid #1071F3;
         margin: 5%;
         padding: 1.5%;
-    } 
+    }
 }
