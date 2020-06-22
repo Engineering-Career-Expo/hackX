@@ -19,6 +19,11 @@ button:hover, input:hover {
     outline: none;
     border: none;
 }
+.dashboard-submission-form {
+    width: 100%;
+    margin: 0;
+    padding-bottom: 5%;
+}
 .dashboard-submission-form .heading {
     width: 100%;
     margin: 0;
@@ -148,6 +153,18 @@ button:hover, input:hover {
     border: 1.5px solid #1071F3;
     padding: .85%;
 } 
+.dashboard-submission-form .subForm .inputCnt .imgCnt {
+    margin: 0 4% 0 4%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.dashboard-submission-form .subForm .inputCnt .imgCnt img {
+    margin: 2%;
+    cursor: pointer;
+}
 @media (min-width: 1px) and (max-width: 299px) {
     .dashboard-submission-form {
         display: none;
@@ -303,57 +320,3 @@ button:hover, input:hover {
         padding: 1.5%;
     } 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.custom-file-input {
-    color: transparent; 
-} 
-.custom-file-input::-webkit-file-upload-button { 
-    visibility: hidden; 
-} 
-.custom-file-input::before { 
-    content: 'Select some files'; 
-    color: black; 
-    display: inline-block; 
-    background-image: url(../../assets/images/dashboard/add-image.svg);
-    height: 80px;
-    width: 80px; 
-    border: 1px solid #999; 
-    border-radius: 3px; 
-    padding: 5px 8px; 
-    outline: none; 
-    white-space: nowrap; 
-    -webkit-user-select: none; 
-    cursor: pointer; 
-    text-shadow: 1px 1px #fff; 
-    font-weight: 700; 
-    font-size: 10pt; 
-} 
-.custom-file-input:hover::before { 
-    border-color: black; 
-} 
-.custom-file-input:active { 
-    outline: 0; 
-} 
-/*.custom-file-input:active::before { 
-    background-image: url(../../assets/images/dashboard/add-image.svg);
-} body { 
-    padding: 20px; 
-}
-
-
