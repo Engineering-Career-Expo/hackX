@@ -260,6 +260,7 @@ button:hover, input:hover {
         display: flex;
         border-radius: 5px;
         flex-direction: column;
+        padding-bottom: 3%;
     }
     .dashboard-submission-form .subForm .inputCnt {
         margin: 10% 8% 0 8%;
@@ -300,12 +301,17 @@ button:hover, input:hover {
         height: 45px;    
         font-size: 4vw;
         padding: 4%;
+        margin: 4%;
     }
     .dashboard-submission-form .submitBtn .submit:disabled {
         font-size: 4vw;
+        padding: 3%;
     }
 }
 @media (min-width: 401px) and (max-width: 570px) {
+    .dashboard-submission-form .subForm {
+        padding-bottom: 3%;
+    }
     .dashboard-submission-form .subForm .inputCnt .title {
         margin-left: 2%;
     }
@@ -342,6 +348,7 @@ button:hover, input:hover {
         height: 50px;    
         font-size: 3vw;
         padding: 3%;
+        margin: 3%;
     }
     .dashboard-submission-form .submitBtn .submit:disabled {
         font-size: 3vw;
