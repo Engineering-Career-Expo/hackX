@@ -22,7 +22,6 @@ button:hover, input:hover {
 .dashboard-submission-form {
     width: 100%;
     margin: 0;
-    padding-bottom: 5%;
 }
 .dashboard-submission-form .heading {
     width: 100%;
@@ -165,6 +164,14 @@ button:hover, input:hover {
     margin: 2%;
     cursor: pointer;
 }
+position: absolute;
+width: 303px;
+height: 55px;
+left: 501px;
+top: 2159px;
+
+background: rgba(16, 113, 243, 0.3);
+border-radius: 5px;
 @media (min-width: 1px) and (max-width: 299px) {
     .dashboard-submission-form {
         display: none;
