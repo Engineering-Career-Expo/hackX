@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
+@font-face {
+    font-family: Monad;
+    src: url(../../fonts/Monad.otf);
+}
 html, body {
     width: 100%;
     margin: 0;
@@ -5,116 +11,99 @@ html, body {
 * {
     box-sizing: border-box;
 }
-.dashboard-submission-form .headForm {
-    font-family: Nunito Sans;
+button, input {
+    outline: none;
+    border: none;
+}
+button:hover, input:hover {
+    outline: none;
+    border: none;
+}
+.dashboard-submission-form .heading {
+    width: 100%;
+    margin: 0;
+    background: #E5E5E5;
+    padding: 5% 5% 3% 5%;
+}
+.dashboard-submission-form .heading .headForm {
+    font-family: 'Nunito Sans', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 25px;    
     color: #0080FB;    
 }
-/*
+.dashboard-submission-form .heading .headMain {
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+.dashboard-submission-form .heading .headMain .Hd {
+    font-family: 'Monad', Georgia, Times, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 72px;
+    line-height: 72px;
+    color: #0080FB;
+}
+.dashboard-submission-form .heading .headMain .Hd .X {
+    color: rgb(255,206,0);
+}
+.dashboard-submission-form .heading .headMain .cnt {
+    font-family: 'Nunito Sans', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 33px;
+    color: #000000;   
+}
+.dashboard-submission-form .heading .Ul .List {
+    font-family: 'Nunito Sans', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px; 
+    color: #000000;  
+}
+.dashboard-submission-form .subForm .inputCnt .title .vertrule {
+    border: none;
+    width: 4px;
+    height: 100%;
+    background: #1071F3;
+}
+.dashboard-submission-form .subForm .inputCnt .title .titleName {
+    font-family: 'Nunito Sans', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 28px;
+    line-height: 38px;
+    color: rgba(0, 0, 0, 0.7);
+}
+.dashboard-submission-form .subForm .inputCnt .info {
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.dashboard-submission-form .subForm .inputCnt .inputCount {
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.4);
+}
+.dashboard-submission-form .subForm .inputCnt input {
+    font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 14px;
+    line-height: 17px;
+    color: rgba(0, 0, 0, 0.4);
+}
 
-
-
- hackx 
-
-
-position: absolute;
-width: 257px;
-height: 72px;
-left: 512px;
-top: 203px;
-
-font-family: Monad;
-font-style: normal;
-font-weight: 500;
-font-size: 72px;
-line-height: 72px;
- identical to box height 
-
-
-color: #0080FB;
-
-
- Submitting project to HackX 
-
-
-position: absolute;
-width: 314px;
-height: 33px;
-left: 483px;
-top: 299px;
-
-font-family: Nunito Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 24px;
-line-height: 33px;
-identical to box height 
-
-
-color: #000000;
-
-
-
- Describe your project 
-
-
-position: absolute;
-width: 171px;
-height: 25px;
-left: 196px;
-top: 429px;
-
-font-family: Nunito Sans;
-font-style: normal;
-font-weight: normal;
-font-size: 18px;
-line-height: 25px;
- identical to box height 
-
-
-color: #000000;
-
-
- Name 
-
-
-position: absolute;
-width: 76px;
-height: 38px;
-left: 175px;
-top: 577px;
-
-font-family: Nunito Sans;
-font-style: normal;
-font-weight: bold;
-font-size: 28px;
-line-height: 38px;
-
-color: rgba(0, 0, 0, 0.7);
-
-
- WHAT ARE YOU CALLING IT ?? 
-
-
-position: absolute;
-width: 223px;
-height: 17px;
-left: 176px;
-top: 623px;
-
-font-family: Montserrat;
-font-style: normal;
-font-weight: bold;
-font-size: 14px;
-line-height: 17px;
- identical to box height 
-
-
-color: rgba(0, 0, 0, 0.4);
-*/
 .custom-file-input {
     color: transparent; 
 } 
