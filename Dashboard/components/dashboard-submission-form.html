@@ -25,8 +25,8 @@
                     <span class="titleName">Name</span>
                 </div>
                 <div class="info">WHAT ARE YOU CALLING IT ??</div>
-                <span class="inputCount">0 / 50</span>                
-                <input type="text" id="projectName" name="project-name" placeholder="Begin typing....">
+                <span class="inputCount" id="inputCount1">0 / 50</span>                
+                <input type="text" onkeyup="countInput1(this.value)" id="projectName" name="project-name" maxlength="50" placeholder="Begin typing....">
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -34,8 +34,8 @@
                     <span class="titleName">Tagline</span>
                 </div>
                 <div class="info">WRITE A SHORT, SHARP AND ON-POINT DESCRIPTION OF YOUR PROJECT</div>
-                <span class="inputCount">0 / 200</span>
-                <input type="text" id="projectTagline" name="tagline" placeholder="Begin typing....">
+                <span class="inputCount"id="inputCount2">0 / 200</span>
+                <input type="text" onkeyup="countInput2(this.value)" id="projectTagline" name="tagline" maxlength="200" placeholder="Begin typing....">
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -43,8 +43,8 @@
                     <span class="titleName">The problem it solves</span>
                 </div>
                 <div class="info">DESCRIBE WHAT PEOPLE CAN USE IT FOR, OR HOW IT MAKES EXISTING EASIER/SAFER E.T.C</div>
-                <span class="inputCount">0 / 200</span>
-                <input type="text" id="projectUSe" name="problem-it-addresses" placeholder="Begin typing....">
+                <span class="inputCount" id="inputCount3">0 / 200</span>
+                <input type="text" onkeyup="countInput3(this.value)" id="projectUSe" name="problem-it-addresses" maxlength="200" placeholder="Begin typing....">
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -52,8 +52,8 @@
                     <span class="titleName">Challenges I ran into</span>
                 </div>
                 <div class="info">TELL US ABOUT ANY SPECIFIC BUG OR HUDDLE YOU RAN INTO WHILE BUILDING THIS PROJECT, HOW DID YOU GET OVER IT?</div>
-                <span class="inputCount">0 / 200</span>
-                <input type="text" id="projectChallenge" name="challenges-encountered" placeholder="Begin typing....">
+                <span class="inputCount" id="inputCount4">0 / 200</span>
+                <input type="text" onkeyup="countInput4(this.value)" id="projectChallenge" name="challenges-encountered" maxlength="200" placeholder="Begin typing....">
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -61,8 +61,8 @@
                     <span class="titleName">Technologies I used</span>
                 </div>
                 <div class="info">WRITE A COMMA SEPARATED LIST OF TECHNOLOGIES YOU USED IN BUILDING THE PROJECT</div>
-                <span class="inputCount">0 / 200</span>
-                <input type="text" id="projectTechnology" name="technologies-used" placeholder="Begin typing....">
+                <span class="inputCount" id="inputCount5">0 / 200</span>
+                <input type="text" onkeyup="countInput5(this.value)" id="projectTechnology" name="technologies-used" maxlength="200" placeholder="Begin typing....">
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -70,8 +70,8 @@
                     <span class="titleName">Links</span>
                 </div>
                 <div class="info">ADD A GITHUB, WEBSITE, APP STORE E.T.C OR WHEREVER THE PROJECT CAN BE TESTED LIVE</div>
-                <span class="inputCount">0 / 50</span>
-                <input type="url" id="projectLink" name="links" placeholder="Paste or type a link (e.g. https:hackX.github.io) and then press 'Enter'">
+                <span class="inputCount" id="inputCount6">0 / 50</span>
+                <input type="url" onkeyup="countInput6(this.value)" id="projectLink" name="links" maxlength="50" placeholder="Paste or type a link (e.g. https:hackX.github.io) and then press 'Enter'">
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -79,8 +79,8 @@
                     <span class="titleName">Video Demo</span>
                 </div>
                 <div class="info">ADD A GITHUB, WEBSITE, APP STORE E.T.C OR WHEREVER THE PROJECT CAN BE TESTED LIVE</div>
-                <span class="inputCount">0 / 50</span>
-                <input type="url" id="projectVideoLink" name="video-demo" placeholder="Paste or type link here">
+                <span class="inputCount" id="inputCount7">0 / 50</span>
+                <input type="url" onkeyup="countInput7(this.value)" id="projectVideoLink" name="video-demo" maxlength="50" placeholder="Paste or type link here">
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -88,13 +88,21 @@
                     <span class="titleName">Pictures</span>
                 </div>
                 <div class="info">UPLOAD A MAXIMUM OF 5 PICTURES (SIZE: MAX 2MB EACH) SHOWCASING YOUR PROJECT (THE FIRST IMAGE WILL BE USED AS A PREVIEW ON SOCIAL MEDIA)</div>
-                <input type="image" id="projectImage" name="pictures" src="../../assets/images/dashboard/add image.svg">
+                <input type="file" id="demo" class="custom-file-input" onchange="readFile();">
+                <img src="" alt=" the image will be shown here" id="result">
+                <input type="file" class="custom-file-input">
+                <input type="file" class="custom-file-input">
+                <input type="file" class="custom-file-input">
+                <input type="file" class="custom-file-input">
+
+                <input type='file' onchange="readURL(this);" />
+                <img id="blah" src="http://placehold.it/180" alt="your image" />
+                <p> <input type="file" id="file" multiple /> </p> 
+                <!--SHOW RESULT HERE--> 
+                <p id="fp"></p>
+                <p> <input type="submit" value="Show Details" onclick="FileDetails()" > </p> 
+
             </div>
-            <input type="file" class="custom-file-input">
-            <input type="file" class="custom-file-input">
-            <input type="file" class="custom-file-input">
-            <input type="file" class="custom-file-input">
-            <input type="file" class="custom-file-input">
         </form>
     </div>
     <script src="../../js/dashboard-submission-form.js"></script>
