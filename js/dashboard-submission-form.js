@@ -119,7 +119,7 @@ projectVideoLink.addEventListener( 'keydown' , function show() {
 
 
 // SHOW HORIZONTAL BORDER ON INPUT KEYDOWN
-projectImage.addEventListener( 'keydown' , function show() {
+projectImage.addEventListener( 'click' , function show() {
     // HORIZONTAL BORDER
     vR1.style.visibility = 'hidden';
     vR2.style.visibility = 'hidden';
