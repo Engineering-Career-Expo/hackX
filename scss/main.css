@@ -22,6 +22,15 @@ body,
 html {
   overflow-x: hidden;
 }
+/* DISABLE AUTOMATIC BORDER AND OUTLINES */
+button, input {
+  border: none;
+  outline: none;
+}
+button:hover, input:hover {
+  border: none;
+  outline: none;
+}
 
 @font-face {
   font-family: Monad;
