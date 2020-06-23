@@ -1,3 +1,4 @@
+if(window.matchMedia("(max-width: 700px)").matches) {
 // THE BUTTONS ID
 var timelineBtn = document.getElementById('timelineBtn');
 var announBtn = document.getElementById('announBtn');
@@ -102,3 +103,4 @@ overviewBtn.addEventListener('click', function open() {
     pl.style.display = 'none';
     ol.style.display = 'block';
 });
+}
