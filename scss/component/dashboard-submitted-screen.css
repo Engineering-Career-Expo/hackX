@@ -9,6 +9,15 @@ html, body {
 * {
     box-sizing: border-box;
 }
+button {
+    border: none;
+    outline: none;
+}
+button:hover {
+    border: none;
+    outline: none;
+}
+
 .dashboard-submitted-screen {
     width: 100%;
     margin: 0;
@@ -73,32 +82,47 @@ html, body {
     width: 100%;
     padding: 5%;
     background: #FFFFFF;
+    font-weight: 500;
     border-radius: 5px;
-    font-family: 'Nuito Sans', Tahoma, Geneva, Verdana, sans-serif;
 }
 .dashboard-submitted-screen .contentBar .mainCnt .inputResult {
-    margin-bottom: 7%;
+    margin-bottom: 8%;
+    font-family: 'Nunito Sans', sans-serif;
 }
 .dashboard-submitted-screen .contentBar .mainCnt .inputResult .title {
-    font-weight: 1000;
+    font-weight: 900;
+    display: block;
+    font-family: 'Nunito Sans', sans-serif;
 }
-.dashboard-submitted-screen .contentBar .mainCnt .inputResult .techUsed {
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .techList {
+    width: 100%;
+    margin: 5% 0 0 0;
+}
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .techList .techUsed {
     width: 129px;
     height: 39px;
     background: #C8F8F0;
-    padding: 1.5%;
-    margin: 1% 0;
+    padding: 1.5% 2.5%;
+    margin: 0 2% 0 0;
     border-radius: 5px;
 }
-.dashboard-submitted-screen .contentBar .mainCnt .inputResult .attachments {
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .link {
+    margin: 2% 2.6%;
+}
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .attachmentImg {
+    width: 100%;
+    margin: 0;
+    padding: 1% 1.5%;
+}
+.dashboard-submitted-screen .contentBar .mainCnt .inputResult .attachmentImg .attachments {
     width: 62px;
     display: inline-block;
     margin: 1.5%;
     height: 53px;
+    cursor: pointer;
     background: #C4C4C4;
     border-radius: 5px;
 }
-
 .dashboard-submitted-screen .contentBar .blank {
     width: 30%;
     margin: 0;
@@ -109,28 +133,29 @@ html, body {
     width: 100%;
     margin: 0;
     background: white;
-    height: 20vw;
+    height: 24vw;
     border-radius: 5px;
-    margin-bottom: 5%;
+    margin-bottom: 9%;
 }
 .dashboard-submitted-screen .contentBar .blank .blank2 {
     width: 100%;
     margin: 0;
     background: white;
-    height: 10vw;
+    height: 13vw;
     border-radius: 5px;
 }
-
 .dashboard-submitted-screen .editBtn {
-    width: 301px;
+    width: 25%;
     height: 70px;
     float: left;
-    margin-left: 5%;    
+    margin: 0 0 2% 5%;    
     background: #0080FB;
     border-radius: 5px;
     color: white;
+    cursor: pointer;
     font-weight: 500;
     font-size: 18px;
     font-style: normal;
-    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    border: none;
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
 }
