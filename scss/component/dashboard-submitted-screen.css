@@ -13,3 +13,34 @@ html, body {
     margin: 0;
     background: #E5E5E5;
 }
+.dashboard-submitted-screen .headbar {
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;   
+    color: #FFFFFF;
+    background: #0080FB;
+}
+.helloBar {
+    background: #FFFFFF;
+    border-radius: 5px;
+    width: 60%;
+    
+}
+.HdCnt {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 22px;
+    color: #000000;
+}
+.txtCnt {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+}
+.horLineCnt {
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
