@@ -235,3 +235,101 @@ button {
     float: right;
     cursor: pointer;
 }
+@media screen and (min-width: 768px) {
+	.d_section__all{
+		display: flex;
+	}
+	.submission_section{
+		padding: 2%;
+		width: 45%;
+		height: 600px;
+		background: #ffffff;
+		margin-left: 1%;
+		margin-top: 2%;
+	}
+	.sub_head{
+		display: flex;
+		border: none;
+		justify-content: space-between;
+		padding: 0% 7%;
+		background: #EAEDFE;
+		border-radius: 5px;
+		margin-bottom: 15%;
+	}
+	.sub_head__submitOne, .sub_head__submitTwo{
+		font-size: 14px;
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+	}
+	.sub_head__submitTwo{
+		color: #1071f3;
+		padding: 10px 0px;
+	}
+	.sub_head__submitOne{
+		background: #ffffff;
+		color: #1071f3;
+		padding: 10px 5px;
+		border-radius: 5px;
+		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
+	}
+	.sub_section__time p{
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+	}
+	#sub_section__timeLeft{
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: 900;
+		font-size: 30px;
+		margin-bottom: 5%;
+	}
+	.sub_section__add{
+		background: #f7f7f8;
+		display: flex;
+		justify-content: space-between;
+	}
+	.sub_section__addImage{
+		width: 170px;
+		height: 189px;
+		cursor: pointer;
+		margin: 2%;
+		margin-top: 4%;
+	}
+	.sub_section__addImage{
+		background-image: radial-gradient(rgb(228, 220, 220), white);
+	}
+	.sub_section__add p{
+		font-family: "Nunito sans";
+		font-style: normal;
+		font-weight: normal;
+		font-size: 18px;
+	}
+	.sub_section__addImage p{
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		margin-top: -3%;
+		text-align: center;
+	}
+	.sub_submit{
+		font-family: "Montserrat", sans-serif;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 8px;
+		width: 100%;
+		border: none;
+		background: #1071f3;
+		color: #ffffff;
+		margin-top: 15%;
+		outline: none;
+	}
+	.sub_submit:active{
+		color: #1071f3;
+		background: #ffffff;
+	}
+}
