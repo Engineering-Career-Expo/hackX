@@ -16,7 +16,7 @@ body {
     background: #E5E5E5;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 450px) {
     .Dashboard2-section .headbar {
         display: none;
     }
@@ -40,34 +40,71 @@ body {
         margin: 6% 7% 0 7%;
         color: #0080FB;
         font-family: 'Poppins', sans-serif;
+        font-size: 4.6vw;
+        line-height: 1.8;
+        font-weight: bold;
     }
     .Dashboard2-section .sectionbar .mobViewHr {
-        margin: 7%;
+        margin: 5% 7%;
+        border: 1px solid lightgrey;
+    }
+    .Dashboard2-section .sectionbar .briefo {
+        width: 60%;
+        margin: 0; 
+        padding-left: 8%;
+        display: inline-block;
+        text-align: left;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4vw;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        cursor: pointer;
+    }
+    .Dashboard2-section .sectionbar .briefo:hover {
+        color: rgba(0, 0, 0, 0.9);
+    }
+    .Dashboard2-section .sectionbar .fullView {
+        width: 40%;
+        margin: 0;
+        padding-right: 8%;
+        display: inline-block;
+        text-align: right;
+        float: right;
+    }
+    .Dashboard2-section .sectionbar .fullView a {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4vw;
+        color: black;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
     }
     .Dashboard2-section .sectionbar section {
         background: white;
         border-radius: 5px;
-    }
-     
-    
+        margin-bottom: 7%;
+        padding: 3% 0;
+        height: auto;
+    }  
     .Dashboard2-section .sectionbar .timeline .active-head {
         width: 100%;
         margin: 0;
         background: white;
         line-height: 1.8;
-        padding: 3% 5% 7% 5%;
+        padding: 3% 8% 3% 8%;
         font-family: Nuito Sans, sans-serif;
     }
     .Dashboard2-section .sectionbar .timeline .active-head .first {
         font-size: 4.3vw;
-        float: left;
+        display: inline-block;
     }
     .Dashboard2-section .sectionbar .timeline .active-head .second {
         height: auto;
     }
     .Dashboard2-section .sectionbar .timeline .active-head .second .bold {
         font-weight: 700;
-        font-size: 4.75vw;
+        font-size: 4.35vw;
+        display: block;
     }
     .Dashboard2-section .sectionbar .timeline .active-head .spnBtn {
         margin: 0 3%;
@@ -85,16 +122,15 @@ body {
         font-size: 4vw;
         margin-top: 1%;
         text-align: left;
-    }
-    
+    } 
     /* COMING HEAD */
     .Dashboard2-section .sectionbar .timeline .coming-head {
         width: 100%;
-        margin: 0;
+        margin: 4% 0;
         background: transparent;
         border-radius: 4px;
         line-height: 1.6;
-        padding: 3% 5% 7% 5%;
+        padding: 3% 8% 3% 8%;
         font-family: Nuito Sans, sans-serif;
     }
     .Dashboard2-section .sectionbar .timeline .coming-head .second {
@@ -102,7 +138,8 @@ body {
     }
     .Dashboard2-section .sectionbar .timeline .coming-head .second .bold {
         font-weight: 700;
-        font-size: 4.75vw;
+        font-size: 4.35vw;
+        display: block;
     }
     .Dashboard2-section .sectionbar .timeline .coming-head .spnBtn {
         margin: 0 3%;
@@ -118,13 +155,91 @@ body {
     }
     .Dashboard2-section .sectionbar .timeline .coming-head .first {
         font-size: 4.3vw;
-        float: left;
+        display: inline-block;
     }
     .Dashboard2-section .sectionbar .timeline .coming-head .third {
         font-size: 4vw;
         margin-top: 1%;
-        margin-bottom: 3.5%;
+        margin-bottom: 6%;
         text-align: left;
+    }
+    /* ANNOUNCEMENT SECTION */
+    .Dashboard2-section .sectionbar .announcement .paranounce {
+        margin: 0 8%;
+        padding: 4% 0;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4.6vw;
+        font-weight: bold;
+        line-height: 1.8;
+    }
+    .Dashboard2-section .sectionbar .announcement .paranounce .elem1 {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 4.18vw;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .announcement .paranounce a {
+        color: #2864F0;
+        text-decoration: none;
+    }
+    .Dashboard2-section .sectionbar .prizes .prH {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4.3vw;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .prizes .prHd {
+        background: white;
+        padding: 0 8%;
+        border-radius: 4px;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4.3vw;
+        line-height: 1.8;
+        font-weight: normal;
+    }
+    .Dashboard2-section .sectionbar .prizes .pH {
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .overview .image {
+        width: 90%;
+        height: auto;
+        margin: 0 5%;
+        background: url(../../assets/images/dashboard/overview-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 10% 6%;
+        text-align: center;
+        font-size: 11vw;
+        font-family: Monad, sans-serif;
+        color: white;
+        margin-bottom: 7%;
+    }
+    .Dashboard2-section .sectionbar .overview .image .X {
+        color: rgb(242,167,2);
+    }
+    .Dashboard2-section .sectionbar .overview .image .hackathon {
+        color: #2864F0;
+    }
+    .Dashboard2-section .sectionbar .overview .social {
+        background: white;
+        width: 100%;
+        margin-bottom: 3%;
+        height: 75px;
+        border-radius: 5px;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 1.6vw;
+        line-height: 28px;
+        padding: 4% 5%;
+        cursor: pointer;
+    }
+    .Dashboard2-section .sectionbar .overview .social .img {
+        float: left;
+        cursor: pointer;
+        margin-right: 4%;
+        transform: scale(.6);
+    }
+    .Dashboard2-section .sectionbar .overview .social .go {
+        float: right;
+        transform: scale(.6);
+        cursor: pointer;
     }
 }
 @media (min-width: 769px) {
@@ -315,7 +430,7 @@ body {
     }
     .Dashboard2-section .sectionbar .overview .image {
         width: 100%;
-        height: 264px;
+        height: auto;
         margin: 0;
         background: url(../../assets/images/dashboard/overview-bg.png);
         background-repeat: no-repeat;
