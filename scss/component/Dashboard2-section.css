@@ -83,7 +83,7 @@ body {
         background: white;
         border-radius: 5px;
         margin-bottom: 7%;
-        padding: 3% 0;
+        padding: 3% 0 8% 0;
         height: auto;
     }  
     .Dashboard2-section .sectionbar .timeline .active-head {
@@ -160,7 +160,6 @@ body {
     .Dashboard2-section .sectionbar .timeline .coming-head .third {
         font-size: 4vw;
         margin-top: 1%;
-        margin-bottom: 6%;
         text-align: left;
     }
     /* ANNOUNCEMENT SECTION */
