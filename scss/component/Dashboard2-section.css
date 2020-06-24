@@ -32,6 +32,21 @@ body {
     .announcement, .prizes, .overview {
         display: block;
     }
+    .Dashboard2-section .mobileDashLink {
+        margin: 4% 0 14% 5%;
+        font-family: 'Poppins', sans-serif;
+        font-size: 4.8vw;
+    }
+    .Dashboard2-section .mobileDashLink a {
+        cursor: pointer;
+        text-decoration: none;
+        font-family: 'Poppins', sans-serif;
+        font-size: 4.8vw;
+        color: rgba(0, 0, 0, 0.7);
+    }
+    .Dashboard2-section .mobileDashLink a:hover {
+        color: black;
+    }
     .Dashboard2-section .sectionbar {
         width: 90%; 
         margin: 5%;
@@ -47,6 +62,41 @@ body {
     .Dashboard2-section .sectionbar .mobViewHr {
         margin: 5% 7%;
         border: 1px solid lightgrey;
+    }
+    .Dashboard2-section .sectionbar .submission .substruction {
+        width: 100%;
+        margin-left: 7.5%;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4vw;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashStatus {
+        margin: 0 7.5%;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4.8vw;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: center;
+        padding: 5% 0;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashTime {
+        margin: 0 7.5%;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashTime .subDashTimeHd {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4vw;
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.6);
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .submission .subDashTime .subDashTimeTxt {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 4vw;
+        font-weight: 900;
+        color: rgba(0, 0, 0, 1);
+        text-align: left;
     }
     .Dashboard2-section .sectionbar .briefo {
         width: 60%;
@@ -167,9 +217,8 @@ body {
         margin: 0 8%;
         padding: 4% 0;
         font-family: Nuito Sans, sans-serif;
-        font-size: 4.6vw;
-        font-weight: bold;
-        line-height: 1.8;
+        font-size: 3.8vw;
+        line-height: 1.5;
     }
     .Dashboard2-section .sectionbar .announcement .paranounce .elem1 {
         color: rgba(0, 0, 0, 0.6);
@@ -179,6 +228,8 @@ body {
     .Dashboard2-section .sectionbar .announcement .paranounce a {
         color: #2864F0;
         text-decoration: none;
+        font-size: 3.5vw;
+        font-weight: 600;
     }
     .Dashboard2-section .sectionbar .prizes .prH {
         font-family: Nuito Sans, sans-serif;
@@ -241,7 +292,7 @@ body {
         cursor: pointer;
     }
 }
-@media (min-width: 769px) {
+@media (min-width: 451px) {
     .Dashboard2-section .headbar {
         display: block;
         width: 100%;
