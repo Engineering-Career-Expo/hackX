@@ -269,27 +269,40 @@ body {
         color: #2864F0;
     }
     .Dashboard2-section .sectionbar .overview .social {
-        background: white;
-        width: 100%;
-        margin-bottom: 3%;
-        height: 75px;
+        background: whitesmoke;
+        width: 90%;
+        margin: 0 5% 7% 5%;
+        height: auto;
         border-radius: 5px;
         font-family: Nuito Sans, sans-serif;
-        font-size: 1.6vw;
-        line-height: 28px;
+        font-size:5.6vw;
         padding: 4% 5%;
+        display: inline-block;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: stretch;
         cursor: pointer;
     }
     .Dashboard2-section .sectionbar .overview .social .img {
-        float: left;
+        left: 0;
         cursor: pointer;
-        margin-right: 4%;
-        transform: scale(.6);
+        margin-right: 6%;
+        width: 8vw;
+    }
+    .Dashboard2-section .sectionbar .overview .social .txt {
+        text-align: left;
+        width: 70%;
+        margin: 0 5% 0 15%;
     }
     .Dashboard2-section .sectionbar .overview .social .go {
-        float: right;
-        transform: scale(.6);
+        right: 0;
         cursor: pointer;
+        width: 8vw;
+        margin-left: 50%;
+    }
+    .Dashboard2-section .sectionbar .overview .social .last {
+        margin-left: 54%;
     }
 }
 @media (min-width: 451px) {
