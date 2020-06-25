@@ -458,14 +458,15 @@ button {
 	cursor: pointer;
 	}
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 869px) {
 	.d_section__all{
 		display: flex;
+		margin-bottom: 100px;
 	}
 	.submission_section{
 		padding: 2%;
 		width: 45%;
-		height: 600px;
+		height: 650px;
 		background: #ffffff;
 		margin-left: 1%;
 		margin-top: 2%;
@@ -517,6 +518,7 @@ button {
 		display: flex;
 		justify-content: space-between;
 		height: 270px;
+		overflow: scroll;
 	}
 	.sub_section__addImage{
 		width: 170px;
@@ -561,7 +563,7 @@ button {
 	}
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 868px) {
 	.submission_section{
 		padding: 5%;
 		background: #ffffff;
@@ -698,12 +700,13 @@ button {
 		display: flex;
 		justify-content: space-between;
 		height: 350px;
+		overflow: scroll;
 	}
 	.sub_section__addImage{
 		width: 170px;
 		height: 189px;
 		cursor: pointer;
-		margin: 2%;
+		margin: 0.5%;
 		margin-top: 4%;
 	}
 	.sub_section__addImage{
