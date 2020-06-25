@@ -39,7 +39,20 @@ let ecxSchema = new mongoose.Schema({
 		    minlength: 3,
 		    maxlength: 50
 		},
-		isAdmin: Boolean
+		role: {
+		    type: String,
+		    minlength: 3,
+		    maxlength: 10
+		},
+		dashboard: [{
+		    type: mongoose.Schema.Types.ObjectId,
+		    ref: 'Dashboard'
+		}],
+		submission: [{
+		    type: mongoose.Schema.Types.ObjectId,
+		    ref: 'Submission'
+		}],
+		
 
 
 },{timestamps: true},{collection: "user"});
@@ -56,7 +69,7 @@ function validateUser(user) {
 	        errors.forEach((err) => {
 	          switch (err.code) {
 	          	case "string.empty":
-	              err.message = "Username should not be empty!";
+	              err.message = "Firstname should not be empty!";
 	              break;
 	            case "any.empty":
 	              err.message = "Firstname should not be empty!";
@@ -84,7 +97,7 @@ function validateUser(user) {
 	        errors.forEach((err) => {
 	          switch (err.code) {
 	          	case "string.empty":
-	              err.message = "Username should not be empty!";
+	              err.message = "Lastname should not be empty!";
 	              break;
 	            case "any.empty":
 	              err.message = "Lastname should not be empty!";
@@ -113,7 +126,7 @@ function validateUser(user) {
 	        errors.forEach((err) => {
 	          switch (err.code) {
 	          	case "string.empty":
-	              err.message = "Username should not be empty!";
+	              err.message = "Email should not be empty!";
 	              break;
 	            case "any.empty":
 	              err.message = "Email should not be empty!";
@@ -197,6 +210,34 @@ function validateUser(user) {
 	              break;
 	            case "string.base":
 	              err.message = "Username should be a string.";
+	              break;
+	            default:
+	              break;
+	          }
+	        });
+	        return errors;
+      	}),
+  	role: Joi.string()
+	    .alphanum()
+	    .min(3)
+	    .max(50)
+	    .error((errors) => {
+	        errors.forEach((err) => {
+	          switch (err.code) {
+	            case "any.empty":
+	              err.message = "Role should not be empty!";
+	              break;
+              	case "string.empty":
+	              err.message = "Role should not be empty!";
+	              break;
+	            case "string.min":
+	              err.message = "Role should have at least 3characters!";
+	              break;
+	            case "string.max":
+	              err.message = "Role should have at most 10 characters!";
+	              break;
+	            case "string.base":
+	              err.message = "Role should be a string.";
 	              break;
 	            default:
 	              break;
