@@ -66,7 +66,9 @@ const createSignup = async (signupInfo) => {
         } else if(response.data == "Successfully Signed Up"){
           showAlert_signup("Signup Successfully", "success");
           window.location.href = 'https://hackx.netlify.app/dashboard'; 
-        } else {
+        } else if (response.data == "Session Checker"){
+          window.location.href = 'https://hackx.netlify.app/dashboard';
+        }else {
           showAlert_signup(response.data, "error");
         }
       } else {
