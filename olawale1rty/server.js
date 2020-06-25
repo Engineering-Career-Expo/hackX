@@ -1,12 +1,22 @@
 const config = require("config");
 const express = require('express');
+const cors = require('cors');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
+const logger = require('morgan');
+const fs = require('fs');
+const path = require('path');
+const errorHandler = require('./auto/error-handler');
+
 const app = express();
 module.exports = app.listen(3000);
-const cors = require('cors');
+const port = process.env.PORT || 8080;
+
 app.use(express.json());
 app.use(express.urlencoded({exteneded:true}));
 app.use(cors());
-const port = process.env.PORT || 8080;
+app.use(cookieParser());
+
 require('./database');
 
 //use config module to get the privatekey, if no private key set, end the application
@@ -15,11 +25,25 @@ if (!config.get("secret")) {
   process.exit(1);
 }
 
-//logging details
-const logger = require('morgan');
-const fs = require('fs');
-const path = require('path');
+// initialize express session
+app.use(session({
+    key: 'user_sid',
+    secret: config.get("secret"),
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        expires: 600000
+    }
+}));
 
+app.use((req, res, next) => {
+    if (req.cookies.user_sid && !req.session.user) {
+        res.clearCookie('user_sid');        
+    }
+    next();
+});
+
+//logging details
 logger.token('host', (req, res)=>{
 	return req.hostname;
 });
@@ -45,6 +69,7 @@ app.get(['/','/index.html'],(req, res)=>{
 	res.sendFile(path.join(__dirname,'/public/ecx.html'));
 })
 
+app.use(errorHandler);
 
 //listen 
 app.listen(port, ( ) => {
