@@ -22,6 +22,11 @@
 .head_pic0{
 		margin-bottom:-5px;
 		}
+		::placeholder{
+			color:black;
+			text-align: left;
+			padding: 4% 2%;
+		}
 .head_info0{
 		margin-left: 3%;
 		}
@@ -347,7 +352,7 @@ html, body {
 	width: 100%;
 	background: whitesmoke;
 	height: 400px;
-	padding: 4% 0;
+	padding: 4% 2%;
 	border-radius: 8px;
 	margin: 1% 0;
 	border: none;
@@ -355,6 +360,7 @@ html, body {
 	text-align: left;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
+	
 	outline: none;
 	}
 	.participant-info .reply .inputarea2 {
@@ -611,7 +617,7 @@ html, body {
     width: 100%;
     background: whitesmoke;
     height: 400px;
-    padding: 4% 0;
+    padding: 4% 2%;
     border-radius: 8px;
     margin: 1% 0;
     border: none;
