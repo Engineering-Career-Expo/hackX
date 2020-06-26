@@ -1,0 +1,29 @@
+.dashboard_anonymous{
+		padding:0;
+		margin:0;
+		font-family:Poppins;
+		}
+.anonymous_left{
+		width:230px;
+		}
+.anonymous_pic{
+		width:100%;
+		}
+.anonymous_head{
+		font-size:25px;
+		font-weight:700;
+		}
+
+
+@media(min-width:768px){
+.dashboard_anonymous{	
+	  display:flex;
+	  justify-content:space-evenly;
+	  width:90%;
+	  margin:auto;
+		}		
+.anonymous_right{
+		width:50%;
+		}		
+	}
+
