@@ -21,7 +21,8 @@
 	  border-radius:50%;
 	  font-size:25px;
 	  padding:0px 7px;
-	  color:grey;
+		color:grey;
+		cursor: pointer;
 		}
 .anonymous_left{
 		width:230px;
