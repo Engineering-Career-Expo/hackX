@@ -8,6 +8,7 @@ html, body {
     width: 100%;
     height: 100%;
     margin: 0;
+    scroll-behavior: smooth;
 }
 * {
     box-sizing: border-box;
@@ -17,6 +18,11 @@ body {
 }
 /* SMALL MOBILE VIEW */
 @media (max-width: 450px) {
+    .Dashboard2-section {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
     .Dashboard2-section .headbar {
         display: none;
     }
@@ -28,6 +34,8 @@ body {
     }
     .desktopView, .submission_section {
         display: none;
+        width: 100%;
+        margin: 0;
     }
     .announcement, .prizes, .overview {
         display: block;
@@ -596,21 +604,21 @@ body {
 }
 @media (min-width: 768px) and (max-width: 999px) {
     .Dashboard2-section {
-        width: 47%;
-        margin-left: 5%;
-        margin-right: 4%;
+        width: 48%;
+        margin-left: 3.5%;
+        margin-right: 3%;
     }
     .Dashboard2-section .headbar {
         display: block;
         width: 100%;
         margin: 0 0 5% 0;
-        height: 68px;
+        height: 60px;
         background: white;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-around;
-        border-radius: 4px;
+        border-radius: 5px;
     }
     .desktopView {
         display: block;
@@ -621,15 +629,15 @@ body {
     }
     .Dashboard2-section .headbar .header-btn {
         width: auto;
-        height: 68px;
+        height: 60px;
         display: flex;
         flex-direction: column;
     }
     .Dashboard2-section .headbar .header-btn button {
         width: 100%;
-        height: 64px;
-        font-size: 1.45vw;
-        line-height: 64px; 
+        height: 56px;
+        font-size: 1.8vw;
+        line-height: 56px; 
         margin: 0;
         outline: none;
         border: none;
@@ -673,7 +681,7 @@ body {
         width: 100%;
         margin: 0;
         background: white;
-        border-radius: 4px;
+        border-radius: 5px;
         line-height: 1.6;
         padding: 3% 5% 7% 5%;
         font-family: Nuito Sans, sans-serif;
@@ -683,24 +691,24 @@ body {
     }
     .Dashboard2-section .sectionbar .timeline .active-head .second .bold {
         font-weight: 700;
-        font-size: 1.45vw;
+        font-size: 1.8vw;
     }
     .Dashboard2-section .sectionbar .timeline .active-head .second .spnBtn {
         margin: 0 3%;
         padding: 0.6% 2.2%;
         background: #0080FB;
         color: rgba(253, 254, 255, 0.7);
-        font-size: 1.36vw;
+        font-size: 1.62vw;
         text-transform: uppercase;
         cursor: pointer;
-        border-radius: 4px;
+        border-radius: 5px;
         font-weight: bold;
     }
     .Dashboard2-section .sectionbar .timeline .active-head .first {
-        font-size: 1.42vw;
+        font-size: 1.60vw;
     }
     .Dashboard2-section .sectionbar .timeline .active-head .third {
-        font-size: 1.35vw;
+        font-size: 1.55vw;
         margin-top: 1%;
     }
     
@@ -719,24 +727,24 @@ body {
     }
     .Dashboard2-section .sectionbar .timeline .coming-head .second .bold {
         font-weight: 700;
-        font-size: 1.45vw;
+        font-size: 1.8vw;
     }
     .Dashboard2-section .sectionbar .timeline .coming-head .second .spnBtn {
         margin: 0 3%;
         padding: 0.6% 3.8%;
         background: #C4C4C4;
         color: rgba(0, 0, 0, 0.6);
-        font-size: 1.35vw;
+        font-size: 1.62vw;
         text-transform: uppercase;
         border-radius: 4px;
         cursor: pointer;
         font-weight: bold;
     }
     .Dashboard2-section .sectionbar .timeline .coming-head .first {
-        font-size: 1.42vw;
+        font-size: 1.60vw;
     }
     .Dashboard2-section .sectionbar .timeline .coming-head .third {
-        font-size: 1.35vw;
+        font-size: 1.55vw;
         margin-top: 1%;
         margin-bottom: 3.5%;
     }
@@ -747,13 +755,13 @@ body {
         border-radius: 4px;
         background: white;
         font-family: Nuito Sans, sans-serif;
-        font-size: 1.2vw;
+        font-size: 1.55vw;
         line-height: 1.6;
         font-weight: bold;
     }
     .Dashboard2-section .sectionbar .announcement .elem1 {
         color: rgba(0, 0, 0, 0.6);
-        font-size: 1.3vw;
+        font-size: 1.6vw;
         font-weight: bold;
     }
     .Dashboard2-section .sectionbar .announcement a {
@@ -766,7 +774,7 @@ body {
     }
     .prH {
         font-family: Nuito Sans, sans-serif;
-        font-size: 1.3vw;
+        font-size: 1.6vw;
         font-weight: bold;
     }
     .prHd {
@@ -776,7 +784,7 @@ body {
         padding: 4% 8% 24% 8%;
         border-radius: 4px;
         font-family: Nuito Sans, sans-serif;
-        font-size: 1.3vw;
+        font-size: 1.6vw;
         line-height: 1.6;
         font-weight: normal;
     }
@@ -792,7 +800,7 @@ body {
         background-size: 100% 100%;
         padding: 10% 8%;
         text-align: center;
-        font-size: 4.8vw;
+        font-size: 5vw;
         font-family: Monad, sans-serif;
         color: white;
         margin-bottom: 7%;
@@ -810,7 +818,7 @@ body {
         height: auto;
         border-radius: 5px;
         font-family: Nuito Sans, sans-serif;
-        font-size:2.3vw;
+        font-size: 2.2vw;
         padding: 3% 4%;
         display: flex;
         flex-direction: row;
@@ -821,7 +829,7 @@ body {
         left: 0;
         cursor: pointer;
         margin-right: 6%;
-        width: 2.3vw;
+        width: 3vw;
     }
     .Dashboard2-section .sectionbar .overview .social .txt {
         text-align: left;
@@ -829,11 +837,11 @@ body {
     .Dashboard2-section .sectionbar .overview .social .go {
         right: 0;
         cursor: pointer;
-        margin-left: 67%;
-        width: 2.3vw;
+        margin-left: 66%;
+        width: 3vw;
     }
     .Dashboard2-section .sectionbar .overview .social .last {
-        margin-left: 70%;
+        margin-left: 68.5%;
     }
 	.d_section__all {
         width: 100%;
@@ -843,9 +851,9 @@ body {
         flex-wrap: nowrap;
     }
 	.submission_section {
-		padding: 3.2%;
-		width: 40%;
-		height: 55vw;
+		padding: 2.6%;
+		width: 42%;
+		height: 60vw;
 		background: #ffffff;
         border-radius: 5px;
 	}
@@ -859,7 +867,7 @@ body {
 		margin-bottom: 15%;
 	}
 	.sub_head__submitOne, .sub_head__submitTwo {
-		font-size: 1.2vw;
+		font-size: 1.4vw;
 		font-family: 'Montserrat', sans-serif;
 		font-style: normal;
 		font-weight: bold;
@@ -882,13 +890,13 @@ body {
 		font-family: 'Montserrat', sans-serif;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 1.2vw;
+		font-size: 1.5vw;
 	}
 	#sub_section__timeLeft {
 		font-family: 'Nunito sans', sans-serif;
 		font-style: normal;
 		font-weight: 900;
-		font-size: 2.6vw;
+		font-size: 3.3vw;
 		margin-bottom: 5%;
 	}
 	.sub_section__add {
@@ -900,8 +908,8 @@ body {
         border-radius: 5px;
         font-family: 'Nunito sans', sans-serif;
 		font-style: normal;
-		font-weight: normal;
-		font-size: 1.48vw;
+		font-weight: 500;
+		font-size: 1.56vw;
     }
     .sub_section__add div:nth-child(1) {
         grid-column: 1 / 2;
@@ -911,7 +919,6 @@ body {
         font-family: 'Montserrat', sans-serif;
 		font-style: normal;
 		font-weight: bold;
-        font-size: 1vw;
         text-transform: uppercase;
     }
     .sub_section__add div:nth-child(1) img {
@@ -922,6 +929,9 @@ body {
     .sub_section__add div:nth-child(1) img:hover {
         background-image: radial-gradient(rgb(228, 220, 220), whitesmoke, whitesmoke);
     }
+    .sub_section__add div:nth-child(1) div {
+        font-size: 1.44vw;
+    } 
     .sub_section__add div:nth-child(2) {
         grid-column: 2 / 3;
     }
@@ -929,8 +939,8 @@ body {
 		font-family: 'Montserrat', sans-serif;
 		font-style: normal;
 		font-weight: 500;
-		font-size: 1.2vw;
-		padding: 3%;
+		font-size: 1.8vw;
+		padding: 3.4%;
 		width: 100%;
 		border: none;
         background: #1071f3;
