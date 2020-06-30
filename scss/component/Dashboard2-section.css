@@ -594,11 +594,16 @@ body {
         margin-left: 67%;
     }
 }
-@media (min-width: 768px) {
+@media (min-width: 768px) and (max-width: 999px) {
+    .Dashboard2-section {
+        width: 47%;
+        margin-left: 5%;
+        margin-right: 4%;
+    }
     .Dashboard2-section .headbar {
         display: block;
         width: 100%;
-        margin: 4% 0 5% 0;
+        margin: 0 0 5% 0;
         height: 68px;
         background: white;
         display: flex;
@@ -609,8 +614,6 @@ body {
     }
     .desktopView {
         display: block;
-        width: 47%;
-        margin-left: 5%;
         background: #E5E5E5;
     }
     .mobileView {
@@ -832,22 +835,21 @@ body {
     .Dashboard2-section .sectionbar .overview .social .last {
         margin-left: 70%;
     }
-}
-
-@media screen and (min-width: 869px) {
-	.d_section__all{
-		display: flex;
-		margin-bottom: 100px;
-	}
-	.submission_section{
-		padding: 2%;
-		width: 45%;
-		height: 650px;
+	.d_section__all {
+        width: 100%;
+        margin: 4% 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+	.submission_section {
+		padding: 3.2%;
+		width: 40%;
+		height: 55vw;
 		background: #ffffff;
-		margin-left: 1%;
-		margin-top: 2%;
+        border-radius: 5px;
 	}
-	.sub_head{
+	.sub_head {
 		display: flex;
 		border: none;
 		justify-content: space-between;
@@ -856,267 +858,443 @@ body {
 		border-radius: 5px;
 		margin-bottom: 15%;
 	}
-	.sub_head__submitOne, .sub_head__submitTwo{
-		font-size: 14px;
-		font-family: "Montserrat", sans-serif;
+	.sub_head__submitOne, .sub_head__submitTwo {
+		font-size: 1.2vw;
+		font-family: 'Montserrat', sans-serif;
 		font-style: normal;
 		font-weight: bold;
 	}
-	.sub_head__submitTwo{
+	.sub_head__submitTwo {
 		color: #1071f3;
 		padding: 10px 0px;
 	}
-	.sub_head__submitOne{
+	.sub_head__submitOne {
 		background: #ffffff;
 		color: #1071f3;
 		padding: 10px 5px;
 		border-radius: 5px;
 		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
 	}
-	.submission_team{
+	.submission_team {
 		display: none;
 	}
-	.sub_section__time p{
-		font-family: "Montserrat", sans-serif;
+	.sub_section__time p {
+		font-family: 'Montserrat', sans-serif;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 14px;
+		font-size: 1.2vw;
 	}
-	#sub_section__timeLeft{
-		font-family: "Nunito sans";
+	#sub_section__timeLeft {
+		font-family: 'Nunito sans', sans-serif;
 		font-style: normal;
 		font-weight: 900;
-		font-size: 30px;
+		font-size: 2.6vw;
 		margin-bottom: 5%;
 	}
-	.sub_section__add{
+	.sub_section__add {
 		background: #f7f7f8;
-		display: flex;
-		justify-content: space-between;
-		height: 270px;
-		overflow: scroll;
-	}
-	.sub_section__addImage{
-		width: 170px;
-		height: 189px;
-		cursor: pointer;
-		margin: 2%;
-		margin-top: 4%;
-	}
-	.sub_section__addImage{
-		background-image: radial-gradient(rgb(228, 220, 220), white);
-	}
-	.sub_section__add p{
-		font-family: "Nunito sans";
+        display: grid;
+        grid-template-columns: 50%, 50%;
+        grid-gap: 10px;
+        padding: 5%;
+        border-radius: 5px;
+        font-family: 'Nunito sans', sans-serif;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 18px;
-	}
-	.sub_section__addImage p{
-		font-family: "Montserrat", sans-serif;
+		font-size: 1.48vw;
+    }
+    .sub_section__add div:nth-child(1) {
+        grid-column: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 14px;
-		margin-top: -3%;
-		text-align: center;
-	}
+        font-size: 1vw;
+        text-transform: uppercase;
+    }
+    .sub_section__add div:nth-child(1) img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    .sub_section__add div:nth-child(1) img:hover {
+        background-image: radial-gradient(rgb(228, 220, 220), whitesmoke, whitesmoke);
+    }
+    .sub_section__add div:nth-child(2) {
+        grid-column: 2 / 3;
+    }
 	.sub_submit{
-		font-family: "Montserrat", sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		font-style: normal;
-		font-weight: bold;
-		font-size: 14px;
-		padding: 8px;
+		font-weight: 500;
+		font-size: 1.2vw;
+		padding: 3%;
 		width: 100%;
 		border: none;
-		background: #1071f3;
+        background: #1071f3;
+        border-radius: 5px;
 		color: #ffffff;
 		margin-top: 15%;
-		outline: none;
+        outline: none;
+        cursor: pointer;
 	}
-	.sub_submit:active{
-		color: #1071f3;
-		background: #ffffff;
+	.sub_submit:active {
+		color: #f3f3f3;
+        background: #64a7ff;
+        cursor: pointer;
 	}
 }
-
-@media (min-width: 768px) and (max-width: 868px) {
-	.submission_section{
-		padding: 5%;
+@media (min-width: 1000px) {
+    .Dashboard2-section {
+        width: 47%;
+        margin-left: 5%;
+        margin-right: 4%;
+    }
+    .Dashboard2-section .headbar {
+        display: block;
+        width: 100%;
+        margin: 0 0 5% 0;
+        height: 68px;
+        background: white;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        border-radius: 4px;
+    }
+    .desktopView {
+        display: block;
+        background: #E5E5E5;
+    }
+    .mobileView {
+        display: none;
+    }
+    .Dashboard2-section .headbar .header-btn {
+        width: auto;
+        height: 68px;
+        display: flex;
+        flex-direction: column;
+    }
+    .Dashboard2-section .headbar .header-btn button {
+        width: 100%;
+        height: 64px;
+        font-size: 1.45vw;
+        line-height: 64px; 
+        margin: 0;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        font-family: Montserrat, sans-serif;
+        font-weight: bold;
+        color: rgba(156, 99, 99, 0.4);
+    }
+    .Dashboard2-section .headbar .header-btn button:hover {
+        outline: none;
+        border: none;
+        color: #1071F3;
+    }
+    .Dashboard2-section .headbar .header-btn .border-bottom {
+        width: 100%;
+        background: #1071F3;
+        border: none;
+        height: 4px;
+        display: none;
+        border-radius: 5px;
+    }
+    .Dashboard2-section .headbar .active button {
+        color: #1071F3;
+    }
+    .Dashboard2-section .headbar .active .border-bottom {
+        display: block;
+    }
+    button {
+        margin-bottom: 5%;
+        border: none;
+        background: white;
+    }
+    .announcement, .prizes, .overview {
+        display: none;
+    }
+    .Dashboard2-section .sectionbar {
+        width: 100%; 
+        margin: 5% 0 0 0;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head {
+        width: 100%;
+        margin: 0;
+        background: white;
+        border-radius: 4px;
+        line-height: 1.6;
+        padding: 3% 5% 7% 5%;
+        font-family: Nuito Sans, sans-serif;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second {
+        height: auto;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second .bold {
+        font-weight: 700;
+        font-size: 1.45vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .second .spnBtn {
+        margin: 0 3%;
+        padding: 0.6% 2.2%;
+        background: #0080FB;
+        color: rgba(253, 254, 255, 0.7);
+        font-size: 1.36vw;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 4px;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .first {
+        font-size: 1.42vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .active-head .third {
+        font-size: 1.35vw;
+        margin-top: 1%;
+    }
+    
+    /* COMING HEAD */
+    .Dashboard2-section .sectionbar .timeline .coming-head {
+        width: 100%;
+        margin: 0;
+        background: transparent;
+        border-radius: 4px;
+        line-height: 1.6;
+        padding: 3% 5% 7% 5%;
+        font-family: Nuito Sans, sans-serif;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second {
+        height: auto;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second .bold {
+        font-weight: 700;
+        font-size: 1.45vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .second .spnBtn {
+        margin: 0 3%;
+        padding: 0.6% 3.8%;
+        background: #C4C4C4;
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.35vw;
+        text-transform: uppercase;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .first {
+        font-size: 1.42vw;
+    }
+    .Dashboard2-section .sectionbar .timeline .coming-head .third {
+        font-size: 1.35vw;
+        margin-top: 1%;
+        margin-bottom: 3.5%;
+    }
+    .Dashboard2-section .sectionbar .announcement {
+        width: 100%;
+        margin: 0;
+        padding: 5%;
+        border-radius: 4px;
+        background: white;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 1.2vw;
+        line-height: 1.6;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .announcement .elem1 {
+        color: rgba(0, 0, 0, 0.6);
+        font-size: 1.3vw;
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .announcement a {
+        color: #2864F0;
+        text-decoration: none;
+    }
+    .Dashboard2-section .sectionbar .prizes {
+        width: 100%;
+        margin: 0;
+    }
+    .prH {
+        font-family: Nuito Sans, sans-serif;
+        font-size: 1.3vw;
+        font-weight: bold;
+    }
+    .prHd {
+        background: white;
+        width: 100%;
+        margin: 0;
+        padding: 4% 8% 24% 8%;
+        border-radius: 4px;
+        font-family: Nuito Sans, sans-serif;
+        font-size: 1.3vw;
+        line-height: 1.6;
+        font-weight: normal;
+    }
+    .Dashboard2-section .sectionbar .prizes .pH {
+        font-weight: bold;
+    }
+    .Dashboard2-section .sectionbar .overview .image {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        background: url(../../assets/images/dashboard/overview-bg.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        padding: 10% 8%;
+        text-align: center;
+        font-size: 4.8vw;
+        font-family: Monad, sans-serif;
+        color: white;
+        margin-bottom: 7%;
+    }
+    .Dashboard2-section .sectionbar .overview .image .X {
+        color: rgb(242,167,2);
+    }
+    .Dashboard2-section .sectionbar .overview .image .hackathon {
+        color: #2864F0;
+    }
+    .Dashboard2-section .sectionbar .overview .social {
+        background: white;
+        width: 100%;
+        margin: 0 0 7% 0;
+        height: auto;
+        border-radius: 5px;
+        font-family: Nuito Sans, sans-serif;
+        font-size:2.3vw;
+        padding: 3% 4%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        cursor: pointer;
+    }
+    .Dashboard2-section .sectionbar .overview .social .img {
+        left: 0;
+        cursor: pointer;
+        margin-right: 6%;
+        width: 2.3vw;
+    }
+    .Dashboard2-section .sectionbar .overview .social .txt {
+        text-align: left;
+    }
+    .Dashboard2-section .sectionbar .overview .social .go {
+        right: 0;
+        cursor: pointer;
+        margin-left: 67%;
+        width: 2.3vw;
+    }
+    .Dashboard2-section .sectionbar .overview .social .last {
+        margin-left: 70%;
+    }
+	.d_section__all {
+        width: 100%;
+        margin: 4% 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+	.submission_section {
+		padding: 3.2%;
+		width: 40%;
+		height: 55vw;
 		background: #ffffff;
+        border-radius: 5px;
 	}
-	.sub_head{
+	.sub_head {
 		display: flex;
 		border: none;
 		justify-content: space-between;
-		padding: 0% 3%;
+		padding: 0% 7%;
 		background: #EAEDFE;
 		border-radius: 5px;
+		margin-bottom: 15%;
 	}
-	.sub_head__submitOne, .sub_head__submitTwo{
-		font-size: 12px;
-		font-family: "Montserrat", sans-serif;
+	.sub_head__submitOne, .sub_head__submitTwo {
+		font-size: 1.2vw;
+		font-family: 'Montserrat', sans-serif;
 		font-style: normal;
 		font-weight: bold;
 	}
-	.sub_head__submitOne{
-		color: rgba(16, 113, 243, 0.4);
+	.sub_head__submitTwo {
+		color: #1071f3;
 		padding: 10px 0px;
 	}
-	.sub_head__submitTwo{
+	.sub_head__submitOne {
 		background: #ffffff;
 		color: #1071f3;
 		padding: 10px 5px;
 		border-radius: 5px;
 		box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.25);
 	}
-	.sub_create{
-		font-family: "Nunito sans";
-		font-style: normal;
-		font-weight: normal;
-		font-size: 18px;
-		color: rgba(0, 0, 0, 0.6);
+	.submission_team {
+		display: none;
 	}
-	.sub_team__name, .sub_team__code{
-		font-family: "Nunito sans";
-		font-style: normal;
-		font-weight: normal;
-		font-size: 14px;
-	}
-	#name{
-		border: 2px solid #1071F3;
-		padding: 6px;
-		width: 66%;
-		outline: none;
-	}
-	.sub_team__createTeam{
-		border: none;
-		border-radius: 5px;
-		background: #1071F3;
-		padding: 7px;
-		margin-left: 4%;
-		color: #ffffff;
-		font-family: "Nunito sans";
-		font-style: normal;
-		font-weight: normal;
-		font-size: 14px;
-		outline: none;
-		width: 30%;
-	}
-	.sub_team__createTeam:active{
-		color: #1071f3;
-		background: #ffffff;
-	}
-	.sub_team__or{
-		margin-top: 30px;
-		display:flex;
-		color: rgba(0, 0, 0, 0.4);
-		font-family: "Nunito sans";
-		font-style: normal;
-		font-weight: normal;
-		font-size: 14px;
-	}
-	.sub_team__line span:before, .sub_team__line span:after {
-		color: rgba(0, 0, 0, 0.4);
-		content:'';
-		flex: 0.5;
-		border-bottom:solid 1px;
-		margin: 9px 1px;
-	}
-	.sub_team__code{
-		color: rgba(0, 0, 0, 0.4);
-	}
-	#code{
-		padding: 8px;
-		background: #f4f4f4;
-		border: none;
-		width: 66%;
-		outline: none;
-	}
-	 ::placeholder{
-		color: rgba(0, 0, 0, 0.4);
-	}
-	.sub_team__joinTeam{
-		border: none;
-		border-radius: 5px;
-		background: rgba(16, 113, 243, 0.4);
-		padding: 7px;
-		margin-left: 4%;
-		color: #f4f4f4;
-		font-family: "Nunito sans";
-		font-style: normal;
-		font-weight: normal;
-		font-size: 14px;
-		outline: none;
-		width: 30%;
-		margin-bottom: 10%;
-	}
-	.sub_team__joinTeam:active{
-		color: rgba(16, 113, 243, 0.4);
-		background: #f4f4f4;
-	}
-	.sub_team{
-		border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-		margin-bottom: 15%;
-	}
-	.sub_section__time p{
-		font-family: "Montserrat", sans-serif;
+	.sub_section__time p {
+		font-family: 'Montserrat', sans-serif;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 14px;
+		font-size: 1.2vw;
 	}
-	#sub_section__timeLeft{
-		font-family: "Nunito sans";
+	#sub_section__timeLeft {
+		font-family: 'Nunito sans', sans-serif;
 		font-style: normal;
 		font-weight: 900;
-		font-size: 30px;
+		font-size: 2.6vw;
 		margin-bottom: 5%;
 	}
-	.sub_section__add{
+	.sub_section__add {
 		background: #f7f7f8;
-		display: flex;
-		justify-content: space-between;
-		height: 350px;
-		overflow: scroll;
-	}
-	.sub_section__addImage{
-		width: 170px;
-		height: 189px;
-		cursor: pointer;
-		margin: 0.5%;
-		margin-top: 4%;
-	}
-	.sub_section__addImage{
-		background-image: radial-gradient(rgb(228, 220, 220), white);
-	}
-	.sub_section__add p{
-		font-family: "Nunito sans";
+        display: grid;
+        grid-template-columns: 50%, 50%;
+        grid-gap: 10px;
+        padding: 5%;
+        border-radius: 5px;
+        font-family: 'Nunito sans', sans-serif;
 		font-style: normal;
 		font-weight: normal;
-		font-size: 18px;
-	}
-	.sub_section__addImage p{
-		font-family: "Montserrat", sans-serif;
+		font-size: 1.48vw;
+    }
+    .sub_section__add div:nth-child(1) {
+        grid-column: 1 / 2;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
 		font-style: normal;
 		font-weight: bold;
-		font-size: 14px;
-		margin-top: -3%;
-		text-align: center;
-	}
+        font-size: 1vw;
+        text-transform: uppercase;
+    }
+    .sub_section__add div:nth-child(1) img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+    .sub_section__add div:nth-child(1) img:hover {
+        background-image: radial-gradient(rgb(228, 220, 220), whitesmoke, whitesmoke);
+    }
+    .sub_section__add div:nth-child(2) {
+        grid-column: 2 / 3;
+    }
 	.sub_submit{
-		font-family: "Montserrat", sans-serif;
+		font-family: 'Montserrat', sans-serif;
 		font-style: normal;
-		font-weight: bold;
-		font-size: 14px;
-		padding: 8px;
+		font-weight: 500;
+		font-size: 1.2vw;
+		padding: 3%;
 		width: 100%;
 		border: none;
-		background: #1071f3;
+        background: #1071f3;
+        border-radius: 5px;
 		color: #ffffff;
-		margin-top: 5%;
-		outline: none;
+		margin-top: 15%;
+        outline: none;
+        cursor: pointer;
 	}
-	.sub_submit:active{
-		color: #1071f3;
-		background: #ffffff;
+	.sub_submit:active {
+		color: #f3f3f3;
+        background: #64a7ff;
+        cursor: pointer;
 	}
 }
