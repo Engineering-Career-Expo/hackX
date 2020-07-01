@@ -5,10 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard2-section</title>
-    <link href="../../scss/component/dashboard2-section.css" rel="stylesheet">
+    <link href="../scss/component/dashboard2-section.css" rel="stylesheet">
 </head>
 <body>
-   <div class="d_section__all">
+    <div class="Dashboard2-section mobileView">
+        <header class="mobileDashLink">Dashboard > <b>home</b></header>
+        <div class="sectionbar">
+            <section class="submission">
+                <div class="blueHead">SUBMISSIONS</div>
+                <div class="substruction">Your submissions will appear here</div>
+                <hr class="mobViewHr">
+                <div class="subDashStatus">No Submissions yet</div>
+                <hr class="mobViewHr">
+                <div class="subDashTime">
+                    <div class="subDashTimeHd">time left to submit</div>
+                    <div class="subDashTimeTxt">1d:11h:37m</div>
+                </div>
+            </section>
+            <section class="timeline">
+                <div class="blueHead">TIMELINE</div>
+                <hr class="mobViewHr">
+                <div class="active-head">
+                    <div class="first">
+                        April 30, 2020
+                    </div>
+                    <span class="spnBtn">starts in 78hrs</span>
+                    <div class="second">
+                        <span class="bold">Hackathon starts</span>
+                    </div>
+                    <div class="third">
+                        Submissions open and you can start submitting your projects
+                    </div>                    
+                </div>
+                <hr class="mobViewHr">
+                <div class="coming-head">
+                    <div class="first">
+                        April 30, 2020
+                    </div>
+                    <span class="spnBtn">coming soon</span>
+                    <div class="second">
+                        <span class="bold">Hackathon starts</span>
+                    </div>
+                    <div class="third">
+                        Submissions open and you can start submitting your projects
+                    </div>
+                </div>
+                <hr class="mobViewHr">
+                <span class="briefo">
+                    Timeline was last updated <span id="time">20 mins</span> ago
+                </span>
+                <span class="fullView">
+                    <a href="dashboard-mobile-timeline.html">View All</a>
+                </span>
+            </section>
+            <section class="announcement">
+                <div class="blueHead">ANNOUNCEMENT</div>
+                <hr class="mobViewHr">
+                <div class="paranounce">
+                    <div class="elem1">May 19, 2020</div>
+                    <a href="#">Book your mentor session with the Biconomy team!</a><br>
+                    Hey Hackers,
+                </div>
+                <hr class="mobViewHr">
+                <span class="briefo">
+                    Announcement was last updated <span id="time">20 mins</span> ago
+                </span>
+                <span class="fullView">
+                    <a href="dashboard-mobile-announcement.html">View All</a>
+                </span>
+            </section>
+            <section class="prizes">
+                <div class="blueHead">PRIZES</div>
+                <hr class="mobViewHr">
+                <div class="prHd">
+                    <p>
+                        <div class="pH">First position:</div>
+                        First position wins a sum of One million naira (N1,000,000)
+                    </p>
+                    <p>
+                        <div class="pH">Second position:</div>
+                    </p>
+                </div>
+                <hr class="mobViewHr">
+                <span class="briefo">
+                    
+                </span>
+                <span class="fullView">
+                    <a href="dashboard-mobile-prizes.html">View All</a>
+                </span>
+            </section>
+            <section class="overview">
+                <div class="blueHead">OVERVIEW</div>
+                <hr class="mobViewHr">
+                <div class="image">
+                    <div class="hackX">HACK<span class="X">X</span></div>
+                    <div class="hackathon">HACKATHON</div>
+                </div>
+                <hr class="mobViewHr">
+                <span class="briefo">
+                    
+                </span>
+                <span class="fullView">
+                    <a href="dashboard-mobile-overview.html">View All</a>
+                </span>
+            </section>
+        </div>
+    </div>
+   <div class="d_section__all desktopView">
     <div class="Dashboard2-section">
         <div class="headbar">
             <span class="header-btn active">
@@ -143,19 +246,19 @@
                     <div class="hackathon">HACKATHON</div>
                 </div>
                 <div class="social">
-                    <img src="../../assets/images/dashboard/dash-twitter.svg" class="img">
-                    Twitter
-                    <img src="../../assets/images/dashboard/overview-blue.svg" class="go">
+                    <img src="../assets/images/dashboard/dash-twitter.svg" class="img">
+                    <div class="txt">Twitter</div>
+                    <img src="../assets/images/dashboard/overview-blue.svg" class="go">
                 </div>
                 <div class="social">
-                    <img src="../../assets/images/dashboard/dash-github.svg" class="img">
-                    Github
-                    <img src="../../assets/images/dashboard/overview-gold.svg" class="go">
+                    <img src="../assets/images/dashboard/dash-github.svg" class="img">
+                    <div class="txt">Github</div>
+                    <img src="../assets/images/dashboard/overview-gold.svg" class="go">
                 </div>
                 <div class="social">
-                    <img src="../../assets/images/dashboard/dash-slack.svg" class="img">
-                    Slack  
-                    <img src="../../assets/images/dashboard/overview-red.svg" class="go">
+                    <img src="../assets/images/dashboard/dash-slack.svg" class="img">
+                    <div class="txt">Slack</div>  
+                    <img src="../assets/images/dashboard/overview-red.svg" class="go last">
                 </div>
             </section>
         </div>
@@ -182,7 +285,7 @@
    		    </div>
    		    <div class="sub_section__add">
     			<div class="sub_section__addImage">
-    				<img src="/storage/emulated/0/hackX/assets/images/submission-page-submit.svg"><p>Add Project</p>
+    				<img src="../assets/images/submission-page-submit.svg"><p>Add Project</p>
     			</div>
     			<p>Begin your project submission by clicking the plus [+] button once the hackathon starts.
    				   Once started, you will be able to edit and update the project until you submit it for judging.</p>
@@ -191,6 +294,6 @@
     	 <button class="sub_submit">Submit project for judging</button>
     </div>
    </div>
-    <script src="../../js/dashboard2-section.js"></script>
+    <script src="../js/dashboard2-section.js"></script>
 </body>
 </html>

@@ -1,3 +1,16 @@
+// DISPLAY THE RESET MESSAGE TO CHECK MAIL FOR PASSWORD RESET LINK
+var resetBtn = document.getElementById('resetBtn');
+
+resetBtn.addEventListener('click', function showCheckMailMessage() {
+  var passwordResetLink = document.getElementById('passwordResetLink');
+  var forgotPassword = document.getElementById('forgotPassword');
+
+  passwordResetLink.style.display = 'block';
+  forgotPassword.style.display = 'none';
+});
+
+
+
 const loginForm = document.querySelector(".login-form");
 
 const showLoginAlert = (message, className) => {
@@ -24,7 +37,7 @@ const formEvent = loginForm.addEventListener("submit", async (event) => {
   }
 });
 const userLogin = async (loginInfo) => {
-  // http://localhost:8080/login
+  //http://localhost:8080/login 
   axios
     .post("https://hackxbackend.herokuapp.com/login", loginInfo)
     .then((response) => {
@@ -37,13 +50,11 @@ const userLogin = async (loginInfo) => {
         } else if (response.data == "Password Incorrect.") {
           showLoginAlert("Password Incorrect.", "error");
         } else if (response.data == "Session Checker"){
-          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
+          window.location.href = 'https://hackx.netlify.app/dashboard';
         }else {
           showLoginAlert("Login Successfully", "success");
           localStorage.setItem("pass", response.data.token);
-          localStorage.setItem("id", response.data.id);
-          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
-
+          window.location.href = 'https://hackx.netlify.app/dashboard';
         }
       } else {
         showLoginAlert("Something Went Wrong. Try Again Later", "error");
@@ -52,3 +63,5 @@ const userLogin = async (loginInfo) => {
 
     .catch((error) => console.error(error));
 };
+
+

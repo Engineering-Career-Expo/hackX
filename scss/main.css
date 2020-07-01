@@ -940,7 +940,7 @@ body {
   .register-main-container .register-form-container h2 {
     padding: 0 0 2rem 0;
     font-family: Gilroy-bold, sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 600;
     line-height: 28px;
     font-weight: 400;
@@ -1354,6 +1354,30 @@ body {
     background: rgb(229,25,59);
     border-color: rgb(229,25,59);
   }
+}
+.register-main-container .register-form-container .forgot-password a {
+  font-size: 16px;
+  color: rgba(229, 25, 59, 0.6);
+  float: right;
+  margin-bottom: 10px;
+  font-family: Gilroy-Bold, sans-serif;
+  font-weight: 500;
+  text-decoration: none;
+}
+.register-main-container .register-form-container .forgot-password a:hover {
+  color: rgb(229,25,59);
+}
+.password-reset-link {
+  display: none;
+}
+.sent-reset-link {
+  text-align: center;
+  margin-top: 8%;
+}
+.register-main-container .register-form-container .submit-new-password,
+.register-main-container .register-form-container .reset-btn,
+.register-main-container .register-form-container .check-mail-btn {
+    width: 100%;
 }
 .about {
   padding: 8px;
