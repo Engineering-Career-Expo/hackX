@@ -12,7 +12,7 @@ nav {
 	width: 100%;
 	margin: 0;
 	background-color: #ffffff;
-	padding: 10px 0;
+	padding: 2px 0;
 }
 *{
 	box-sizing: border-box;
@@ -55,6 +55,7 @@ button:hover, input:hover {
 	justify-content: space-between;
 	flex-direction: row;
 	flex-wrap: nowrap;
+	align-items: center;
 }
 
 .nav-links {
@@ -157,7 +158,8 @@ button:hover, input:hover {
   		-moz-background-repeat: no-repeat;
   		-webkit-background-repeat: no-repeat;
   		-o-background-repeat: no-repeat;
-  		background-repeat: no-repeat;
+		  background-repeat: no-repeat;
+		  z-index: 1000;
 		}
 		.dropdown_button {
 			cursor: pointer;
@@ -253,7 +255,50 @@ button:hover, input:hover {
 a.view {
 	display: none;
 }
-
+.dropdownProfile {
+    position: absolute;
+    width: 20%;
+	margin: 25px 0 0 0;
+	left: 79%;
+    background: #FFFFFF;
+    padding: .8% .5% .7% 1.7%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+	font-weight: normal;
+	color: black;
+	font-size: 1.38vw;
+	box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
+	border-radius: 3px;
+}
+.dropdownProfile .accountState {
+    font-weight: 500;
+    font-size: .7vw;
+    color: #00BC4B;
+    border-radius: 5px;
+    border: 1px solid #00BC4B;
+    text-align: center;
+    margin: 9% 33% 1.5% 0;
+    padding: 2.5% 0;
+    font-size: 1.08vw;
+}
+.ddHr {
+    float: right;
+    width: 87%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    margin: 4% 0;
+}
+.navigationLink, .otherNavs {
+    margin-left: 1.5%;
+}
+.navigationLink a, .otherNavs a {
+    text-decoration: none;
+    display: block;
+    margin-bottom: 4%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.34vw;
+}
 
 /* 
 @media(min-width:768px){
@@ -277,6 +322,9 @@ a.view {
 		padding: 10px;
 		padding-bottom: 30px;
 		background-color: #ffffff;
+	}
+	.dropdownProfile {
+		display: none;
 	}
 
 	.responsive {
