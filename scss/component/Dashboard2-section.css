@@ -15,6 +15,11 @@ html, body {
 }
 body {
     background: #E5E5E5;
+    width: 100%;
+    margin: 0;
+}
+.hackx-dashboard {
+    display: none;
 }
 /* SMALL MOBILE VIEW */
 @media (max-width: 450px) {
@@ -313,7 +318,7 @@ body {
         margin-left: 54%;
     }
 }
-@media (min-width: 451px) and (max-width: 767px) {
+@media (min-width: 451px) and (max-width: 750px) {
     .Dashboard2-section .headbar {
         display: none;
     }
@@ -602,7 +607,13 @@ body {
         margin-left: 67%;
     }
 }
-@media (min-width: 768px) and (max-width: 999px) {
+@media (min-width: 751px) and (max-width: 999px) {
+    .hackx-dashboard {
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2.2vw;
+        margin: 2% 5%;
+    }
     .Dashboard2-section {
         width: 48%;
         margin-left: 3.5%;
@@ -845,7 +856,7 @@ body {
     }
 	.d_section__all {
         width: 100%;
-        margin: 4% 0;
+        margin: 0;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
@@ -957,6 +968,12 @@ body {
 	}
 }
 @media (min-width: 1000px) {
+    .hackx-dashboard {
+        display: block;
+        font-family: 'Poppins', sans-serif;
+        font-size: 2vw;
+        margin: 2% 5%;
+    }
     .Dashboard2-section {
         width: 47%;
         margin-left: 5%;
@@ -1199,7 +1216,7 @@ body {
     }
 	.d_section__all {
         width: 100%;
-        margin: 4% 0;
+        margin: 0;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
