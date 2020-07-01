@@ -37,11 +37,12 @@ const userLogin = async (loginInfo) => {
         } else if (response.data == "Password Incorrect.") {
           showLoginAlert("Password Incorrect.", "error");
         } else if (response.data == "Session Checker"){
-          window.location.href = 'https://hackx.netlify.app/dashboard';
+          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
         }else {
           showLoginAlert("Login Successfully", "success");
           localStorage.setItem("pass", response.data.token);
-          window.location.href = 'https://hackx.netlify.app/dashboard';
+          localStorage.setItem("id", response.data.id);
+          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
         }
       } else {
         showLoginAlert("Something Went Wrong. Try Again Later", "error");
