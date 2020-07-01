@@ -11,6 +11,7 @@ const { Submission, validateSubmission } = require("../model/submission");
 const { User, validate } = require("../model/user");
 const { contact, validateContact } = require("../model/contact");
 const {Picture, Media}    = require('../auto/upload');
+const path = require('path');
 
 // middleware function to check for logged-in users
 var sessionChecker = (req, res, next) => {
@@ -21,7 +22,7 @@ var sessionChecker = (req, res, next) => {
     } else {
         next();
     }     
-};
+}; 
 
 //routes
 
@@ -338,6 +339,7 @@ router.get("/getuser", authorize(), (req, res) => {
   })
     .populate("dashboard")
     .populate("submission")
+    .sort([["updatedAt", -1]])
     .then((doc) => {
       let index = doc[0];
       //console.log(doc);
@@ -357,8 +359,88 @@ router.get("/getuser", authorize(), (req, res) => {
       });
     })
     .catch((err) => {
-      console.log(err)
+      // console.log(err)
       res.json("Incorrect username");
+    });
+});
+
+router.get("/dashboardImages", authorize(), (req, res) => {  
+  const { id } = req.query;
+  Dashboard.find({
+    _id: id, 
+  })
+    .then((doc) => {
+      let index = doc[0];     
+     if (index.picture === undefined){
+        res.json("There is no picture present");
+      }else {
+        index.picture.forEach((video)=>{
+           res.sendFile(path.join(__dirname,'../public/uploads/'+ video));
+        })
+       }         
+    })
+    .catch((err) => {
+      // console.log(err)
+      res.json("Incorrect Id");
+    });
+});
+
+router.get("/dashboardVideo", authorize(), (req, res) => {  
+  const { id } = req.query;
+  Dashboard.find({
+    _id: id, 
+  })
+    .then((doc) => {
+      let index = doc[0]; 
+     if (index.media === undefined){
+        res.json("There is no video present");
+      }else { 
+        index.media.forEach((video)=>{
+           res.sendFile(path.join(__dirname,'../public/uploads/'+ video))  
+        })
+       }         
+    })
+    .catch((err) => {
+      // console.log(err)
+      res.json("Incorrect Id");
+    });
+});
+
+router.get("/submissionImages", authorize(), (req, res) => {  
+  const { id } = req.query;
+  const { name } = req.body;
+  Submission.find({
+    _id: id, 
+  })
+    .then((doc) => {
+      let index = doc[0];      
+     if (index.pictures === undefined){
+        res.json("There is no picture present");
+      }else {
+        res.sendFile(path.join(__dirname,'../public/uploads/'+ name));
+       }         
+    })
+    .catch((err) => {
+      res.json("Incorrect Id");
+    });
+});
+
+router.get("/submissionVideo", authorize(), (req, res) => {  
+  const { id } = req.query;
+  const { name } = req.body;
+  Submission.find({
+    _id: id, 
+  })
+    .then((doc) => {
+      let index = doc[0]; 
+     if (index.video === undefined){
+        res.json("There is no video present");
+      }else {
+        res.sendFile(path.join(__dirname,'../public/uploads/' + name)); 
+       }         
+    })
+    .catch((err) => {
+      res.json("Incorrect Id");
     });
 });
 
@@ -416,6 +498,33 @@ router.put("/updateUsername", authorize(), (req, res) => {
       });
 });
 
+router.put("/updateSubmission", authorize(), (req, res) => {
+  const { id } = req.query;
+  const {name, tagline, problem, challenges, technologies, links, } = req.body;
+    Submission.findOneAndUpdate(
+      {
+        _id: id,
+      },
+      {
+        name: name,
+        tagline: tagline,
+        problem: problem,
+        challenges: challenges,
+        technologies: technologies,
+        links: links,
+      },
+      { new: true }
+    )
+      .then((doc) => {
+        //console.log(doc);
+       
+        res.json("Files has been updated Successfully.");
+      })
+      .catch((err) => {
+        res.json("Unable to update Files");
+      });
+});
+
 router.get("/forgotPassword", (req, res) => {
   const { email, username } = req.body;   
   User.find(
@@ -460,6 +569,7 @@ router.get("/alluser", authorize(Role.Admin), (req, res) => {
   User.find()
     .populate("dashboard")
     .populate("submission")
+    .sort([["updatedAt", -1]])
     .then((doc) => {
       //console.log(doc);
       res.json({
@@ -496,6 +606,7 @@ router.get("/getContacts", authorize(Role.Admin), (req, res) => {
 router.get("/getAllContacts/", authorize(Role.Admin), (req, res) => {
   contact
     .find()
+    .sort([["updatedAt", -1]])
     .then((doc) => {
       //console.log(doc);
       res.json({
