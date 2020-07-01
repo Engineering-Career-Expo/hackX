@@ -26,19 +26,21 @@ button:hover, input:hover {
 	outline: none;
 }
 .head_section1{
-		font-family: 'Montserrat', sans-serif;
-		width:90%;
-		margin:auto;
-		display:flex;
-  		justify-content:space-between;
-  		align-items:center;
-		}
+	font-family: 'Montserrat', sans-serif;
+	width:90%;
+	margin:auto;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+}
 .head_section2{
-		display:flex;
-  justify-content: space-between;
-  align-items:center;
-  color:#1071f3;
-		}
+	display:flex;
+	justify-content: space-between;
+	align-items:center;
+	color:#1071f3;
+	font-weight: 500;
+	font-size: 1.45vw;
+}
 
 .head_info0 {
 	width: 8%;
@@ -51,13 +53,18 @@ button:hover, input:hover {
 .nav-content-flex {
 	display: flex;
 	justify-content: space-between;
+	flex-direction: row;
+	flex-wrap: nowrap;
 }
 
 .nav-links {
 	display: flex;
-	width: 45%;
+	width: 50%;
 	padding: 20px 0;
+	margin-left: -5%;
 	justify-content: space-between;
+	font-weight: 500;
+	font-size: 1.45vw;
 }
 
 .nav-links img {
@@ -77,14 +84,18 @@ button:hover, input:hover {
 .nav-item a {
 	color: #1071F3;
 	text-decoration: none;
+	font-weight: 500;
+	font-size: 1.45vw;
+	align-items: center;
 }
 
 .nav-item a:hover {
-	font-weight: 500;
+	font-weight: 1000;
 }
 
 .nav-links img.unread {
 	width: 10px;
+	margin-right: -10%;
 	transform: translate(-10px, -12px);
 }
 
@@ -137,8 +148,8 @@ button:hover, input:hover {
 		/* border:1px dashed #1071f3; */
 		background: url('../../assets/images/Ellipse 2.png');
 		margin:0px 10px;
-		width: 50px;
-		height: 50px;
+		width: 58px;
+		height: 58px;
 		-moz-background-size: cover;
   		-webkit-background-size: cover;
   		-o-background-size: cover;
@@ -148,10 +159,19 @@ button:hover, input:hover {
   		-o-background-repeat: no-repeat;
   		background-repeat: no-repeat;
 		}
+		.dropdown_button {
+			cursor: pointer;
+			margin: 0;
+			align-self: center;
+		}
+		.dropdown_button:hover {
+			color: black;
+		}
 .head_pic2{
 		width:50px;
 		height:50px;
 		border-radius: 50%;
+		align-items: center;
 		}
 .head_pic02{
 		width:100%;
@@ -245,7 +265,7 @@ a.view {
 		}	
 	} */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 750px) {
 	.nav-content {
 		box-sizing: border-box;
 		display: none;
