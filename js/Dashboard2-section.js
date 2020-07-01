@@ -32,6 +32,14 @@ for (i = 0; i < coll.length; i++) {
    });
  }
 
+
+ // MAIN NAVBAR DROPDOWN
+ var dropdownLogo = document.getElementById('dropdownLogo');
+ dropdownLogo.addEventListener ('click', function change() {
+    
+ });
+
+
  const ham = document.querySelector('.hamburger');
  const nav = document.querySelector('.nav-content');
  ham.addEventListener('click', () => {
