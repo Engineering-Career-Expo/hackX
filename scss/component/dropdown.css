@@ -14,7 +14,7 @@ body {
     position: left;
     width: 20%;
     margin: 0;
-    float: left;
+    float: right;
     background: #FFFFFF;
     padding: .8% .5% 1.4% 1.7%;
     font-family: 'Montserrat', sans-serif;
@@ -24,17 +24,18 @@ body {
 }
 .dropdownProfile .accountState {
     font-weight: 500;
-    font-size: 11px;
+    font-size: .7vw;
     color: #00BC4B;
     border-radius: 5px;
     border: 1px solid #00BC4B;
     text-align: center;
-    margin: 8% 26% 2% 0;
+    margin: 9% 33% 1.5% 0;
     padding: 2.5% 0;
+    font-size: 1.1vw;
 }
 .ddHr {
     float: right;
-    width: 90%;
+    width: 87%;
     border: 1px solid rgba(0, 0, 0, 0.1);
     margin: 4% 0;
 }
@@ -45,4 +46,8 @@ body {
     text-decoration: none;
     display: block;
     margin-bottom: 4%;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.35vw;
 }
