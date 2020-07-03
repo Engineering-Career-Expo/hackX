@@ -109,11 +109,11 @@ router.post("/login", sessionChecker, (req, res) => {
           
           req.session.user = Object.values(index);
           // console.log(req.session.user)
-          // res.header("x-auth-token", token_pass);
+          // res.header("Access-Control-Allow-Origin", "*");
           res.json({
             message: "Authentication Successful",
             token: token_pass,
-            id: index._id
+            id: index._id,
           });
           // res.redirect('https://hackx.netlify.app/dashboard');
           
@@ -140,18 +140,18 @@ router.get("/dashboard/:id", authorize(),  (req, res) => {
       if (error === "LIMIT_UNEXPECTED_FILE") {
             return res.json("Too many files to upload.");
             }
-      if (error) return res.json(`Error when trying upload files: ${error}`);
+      if (error) return res.json("Error when trying to upload files.");
 
           let OUTPUT = () => {
           // console.log(req.body)
           const { error } = validateDashboard(req.body);
-          if (error) return res.json(error.details[0].message);
+          if (error) return res.json(error.details[0].message); 
 
           
             const {
               bio,
               track,
-              age,
+              link,
               institution,
               department,
             } = req.body;
@@ -182,7 +182,7 @@ router.get("/dashboard/:id", authorize(),  (req, res) => {
             let inputData = new Dashboard({
               bio: bio,
               track: track,
-              age: age,
+              link: link,
               institution: institution,
               department: department,
               media: media,

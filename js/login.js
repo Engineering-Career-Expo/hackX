@@ -23,12 +23,20 @@ const formEvent = loginForm.addEventListener("submit", async (event) => {
     userLogin(loginInfo);
   }
 });
+
 const userLogin = async (loginInfo) => {
-  // http://localhost:8080/login
+  //  http://localhost:8080/login
+  headers = {
+    'Content-Type': 'application/json',
+    'withCredentials': true
+  }
+
+
   axios
-    .post("https://hackxbackend.herokuapp.com/login", loginInfo)
+    .post("https://hackxbackend.herokuapp.com/login",  loginInfo, { headers: headers})
     .then((response) => {
       response.data;
+      // console.log(response)
       if (response.status == "200") {
         if (response.data == "Login Incorrect") {
           showLoginAlert("Login Incorrect", "error");
@@ -36,7 +44,7 @@ const userLogin = async (loginInfo) => {
           showLoginAlert("Wrong email entered.", "error");
         } else if (response.data == "Password Incorrect.") {
           showLoginAlert("Password Incorrect.", "error");
-        } else if (response.data == "Session Checker"){
+        } else if (response.data == "Session Redirection To Dashboard"){
           window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
         }else {
           showLoginAlert("Login Successfully", "success");

@@ -102,3 +102,97 @@ else {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 }
+
+// backend connection
+
+function ValidateTrack()  
+{  
+    var checkboxes = document.getElementsByName("track");  
+    var numberOfCheckedItems = 0;  
+    for(var i = 0; i < checkboxes.length; i++)  
+    {  
+        if(checkboxes[i].checked)  
+            numberOfCheckedItems++;  
+    }  
+    if(numberOfCheckedItems > 1)  
+    {  
+      showLoginAlert("You can't select more than one track!", "error");  
+      return false;  
+    }  
+}  
+
+const popUp = document.querySelector(".response-bar");
+const Submit = document.querySelector("#finish");
+
+const showLoginAlert = (message, className) => {
+  const div = document.createElement("div");
+  div.className = `alert ${className}`;
+  div.appendChild(document.createTextNode(message));
+  const container = document.querySelector(".participant-info");
+  container.insertBefore(div, popUp);
+
+  setTimeout(function () {
+    document.querySelector(".alert").remove();
+  }, 3000);
+};
+
+const formEvent = Submit.addEventListener("click", async (event) => {
+  event.preventDefault();
+  const bio = document.querySelector("#bio").value;
+  let track = "";
+  if (document.querySelector("#customCheckbox").checked){
+    track = document.querySelector("#customCheckbox").value
+  }else if(document.querySelector("#customCheckbox2").checked){
+    track = document.querySelector("#customCheckbox2").value
+  }else if(document.querySelector("#customCheckbox3").checked){
+    track = document.querySelector("#customCheckbox3").value
+  }else if(document.querySelector("#customCheckbox4").checked){
+    track = document.querySelector("#customCheckbox4").value
+  }
+  const link = document.querySelector("#link").value;
+  const institution = document.querySelector("#institution").value;
+  const department = document.querySelector("#department").value;
+  const Info = await { bio, track, link, institution, department };
+  dashboardInfo(Info); 
+});
+
+const headers = {
+  'Content-Type': 'application/json',
+  'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
+  'withCredentials': true,
+}
+const id = window.localStorage.getItem("id");
+ 
+const dashboardInfo = async (Info) => {
+  console.log(id, Info, headers)
+  axios
+    .get("https://hackxbackend.herokuapp.com/dashboard/"+ id, { headers: headers}, Info)
+    .then((response) => {
+      response.data;
+      // console.log(response)
+      if (response.status == "200") {
+        localStorage.clear();
+        if (response.data == "Redirect To login") {
+          window.location.href = 'https://hackx.netlify.app/pages/login';
+        } else if (response.data == "Too many files to upload.") {
+          showLoginAlert("Too many files to upload.", "error");
+        } else if (response.data == "Error when trying to upload files.") {
+          showLoginAlert("Error when trying to upload files.", "error");
+        }else if (response.data == "Files have been uploaded.") {
+          showLoginAlert("Files have been uploaded successfully.", "success");
+        } else if (response.data == "Dashboard Submission Failed") {
+          showLoginAlert("Unable to submit files.", "error");
+        }else if (response.data == 'Invalid Token') {
+          showLoginAlert("Unable to submit files.", "error");
+        }else if (response.data == 'You are not allowed to access this page.') {
+          showLoginAlert('You are not allowed to access this page.', "error");
+        } else { 
+          showLoginAlert(response.data, "error");
+        }
+      } else {
+        showLoginAlert("Something Went Wrong. Try Again Later", "error");
+      }
+    })
+
+    .catch((error) => console.error(error.message));
+};
