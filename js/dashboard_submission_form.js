@@ -187,14 +187,14 @@ const showLoginAlert = (message, className) => {
 
 const formEvent = submitBtn.addEventListener("click", async (event) => {
   event.preventDefault();
-  projectName.value;
-  projectTagline.value;
-  projectChallenge.value;
-  projectTechnology.value;
-  projectLink.value;
-  projectVideoLink.value;
-  projectImage.value;
-  const Info = await { projectName, projectTagline ,projectChallenge, projectTechnology, projectLink, projectVideoLink, projectImage  };
+  const proImgVal = projectImage.value;
+  const proNameVal = projectName.value;
+  const proTagVal = projectTagline.value;
+  const proChallVal = projectChallenge.value;
+  const proTechVal = projectTechnology.value;
+  const proLinkVal = projectLink.value;
+  const proVidVal = projectVideoLink.value;
+  const Info = await { proImgVal, proNameVal, proTagVal , proChallVal, proTechVal, proLinkVal, proVidVal };
   submissionInfo(Info); 
 });
 
