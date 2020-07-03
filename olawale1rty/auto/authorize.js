@@ -16,13 +16,14 @@ function authorize(roles = []) {
     return [
 
         // authenticate JWT token and attach user to request object (req.user)
-        expressJwt({ secret }),
+        // expressJwt({ secret:  process.env.JWT_SECRET, algorithms: ['RS256'] })
+        expressJwt({ secret: secret, algorithms: ['HS256'] }),
 
         // authorize based on user role
         (req, res, next) => {
             if (roles.length && !roles.includes(req.user.role)) {
-            	console.log(roles.length);
-            	console.log(req.user);
+            	// console.log(roles.length);
+            	// console.log(req.user);
                 // user's role is not authorized
                 return res.status(401).json({ message: 'You are not allowed to access this page.' });
             }

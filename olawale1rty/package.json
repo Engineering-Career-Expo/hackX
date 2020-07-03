@@ -4,7 +4,8 @@
   "description": "Ecx Hackathon Competition",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
+    "start": "set NODE_ENV=development&& node server.js",
+    "start-prod": "set NODE_ENV=production&& node server.js",
     "test": "mocha"
   },
   "keywords": [
@@ -22,6 +23,8 @@
     "bcryptjs": "^2.4.3",
     "chai": "^4.2.0",
     "config": "^3.3.1",
+    "connect-mongo": "^3.2.0",
+    "connect-mongodb-session": "^2.3.3",
     "cookie-parser": "^1.4.5",
     "cors": "^2.8.5",
     "express": "^4.17.1",

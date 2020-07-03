@@ -15,8 +15,8 @@ let dashboard = new mongoose.Schema({
 		    minlength: 3,
 		    maxlength: 50
 		},
-		age: {
-		    type: Number,
+		link: {
+		    type: String,
 		    minlength: 2,
 		},
 		institution: {
@@ -101,8 +101,7 @@ function validateDashboard(user) {
 	        });
 	        return errors;
       	}),
-  	age: Joi.number()
-  		.integer()
+  	link: Joi.string()
   		.min(2)
   		.error((errors) => {
 	        errors.forEach((err) => {

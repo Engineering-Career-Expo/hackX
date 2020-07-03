@@ -14,10 +14,16 @@ const port = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(express.urlencoded({exteneded:true}));
-app.use(cors());
+
+const corsOptions = {
+  credentials: true,
+  exposedHeaders: ['Set-Cookie'],
+};
+
+app.use(cors(corsOptions));
 app.use(cookieParser());
 
-require('./database');
+const { store } = require('./database');
 
 //use config module to get the privatekey, if no private key set, end the application
 if (!config.get("secret")) {
@@ -25,15 +31,18 @@ if (!config.get("secret")) {
   process.exit(1);
 }
 
+
+
 // initialize express session
 app.use(session({
     key: 'user_sid',
     secret: config.get("secret"),
-    resave: false,
-    saveUninitialized: false,
     cookie: {
         expires: 600000
-    }
+    },
+    store: store,
+    resave: false,
+    saveUninitialized: false,
 }));
 
 app.use((req, res, next) => {
