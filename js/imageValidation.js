@@ -28,7 +28,7 @@ document.querySelector("#imageFile").addEventListener('change', function() {
     // USER'S SELECTED IMAGE
     var file = this.files[0];
     // VALID IMAGE'S TYPE
-    var supportedImage = [ 'image/jpeg', 'image/png' ];
+    var supportedImage = [ 'image/jpeg', 'image/png', 'image/gif' ];
     // VALIDATE IMAGE TYPE
     if(supportedImage.indexOf(file.type) == -1) {
         alert('Error : Incorrect file type');
@@ -58,7 +58,7 @@ document.querySelector("#imageFile1").addEventListener('change', function() {
     // USER'S SELECTED IMAGE
     var file = this.files[0];
     // VALID IMAGE'S TYPE
-    var supportedImage = [ 'image/jpeg', 'image/png' ];
+    var supportedImage = [ 'image/jpeg', 'image/png', 'image/gif' ];
     // VALIDATE IMAGE TYPE
     if(supportedImage.indexOf(file.type) == -1) {
         alert('Error : Incorrect file type');
@@ -88,7 +88,7 @@ document.querySelector("#imageFile2").addEventListener('change', function() {
     // USER'S SELECTED IMAGE
     var file = this.files[0];
     // VALID IMAGE'S TYPE
-    var supportedImage = [ 'image/jpeg', 'image/png' ];
+    var supportedImage = [ 'image/jpeg', 'image/png', 'image/gif' ];
     // VALIDATE IMAGE TYPE
     if(supportedImage.indexOf(file.type) == -1) {
         alert('Error : Incorrect file type');
@@ -118,7 +118,7 @@ document.querySelector("#imageFile3").addEventListener('change', function() {
     // USER'S SELECTED IMAGE
     var file = this.files[0];
     // VALID IMAGE'S TYPE
-    var supportedImage = [ 'image/jpeg', 'image/png' ];
+    var supportedImage = [ 'image/jpeg', 'image/png', 'image/gif' ];
     // VALIDATE IMAGE TYPE
     if(supportedImage.indexOf(file.type) == -1) {
         alert('Error : Incorrect file type');
@@ -148,7 +148,7 @@ document.querySelector("#imageFile4").addEventListener('change', function() {
     // USER'S SELECTED IMAGE
     var file = this.files[0];
     // VALID IMAGE'S TYPE
-    var supportedImage = [ 'image/jpeg', 'image/png' ];
+    var supportedImage = [ 'image/jpeg', 'image/png', 'image/gif' ];
     // VALIDATE IMAGE TYPE
     if(supportedImage.indexOf(file.type) == -1) {
         alert('Error : Incorrect file type');
