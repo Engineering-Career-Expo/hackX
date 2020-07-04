@@ -60,3 +60,25 @@ const userLogin = async (loginInfo) => {
 
     .catch((error) => console.error(error));
 };
+
+function viewPassword() {
+  var passwordInput = document.getElementById('password');
+  var passStatus = document.getElementById('pass');
+ 
+  if (passwordInput.type == 'password'){
+    passwordInput.type='text';
+    passStatus.className='fa fa-eye';
+    
+  }
+  else{
+    passwordInput.type='password';
+    passStatus.className='fa fa-eye-slash';
+  }
+}
+
+$(document).ready( function() {
+	 $('input').hover( function() {
+		$('.row_1').css("display", "flex");
+		$('.row_2').css("display", "flex");
+	});
+});
