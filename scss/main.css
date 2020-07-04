@@ -987,7 +987,7 @@ body {
   .register-main-container .register-form-container input:focus {
     outline: none;
   }
-  .register-main-container .register-form-container .previous-btn {
+  .register-main-container .register-form-container .signup-btn {
     width: 100%;
     height: 50px;
     float: right;
@@ -1006,7 +1006,7 @@ body {
   .register-main-container .register-form-container button:focus {
     outline: none;
   }
-  .register-main-container .register-form-container .signup-btn {
+  .register-main-container .register-form-container .previous-btn {
     width: 100%;
     height: 50px;
     float: left;
@@ -1127,7 +1127,7 @@ body {
   .register-main-container .register-form-container input:focus {
     outline: none;
   }
-  .register-main-container .register-form-container .previous-btn {
+  .register-main-container .register-form-container .signup-btn {
     width: 46%;
     height: 50px;
     float: right;
@@ -1145,7 +1145,7 @@ body {
   .register-main-container .register-form-container button:focus {
     outline: none;
   }
-  .register-main-container .register-form-container .signup-btn {
+  .register-main-container .register-form-container .previous-btn {
     width: 46%;
     height: 50px;
     float: left;
@@ -1291,7 +1291,7 @@ body {
   .register-main-container .register-form-container input:focus {
     outline: none;
   }
-  .register-main-container .register-form-container .previous-btn {
+  .register-main-container .register-form-container .signup-btn {
     width: 46%;
     height: 50px;
     float: right;
@@ -1308,7 +1308,7 @@ body {
   .register-main-container .register-form-container button:focus {
     outline: none;
   }
-  .register-main-container .register-form-container .signup-btn {
+  .register-main-container .register-form-container .previous-btn {
     width: 46%;
     height: 50px;
     float: left;
