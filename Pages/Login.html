@@ -11,6 +11,7 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../scss/main.css"/>
     <title>Login</title>
@@ -59,6 +60,7 @@
           <h2>LOGIN</h2>
           <p class="come">Welcome Back</p>
           <legend>Email</legend>
+          <div class="row_1">
           <input
             type="email"
             id="email"
@@ -66,7 +68,9 @@
             placeholder="Email"
             required
           /><i class="fa fa-envelope"></i>
-          <legend>Password <span class="forgot-password"><a href="forgot-password.html">forgot password?</a></span></legend>
+          </div>
+          <legend>Password <span class="forgot-password"><a href="forgot-password.html">Forgot password?</a></span></legend>
+          <div class="row_2">
           <input
             id="password"
             type="password"
@@ -78,15 +82,16 @@
             class="fa fa-fw fa-eye-slash"
             onclick="viewPassword()"
           ></i>
-
+		  </div>
+		  
           <button type="button" class="signup-btn">
             <a href="Register.html" style="color: white;">
               <span class="btn-txt"
-                >Sign Up</span>
+                >Sign In</span>
             </a>
           </button>
           <button class="previous-btn" type="submit">
-            <span class="btn-txt">Sign In</span>
+            <span class="btn-txt">Sign Up</span>
           </button>
         </form>
       </div>
