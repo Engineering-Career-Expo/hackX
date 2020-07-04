@@ -146,7 +146,9 @@ a:hover{
     padding-left: 8%;
     margin-bottom: 2.5%;
     font-size: 14px;
-    font-family: Poppins, sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 300;
 }
 	
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
@@ -271,6 +273,8 @@ html, body {
 	background: rgba(48, 152, 250, 0.3);
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
 	line-height: 1.8;
 	border-radius: 4px;
 	text-align: right;
@@ -307,6 +311,8 @@ html, body {
 	color: white;
 	border: none;
 	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
 	margin-top: -0.9%;
 	user-select: none;
 	font-family: 'Montserrat', sans-serif;
@@ -347,6 +353,8 @@ html, body {
 	margin: 0.5% 0;
 	font-size: 14px;
 	font-family: 'Montserrat', sans-serif;
+	font-style: normal;
+	font-weight: bold;
 	}
 	.participant-info .reply .inputarea {
 	width: 100%;
@@ -360,7 +368,8 @@ html, body {
 	text-align: left;
 	font-family: 'Montserrat', sans-serif;
 	font-size: 14px;
-	
+	font-style: normal;
+	font-weight: normal;
 	outline: none;
 	}
 	.participant-info .reply .inputarea2 {
@@ -623,7 +632,7 @@ html, body {
     border: none;
     resize: none;
     text-align: left;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 1em;
     outline: none;
 }
@@ -810,13 +819,13 @@ body {
 }
 .dashboard-info .hack {
     font-size: 3vw;
-    font-family: Monad, sans-serif;
+    font-family: "Monad", sans-serif;
     color: rgb(16,113,243);
 }
 .dashboard-info .X {
     font-size: 3vw;
     color: rgb(255,212,32);
-    font-family: Monad, sans-serif;
+    font-family: "Monad", sans-serif;
 }
 .dashboard-info .bold {
     font-weight: 600;
