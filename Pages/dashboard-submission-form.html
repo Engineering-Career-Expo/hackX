@@ -101,7 +101,7 @@
                 <li class="List">Describe your project</li>
             </ul>
         </div>
-        <form class="subForm">
+        <form class="subForm" name="submission-form" method="POST" enctype="multipart/form-data" action="https://hackx.netlify.app/pages/dashboard_submitted_screen">
             <div class="mobileHead">
                 <div class="headTitle">SUBMISSIONS</div>
                 <div class="cnt">Your submission will appear</div>
@@ -211,7 +211,7 @@
                 
                     <div id="preview-container4" class="imageDialogContainer">
                         <img src="../assets/images/dashboard/add-image.svg" id="imageUpload4" class="imageUpload">
-                        <input type="file" id="imageFile4" class="imageFile" name="image" accept="image/jpg,image/png" />
+                        <input type="file" id="imageFile4" class="imageFile" name="image" accept="image/jpg,image/png,image/gif" />
                         <img id="imagePreview4" class="imagePreview" />
                         <div id="imageName4" class="imageName"></div>
                         <button id="deleteImage4" class="deleteImage">Delete</button>
