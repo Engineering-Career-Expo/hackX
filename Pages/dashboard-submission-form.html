@@ -177,11 +177,45 @@
                 </div>
                 <div class="info">UPLOAD A MAXIMUM OF 5 PICTURES (SIZE: MAX 2MB EACH) SHOWCASING YOUR PROJECT (THE FIRST IMAGE WILL BE USED AS A PREVIEW ON SOCIAL MEDIA)</div>
                 <div class="imgCnt">
-                    <img src="../assets/images/dashboard/add-image.svg">
-                    <img src="../assets/images/dashboard/add-image.svg">
-                    <img src="../assets/images/dashboard/add-image.svg">
-                    <img src="../assets/images/dashboard/add-image.svg">
-                    <img src="../assets/images/dashboard/add-image.svg">
+                    <div id="preview-container" class="imageDialogContainer">
+                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload" class="imageUpload">
+                        <input type="file" id="imageFile" class="imageFile" name="image" accept="image/jpg,image/png" />
+                        <img id="imagePreview" class="imagePreview" />
+                        <div id="imageName" class="imageName" title="image name"></div>
+                        <button id="deleteImage" class="deleteImage">Delete</button>
+                    </div>
+                
+                    <div id="preview-container1" class="imageDialogContainer">
+                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload1" class="imageUpload">
+                        <input type="file" id="imageFile1" class="imageFile" name="image" accept="image/jpg,image/png" />
+                        <img id="imagePreview1" class="imagePreview" />
+                        <div id="imageName1" class="imageName"></div>
+                        <button id="deleteImage1" class="deleteImage">Delete</button>
+                    </div>
+                
+                    <div id="preview-container2" class="imageDialogContainer">
+                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload2" class="imageUpload">
+                        <input type="file" id="imageFile2" class="imageFile" name="image" accept="image/jpg,image/png" />
+                        <img id="imagePreview2" class="imagePreview" />
+                        <div id="imageName2" class="imageName"></div>
+                        <button id="deleteImage2" class="deleteImage">Delete</button>
+                    </div>
+                
+                    <div id="preview-container3" class="imageDialogContainer">
+                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload3" class="imageUpload">
+                        <input type="file" id="imageFile3" class="imageFile" name="image" accept="image/jpg,image/png" />
+                        <img id="imagePreview3" class="imagePreview" />
+                        <div id="imageName3" class="imageName"></div>
+                        <button id="deleteImage3" class="deleteImage">Delete</button>
+                    </div>
+                
+                    <div id="preview-container4" class="imageDialogContainer">
+                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload4" class="imageUpload">
+                        <input type="file" id="imageFile4" class="imageFile" name="image" accept="image/jpg,image/png" />
+                        <img id="imagePreview4" class="imagePreview" />
+                        <div id="imageName4" class="imageName"></div>
+                        <button id="deleteImage4" class="deleteImage">Delete</button>
+                    </div>
                 </div>
             </div>
         </form>
@@ -190,5 +224,6 @@
         </div>
     </div>
     <script src="../js/dashboard-submission-form.js"></script>
+    <script src="../js/imageValidation.js"></script>
 </body>
 </html>
