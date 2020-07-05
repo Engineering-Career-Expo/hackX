@@ -6,7 +6,16 @@ var projectChallenge = document.getElementById('projectChallenge');
 var projectTechnology = document.getElementById('projectTechnology');
 var projectLink = document.getElementById('projectLink');
 var projectVideoLink = document.getElementById('projectVideoLink');
-var projectImage = document.getElementById('projectImage');
+// GET IMAGES ON CLICK
+var image1 = document.getElementById('imageUpload');
+var image2 = document.getElementById('imageUpload1');
+var image3 = document.getElementById('imageUpload2');
+var image4 = document.getElementById('imageUpload3');
+var image5 = document.getElementById('imageUpload4');
+
+
+// THE SUBMISSION BUTTON
+var submissionButton = document.querySelector('#previewSubmissionDetails');
 
 
 // THE ACTIVE INPUT HORIZONTAL BORDER ID
@@ -119,7 +128,51 @@ projectVideoLink.addEventListener( 'keydown' , function show() {
 
 
 // SHOW HORIZONTAL BORDER ON INPUT KEYDOWN
-projectImage.addEventListener( 'click' , function show() {
+image1.addEventListener( 'click' , function show() {
+    // HORIZONTAL BORDER
+    vR1.style.visibility = 'hidden';
+    vR2.style.visibility = 'hidden';
+    vR3.style.visibility = 'hidden';
+    vR4.style.visibility = 'hidden';
+    vR5.style.visibility = 'hidden';
+    vR6.style.visibility = 'hidden';
+    vR7.style.visibility = 'hidden';
+    vR8.style.visibility = 'visible';
+});
+image2.addEventListener( 'click' , function show() {
+    // HORIZONTAL BORDER
+    vR1.style.visibility = 'hidden';
+    vR2.style.visibility = 'hidden';
+    vR3.style.visibility = 'hidden';
+    vR4.style.visibility = 'hidden';
+    vR5.style.visibility = 'hidden';
+    vR6.style.visibility = 'hidden';
+    vR7.style.visibility = 'hidden';
+    vR8.style.visibility = 'visible';
+});
+image3.addEventListener( 'click' , function show() {
+    // HORIZONTAL BORDER
+    vR1.style.visibility = 'hidden';
+    vR2.style.visibility = 'hidden';
+    vR3.style.visibility = 'hidden';
+    vR4.style.visibility = 'hidden';
+    vR5.style.visibility = 'hidden';
+    vR6.style.visibility = 'hidden';
+    vR7.style.visibility = 'hidden';
+    vR8.style.visibility = 'visible';
+});
+image4.addEventListener( 'click' , function show() {
+    // HORIZONTAL BORDER
+    vR1.style.visibility = 'hidden';
+    vR2.style.visibility = 'hidden';
+    vR3.style.visibility = 'hidden';
+    vR4.style.visibility = 'hidden';
+    vR5.style.visibility = 'hidden';
+    vR6.style.visibility = 'hidden';
+    vR7.style.visibility = 'hidden';
+    vR8.style.visibility = 'visible';
+});
+image5.addEventListener( 'click' , function show() {
     // HORIZONTAL BORDER
     vR1.style.visibility = 'hidden';
     vR2.style.visibility = 'hidden';
@@ -131,18 +184,8 @@ projectImage.addEventListener( 'click' , function show() {
     vR8.style.visibility = 'visible';
 });
 
-/*
-if projectName.length
-var projectTagline = document.getElementById('projectTagline');
-var projectUSe = document.getElementById('projectUSe');
-var projectChallenge = document.getElementById('projectChallenge');
-var projectTechnology = document.getElementById('projectTechnology');
-var projectLink = document.getElementById('projectLink');
-var projectVideoLink = document.getElementById('projectVideoLink');
-var projectImage = document.getElementById('projectImage');*/
 
-
-// THE INPUT LENGTH COUNTER
+ // THE INPUT LENGTH COUNTER
 function countInput1(str) {
     var lng = str.length;
     document.getElementById('inputCount1').innerHTML =lng + ' / 50';
