@@ -1,174 +1,99 @@
 // THE INPUT ID
-const projectName = document.getElementById('projectName');
-const projectTagline = document.getElementById('projectTagline');
-const projectUSe = document.getElementById('projectUSe');
-const projectChallenge = document.getElementById('projectChallenge');
-const projectTechnology = document.getElementById('projectTechnology');
-const projectLink = document.getElementById('projectLink');
-const projectVideoLink = document.getElementById('projectVideoLink');
-const projectImage = document.getElementById('projectImage');
+var projectName = document.getElementById('projectName');
+var projectTagline = document.getElementById('projectTagline');
+var projectUSe = document.getElementById('projectUSe');
+var projectChallenge = document.getElementById('projectChallenge');
+var projectTechnology = document.getElementById('projectTechnology');
+var projectLink = document.getElementById('projectLink');
+var projectVideoLink = document.getElementById('projectVideoLink');
+
+// IMAGE INPUT ID'S
+var imageFileVal1 = document.getElementById('imageFile');
+var imageFileVal2 = document.getElementById('imageFile1');
+var imageFileVal3 = document.getElementById('imageFile2');
+var imageFileVal4 = document.getElementById('imageFile3');
+var imageFileVal5 = document.getElementById('imageFile4');
+
+// ARRAY FOR STORING IMAGES
+var imageGallery = [];
+console.log(imageGallery);
 
 
-// THE SUBMISSION BUTTON
-const submitBtn = document.querySelector('#previewSubmissionDetails');
-
-
-// THE ACTIVE INPUT HORIZONTAL BORDER ID
-var vR1 = document.getElementById('vR1');
-var vR2 = document.getElementById('vR2');
-var vR3 = document.getElementById('vR3');
-var vR4 = document.getElementById('vR4');
-var vR5 = document.getElementById('vR5');
-var vR6 = document.getElementById('vR6');
-var vR7 = document.getElementById('vR7');
-var vR8 = document.getElementById('vR8');
-
-
-// SHOW HORIZONTAL BORDER ON INPUT KEYDOWN
-projectName.addEventListener( 'keydown' , function show() {
-    // HORIZONTAL BORDER
-    vR1.style.visibility = 'visible';
-    vR2.style.visibility = 'hidden';
-    vR3.style.visibility = 'hidden';
-    vR4.style.visibility = 'hidden';
-    vR5.style.visibility = 'hidden';
-    vR6.style.visibility = 'hidden';
-    vR7.style.visibility = 'hidden';
-    vR8.style.visibility = 'hidden';
+// ADD ITEM TO ARRAY WHEN CHANGED
+// FILE CHANGE 1
+imageFileVal1.addEventListener('change', function() {
+  var img1 = imageFileVal1.value;
+  imageGallery.push(img1);
+  console.log(imageGallery);
+});
+// FILE CHANGE 2
+imageFileVal2.addEventListener('change', function() {
+  var img2 = imageFileVal2.value;
+  imageGallery.push(img2);
+  console.log(imageGallery);
+});
+// FILE CHANGE 3
+imageFileVal3.addEventListener('change', function() {
+  var img3 = imageFileVal3.value;
+  imageGallery.push(img3);
+  console.log(imageGallery);
+});
+// FILE CHANGE 4
+imageFileVal4.addEventListener('change', function() {
+  var img4 = imageFileVal4.value;
+  imageGallery.push(img4);
+  console.log(imageGallery);
+});
+// FILE CHANGE 5
+imageFileVal5.addEventListener('change', function() {
+  var img5 = imageFileVal5.value;
+  imageGallery.push(img5);
+  console.log(imageGallery);
 });
 
-
-// SHOW HORIZONTAL BORDER ON INPUT KEYDOWN
-projectTagline.addEventListener( 'keydown' , function show() {
-    // HORIZONTAL BORDER
-    vR1.style.visibility = 'hidden';
-    vR2.style.visibility = 'visible';
-    vR3.style.visibility = 'hidden';
-    vR4.style.visibility = 'hidden';
-    vR5.style.visibility = 'hidden';
-    vR6.style.visibility = 'hidden';
-    vR7.style.visibility = 'hidden';
-    vR8.style.visibility = 'hidden';
+// DELETE IMAGE
+//DELETE 1
+document.querySelector("#deleteImage").addEventListener('click', function(e) {
+  e.preventDefault();
+  var index = imageGallery.indexOf(img1);
+  index.splice(index, 1);
+  console.log(imageGallery);
 });
-
-
-// SHOW HORIZONTAL BORDER ON INPUT KEYDOWN
-projectUSe.addEventListener( 'keydown' , function show() {
-    // HORIZONTAL BORDER
-    vR1.style.visibility = 'hidden';
-    vR2.style.visibility = 'hidden';
-    vR3.style.visibility = 'visible';
-    vR4.style.visibility = 'hidden';
-    vR5.style.visibility = 'hidden';
-    vR6.style.visibility = 'hidden';
-    vR7.style.visibility = 'hidden';
-    vR8.style.visibility = 'hidden';
+//DELETE 2
+document.querySelector("#deleteImage1").addEventListener('click', function(e) {
+  e.preventDefault();
+  var index = imageGallery.indexOf(img2);
+  index.splice(index, 1);
+  console.log(imageGallery);
 });
-
-
-// SHOW HORIZONTAL BORDER ON INPUT KEYDOWN
-projectChallenge.addEventListener( 'keydown' , function show() {
-    // HORIZONTAL BORDER
-    vR1.style.visibility = 'hidden';
-    vR2.style.visibility = 'hidden';
-    vR3.style.visibility = 'hidden';
-    vR4.style.visibility = 'visible';
-    vR5.style.visibility = 'hidden';
-    vR6.style.visibility = 'hidden';
-    vR7.style.visibility = 'hidden';
-    vR8.style.visibility = 'hidden';
+//DELETE 3
+document.querySelector("#deleteImage2").addEventListener('click', function(e) {
+  e.preventDefault();
+  var index = imageGallery.indexOf(img3);
+  index.splice(index, 1);
+  console.log(imageGallery);
 });
-
-
-// SHOW HORIZONTAL BORDER ON INPUT KEYDOWN
-projectTechnology.addEventListener( 'keydown' , function show() {
-    // HORIZONTAL BORDER
-    vR1.style.visibility = 'hidden';
-    vR2.style.visibility = 'hidden';
-    vR3.style.visibility = 'hidden';
-    vR4.style.visibility = 'hidden';
-    vR5.style.visibility = 'visible';
-    vR6.style.visibility = 'hidden';
-    vR7.style.visibility = 'hidden';
-    vR8.style.visibility = 'hidden';
+//DELETE 4
+document.querySelector("#deleteImage3").addEventListener('click', function(e) {
+  e.preventDefault();
+  var index = imageGallery.indexOf(img4);
+  index.splice(index, 1);
+  console.log(imageGallery);
 });
-
-
-// SHOW HORIZONTAL BORDER ON INPUT KEYDOWN
-projectLink.addEventListener( 'keydown' , function show() {
-    // HORIZONTAL BORDER
-    vR1.style.visibility = 'hidden';
-    vR2.style.visibility = 'hidden';
-    vR3.style.visibility = 'hidden';
-    vR4.style.visibility = 'hidden';
-    vR5.style.visibility = 'hidden';
-    vR6.style.visibility = 'visible';
-    vR7.style.visibility = 'hidden';
-    vR8.style.visibility = 'hidden';
+//DELETE 5
+document.querySelector("#deleteImage4").addEventListener('click', function(e) {
+  e.preventDefault();
+  var index = imageGallery.indexOf(img5);
+  index.splice(index, 1);
+  console.log(imageGallery);
 });
-
-
-// SHOW HORIZONTAL BORDER ON INPUT KEYDOWN
-projectVideoLink.addEventListener( 'keydown' , function show() {
-    // HORIZONTAL BORDER
-    vR1.style.visibility = 'hidden';
-    vR2.style.visibility = 'hidden';
-    vR3.style.visibility = 'hidden';
-    vR4.style.visibility = 'hidden';
-    vR5.style.visibility = 'hidden';
-    vR6.style.visibility = 'hidden';
-    vR7.style.visibility = 'visible';
-    vR8.style.visibility = 'hidden';
-});
-
-
-// SHOW HORIZONTAL BORDER ON INPUT KEYDOWN
-projectImage.addEventListener( 'click' , function show() {
-    // HORIZONTAL BORDER
-    vR1.style.visibility = 'hidden';
-    vR2.style.visibility = 'hidden';
-    vR3.style.visibility = 'hidden';
-    vR4.style.visibility = 'hidden';
-    vR5.style.visibility = 'hidden';
-    vR6.style.visibility = 'hidden';
-    vR7.style.visibility = 'hidden';
-    vR8.style.visibility = 'visible';
-});
-
-
- // THE INPUT LENGTH COUNTER
-function countInput1(str) {
-    var lng = str.length;
-    document.getElementById('inputCount1').innerHTML =lng + ' / 50';
-}
-function countInput2(str) {
-    var lng = str.length;
-    document.getElementById('inputCount2').innerHTML =lng + ' / 200';
-}
-function countInput3(str) {
-    var lng = str.length;
-    document.getElementById('inputCount3').innerHTML =lng + ' / 200';
-}
-function countInput4(str) {
-    var lng = str.length;
-    document.getElementById('inputCount4').innerHTML =lng + ' / 200';
-}
-function countInput5(str) {
-    var lng = str.length;
-    document.getElementById('inputCount5').innerHTML =lng + ' / 200';
-}
-function countInput6(str) {
-    var lng = str.length;
-    document.getElementById('inputCount6').innerHTML =lng + ' / 50';
-}
-function countInput7(str) {
-    var lng = str.length;
-    document.getElementById('inputCount7').innerHTML =lng + ' / 50';
-}
 
 
 //////// BACCK END CONNECT
 // backend connection
+// THE SUBMISSION BUTTON
+const submitBtn = document.querySelector('#previewSubmissionDetails');
+
 const popUp = document.querySelector(".inputCnt");
 
 
@@ -187,7 +112,7 @@ const showLoginAlert = (message, className) => {
 
 const formEvent = submitBtn.addEventListener("click", async (event) => {
   event.preventDefault();
-  const proImgVal = projectImage.value;
+  const proImgVal = imageGallery;
   const proNameVal = projectName.value;
   const proTagVal = projectTagline.value;
   const proChallVal = projectChallenge.value;
