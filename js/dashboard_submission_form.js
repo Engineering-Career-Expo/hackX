@@ -22,31 +22,36 @@ console.log(imageGallery);
 // ADD ITEM TO ARRAY WHEN CHANGED
 // FILE CHANGE 1
 imageFileVal1.addEventListener('change', function() {
-  var img1 = imageFileVal1.value;
+  var image1 = imageFileVal1.value;
+  img1 = image1;
   imageGallery.push(img1);
   console.log(imageGallery);
 });
 // FILE CHANGE 2
 imageFileVal2.addEventListener('change', function() {
-  var img2 = imageFileVal2.value;
+  var image2 = imageFileVal2.value;
+  img2 = image2;
   imageGallery.push(img2);
   console.log(imageGallery);
 });
 // FILE CHANGE 3
 imageFileVal3.addEventListener('change', function() {
-  var img3 = imageFileVal3.value;
+  var image3 = imageFileVal3.value;
+  img3 = image3;
   imageGallery.push(img3);
   console.log(imageGallery);
 });
 // FILE CHANGE 4
 imageFileVal4.addEventListener('change', function() {
-  var img4 = imageFileVal4.value;
+  var image4 = imageFileVal4.value;
+  img4 = image4;
   imageGallery.push(img4);
   console.log(imageGallery);
 });
 // FILE CHANGE 5
 imageFileVal5.addEventListener('change', function() {
-  var img5 = imageFileVal5.value;
+  var image5 = imageFileVal5.value;
+  img5 = image5;
   imageGallery.push(img5);
   console.log(imageGallery);
 });
@@ -56,35 +61,35 @@ imageFileVal5.addEventListener('change', function() {
 document.querySelector("#deleteImage").addEventListener('click', function(e) {
   e.preventDefault();
   var index = imageGallery.indexOf(img1);
-  index.splice(index, 1);
+  imageGallery.splice(index, 1);
   console.log(imageGallery);
 });
 //DELETE 2
 document.querySelector("#deleteImage1").addEventListener('click', function(e) {
   e.preventDefault();
   var index = imageGallery.indexOf(img2);
-  index.splice(index, 1);
+  imageGallery.splice(index, 1);
   console.log(imageGallery);
 });
 //DELETE 3
 document.querySelector("#deleteImage2").addEventListener('click', function(e) {
   e.preventDefault();
   var index = imageGallery.indexOf(img3);
-  index.splice(index, 1);
+  imageGallery.splice(index, 1);
   console.log(imageGallery);
 });
 //DELETE 4
 document.querySelector("#deleteImage3").addEventListener('click', function(e) {
   e.preventDefault();
   var index = imageGallery.indexOf(img4);
-  index.splice(index, 1);
+  imageGallery.splice(index, 1);
   console.log(imageGallery);
 });
 //DELETE 5
 document.querySelector("#deleteImage4").addEventListener('click', function(e) {
   e.preventDefault();
   var index = imageGallery.indexOf(img5);
-  index.splice(index, 1);
+  imageGallery.splice(index, 1);
   console.log(imageGallery);
 });
 
