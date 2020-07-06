@@ -17,6 +17,8 @@ var imageFileVal5 = document.getElementById('imageFile4');
 // SUBMIT BUTTON
 const submitBtn = document.querySelector('#previewSubmissionDetails');
 
+submitBtn.disabled = true;
+
 // VALIDATEION FUNCTION
 function validateInput() {
   if(projectName.value.length > 4 && projectTagline.value.length > 4 && projectUSe.value.length > 4 && 
