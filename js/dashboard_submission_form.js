@@ -14,6 +14,49 @@ var imageFileVal3 = document.getElementById('imageFile2');
 var imageFileVal4 = document.getElementById('imageFile3');
 var imageFileVal5 = document.getElementById('imageFile4');
 
+// SUBMIT BUTTON
+const submitBtn = document.querySelector('#previewSubmissionDetails');
+
+// VALIDATEION FUNCTION
+function validateInput() {
+  if(projectName.value.length > 4 && projectTagline.value.length > 4 && projectUSe.value.length > 4 && 
+    projectChallenge.value.length > 4 && projectTechnology.value.length > 4 && projectLink.value.length > 5 && 
+    projectVideoLink.value.length > 5) {
+      submitBtn.disabled = false;
+  } else {
+      submitBtn.disabled = true;
+  }
+};
+
+// WHEN SUBMIT BUTTON IS CLICKED
+submitBtn.addEventListener('click', function() {
+  submitBtn.disabled = 'true';
+  console.log('response has been submitted and button disabled');
+})
+
+// INPUT VALIDATION
+projectName.addEventListener('keyup', function() {
+  validateInput();
+});
+projectTagline.addEventListener('keyup', function() {
+  validateInput();
+});
+projectUSe.addEventListener('keyup', function() {
+  validateInput();
+});
+projectChallenge.addEventListener('keyup', function() {
+  validateInput();
+});
+projectTechnology.addEventListener('keyup', function() {
+  validateInput();
+});
+projectLink.addEventListener('keyup', function() {
+  validateInput();
+});
+projectVideoLink.addEventListener('keyup', function() {
+  validateInput();
+});
+
 // ARRAY FOR STORING IMAGES
 var imageGallery = [];
 console.log(imageGallery);
@@ -97,8 +140,6 @@ document.querySelector("#deleteImage4").addEventListener('click', function(e) {
 //////// BACCK END CONNECT
 // backend connection
 // THE SUBMISSION BUTTON
-const submitBtn = document.querySelector('#previewSubmissionDetails');
-
 const popUp = document.querySelector(".inputCnt");
 
 
