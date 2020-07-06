@@ -341,7 +341,10 @@ a.view {
 	.dropdownProfile {
 		display: none;
 	}
-
+	#dropdownLogo:hover ~ .dropdownProfile {
+		display: none;
+		opacity: 1;
+	}
 	.responsive {
 		display: block;
 		animation: fade 1s ease;
