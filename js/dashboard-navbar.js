@@ -44,3 +44,15 @@ for (i = 0; i < coll.length; i++) {
 	 nav.className = 'nav-content';
    }
  });
+
+ /*
+// MAIN NAVBAR DROPDOWN
+var dropdownLogo = document.getElementById('dropdownLogo');
+dropdownLogo.addEventListener ('mouseover', function() {
+   var x = document.getElementById('dropdownProfile');
+   if (x.style.display === "none") {
+	 x.style.display = "block";
+   } else {
+	 x.style.display = "none";
+   };
+});*/
