@@ -256,7 +256,7 @@ a.view {
 	display: none;
 }
 .dropdownProfile {
-	display: none;
+	opacity: 0;
 	cursor: auto;
     position: absolute;
     width: 20%;
@@ -269,8 +269,16 @@ a.view {
 	font-weight: normal;
 	color: black;
 	font-size: 1.38vw;
-	box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
+	-webkit-box-shadow: -1px 2px 30px -13px rgba(0, 0, 0, 0.562);
+    -moz-box-shadow: -1px 2px 30px -13px rgba(0, 0, 0, 0.562);
+    box-shadow: -1px 2px 30px -13px rgba(0, 0, 0, 0.562);
+    border: none;
 	border-radius: 3px;
+	transition: .6s;
+}
+#dropdownLogo:hover ~ .dropdownProfile {
+	display: block;
+	opacity: 1;
 }
 .dropdownProfile .accountState {
     font-weight: 500;
@@ -333,7 +341,10 @@ a.view {
 	.dropdownProfile {
 		display: none;
 	}
-
+	#dropdownLogo:hover ~ .dropdownProfile {
+		display: none;
+		opacity: 1;
+	}
 	.responsive {
 		display: block;
 		animation: fade 1s ease;

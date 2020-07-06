@@ -5,8 +5,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overview</title>
     <link rel="stylesheet" href="../scss/component/Dashboard2-section.css" type="text/css">
+    <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
 </head>
 <body>
+    <nav>
+        <div class="head_section1">
+            <div class="head_info0">
+                <a href="#">
+                    <div class="head_pic0">
+                        <img src="../assets/ECX.svg"/>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-content">
+                <div class="nav-content-flex">
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <button class="drop-btn">
+                                <img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">
+                                Dashboard
+                            </button>
+                            <div class="dropDown-content">
+                                <a class="filter" href="#">Timeline</a>
+                                <a class="filter" href="#">Announcements</a>
+                                <a class="filter" href="#">Overview</a>
+                            </div> 
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="#">
+                                <img class="message" src="../assets/images/dashboard/inbox-logo.png" alt="Logo">
+                                <img class="unread" src="../assets/images/Ellipse 16.png" alt="">
+                                Inbox
+                            </a>
+                        </div>  
+                        <div class="nav-item br30">
+                            <a href="#">
+                                <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
+                                Submission
+                            </a>
+                        </div>
+                    </div>
+                    <div class="i100">
+                        <div class="head_section2">
+                            <div class="head_logout">
+                                <p class="name">KEAZZY</p>
+                                <a href="#" class="view">VIEW PROFILE</a>
+                            </div>
+                            <div class="head_pic1">
+                                <div class="head_pic2"><img src="../assets/images/sample.jpg" class="head_pic02"/></div>
+                            </div>
+                            <div class="dropdown_button">
+                                <img src="../assets/images/dashboard/dropdown-logo.svg" id="dropdownLogo">
+                                <div class="dropdownProfile" id="dropdownProfile">
+                                    <div class="username">Signed in as Keazzy </div>
+                                    <hr class="ddHr">
+                                    <div class="accountState">Flying Solo</div>
+                                    <hr class="ddHr">
+                                    <div class="navigationLink">
+                                        <a>Your Profile</a>
+                                        <a>Your submissions</a>
+                                        <a>Your Teams</a>
+                                    </div>
+                                    <hr class="ddHr">
+                                    <div class="otherNavs">
+                                        <a>Help</a>
+                                        <a>Settings</a>
+                                        <a>Logout</a>
+                                    </div>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="linedivide"></div>
+                    </div>
+                </div>
+                <div class="logout-wrapper">
+                    <a href="#" class="logout-btn"><button>LOGOUT</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
     <div class="Dashboard2-section mobileView">
         <header class="mobileDashLink">
             <a class="dashLinks" href="Dashboard2-section.html">Dashboard</a> > <b>Overview</b>
@@ -38,5 +120,6 @@
             </section>
         </div>
     </div>
+    <script src="../js/dashboard-navbar.js"></script>
 </body>
 </html>
