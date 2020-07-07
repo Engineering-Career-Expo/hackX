@@ -135,11 +135,10 @@ a:hover{
 	
 .dashboard_header {
     width: 100%;
-    margin: 0;
+    margin: 1.5% 1% 4% 1%;
     font-weight: 300;
     padding-left: 8%;
-    margin-bottom: 2.5%;
-    font-size: 14px;
+    font-size: 2vw;
     font-family: "Poppins", sans-serif;
     font-style: normal;
     font-weight: 300;
@@ -153,25 +152,25 @@ html, body{
 	height: 100%;
 }
 @media screen and (min-width: 769px) {
-	.header_head{
+	.header_head {
 		display: flex;
 		margin-top: 0%;
 		margin-left: 10%;
-		justify-content: space-around;
+		flex-direction: row;
+		flex-wrap: nowrap;
 		width: 100%;
 	}
-	.header_head a{
+	.header_head a {
 		text-decoration: none;
 		color: black;
 	}
-	.header_one{
-		margin-left: -10%;
+	.header_one {
+		float: left;
 		background: #ffffff;
-		margin-top: -17px;
 		border: 1px solid #ffffff;
 		border-radius: 5px;
 	}
-	.header_one__app{
+	.header_one__app {
 		font-family: "Montserrat", sans-serif;
 		font-weight: bold;
 		font-style: normal;
@@ -188,8 +187,7 @@ html, body{
 		display: flex;
 		border: 1px solid #ffffff;
 		border-radius: 5px;
-		margin-top: -17px;
-		margin-left: -13%;
+		align-self: unset;
 		height: 81px;
 		line-height: 46px;
 		background: #ffffff;
