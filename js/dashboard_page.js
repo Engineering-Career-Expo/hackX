@@ -133,7 +133,7 @@ const showLoginAlert = (message, className) => {
 
   setTimeout(function () {
     document.querySelector(".alert").remove();
-  }, 3000);
+  }, 12000);
 };
 
 const formEvent = Submit.addEventListener("click", async (event) => {
@@ -159,19 +159,17 @@ const formEvent = Submit.addEventListener("click", async (event) => {
 const headers = {
   'Content-Type': 'application/json',
   'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
-  'withCredentials': true,
+  'withCredentials': true, 
 }
 const id = window.localStorage.getItem("id");
- 
+ // https://hackxbackend.herokuapp.com
 const dashboardInfo = async (Info) => {
-  console.log(id, Info, headers)
   axios
-    .get("https://hackxbackend.herokuapp.com/dashboard/"+ id, { headers: headers}, Info)
+    .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, Info, { headers: headers})
     .then((response) => {
       response.data;
       // console.log(response)
       if (response.status == "200") {
-        localStorage.clear();
         if (response.data == "Redirect To login") {
           window.location.href = 'https://hackx.netlify.app/pages/login';
         } else if (response.data == "Too many files to upload.") {
@@ -179,7 +177,7 @@ const dashboardInfo = async (Info) => {
         } else if (response.data == "Error when trying to upload files.") {
           showLoginAlert("Error when trying to upload files.", "error");
         }else if (response.data == "Files have been uploaded.") {
-          showLoginAlert("Files have been uploaded successfully.", "success");
+          showLoginAlert("Submitted Successfully.", "success");
         } else if (response.data == "Dashboard Submission Failed") {
           showLoginAlert("Unable to submit files.", "error");
         }else if (response.data == 'Invalid Token') {
