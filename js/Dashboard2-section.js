@@ -16,23 +16,6 @@ window.addEventListener('load', function start() {
     }, 1000);   
 });
 
-// NAVBAR DROPDOWN
-let coll = document.getElementsByClassName('drop-btn');
-let i;
- 
-for (i = 0; i < coll.length; i++) {
-	coll[i].addEventListener("click", function(){
-	 this.classList.toggle("active");
-	 let content = this.nextElementSibling;
-	 if (content.style.maxHeight) {
-	   content.style.maxHeight = null;
-	 } else {
-	   content.style.maxHeight = content.scrollHeight + "px";
-	 }
-   });
- }
- 
-
 // THE BUTTONS ID
 var timelineBtn = document.getElementById('timelineBtn');
 var announBtn = document.getElementById('announBtn');
