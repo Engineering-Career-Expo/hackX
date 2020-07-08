@@ -13,7 +13,7 @@
 
 
 // components
-
+@import "./component/anonymous";
 @import "./component/hero";
 @import "./component/about";
 @import "./component/30Hours";
@@ -31,4 +31,5 @@
 // pages
 @import "./layout/register";
 @import "./layout/about";
+@import './page/404-style';
 @import "./component/dashboard_page";
