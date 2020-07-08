@@ -256,8 +256,8 @@ a.view {
 	display: none;
 }
 .dropdownProfile {
-	opacity: 0;
 	cursor: auto;
+	display: none;
     position: absolute;
     width: 20%;
 	margin: 25px 0 0 0;
@@ -276,12 +276,8 @@ a.view {
 	border-radius: 3px;
 	transition: .9s;
 }
-.dropdownProfile:hover {
-	transition: 1s;
-}
 #dropdownLogo:hover ~ .dropdownProfile {
 	display: block;
-	opacity: 1;
 }
 .dropdownProfile .accountState {
     font-weight: 500;
