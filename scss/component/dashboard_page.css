@@ -751,7 +751,7 @@ html, body {
 	.contestant-description input[type=checkbox]:checked + label:after {
 		position: absolute;
 		content: "\E5CA";
-		color: #fff;
+		color: #FFFFFF;
 		font-size: 26px;
 		text-align: center;
 		line-height: 24px;
