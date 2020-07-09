@@ -716,3 +716,480 @@ i {
 		right: 50%;
 	}
 }
+
+@media (max-width: 300px) {
+	main {
+	  width: 100%;
+	}
+	.register-call-to-action {
+	  display: none;
+	}
+	.register-form-container {
+	  display: none;
+	}
+	nav {
+	  display: none;
+	}
+	.device-compatibility {
+	  text-align: center;
+	  position: absolute;
+	  width: 100%;
+	  color: red;
+	  height: 100%;
+	  padding: 50% 0;
+	  font-size: 8vw;
+	  font-weight: normal;
+	  background: lightgray;
+	}
+	.device-compatibility:before {
+	  content: "";
+	}
+	.device-compatibility:after {
+	  content:"Oops This Site is not Optimised for devices lower than 300px";
+	}
+  }
+	
+  @media (min-width: 301px) and (max-width: 449px) {
+	.register-main-container {
+	  width: 100%;
+	  margin: 0;
+	  padding: 7% 0 7% 0;
+	}
+	.register-main-container .register-call-to-action {
+	  display: none;
+	}
+	.register-main-container .come {
+	  display: none;
+	}
+	  .register-main-container .register-form-container {
+	  display: block;
+	  width: 80%;
+	  margin: 10%;
+	  height: auto;
+	  float: right;
+	  clear: right;
+	}
+	.register-main-container .register-form-container h2 {
+	  padding: 0 0 2rem 0;
+	  font-family: Gilroy-bold, sans-serif;
+	  font-size: 20px;
+	  font-weight: 600;
+	  line-height: 28px;
+	  font-weight: 400;
+	  color: #000000;
+	}
+	.register-main-container .register-form-container legend {
+	  margin-bottom: 10px;
+	  font-family: Gilroy-Bold, sans-serif;
+	  font-size: 18px;
+	  font-weight: 500;
+	  color: #000000;
+	}
+	.register-main-container .register-form-container label {
+	  margin-top: 7%;
+	  font-family: Gilroy-Bold, sans-serif;
+	  font-size: 18px;
+	  font-weight: 500;
+	  color: #000000;
+	}
+	.register-main-container .register-form-container input[type="text"],
+	.register-main-container .register-form-container input[type="email"],
+	.register-main-container .register-form-container input[type="number"],
+	.register-main-container .register-form-container input[type="password"] {
+	  width: 90%;
+	  padding: 0 5%;
+	  border: none;
+	  height: 50px;
+	  margin-bottom: 5%;
+	  font-family: Gilroy-Bold;
+	  font-size: 14px;
+	  color: #232732;
+	  line-height: 16px;
+	  background: rgba(196, 196, 196, 0.2);
+	  border-radius: 5px;
+	  -webkit-transition: 1s;
+	  transition: 1s;
+	}
+	.register-main-container .register-form-container input:hover {
+	  -webkit-box-shadow: -1px 2px 30px -13px rgba(250, 0, 72,0.5);
+	  -moz-box-shadow: -1px 2px 30px -13px rgba(250, 0, 72,0.5);
+	  box-shadow: -1px 2px 30px -13px rgba(250, 0, 72,0.5);
+	  border: 1px solid rgba(250, 0, 72,0.5);
+	}
+	.register-main-container .register-form-container input:focus {
+	  outline: none;
+	}
+	.register-main-container .register-form-container .signup-btn,
+	.register-main-container .register-form-container .previous-btnn {
+	  width: 100%;
+	  height: 50px;
+	  float: right;
+	  display: block;
+	  font-family: Poppins, sans-serif;
+	  font-size: 18px;
+	  color: #FA0048;
+	  background: transparent;
+	  border: none;
+	  margin: 2% 0 16% 0;
+	  border-radius: 4px;
+	  border: 0.5px solid #FA0048;
+	  -webkit-transition: 1s;
+	  transition: 1s;
+	}
+	.register-main-container .register-form-container button:focus {
+	  outline: none;
+	}
+	.register-main-container .register-form-container .previous-btn,
+	.register-main-container .register-form-container .signup-btnn {
+	  width: 100%;
+	  height: 50px;
+	  float: left;
+	  display: block;
+	  margin: 13% 0 5% 0;
+	  font-family: Poppins, sans-serif;
+	   font-size: 18px;
+	  color: white;
+	  background: #FA0048;
+	  border: none;
+	  border-radius: 4px;
+	}
+	.register-main-container .register-form-container input[type=checkbox] {
+	  display: none;
+	}
+	.register-main-container .register-form-container .policy {
+	  display: inline-block;
+	  cursor: pointer;
+	  padding-left: 46px;
+	  position:relative;
+	  font-size: 3.5vw;
+	  margin-bottom: 5%;
+	  margin-top: 1%;
+	}
+	.register-main-container .register-form-container input[type=checkbox] + .policy:after {
+	  font-family: 'Material Icons';
+	  content: "";
+	  display: inline-block;
+	  width: 20px;
+	  height: 20px;
+	  position: absolute;
+	  padding: 5px 5px 0 0;
+	  left: 0;
+	  transform: translate(10%, -75%);
+	  border: 2px solid #757575;
+	  border-radius: 2px;
+	}
+	.register-main-container .register-form-container input[type=checkbox]:checked + .policy:after {
+	  content: "\E5CA";
+	  color: #fff;
+	  font-size: 26px;
+	  text-align: center;
+	  line-height: 16px;
+	  background: rgb(229,25,59);
+	  border-color: rgb(229,25,59);
+	}
+  }
+  
+@media (min-width: 450px) and (max-width: 768px) {
+	.register-main-container {
+	  width: 100%;
+	  margin: 0;
+	  padding: 7% 0 7% 0;
+	}
+	.register-main-container button {
+	  cursor: pointer;
+	}
+	.register-main-container .register-call-to-action {
+	  display: none;
+	}
+	.register-main-container .register-form-container {
+	  display: block;
+	  width: 80%;
+	  margin: 0 10%;
+	  height: auto;
+	  float: right;
+	  clear: right;
+	}
+	.register-main-container .register-form-container h2 {
+	  padding-left: 5px;
+	  font-family: Gilroy-Bold, sans-serif;
+	  font-size: 24px;
+	  line-height: 28px;
+	  font-weight: 400;
+	  color: #000000;
+	}
+	.register-main-container .come {
+	  font-size: 25px;
+	}
+	.register-main-container .register-form-container legend {
+	  margin-bottom: 10px;
+	  font-family: Gilroy-Bold, sans-serif;
+	  font-size: 18px;
+	  font-weight: 500;
+	  color: #000000;
+	}
+	.register-main-container .register-form-container label {
+	  margin-top: 7%;
+	  font-family: Gilroy-Bold, sans-serif;
+	  font-size: 18px;
+	  font-weight: 500;
+	  color: #000000;
+	}
+	.register-main-container .register-form-container input[type="text"],
+	.register-main-container .register-form-container input[type="email"],
+	.register-main-container .register-form-container input[type="number"],
+	.register-main-container .register-form-container input[type="password"] {
+	  width: 90%;
+	  padding: 0 5%;
+	  border: none;
+	  height: 48px;
+	  margin-bottom: 9%;
+	  font-family: Gilroy-Bold, sans-serif;
+	  font-size: 14px;
+	  color: #232732;
+	  line-height: 16px;
+	  background: rgba(196, 196, 196, 0.2);
+	  border-radius: 5px;
+	  -webkit-transition: 1s;
+	  transition: 1s;
+	}
+	.register-main-container .register-form-container input:hover {
+	  -webkit-box-shadow: -1px 2px 30px -13px rgba(250, 0, 72,0.5);
+	  -moz-box-shadow: -1px 2px 30px -13px rgba(250, 0, 72,0.5);
+	  box-shadow: -1px 2px 30px -13px rgba(250, 0, 72,0.5);
+	  border: 1px solid rgba(250, 0, 72,0.5);
+	}
+	.register-main-container .register-form-container input:focus {
+	  outline: none;
+	}
+	.register-main-container .register-form-container .signup-btn,
+	.register-main-container .register-form-container .previous-btnn {
+	  width: 46%;
+	  height: 50px;
+	  float: right;
+	  display: block;
+	  font-family: Poppins, sans-serif;
+	  font-size: 18px;
+	  color: #FA0048;
+	  background: transparent;
+	  border: none;
+	  border-radius: 4px;
+	  -webkit-transition: 1s;
+	  border: 0.5px solid #FA0048;
+	  transition: 1s;
+	}
+	.register-main-container .register-form-container button:focus {
+	  outline: none;
+	}
+	.register-main-container .register-form-container .previous-btn,
+	.register-main-container .register-form-container .signup-btnn {
+	  width: 46%;
+	  height: 50px;
+	  float: left;
+	  display: block;
+	  font-family: Poppins, sans-serif;
+	  font-size: 18px;
+	  color: white;
+	  background: #FA0048;
+	  border: none;
+	  border-radius: 4px;
+	}
+	.register-main-container .register-form-container input[type=checkbox] {
+	  display: none;
+	}
+	.register-main-container .register-form-container .policy {
+	  display: inline-block;
+	  cursor: pointer;
+	  padding-left: 40px;
+	  position:relative;
+	  font-size: 2.7vw;
+	  margin-bottom: 5%;
+	}
+	.register-main-container .register-form-container input[type=checkbox] + .policy:after {
+	  font-family: 'Material Icons';
+	  content: "";
+	  display: inline-block;
+	  width: 20px;
+	  height: 20px;
+	  position: absolute;
+	  padding: 5px 5px 0 0;
+	  left: 0;
+	  transform: translate(10%, -50%);
+	  border: 2px solid #757575;
+	  border-radius: 2px;
+	}
+	.register-main-container .register-form-container input[type=checkbox]:checked + .policy:after {
+	  content: "\E5CA";
+	  color: #fff;
+	  font-size: 26px;
+	  text-align: center;
+	  line-height: 16px;
+	  background: rgb(229,25,59);
+	  border-color: rgb(229,25,59);
+	}
+  }
+@media (min-width: 769px) {
+	.register-main-container {
+	  width: 100%;
+	  margin: 0;
+	  padding: 7% 0 7% 0;
+	}
+	.register-main-container button {
+	  cursor: pointer;
+	}
+	.register-main-container .register-call-to-action {
+	  width: 30%;
+	  margin: 0 7% 0 0;
+	  float: right;
+	}
+	.register-main-container .register-call-to-action h1 {
+	  float: right;
+	  font-family: Monad, san-serif;
+	  font-style: normal;
+	  font-weight: 500;
+	  font-size: 5vw;
+	  line-height: 72px;
+	  text-align: center;
+	  color: #000000;
+	}
+	.register-main-container .register-call-to-action h1 .X {
+	  color: #F2A702;
+	}
+	.register-main-container .register-call-to-action h1 .hack {
+	  color: #1071F3;
+	}
+	.register-main-container .register-call-to-action button {
+	  height: 68px;
+	  background: white;
+	  border: 1px solid #E5193B;
+	  -webkit-box-sizing: border-box;
+	  box-sizing: border-box;
+	  border-radius: 10px;
+	  width: 70%;
+	  margin: 20% 10%;
+	  font-family: Gilroy-Bold, sans-serif;
+	  font-size: 1.4vw;
+	  color: #E5193B;
+	}
+	.register-main-container .register-form-container {
+	  display: inline-block;
+	  width: 36%;
+	  margin: 0 0 0 12%;
+	  height: auto;
+	  float: left;
+	}
+	.register-main-container .register-form-container h2 {
+	  font-family: Gilroy-Bold, sans-serif;
+	  margin-bottom: 2rem;
+	  font-weight: 600;
+	  font-size: 24px;
+	  line-height: 28px;
+	  font-weight: 400;
+	  color: #000000;
+	}
+	.register-main-container .register-form-container legend {
+	  margin-bottom: 10px;
+	  font-family: Gilroy-Bold, sans-serif;
+	  font-weight: 500;
+	  font-size: 22px;
+	  color: #000000;
+	}
+	.register-main-container .register-form-container label {
+	  margin-top: 7%;
+	  font-family: Gilroy-Bold, sans-serif;
+	  font-weight: 500;
+	  font-size: 22px;
+	  color: #000000;
+	}
+	.register-main-container .register-form-container input[type="text"],
+	.register-main-container .register-form-container input[type="email"],
+	.register-main-container .register-form-container input[type="number"],
+	.register-main-container .register-form-container input[type="password"] {
+	  width: 95%;
+	  border: none;
+	  padding-left: 5%;
+	  height: 50px;
+	  margin-bottom: 9%;
+	  font-family: Gilroy-Bold, sans-serif;
+	  font-size: 20px;
+	  color: #232732;
+	  line-height: 16px;
+	  background: rgba(196, 196, 196, 0.2);
+	  border-radius: 5px;
+	  -webkit-transition: 1s;
+	  transition: 1s;
+	}
+	.register-main-container .register-form-container input:hover {
+	  -webkit-box-shadow: -1px 2px 30px -13px rgba(250, 0, 72,0.5);
+	  -moz-box-shadow: -1px 2px 30px -13px rgba(250, 0, 72,0.5);
+	  box-shadow: -1px 2px 30px -13px rgba(250, 0, 72,0.5);
+	  border: 1px solid rgba(250, 0, 72,0.5);
+	}
+	.register-main-container .register-form-container input:focus {
+	  outline: none;
+	}
+	.register-main-container .register-form-container .signup-btn,
+	.register-main-container .register-form-container .previous-btnn {
+	  width: 46%;
+	  height: 50px;
+	  float: right;
+	  display: block;
+	  font-family: Poppins, sans-serif;
+	  font-size: 1.47vw;
+	  color: #FA0048;
+	  background: transparent;
+	  border: 1px solid #FA0048;
+	  border-radius: 4px;
+	  -webkit-transition: 1s;
+	  transition: 1s;
+	}
+	.register-main-container .register-form-container button:focus {
+	  outline: none;
+	}
+	.register-main-container .register-form-container .previous-btn,
+	.register-main-container .register-form-container .signup-btnn {
+	  width: 46%;
+	  height: 50px;
+	  float: left;
+	  display: block;
+	  font-family: Poppins, sans-serif;
+	  font-size: 1.47vw;
+	  color: white;
+	  background: #FA0048;
+	  border: none;
+	  border-radius: 4px;
+	  transition: 1s;
+	}
+	.register-main-container .register-form-container input[type=checkbox] {
+	  display: none;
+	}
+	.register-main-container .register-form-container .policy {
+	  display: inline-block;
+	  cursor: pointer;
+	  padding-left: 40px;
+	  position:relative;
+	  font-size: 1.435vw;
+	  margin-bottom: 5%;
+	}
+	.register-main-container .register-form-container input[type=checkbox] + .policy:after {
+	  font-family: 'Material Icons';
+	  content: "";
+	  display: inline-block;
+	  width: 20px;
+	  height: 20px;
+	  position: absolute;
+	  padding: 5px 5px 0 0;
+	  left: 0;
+	  transform: translate(10%, -50%);
+	  border: 2px solid #757575;
+	  border-radius: 2px;
+	}
+	.register-main-container .register-form-container input[type=checkbox]:checked + .policy:after {
+	  content: "\E5CA";
+	  color: #fff;
+	  font-size: 26px;
+	  text-align: center;
+	  line-height: 16px;
+	  background: rgb(229,25,59);
+	  border-color: rgb(229,25,59);
+	}
+  }
