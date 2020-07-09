@@ -183,13 +183,6 @@
 	margin-left: -12%;
 	border-radius:50%;
 }
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
-
-html, body{
-	margin: 0px;
-	padding: 0px;
-	height: 100%;
-}
 @media screen and (min-width: 769px) {
 	.header_head {
 		display: flex;
@@ -238,6 +231,7 @@ html, body{
 		border: none;
 		margin-bottom: 20%;
 		transition: .8s;
+		font-size: 1.18vw;
 	}
 	.header_one__app a:hover {
 		color: #1071f3;
