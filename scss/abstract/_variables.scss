@@ -25,54 +25,36 @@ $default-font-family-info: "Gilroy-Bold", serif;
 
 
 // styling for success and error message starts
-.anonymous_success{
-		display:flex;
-		justify-content: space-between;
-		margin:0;
-		font-family:Poppins;
-		padding:5px 8px 5px 30px;
-	  border-display:flex;5px;
+.alert{
+	  font-family:Poppins;
 	  font-size:13px;
 	  width:max-content;
+	  background-color:green;	  
+	  border-radius:12px;
+	  color:#f0f0f0;
+	  width:250px;
+	  position:relative;
+		}
+.alert > div:after{
+		position: absolute;
+		top:5px;
+		right:3px;
+		content:"X";
+		color:red;
+		background-color:#f0f0f0;
+		border-radius:50%;
+		padding:2px 8px;
+		}
+.success{		
+	  border-radius:12px;
+	  padding:7px;
+	  color:white;
 	  background-color:green;
-	  align-items: flex-start;
-	  border-radius:12px;
-	  color:#f0f0f0;
-	  width:250px;
 		}
-.anonymous_error{
-		display:flex;
-		justify-content: space-between;
-		margin:0;
-		font-family:Poppins;
-		padding:5px 8px 5px 30px;
-	  border-display:flex;5px;
-	  font-size:13px;
-	  width:max-content;
+.error{
+	  border-radius:12px;		
+	  padding:7px;
+	  color:white;
 	  background-color:red;
-	  align-items: flex-start;
-	  border-radius:12px;
-	  color:#f0f0f0;
-	  width:250px;
-		}
-.message_success{
-	  border-radius:50%;
-	  font-size:15px;
-	  padding:0px 7px;
-	  color:green;
-	  background-color:#f0f0f0;
-	  width:max-content;
-		}
-.message_error{
-	  border-radius:50%;
-	  font-size:15px;
-	  padding:0px 7px;
-	  color:red;
-	  background-color:#f0f0f0;
-	  width:max-content;
-		}
-.anonymous_about{
-		padding-right:30px;
-		align-self:center;
 		}
 //styling for success and error message ends
