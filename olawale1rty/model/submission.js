@@ -8,7 +8,7 @@ let submission = new mongoose.Schema({
 		    type: String,
 		    required: true,
 		    minlength: 3,
-		    maxlength: 20
+		    maxlength: 50
 		},
 		tagline: {
 		    type: String,
@@ -38,6 +38,11 @@ let submission = new mongoose.Schema({
 		    minlength: 3,
 		    maxlength: 200
 		},
+		vidLinks: {
+		    type: String,
+		    minlength: 3,
+		    maxlength: 200
+		},
 		video: {
 		    type: Array,
 		},
@@ -55,7 +60,7 @@ function validateSubmission(user) {
   const schema = Joi.object().keys({
     name: Joi.string()
 	    .min(3)
-	    .max(20)
+	    .max(50)
 	    .required()
 	    .error((errors) => {
 	        errors.forEach((err) => {
@@ -70,7 +75,7 @@ function validateSubmission(user) {
 	              err.message = "Name should have at least 3 characters!";
 	              break;
 	            case "string.max":
-	              err.message = "Name should have at moTagline characters!";
+	              err.message = "Name should have at most 50 characters!";
 	              break;
 	            case "string.base":
 	              err.message = "Name should be a string.";
@@ -212,6 +217,33 @@ function validateSubmission(user) {
 	              break;
 	            case "string.base":
 	              err.message = "Links should be a string.";
+	              break;
+	            default:
+	              break;
+	          	}
+	        });
+	        return errors;
+      	}),
+  	vidLinks: Joi.string()
+	    .min(3)
+	    .max(200)
+	    .error((errors) => {
+	        errors.forEach((err) => {
+	          switch (err.code) {
+	          	case "string.empty":
+	              err.message = "Video links should not be empty!";
+	              break;
+	            case "any.empty":
+	              err.message = "Video links should not be empty!";
+	              break;
+	            case "string.min":
+	              err.message = "Video links should have at least 3 characters!";
+	              break;
+	            case "string.max":
+	              err.message = "Video links should have at most 200 characters!";
+	              break;
+	            case "string.base":
+	              err.message = "Video links should be a string.";
 	              break;
 	            default:
 	              break;

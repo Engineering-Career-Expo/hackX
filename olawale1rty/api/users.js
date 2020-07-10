@@ -166,11 +166,11 @@ inputData
 
 router.post("/submission/:id", authorize(), (req, res) => {
   Picture(req, res,(error) => {
-      
+      // console.log(req);
       if (error === "LIMIT_UNEXPECTED_FILE") {
             return res.json("Too many files to upload.");
             }
-      if (error) return res.json(`Error when trying upload many files: ${error}`);
+      if (error) return res.json("Error when trying to upload files.");
 
           let OUTPUT = () => {
             const { error } = validateSubmission(req.body);
@@ -183,7 +183,8 @@ router.post("/submission/:id", authorize(), (req, res) => {
               problem,
               challenges,
               technologies,
-              links
+              links,
+              vidLinks
             } = req.body;
             let VIDEO = [];
             if (req.files["media"] === undefined){
@@ -214,6 +215,7 @@ router.post("/submission/:id", authorize(), (req, res) => {
               challenges: challenges,
               technologies: technologies,
               links: links,
+              vidLinks: vidLinks,
               video: video,
               pictures: pictures
             });
