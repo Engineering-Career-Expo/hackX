@@ -102,16 +102,16 @@ function validateDashboard(user) {
 	        errors.forEach((err) => {
 	          switch (err.code) {
 	          	case "string.empty":
-	              err.message = "Age should not be empty!";
+	              err.message = "Links should not be empty!";
 	              break;
 	            case "any.empty":
-	              err.message = "Age should not be empty!";
+	              err.message = "Links should not be empty!";
 	              break;
 	            case "number.min":
-	              err.message = "Age should have at least 3 characters!";
+	              err.message = "Links should have at least 3 characters!";
 	              break;
 	            case "number.base":
-	              err.message = "Age should be a string.";
+	              err.message = "Links should be a string.";
 	              break;
 	            default:
 	              break;

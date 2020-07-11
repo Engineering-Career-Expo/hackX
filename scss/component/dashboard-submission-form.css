@@ -441,3 +441,20 @@ button:hover, input:hover, textarea:hover {
         padding: 1.5%;
     }
 }
+
+.success,
+.error {
+  color: white;
+  width: 60%;
+  padding: 5px;
+  margin-top: 3rem;
+  margin: 2rem auto;
+}
+
+.success {
+  background: green;
+}
+
+.error {
+  background: #E5193B;
+}

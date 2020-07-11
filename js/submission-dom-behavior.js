@@ -13,7 +13,6 @@ var image3 = document.getElementById('imageUpload2');
 var image4 = document.getElementById('imageUpload3');
 var image5 = document.getElementById('imageUpload4');
 
-
 // THE SUBMISSION BUTTON
 var submissionButton = document.querySelector('#previewSubmissionDetails');
 
@@ -139,6 +138,7 @@ image1.addEventListener( 'click' , function show() {
     vR7.style.visibility = 'hidden';
     vR8.style.visibility = 'visible';
 });
+
 image2.addEventListener( 'click' , function show() {
     // HORIZONTAL BORDER
     vR1.style.visibility = 'hidden';
