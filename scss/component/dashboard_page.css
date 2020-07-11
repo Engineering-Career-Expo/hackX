@@ -19,6 +19,11 @@ body {
 .participant_info__body{
 	background: whitesmoke;
 }
+input::placeholder {
+	color: rgba(0, 0, 0, 0.5);
+	font-weight: 500;
+	font-family: 'Montserrat', sans-serif;
+}
 * {
 	box-sizing: border-box;
 	outline: none;
