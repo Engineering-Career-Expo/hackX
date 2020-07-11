@@ -504,9 +504,9 @@ body {
 	.contestant-description input[type=checkbox]:checked + label:after {
 	content: "\E5CA";
 	color: #fff;
-	font-size: 26px;
+	font-size: 18px;
 	text-align: center;
-	line-height: 24px;
+	line-height: 2.5vw;
 	background: #1071F3;
 	border-color: #1071F3;
 	}
@@ -758,6 +758,7 @@ body {
 		left: 0;
 		border: 2px solid #1071F3;
 		border-radius: 2px;
+		transform: translate(-15%, -19%);
 	}
 	.contestant-description:hover input[type=checkbox] + label:after {
 		background: lightgray;
