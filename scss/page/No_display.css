@@ -34,6 +34,9 @@
 }
 
 @media screen and (min-width: 769px) {
+    .display_all {
+        width: 54%;
+    }
 	html, body{
 		margin: 0;
 		padding: 0;
@@ -61,6 +64,9 @@
 	}
 }
 @media (min-width: 769px) and (max-width: 999px) {
+    .display_all {
+        width: 54%;
+    }
     .hackx-dashboard {
         display: block;
         font-family: 'Poppins', sans-serif;
@@ -251,6 +257,9 @@
 	}
 }
 @media (min-width: 1000px) {
+    .display_all {
+        width: 54%;
+    }
     .hackx-dashboard {
         display: block;
         font-family: 'Poppins', sans-serif;
