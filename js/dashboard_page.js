@@ -206,7 +206,9 @@ const dashboardInfo = async (Info) => {
           showLoginAlert("Error when trying to upload files.", "error");
         }else if (response.data == "Files have been uploaded.") {
           showLoginAlert("Submitted Successfully.", "success");
-          window.location.href = 'https://hackx.netlify.app/pages/main_dashboard_page';
+          setTimeout(function () {
+            window.location.href = 'https://hackx.netlify.app/pages/main_dashboard_page';
+          }, 2000);
         } else if (response.data == "Dashboard Submission Failed") {
           showLoginAlert("Unable to submit files.", "error");
         }else if (response.data == 'Invalid Token') {
