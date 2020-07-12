@@ -236,7 +236,7 @@ button:hover, input:hover, textarea:hover {
     padding: 2%;
 }
 .dashboard-submission-form .submitBtn .submit {
-    width: 303px;
+    width: 280px;
     height: 55px;    
     background: #1071F3;
     border-radius: 5px;  
@@ -254,6 +254,7 @@ button:hover, input:hover, textarea:hover {
     font-style: normal;
     font-weight: 1000;
     font-size: 14px;
+    cursor: auto;
 }
 @media (min-width: 1px) and (max-width: 299px) {
     nav, .hamburger, .dashboard-submission-form {
