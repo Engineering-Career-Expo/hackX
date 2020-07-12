@@ -23,22 +23,35 @@ const formEvent = loginForm.addEventListener("submit", async (event) => {
     userLogin(loginInfo);
   }
 });
+
 const userLogin = async (loginInfo) => {
-  // http://localhost:8080/login
+  //http://localhost:8080/login   
+  headers = {
+    'Content-Type': 'application/json',
+    'withCredentials': true
+  }
+
+
   axios
-    .post("https://hackxbackend.herokuapp.com/login", loginInfo)
+    .post("https://hackxbackend.herokuapp.com/login",  loginInfo, { headers: headers})
     .then((response) => {
       response.data;
+      // console.log(response)
       if (response.status == "200") {
         if (response.data == "Login Incorrect") {
           showLoginAlert("Login Incorrect", "error");
         } else if (response.data == "Wrong email entered.") {
-          showLoginAlert("Wrong email entered.", "error");
+          showLoginAlert("Email or password entered is incorrect", "error");
         } else if (response.data == "Password Incorrect.") {
-          showLoginAlert("Password Incorrect.", "error");
-        } else {
+          showLoginAlert("Email or password entered is incorrect", "error");
+        } else if (response.data == "Session Redirection To Dashboard"){
+          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
+        }else {
           showLoginAlert("Login Successfully", "success");
-          window.location.href = 'https://hackx.netlify.app/dashboard';
+          localStorage.setItem("pass", response.data.token);
+          localStorage.setItem("id", response.data.id);
+          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
+
         }
       } else {
         showLoginAlert("Something Went Wrong. Try Again Later", "error");
@@ -47,3 +60,25 @@ const userLogin = async (loginInfo) => {
 
     .catch((error) => console.error(error));
 };
+
+function viewPassword() {
+  var passwordInput = document.getElementById('password');
+  var passStatus = document.getElementById('pass');
+ 
+  if (passwordInput.type == 'password'){
+    passwordInput.type='text';
+    passStatus.className='fa fa-eye';
+    
+  }
+  else{
+    passwordInput.type='password';
+    passStatus.className='fa fa-eye-slash';
+  }
+}
+
+$(document).ready( function() {
+	 $('input').hover( function() {
+		$('.row_1').css("display", "flex");
+		$('.row_2').css("display", "flex");
+	});
+});
