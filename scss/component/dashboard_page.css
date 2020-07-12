@@ -897,6 +897,10 @@ input::placeholder {
 	.dashboard-info{
 		display: none;
 	}
+	
+	.inputlink input {
+		width: 80%;
+	}
 }
 
 .progress_body{
