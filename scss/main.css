@@ -3848,6 +3848,8 @@ html {
 }
 .footer-bottom .footer-icons .instagram, .footer-bottom .footer-icons .twitter, .footer-bottom .footer-icons .github {
   cursor: pointer;
+  width: 27px;
+  height: 27px;
 }
 .footer-bottom .footer-icons .instagram {
   position: relative;
