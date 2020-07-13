@@ -510,9 +510,6 @@ footer {
   font-size: 6vw;
 }
 
-div img {
-  float: right;
-}
 
 .image-1,
 .image-2,
@@ -614,11 +611,6 @@ div img {
   color: #e5193b;
   font-size: 5.3vw;
 }
-
-div img {
-  float: right;
-}
-
 .image-1,
 .image-2,
 .location {
@@ -703,9 +695,6 @@ div img {
   color: #e5193b;
 }
 
-div img {
-  float: right;
-}
 
 @media (min-width: 769px) {
   .hero {
@@ -3914,5 +3903,7 @@ html {
   height: 28px;
   background: #FFFFFF;
 }
-
+.image_one img {
+  height: auto;
+}
 /*# sourceMappingURL=main.css.map */
