@@ -1,6 +1,6 @@
 // signup 1
 const signup = document.querySelector(".signup");
-const signup_btn = document.querySelector(".signup-btn");
+const signup_btn = document.querySelector(".signup-btnn");
 
 const showAlert_signup = (message, className) => {
   const div = document.createElement("div");
@@ -63,7 +63,8 @@ const createSignup = async (signupInfo) => {
       if (response.status == "200") {
         if (response.data == "Failed to signup") {
           showAlert_signup("Email used already. ", "error");
-        } else if(response.data == "Successfully Signed Up"){
+        } else if(response.data.message == "Successfully Signed Up"){
+          localStorage.setItem("username", response.data.username);
           showAlert_signup("Signup Successfully", "success");
           window.location.href = 'https://hackx.netlify.app/pages/dashboard_page'; 
         } else if (response.data == "Session Redirection To Dashboard"){
