@@ -3851,15 +3851,15 @@ html {
     color: white;
   }
 }
-.footer-bottom .footer-icons .instagram, .footer-bottom .footer-icons .twitter, .footer-bottom .footer-icons .github {
+.footer-bottom .footer-icons .instagram,
+.footer-bottom .footer-icons .twitter,
+.footer-bottom .footer-icons .email {
   cursor: pointer;
   width: 27px;
   height: 27px;
 }
 .footer-bottom .footer-icons .instagram {
   position: relative;
-  width: 27px;
-  height: 27px;
   margin-right: 15px;
   background: transparent;
   border: 2px solid #FFFFFF;
@@ -3886,4 +3886,33 @@ html {
   background: transparent;
   border-radius: 50%;
 }
+.footer-bottom .footer-icons .email {
+  position: relative;
+  width: 32px;
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  border-radius: 3px;
+  overflow: hidden;
+}
+.footer-bottom .footer-icons .email:before {
+  position: absolute;
+  top: -6px;
+  left: 2px;
+  content: " ";
+  width: 2.4px;
+  transform: rotate(120deg);
+  height: 28px;
+  background: #FFFFFF;
+}
+.footer-bottom .footer-icons .email:after {
+  position: absolute;
+  top: -6px;
+  right: 2px;
+  content: " ";
+  width: 2.4px;
+  transform: rotate(60deg);
+  height: 28px;
+  background: #FFFFFF;
+}
+
 /*# sourceMappingURL=main.css.map */
