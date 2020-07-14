@@ -11,7 +11,15 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
+}
+@font-face {
+  font-family: Monad;
+  src: url(../fonts/Monad.otf);
+}
+@font-face {
+  font-family: Gilroy;
+  src: url(../fonts/Gilroy-Regular.woff);
 }
 
 html {
@@ -22,10 +30,13 @@ html {
   padding: 0;
   overflow-x: hidden;
 }
-
-body,
-html {
+body, html {
   overflow-x: hidden;
+}
+body {
+  font-family: 'Gilroy', sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
 /* DISABLE AUTOMATIC BORDER AND OUTLINES */
 button, input {
@@ -36,12 +47,9 @@ button:hover, input:hover {
   border: none;
   outline: none;
 }
-
-@font-face {
-  font-family: Monad;
-  src: url(../../fonts/Monad.otf);
+a {
+  text-decoration: none;
 }
-
 .u-padding-none {
   padding: 0;
 }
@@ -510,9 +518,6 @@ footer {
   font-size: 6vw;
 }
 
-div img {
-  float: right;
-}
 
 .image-1,
 .image-2,
@@ -614,11 +619,6 @@ div img {
   color: #e5193b;
   font-size: 5.3vw;
 }
-
-div img {
-  float: right;
-}
-
 .image-1,
 .image-2,
 .location {
@@ -703,9 +703,6 @@ div img {
   color: #e5193b;
 }
 
-div img {
-  float: right;
-}
 
 @media (min-width: 769px) {
   .hero {
@@ -1586,7 +1583,6 @@ body {
 .tracks30 {
   font-size: 23px;
   margin-bottom: .8pc;
-  margin-left: 3rem;
 }
 
 .partners_img {
@@ -2692,7 +2688,7 @@ body {
   .schedule_title {
     display: inline-block;
     color: #E5193B;
-    font-family: "Gilroy-Regular", serif;
+    font-family: "Gilroy-Regular", sans-serif;
     font-size: 2vw;
   }
   .schedule_txt {
@@ -3914,5 +3910,19 @@ html {
   height: 28px;
   background: #FFFFFF;
 }
-
+.mentors-main .mentor .container img {
+  float: left;
+  margin-right: 15px;
+}
+@media (min-width: 1000px) {
+  .mentors-main .mentor .container img {
+    margin-right: 25px;
+  }
+}
+.image_one img {
+  height: auto;
+}
+.two30 {
+  text-align: center;
+}
 /*# sourceMappingURL=main.css.map */

@@ -19,13 +19,13 @@ html {
 .text_one__head {
 	text-align: center;
 	font-size: 24px;
-	font-family: "Gilroy";
+	font-family: "Gilroy", sans-serif;
 	font-weight: 800;
 }
 
 .text_one p {
 	font-size: 18px;
-	font-family: "Poppins";
+	font-family: "Poppins", sans-serif;
 	line-height: 25px;
 }
 
@@ -92,10 +92,6 @@ html {
 }
 
 @media screen and (min-width: 768px) {
-	.image_one img {
-		height: 400px;
-	}
-
 	.text_one__head {
 		font-size: 48px;
 	}
@@ -867,6 +863,9 @@ html {
 		height: 50px;
 		color: white;
 	}
+}
+.image_one img {
+	height: auto;
 }
 
 /*# sourceMappingURL=main.css.map */

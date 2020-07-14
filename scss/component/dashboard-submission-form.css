@@ -177,7 +177,7 @@ button:hover, input:hover, textarea:hover {
     justify-content: center;
 }
 .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer {
-    width: 14vw;
+    width: auto;
     height: auto;
     border-radius: 5px;
     display: flex;
@@ -209,7 +209,7 @@ button:hover, input:hover, textarea:hover {
 .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer .imagePreview {
     display: none;
     width: inherit;
-    height: 14vw;
+    height: auto;
     overflow: hidden;
     text-align: center;
     border: 1px solid rgba(0,0,0,0.01);
