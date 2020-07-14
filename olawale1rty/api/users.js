@@ -45,7 +45,10 @@ router.post("/signup", (req, res) => {
   inputData
     .save()
     .then((doc) => {
-      res.json("Successfully Signed Up");
+      res.json({
+            message: "Successfully Signed Up",
+            username: doc.username,
+          });
       
       // res.redirect('https://hackx.netlify.app/dashboard');
     })
@@ -100,8 +103,7 @@ router.post("/login", (req, res) => {
             message: "Authentication Successful",
             token: token_pass,
             id: index._id,
-            session: res.req.session,
-            cookie: res.req.signedCookies,
+            username: index.username,
           });
           // res.redirect('https://hackx.netlify.app/dashboard');
           
