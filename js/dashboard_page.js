@@ -123,6 +123,7 @@ function ValidateTrack()
 
 const popUp = document.querySelector(".response-bar");
 const Submit = document.querySelector("#finish");
+const SubmitAlt = document.querySelector("#submitResponse");
 
 const showLoginAlert = (message, className) => {
   const div = document.createElement("div");
@@ -149,6 +150,33 @@ const formEvent = Submit.addEventListener("click", async (event) => {
   }else if(document.querySelector("#customCheckbox4").checked){
     track = document.querySelector("#customCheckbox4").value
   }
+  setTimeout(function () {
+    Submit.disabled = true;
+    SubmitAlt.disabled = true;
+  }, 2000);
+  const link = document.querySelector("#link").value;
+  const institution = document.querySelector("#institution").value;
+  const department = document.querySelector("#department").value;
+  const Info = await { bio, track, link, institution, department };
+  dashboardInfo(Info); 
+});
+const formEventAlt = SubmitAlt.addEventListener("click", async (event) => {
+  event.preventDefault();
+  const bio = document.querySelector("#bio").value;
+  let track = "";
+  if (document.querySelector("#customCheckbox").checked){
+    track = document.querySelector("#customCheckbox").value
+  }else if(document.querySelector("#customCheckbox2").checked){
+    track = document.querySelector("#customCheckbox2").value
+  }else if(document.querySelector("#customCheckbox3").checked){
+    track = document.querySelector("#customCheckbox3").value
+  }else if(document.querySelector("#customCheckbox4").checked){
+    track = document.querySelector("#customCheckbox4").value
+  }
+  setTimeout(function () {
+    Submit.disabled = true;
+    SubmitAlt.disabled = true;
+  }, 2000);
   const link = document.querySelector("#link").value;
   const institution = document.querySelector("#institution").value;
   const department = document.querySelector("#department").value;
@@ -178,6 +206,9 @@ const dashboardInfo = async (Info) => {
           showLoginAlert("Error when trying to upload files.", "error");
         }else if (response.data == "Files have been uploaded.") {
           showLoginAlert("Submitted Successfully.", "success");
+          setTimeout(function () {
+            window.location.href = 'https://hackx.netlify.app/pages/main_dashboard_page';
+          }, 2000);
         } else if (response.data == "Dashboard Submission Failed") {
           showLoginAlert("Unable to submit files.", "error");
         }else if (response.data == 'Invalid Token') {

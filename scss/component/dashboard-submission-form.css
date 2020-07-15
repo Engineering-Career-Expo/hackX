@@ -4,6 +4,13 @@
     font-family: Monad;
     src: url(../../fonts/Monad.otf);
 }
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
 html, body {
     width: 100%;
     margin: 0;
@@ -170,7 +177,7 @@ button:hover, input:hover, textarea:hover {
     justify-content: center;
 }
 .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer {
-    width: 14vw;
+    width: auto;
     height: auto;
     border-radius: 5px;
     display: flex;
@@ -202,7 +209,7 @@ button:hover, input:hover, textarea:hover {
 .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer .imagePreview {
     display: none;
     width: inherit;
-    height: 14vw;
+    height: auto;
     overflow: hidden;
     text-align: center;
     border: 1px solid rgba(0,0,0,0.01);
@@ -236,7 +243,7 @@ button:hover, input:hover, textarea:hover {
     padding: 2%;
 }
 .dashboard-submission-form .submitBtn .submit {
-    width: 303px;
+    width: 280px;
     height: 55px;    
     background: #1071F3;
     border-radius: 5px;  
@@ -254,6 +261,7 @@ button:hover, input:hover, textarea:hover {
     font-style: normal;
     font-weight: 1000;
     font-size: 14px;
+    cursor: auto;
 }
 @media (min-width: 1px) and (max-width: 299px) {
     nav, .hamburger, .dashboard-submission-form {
@@ -440,4 +448,21 @@ button:hover, input:hover, textarea:hover {
         margin: 5%;
         padding: 1.5%;
     }
+}
+
+.success,
+.error {
+  color: white;
+  width: 60%;
+  padding: 5px;
+  margin-top: 3rem;
+  margin: 2rem auto;
+}
+
+.success {
+  background: green;
+}
+
+.error {
+  background: #E5193B;
 }

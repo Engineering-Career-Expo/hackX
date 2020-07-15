@@ -6,6 +6,7 @@
     <title>Dashboard submission form</title>
     <link rel="stylesheet" href="../scss/component/dashboard-submission-form.css">
     <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
@@ -57,24 +58,26 @@
                                 <div class="head_pic2"><img src="../assets/images/sample.jpg" class="head_pic02"/></div>
                             </div>
                             <div class="dropdown_button">
-                                <img src="../assets/images/dashboard/dropdown-logo.svg" id="dropdownLogo">
-                                <div class="dropdownProfile" id="dropdownProfile">
-                                    <div class="username">Signed in as Keazzy </div>
-                                    <hr class="ddHr">
-                                    <div class="accountState">Flying Solo</div>
-                                    <hr class="ddHr">
-                                    <div class="navigationLink">
-                                        <a>Your Profile</a>
-                                        <a>Your submissions</a>
-                                        <a>Your Teams</a>
-                                    </div>
-                                    <hr class="ddHr">
-                                    <div class="otherNavs">
-                                        <a>Help</a>
-                                        <a>Settings</a>
-                                        <a>Logout</a>
-                                    </div>
-                                </div>
+                                <button class="dropdownBtn">
+                                    <img src="../assets/images/dashboard/dropdown-logo.svg">
+                                    <div class="dropdownProfile" id="dropdownProfile">
+                                        <div class="username">Signed in as Keazzy </div>
+                                        <hr class="ddHr">
+                                        <div class="accountState">Flying Solo</div>
+                                        <hr class="ddHr">
+                                        <div class="navigationLink">
+                                            <a>Your Profile</a>
+                                            <a>Your submissions</a>
+                                            <a>Your Teams</a>
+                                        </div>
+                                        <hr class="ddHr">
+                                        <div class="otherNavs">
+                                            <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
+                                            <a>Settings</a>
+                                            <a>Logout</a>
+                                        </div>
+                                    </div>                                    
+                                </button>
                             </div>    
                         </div>
                         <div class="linedivide"></div>
@@ -102,7 +105,7 @@
                 <li class="List">Describe your project</li>
             </ul>
         </div>
-        <form class="subForm" name="submission-form" method="POST" enctype="multipart/form-data" action="https://hackx.netlify.app/pages/dashboard_submitted_screen">
+        <form class="subForm" id="formElem" >
             <div class="mobileHead">
                 <div class="headTitle">SUBMISSIONS</div>
                 <div class="cnt">Your submission will appear</div>
@@ -115,7 +118,7 @@
                 </div>
                 <div class="info">WHAT ARE YOU CALLING IT ??</div>
                 <span class="inputCount" id="inputCount1">0 / 50</span>                
-                <input type="text" onkeyup="countInput1(this.value)" id="projectName" name="project-name" maxlength="50" placeholder="Begin typing....">
+                <input type="text" onkeyup="countInput1(this.value)" id="projectName" name="name" maxlength="50" placeholder="Begin typing....">
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -133,7 +136,7 @@
                 </div>
                 <div class="info">DESCRIBE WHAT PEOPLE CAN USE IT FOR, OR HOW IT MAKES EXISTING EASIER/SAFER E.T.C</div>
                 <span class="inputCount" id="inputCount3">0 / 200</span>
-                <textarea class="submissionInputTextarea" onkeyup="countInput3(this.value)" id="projectUSe" name="problem-it-addresses" maxlength="200" placeholder="Begin typing...."></textarea>            
+                <textarea class="submissionInputTextarea" onkeyup="countInput3(this.value)" id="projectUSe" name="problem" maxlength="200" placeholder="Begin typing...."></textarea>            
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -142,7 +145,7 @@
                 </div>
                 <div class="info">TELL US ABOUT ANY SPECIFIC BUG OR HUDDLE YOU RAN INTO WHILE BUILDING THIS PROJECT, HOW DID YOU GET OVER IT?</div>
                 <span class="inputCount" id="inputCount4">0 / 200</span>
-                <textarea class="submissionInputTextarea" onkeyup="countInput4(this.value)" id="projectChallenge" name="challenges-encountered" maxlength="200" placeholder="Begin typing...."></textarea>
+                <textarea class="submissionInputTextarea" onkeyup="countInput4(this.value)" id="projectChallenge" name="challenges" maxlength="200" placeholder="Begin typing...."></textarea>
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -151,7 +154,7 @@
                 </div>
                 <div class="info">WRITE A COMMA SEPARATED LIST OF TECHNOLOGIES YOU USED IN BUILDING THE PROJECT</div>
                 <span class="inputCount" id="inputCount5">0 / 200</span>
-                <textarea class="submissionInputTextarea" onkeyup="countInput5(this.value)" id="projectTechnology" name="technologies-used" maxlength="200" placeholder="Begin typing...."></textarea>
+                <textarea class="submissionInputTextarea" onkeyup="countInput5(this.value)" id="projectTechnology" name="technologies" maxlength="200" placeholder="Begin typing...."></textarea>
             </div>
             <div class="inputCnt">
                 <div class="title">
@@ -169,25 +172,24 @@
                 </div>
                 <div class="info">ADD A GITHUB, WEBSITE, APP STORE E.T.C OR WHEREVER THE PROJECT CAN BE TESTED LIVE</div>
                 <span class="inputCount" id="inputCount7">0 / 50</span>
-                <input type="url" onkeyup="countInput7(this.value)" id="projectVideoLink" name="video-demo" maxlength="50" placeholder="Paste or type link here">
+                <input type="url" onkeyup="countInput7(this.value)" id="projectVideoLink" name="vidLinks" maxlength="50" placeholder="Paste or type link here">
             </div>
             <div class="inputCnt">
                 <div class="title">
                     <span class="vertrule"id="vR8"></span>
                     <span class="titleName">Pictures</span>
                 </div>
-                <div class="info">UPLOAD A MAXIMUM OF 5 PICTURES (SIZE: MAX 2MB EACH) SHOWCASING YOUR PROJECT (THE FIRST IMAGE WILL BE USED AS A PREVIEW ON SOCIAL MEDIA)</div>
+                <div class="info">UPLOAD A MAXIMUM OF 5 PICTURES (SIZE: MAX 2MB EACH) SHOWCASING YOUR PROJECT (THE FIRST IMAGE WILL BE USED AS A PREVIEW ON SOCIAL MEDIA) </div>
                 <div class="imgCnt">
                     <div id="preview-container" class="imageDialogContainer">
                         <img src="../assets/images/dashboard/add-image.svg" id="imageUpload" class="imageUpload">
-                        <input type="file" id="imageFile" class="imageFile" name="image" accept="image/jpg,image/png" />
+                        <input type="file" id="imageFile" class="imageFile" name="picture" accept=".gif, .jpg, .png" multiple />
                         <img id="imagePreview" class="imagePreview" />
                         <div id="imageName" class="imageName" title="image name"></div>
                         <button id="deleteImage" class="deleteImage">Delete</button>
                     </div>
-                
                     <div id="preview-container1" class="imageDialogContainer">
-                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload1" class="imageUpload">
+                        <img src="" id="imageUpload1" class="imageUpload">
                         <input type="file" id="imageFile1" class="imageFile" name="image" accept="image/jpg,image/png" />
                         <img id="imagePreview1" class="imagePreview" />
                         <div id="imageName1" class="imageName"></div>
@@ -195,7 +197,7 @@
                     </div>
                 
                     <div id="preview-container2" class="imageDialogContainer">
-                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload2" class="imageUpload">
+                        <img src="" id="imageUpload2" class="imageUpload">
                         <input type="file" id="imageFile2" class="imageFile" name="image" accept="image/jpg,image/png" />
                         <img id="imagePreview2" class="imagePreview" />
                         <div id="imageName2" class="imageName"></div>
@@ -203,7 +205,7 @@
                     </div>
                 
                     <div id="preview-container3" class="imageDialogContainer">
-                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload3" class="imageUpload">
+                        <img src="" id="imageUpload3" class="imageUpload">
                         <input type="file" id="imageFile3" class="imageFile" name="image" accept="image/jpg,image/png" />
                         <img id="imagePreview3" class="imagePreview" />
                         <div id="imageName3" class="imageName"></div>
@@ -211,7 +213,7 @@
                     </div>
                 
                     <div id="preview-container4" class="imageDialogContainer">
-                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload4" class="imageUpload">
+                        <img src="" id="imageUpload4" class="imageUpload">
                         <input type="file" id="imageFile4" class="imageFile" name="image" accept="image/jpg,image/png,image/gif" />
                         <img id="imagePreview4" class="imagePreview" />
                         <div id="imageName4" class="imageName"></div>
@@ -221,13 +223,13 @@
             </div>
         </form>
         <div class="submitBtn">
-            <input type="submit" class="submit" id="previewSubmissionDetails" value="Preview Submission" disabled>
+            <input type="submit" class="submit" id="previewSubmissionDetails" value="SUBMIT" disabled>
         </div>
     </div>
     <script src="../js/dashboard-navbar.js"></script>
     <script src="../js/submission-dom-behavior.js"></script>
-    <script src="../js/dashboard_submission_form.js"></script>
     <script src="../js/imageValidation.js"></script>
     <script src="../js/get_user.js"></script>
+    <script src="../js/dashboard_submission_form.js"></script>
 </body>
 </html>

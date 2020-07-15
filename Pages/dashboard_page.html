@@ -5,6 +5,8 @@
 		<meta name="viewport" content="width=device-width" intial-scale="1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
 		<link rel="stylesheet" type="text/css" href="../scss/component/dashboard_page.css ">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<title>Dashboard</title>
 	</head>
@@ -118,7 +120,7 @@
 					<form class="selectarea">
 					<div class="inst">
 						<legend>INSTITUTION</legend>
-						<input type="text" name="contestant-institution" list="const-inst-list" id="institution" />
+						<input type="text" name="contestant-institution" list="const-inst-list" id="institution" placeholder="Institution"/>
 						<datalist id="const-inst-list">
 							<option>YABATECH</option>
 							<option>University of Ibadan</option>
@@ -138,7 +140,7 @@
 					</div>
 					<div class="dept">
 						<legend>DEPARTMENT</legend>
-						<input type="text" name="contestant-department" id="department">
+						<input type="text" name="contestant-department" id="department" placeholder="Department">
 					</div>
 					</form>
 				</div>
@@ -167,7 +169,7 @@
 				<div class="progress_bar__circleThree"></div><div class="progress_bar__line"></div>
 				<div class="progress_bar__circleFour"></div>
 			</div><br>
-			<button class="progress_submit"><a href="#">Submit Application</a></button><br><br>
+			<button class="progress_submit" id="submitResponse"><a href="#">Submit Application</a></button><br><br>
 		</div>
 		</div>
 		</div>
