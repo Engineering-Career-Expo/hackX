@@ -1376,7 +1376,7 @@ body {
   color: rgb(229,25,59);
 }
 .password-reset-link {
-  display: none;
+  display: block;
 }
 .sent-reset-link {
   text-align: center;
