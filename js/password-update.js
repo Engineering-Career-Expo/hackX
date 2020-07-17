@@ -53,26 +53,16 @@ const userDetails = async (passwordUpdateInfo) => {
 
 
   axios
-    .post("https://hackxbackend.herokuapp.com/updatePassword/",  passwordUpdateInfo, { headers: headers})
+    .put("https://hackxbackend.herokuapp.com/updatePassword/",  passwordUpdateInfo, { headers: headers})
     .then((response) => {
       response.data;
       // console.log(response)
       if (response.status == "200") {
-        if (response.data == "Password Incorrect") {
-          showLoginAlert("Login Incorrect", "error");
-        } else if (response.data == "Wrong email entered.") {
-          showLoginAlert("Email entered is incorrect", "error");
-        } else if (response.data == "Password Mismatch.") {
-          showLoginAlert("Password do not match each other", "error");
-        } else if (response.data == "Session Redirection To Login page"){
+        if (response.data == "Password has been updated Successfully") {
+          showLoginAlert("Password updated Successfully", "success");
           window.location.href = 'https://hackx.netlify.app/pages/Login';
-        }else {
-          showLoginAlert("email and username is verified", "success");
-          localStorage.setItem("pass", response.data.token);
-          localStorage.setItem("id", response.data.id);
-          localStorage.setItem("username", response.data.username);
-          window.location.href = 'https://hackx.netlify.app/pages/Login';
-
+        } else {
+          showLoginAlert("Details entered not correct", "error");
         }
       } else {
         showLoginAlert("Something Went Wrong. Try Again Later", "error");
