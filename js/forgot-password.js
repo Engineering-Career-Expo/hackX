@@ -39,21 +39,10 @@ const userDetails = async (forgotPasswordInfo) => {
       response.data;
       // console.log(response)
       if (response.status == "200") {
-        if (response.data == "Login Incorrect") {
-          showLoginAlert("Login Incorrect", "error");
-        } else if (response.data == "Wrong email entered.") {
-          showLoginAlert("Email or Username entered is incorrect", "error");
-        } else if (response.data == "Wrong username entered.") {
-          showLoginAlert("Email or username entered is incorrect", "error");
-        } else if (response.data == "Session Redirection To email verification page"){
-          window.location.href = 'https://hackx.netlify.app/pages/email-verification';
-        }else {
-          showLoginAlert("email and username is verified", "success");
-          localStorage.setItem("pass", response.data.token);
-          localStorage.setItem("id", response.data.id);
-          localStorage.setItem("username", response.data.username);
-          window.location.href = 'https://hackx.netlify.app/pages/email-verification';
-
+        if (response.data == "Forgot Password redirect") {
+          window.location.href = 'https://hackx.netlify.app/pages/password-update';
+        } else {
+          showLoginAlert("Credentials does not match", "error");
         }
       } else {
         showLoginAlert("Something Went Wrong. Try Again Later", "error");
