@@ -1376,7 +1376,7 @@ body {
   color: rgb(229,25,59);
 }
 .password-reset-link {
-  display: none;
+  display: block;
 }
 .sent-reset-link {
   text-align: center;
@@ -1386,6 +1386,9 @@ body {
 .register-main-container .register-form-container .reset-btn,
 .register-main-container .register-form-container .check-mail-btn {
     width: 100%;
+}
+.btn-cnt a {
+  font-family: 'Gilroy', sans-serif;
 }
 .about {
   padding: 8px;
