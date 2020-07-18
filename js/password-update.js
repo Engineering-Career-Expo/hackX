@@ -58,7 +58,7 @@ const userDetails = async (passwordUpdateInfo) => {
       response.data;
       // console.log(response)
       if (response.status == "200") {
-        if (response.data == "Password has been updated Successfully") {
+        if (response.data == "Password has been updated Successfully.") {
           showLoginAlert("Password updated Successfully", "success");
           window.location.href = 'https://hackx.netlify.app/pages/Login';
         } else {
