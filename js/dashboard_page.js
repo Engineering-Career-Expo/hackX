@@ -103,6 +103,31 @@ else {
   dots[slideIndex-1].className += " active";
 }
 
+// No display image
+
+var noDisplay = document.querySelector('#displayy_mobile');
+var participantInfo = document.querySelector('.participant-info');
+var headerOneApp = document.querySelector('.header_one__app');
+var headerTwoTime = document.querySelector('.header_two__time');
+var headerTwoPrize = document.querySelector('.header_two__prize');
+var headerTwoOver = document.querySelector('.header_two__over');
+var headerTwo = [headerTwoTime, headerTwoPrize, headerTwoOver];
+var x;
+
+for (x of headerTwo) {
+	x.onclick = () => {
+		noDisplay.style.display = "block";
+		participantInfo.style.display = "none";
+		document.querySelector('.line').style.display = "block";
+	}
+}
+headerOneApp.onclick = () => {
+	noDisplay.style.display = "none";
+	participantInfo.style.display = "block";
+	participantInfo.classList.add('participant-infoAdd_class');
+	document.querySelector('.line').style.display = "none"
+}
+
 // backend connection
 
 function ValidateTrack()  

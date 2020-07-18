@@ -250,6 +250,9 @@ input::placeholder {
     	-moz-box-shadow: -1px 2px 20px -10px rgba(0, 0, 0, 0.562);
     	box-shadow: -1px 2px 20px -10px rgba(0, 0, 0, 0.562);
 	}
+	.header_one:active{
+		background: #78b0ff;
+	}
 	.header_one__app {
 		display: relative;
 		font-family: "Montserrat", sans-serif;
@@ -258,6 +261,9 @@ input::placeholder {
 		font-size: 14px;
 		display: flex;
 		flex-direction: column;
+	}
+	.header_one__app:active{
+		background: #78b0ff;
 	}
 	.header_one .header_one__app .line {
 		width: 100%;
@@ -275,9 +281,14 @@ input::placeholder {
 		margin-bottom: 20%;
 		transition: .8s;
 		font-size: 1.18vw;
+		padding: 3% 0% 0% 0%;
 	}
 	.header_one__app a:hover {
 		color: #1071f3;
+	}
+	.header_one__app a:active{
+		color: #ffffff;
+		background: #78b0ff;
 	}
 	.header_two {
 		width: 70%;
@@ -304,6 +315,18 @@ input::placeholder {
 	.header_two__time a:hover, .header_two__prize a:hover,
 	.header_two__over a:hover {
 		color: rgba(0, 0, 0, 0.9);
+		padding: 3% 0%;
+	}
+	.header_two__time a:active, .header_two__prize a:active,
+	.header_two__over a:active{
+		padding: 0%;
+		color: #ffffff;
+		background: #78b0ff;
+	}
+	.header_two__time:active, .header_two__prize:active,
+	.header_two__over:active{
+		padding: 5% 7%;
+		background: #78b0ff;
 	}
 	.header_two__time a {
 		color: rgba(0, 0, 0, 0.4);
@@ -937,6 +960,7 @@ input::placeholder {
 	}
 	.progress_section{
 		margin-top: 320px;
+		margin-bottom: 100px;
 		border: 1px solid #ffffff;
 		width: 90%;
 		border-radius: 5px;
@@ -1062,4 +1086,43 @@ input::placeholder {
 
 .error {
   background: #E5193B;
+}
+@media screen and (max-width: 768px) {
+	#displayy_mobile{
+		display: none;
+	}
+}
+@media screen and (min-width: 769px) {
+	.display_body{
+		background: #E5E5E5;
+	}
+	#displayy_mobile{
+		display: none;
+		animation: displayy 1s 1;
+	}
+	@keyframes displayy{
+		from{ opacity: 0; }
+		to{ opacity: 1; }
+	}
+	.display_txt{
+		display: block;
+		text-align: center;
+		width: 70%;
+		margin-top: -45%;
+	}
+	.display_txt__one, .display_txt__two{
+		font-family: 'Montserrat', sans-serif;
+		font-style: normal;
+		font-weight: 600;
+		font-size: 18px;
+		color: rgba(0, 0, 0, 0.6);
+		text-transform: capitalize;
+	}
+	.participant-infoAdd_class{
+		animation: parInfo 1s 1;
+	}
+	@keyframes parInfo {
+		from { opacity: 0; }
+		to { opacity: 1; }
+	}
 }
