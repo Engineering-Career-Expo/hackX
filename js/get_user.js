@@ -1,11 +1,9 @@
-$(document).ready( function() {
-	jquery(window).load( function() {
-		var userName = localStorage.get('username');
-		var displayUserName = document.querySelector('.name');
-		if ( userName == undefined ) {
-			alert('Username not available');
-		}else{
-			displayUserName.innerHTML = userName;
-		}
-	});
-});
+ 
+var userName = localStorage.getItem('username');
+console.log(userName);
+var displayUserName = document.querySelector('.name');
+if ( userName == undefined ) {
+	alert('Username not available');
+}else{
+	displayUserName.innerHTML = userName;
+} 
