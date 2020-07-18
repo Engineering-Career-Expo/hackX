@@ -103,6 +103,52 @@ else {
   dots[slideIndex-1].className += " active";
 }
 
+// No display image
+
+var noDisplay = document.querySelector('#displayy_mobile');
+var participantInfo = document.querySelector('.participant-info');
+var headerOneApp = document.querySelector('.header_one__app');
+var headerTwoTime = document.querySelector('.header_two__time');
+var headerTwoPrize = document.querySelector('.header_two__prize');
+var headerTwoOver = document.querySelector('.header_two__over');
+var headerTwo = [headerTwoTime, headerTwoPrize, headerTwoOver];
+var x;
+	
+headerTwoTime.onclick = () => {
+	noDisplay.style.display = "block";
+	participantInfo.style.display = "none";
+	document.querySelector('.line').style.display = "none";
+	document.querySelector('.lineActive1').style.visibility = "visible";
+	document.querySelector('.lineActive2').style.visibility = "hidden";
+	document.querySelector('.lineActive3').style.visibility = "hidden";
+}
+headerTwoPrize.onclick = () => {
+	noDisplay.style.display = "block";
+	participantInfo.style.display = "none";
+	document.querySelector('.line').style.display = "none";
+	document.querySelector('.lineActive2').style.visibility = "visible";
+	document.querySelector('.lineActive1').style.visibility = "hidden";
+	document.querySelector('.lineActive3').style.visibility = "hidden";
+}
+headerTwoOver.onclick = () => {
+	noDisplay.style.display = "block";
+	participantInfo.style.display = "none";
+	document.querySelector('.line').style.display = "none";
+	document.querySelector('.lineActive3').style.visibility = "visible";
+	document.querySelector('.lineActive1').style.visibility = "hidden";
+	document.querySelector('.lineActive2').style.visibility = "hidden";
+}
+
+headerOneApp.onclick = () => {
+	noDisplay.style.display = "none";
+	participantInfo.style.display = "block";
+	participantInfo.classList.add('participant-infoAdd_class');
+	document.querySelector('.line').style.display = "block"
+	document.querySelector('.lineActive1').style.visibility = "hidden";
+	document.querySelector('.lineActive2').style.visibility = "hidden";
+	document.querySelector('.lineActive3').style.visibility = "hidden";
+}
+
 // backend connection
 
 function ValidateTrack()  
