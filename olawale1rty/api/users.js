@@ -454,7 +454,7 @@ router.put("/updateSubmission", authorize(), (req, res) => {
       });
 });
 
-router.get("/forgotPassword", (req, res) => {
+router.post("/forgotPassword", (req, res) => {
   const { email, username } = req.body;   
   User.find(
     {

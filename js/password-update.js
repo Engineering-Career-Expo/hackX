@@ -35,9 +35,9 @@ const formEvent = loginForm.addEventListener("submit", async (event) => {
   const newPassword = document.querySelector('#newPassword').value;
   const password = document.querySelector("#confirmPassword").value;
   const passwordUpdateInfo = await { email, password };
-  if (newPassword === "" || confirmPassword === "") {
+  if (newPassword === "" || password === "") {
     showLoginAlert("Please Fill All Fields", "error");
-  } else if (newPassword != confirmPassword) {
+  } else if (newPassword != password) {
     showLoginAlert("Password Mismatch", "error");
   } else {
     userDetails(passwordUpdateInfo);

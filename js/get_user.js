@@ -1,5 +1,6 @@
+
 var userName = localStorage.getItem('username');
-console.log(userName);
+// console.log(userName);
 var displayUserName1 = document.querySelector('.name');
 var displayUserName2 = document.querySelector('.user_username');
 var displayUserName3 = document.querySelector('.welcome_username');
