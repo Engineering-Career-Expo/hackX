@@ -18,7 +18,7 @@ const formEvent = loginForm.addEventListener("submit", async (event) => {
   localStorage.setItem("email", email);
   const username = document.querySelector("#username").value;
   const forgotPasswordInfo = await { email, username };
-  if (email === "" || password === "") {
+  if (email === "" || username === "") {
     showLoginAlert("Please Fill All Fields", "error");
   } else {
     userDetails(forgotPasswordInfo);
@@ -30,16 +30,16 @@ const userDetails = async (forgotPasswordInfo) => {
   headers = {
     'Content-Type': 'application/json',
     'withCredentials': true
-  }
+  };
 
 
   axios
-    .post("https://hackxbackend.herokuapp.com/forgotPassword/",  forgotPasswordInfo, { headers: headers})
+    .post("https://hackxbackend.herokuapp.com/forgotPassword",  forgotPasswordInfo, { headers: headers})
     .then((response) => {
       response.data;
       // console.log(response)
       if (response.status == "200") {
-        if (response.data == "Forgot Password redirect") {
+        if (response.data == "Forgot password redirect.") {
           window.location.href = 'https://hackx.netlify.app/pages/password-update';
         } else {
           showLoginAlert("Credentials does not match", "error");
