@@ -7,6 +7,7 @@
     <link href="../scss/component/dashboard-submitted-screen.css" rel="stylesheet">
     <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <nav>
@@ -72,7 +73,7 @@
                                         <div class="otherNavs">
                                             <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
                                             <a>Settings</a>
-                                            <a>Logout</a>
+                                            <a id="logout_user">Logout</a>
                                         </div>
                                     </div>                                    
                                 </button>
@@ -82,7 +83,7 @@
                     </div>
                 </div>
                 <div class="logout-wrapper">
-                    <a href="#" class="logout-btn"><button>LOGOUT</button></a>
+                    <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
                 </div>
             </div>
         </div>
@@ -167,5 +168,6 @@
     </div>
     <script src="../js/dashboard-navbar.js"></script>
     <script src="../js/get_user.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 </html>
