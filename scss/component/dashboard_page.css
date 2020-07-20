@@ -162,6 +162,14 @@ input::placeholder {
 		display:block;
 		font-family: Nuito-Sans, sans-serif;
 	}
+	.head_logout{
+		color: #1071f3;
+		background: none;
+	}
+	.head_logout:active{
+		color: #ffffff;
+		background: #1071f3;
+	}
 	.head_drop {
 		display:none;
 	}	

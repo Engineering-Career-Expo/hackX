@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
   <div class="main_dashboard__pageAll">
@@ -77,7 +78,7 @@
                                         <div class="otherNavs">
                                             <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
                                             <a>Settings</a>
-                                            <a>Logout</a>
+                                            <a id="logout_user">Logout</a>
                                         </div>
                                     </div>                                    
                                 </button>
@@ -87,7 +88,7 @@
                     </div>
                 </div>
                 <div class="logout-wrapper">
-                    <a href="#" class="logout-btn"><button>LOGOUT</button></a>
+                    <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
                 </div>
             </div>
         </div>
@@ -407,5 +408,6 @@
     <script src="../js/dashboard2-section.js"></script>
     <script src="../js/get_user.js"></script>
     <script src="../js/popup.js"></script>
+    <script src="../js/logout.js"></script>
 </body>
 </html>
