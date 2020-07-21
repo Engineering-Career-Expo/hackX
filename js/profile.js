@@ -23,3 +23,18 @@ for (i = 0; i < coll.length; i++) {
 	 nav.className = 'nav-content';
    }
  });
+
+ const headers = {
+	'Content-Type': 'application/json',
+	'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
+	'withCredentials': true,
+  }
+  const username = window.localStorage.getItem("username");
+
+ axios.get("https://hackxbackend.herokuapp.com/getuser", { headers: headers}, username)
+ .then (function (response) {
+	 console.log(response);
+ })
+ .catch (function (error) {
+	 console.log(error);
+ })
