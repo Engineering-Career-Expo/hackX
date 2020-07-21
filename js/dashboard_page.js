@@ -41,7 +41,6 @@ function showSlides(n) {
   var x = document.querySelector('.progress_bar__circleTwo');
   var a = document.querySelector('.progress_bar__circleThree');
   var b = document.querySelector('.progress_bar__circleFour');
-  var p = document.querySelector('.progress_submit a');
   
   if (n == 1) {
   	m.style.backgroundColor = "#1071f3";
@@ -71,8 +70,6 @@ function showSlides(n) {
   	b.style.marginTop = "0px";
   	b.innerHTML = "4";
   	y.innerHTML = "100%";
-  	p.style.backgroundColor = "#1071f3";
-  	p.style.color = "#ffffff";
   }
   if (n > 4) {
       document.getElementById("next").disabled = true;
@@ -149,6 +146,20 @@ headerOneApp.onclick = () => {
 	document.querySelector('.lineActive3').style.visibility = "hidden";
 }
 
+// Submit question
+var submitPopup = document.querySelector('#submit_popup');
+var closePopup = document.querySelector('#close_popup');
+document.querySelector('#finish').onclick = () => {
+	submitPopup.style.display = "block";
+	document.querySelector('.dashboard_all__opacity').style.height = "100%";
+	document.querySelector('.dashboard_all__opacity').style.overflow = "hidden";
+};
+closePopup.addEventListener('click', () => {
+	submitPopup.style.display = "none";
+	document.querySelector('.dashboard_all__opacity').style.height = "100%";
+	document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
+});
+
 // backend connection
 
 function ValidateTrack()  
@@ -168,8 +179,7 @@ function ValidateTrack()
 }  
 
 const popUp = document.querySelector(".response-bar");
-const Submit = document.querySelector("#finish");
-const SubmitAlt = document.querySelector("#submitResponse");
+const Submit = document.querySelector(".submit_popup__btn");
 
 const showLoginAlert = (message, className) => {
   const div = document.createElement("div");
@@ -185,6 +195,7 @@ const showLoginAlert = (message, className) => {
 
 const formEvent = Submit.addEventListener("click", async (event) => {
   event.preventDefault();
+  document.querySelector('#submit_popup').style.display = "none";
   const bio = document.querySelector("#bio").value;
   let track = "";
   if (document.querySelector("#customCheckbox").checked){
@@ -198,30 +209,6 @@ const formEvent = Submit.addEventListener("click", async (event) => {
   }
   setTimeout(function () {
     Submit.disabled = true;
-    SubmitAlt.disabled = true;
-  }, 2000);
-  const link = document.querySelector("#link").value;
-  const institution = document.querySelector("#institution").value;
-  const department = document.querySelector("#department").value;
-  const Info = await { bio, track, link, institution, department };
-  dashboardInfo(Info); 
-});
-const formEventAlt = SubmitAlt.addEventListener("click", async (event) => {
-  event.preventDefault();
-  const bio = document.querySelector("#bio").value;
-  let track = "";
-  if (document.querySelector("#customCheckbox").checked){
-    track = document.querySelector("#customCheckbox").value
-  }else if(document.querySelector("#customCheckbox2").checked){
-    track = document.querySelector("#customCheckbox2").value
-  }else if(document.querySelector("#customCheckbox3").checked){
-    track = document.querySelector("#customCheckbox3").value
-  }else if(document.querySelector("#customCheckbox4").checked){
-    track = document.querySelector("#customCheckbox4").value
-  }
-  setTimeout(function () {
-    Submit.disabled = true;
-    SubmitAlt.disabled = true;
   }, 2000);
   const link = document.querySelector("#link").value;
   const institution = document.querySelector("#institution").value;
@@ -251,10 +238,8 @@ const dashboardInfo = async (Info) => {
         } else if (response.data == "Error when trying to upload files.") {
           showLoginAlert("Error when trying to upload files.", "error");
         }else if (response.data == "Files have been uploaded.") {
-          showLoginAlert("Submitted Successfully.", "success");
-          setTimeout(function () {
-            window.location.href = 'https://hackx.netlify.app/pages/main_dashboard_page';
-          }, 2000);
+          document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
+          document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
         } else if (response.data == "Dashboard Submission Failed") {
           showLoginAlert("Unable to submit files.", "error");
         }else if (response.data == 'Invalid Token') {
