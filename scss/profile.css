@@ -22,10 +22,7 @@ html {
 	margin-top: 30px;
 	padding-top: 120px;
 	border-radius: 3px;
-	background: url(../assets/images/Rectangle\ 74.png);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+	background-image: radial-gradient( #b0d9ff, #b0d9ff, #4ea2f1, #4ea2f1, #0080FB);
 }
 .inner_firsta{
 	width: 100%;
@@ -95,11 +92,9 @@ button.btna,input[type="submit"]{
    
    form{
 	text-align: center;
-     background: url(../assets/images/Rectangle\ 80.png);
-     background-size: cover;
-     background-repeat: no-repeat;
-     background-position: center;
+    background-image: radial-gradient( #4ea2f1,#4ea2f1, #4ea2f1, #4ea2f1, #0080FB);
      padding: 10px;
+     border-radius: 5px;
      overflow: hidden;
    }
 
@@ -107,21 +102,21 @@ button.btna,input[type="submit"]{
        width: 90%;
        margin: auto;
    }
-   .over_space .info, .over_space input {
+    .over_space input {
        width: 80%;
        padding: 5px;
    }
    .over_space h3,.over_space h2{
     font-family: 'Nunito Sans', sans-serif;
     margin-bottom: 3px;
-    color: white;
+    color: rgb(38, 39, 44);
    }
    .over_space .info, .over_space input {
-       margin-bottom: 7px;
+       margin-bottom: 20px;
        border-radius: 4px;
        border: transparent;
    }
-   .over_space .info-text, .over_space  textarea {
+    .over_space  textarea {
        width: 87%;
        border-radius: 5px;
    }
@@ -130,5 +125,8 @@ button.btna,input[type="submit"]{
        width: 100%;
        margin-top: 10px;
    }
-
-}
+   .info {
+       color: white;
+       font-family: 'Nuito Sans', sans-serif;
+       text-align: center;
+   }
