@@ -16,43 +16,20 @@ const headers = {
     'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
     'withCredentials': true, 
 }
-const username = localStorage.getItem('username');
-
+const username = localStorage.getItem("username");
+var data;
 axios
-.get("https://hackxbackend.herokuapp.com/getuser/",  username, { headers: headers})
+.get("https://hackxbackend.herokuapp.com/getuser/", { headers: headers},  username)
 .then((response) => {
-    let d = response.data;
-    console.log(d);
-})
-.catch((error) => console.error(error));
-
-    // GETTING THE DATA FROM THE RESPONSE DATA OBJECT
-    var firstname = d.firstname;
-    var lastname = d.lastname;
-    var email = d.email;
-    var track = d.track;
-    var age = d.age;
-    var institution = d.institution;
-
-    // UPDATING THE DETAILS FROM THE RESPONSE DATA
-    fullNameCnt.innerHTML = lastname + " " + firstname;
+    fullNameCnt.innerHTML = response.data.lastname + " " + response.data.firstname;
+    firstnameCnt.innerHTML = response.data.firstname;
     usernameCntHd.innerHTML = username;
     usernameCnt.innerHTML = username;
-    lastnameCnt.innerHTML = lastname;
-    firstnameCnt.innerHTML = firstname;
-    emailCnt.innerHTML = email;
-    trackCnt.innerHTML = track;
-    ageCnt.innerHTML = age;
-    institutionCnt.innerHTML = institution;
-
-
-// I USED CONCEPT TO DO THIS, I DONT COULD NOT TEST IT, PLEASE TEST IT FOR ME
-//{
-//     "firstname": "ola",
-//     "lastname": "unilag",
-//     "email": "olaxunilag@gmail.com",
-//     "username": "unihack",
-//     "track": "health",
-//     "age": 20,
-//     "institution": "unilag"
-//   }
+    lastnameCnt.innerHTML = response.data.lastname;
+    emailCnt.innerHTML = response.data.email;
+    trackCnt = response.data.dashboard.track;
+    ageCnt = response.data.dashboard.age;
+    institutionCnt = response.data.dashboard.institution;
+    console.log(response.data);
+})
+.catch((error) => console.error(error));
