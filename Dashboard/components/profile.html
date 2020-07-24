@@ -9,74 +9,67 @@
     <link rel="stylesheet" href="../../scss/profile.css">
 </head>
 <body>
-    <nav>
-        <div class="head_section1">
-          <div class="head_info0">
+  <nav>
+    <div class="head_section1">
+        <div class="head_info0">
             <a href="#">
-              <div class="head_pic0">
-                <img src="../../assets/images/ECXo.svg"/>
-              </div>
-            </a>
-         </div>
-        
-         <div class="nav-content">
-           <div class="nav-content-flex">
-            <div class="nav-links">
-              <div class="nav-item">
-                <button class="drop-btn">
-                  <img src="../../assets/images/dashboard 1.png" alt="Logo">
-                  Dashboard
-                </button>
-                <div class="dropDown-content">
-                 <a class="filter" href="#">Timeline</a>
-                 <a class="filter" href="#">Announcements</a>
-                 <a class="filter" href="#">Overview</a>
-               </div>
-              </div>
-         
-              <div class="nav-item br30">
-               <a href="#">
-                 <img class="message" src="../../assets/images/inbox 1.png" alt="Logo">
-                 <img class="unread" src="../../assets/images/Ellipse 16.png" alt="">
-                 Inbox
-               </a>
-             </div>
-         
-             <div class="nav-item br30">
-               <a href="#">
-                 <img src="../../assets/images/submit 1.png" alt="Logo">
-                 Submission
-               </a>
-             </div>
-            </div>
-       
-            <div class="i100">
-             <div class="head_section2">
-               <div class="head_logout">
-                 <p class="name">KEAZZY</p>
-                 <a href="#" class="view">VIEW PROFILE</a>
-               </div>
-               <div class="head_pic1">
-                  <div class="head_pic2"><img src="../../assets/images/sample.jpg" class="head_pic02"/></div>
+                <div class="head_pic0">
+                    <img src="../../assets/ECX.svg"/>
                 </div>
-             </div>
-             <div class="linedivide"></div>
-            </div>
-           </div>
-      
-           <div class="logout-wrapper">
-            <a href="#" class="logout-btn"><button>LOGOUT</button></a>
-           </div>
-         </div>
+            </a>
         </div>
-      </nav>
-      
-      <div class="hamburger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
-      
+        <div class="nav-content">
+            <div class="nav-content-flex">
+                <div class="nav-links">
+                    <div class="nav-item">
+                        <button class="drop-btn">
+                            <img src="../../assets/images/dashboard/dashboard-logo.png" alt="Logo">
+                            Dashboard
+                        </button>
+                        <div class="dropDown-content">
+                            <a class="filter" href="#timelineBtn">Timeline</a>
+                            <a id="announDropBtn" class="filter" href="#announBtn">Announcements</a>
+                            <a class="filter" href="#overviewBtn">Overview</a>
+                        </div> 
+                    </div>
+                    <div class="nav-item br30">
+                        <a href="#">
+                            <img class="message" src="../../assets/images/dashboard/inbox-logo.png" alt="Logo">
+                            <img class="unread" src="../../assets/images/Ellipse 16.png" alt="">
+                            Inbox
+                        </a>
+                    </div>  
+                    <div class="nav-item br30">
+                        <a href="#">
+                            <img src="../../assets/images/dashboard/submit-logo.png" alt="Logo">
+                            Submission
+                        </a>
+                    </div>
+                </div>
+                <div class="i100">
+                    <div class="head_section2">
+                        <div class="head_logout">
+                            <p class="name">KEAZZY</p>
+                            <a href="#" class="view">VIEW PROFILE</a>
+                        </div>
+                        <div class="head_pic1">
+                            <div class="head_pic2"><img src="../../assets/images/sample.jpg" class="head_pic02"/></div>
+                        </div> 
+                    </div>
+                    <div class="linedivide"></div>
+                </div>
+            </div>
+            <div class="logout-wrapper">
+                <a href="#" class="logout-btn"><button>LOGOUT</button></a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="hamburger">
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+</div> 
     <div class="firsta">
         <div class="inner_firsta">
            <div class="image_1">
@@ -102,7 +95,7 @@
                
                 
                     <h3>Email Address:</h3>
-                    <input type="email" name="email">
+                    <input type="email" name="email" class="info">
                
                
                     <h3>FirstName</h3>
