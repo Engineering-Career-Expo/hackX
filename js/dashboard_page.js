@@ -48,34 +48,29 @@ function showSlides(n) {
   	m.style.width = "40px";
   	m.style.marginTop = "0px";
   	m.innerHTML = "1";
-  	y.innerHTML = "25%";
   }else if (n == 2) {
   	x.style.backgroundColor = "#1071f3";
   	x.style.height = "40px";
   	x.style.width = "40px";
   	x.style.marginTop = "0px";
   	x.innerHTML = "2";
-  	y.innerHTML = "50%";
   }else if(n == 3) {
   	a.style.backgroundColor = "#1071f3";
   	a.style.height = "40px";
   	a.style.width = "40px";
   	a.style.marginTop = "0px";
   	a.innerHTML = "3";
-  	y.innerHTML = "75%";
   }else{
   	b.style.backgroundColor = "#1071f3";
   	b.style.height = "40px";
   	b.style.width = "40px";
   	b.style.marginTop = "0px";
   	b.innerHTML = "4";
-  	y.innerHTML = "100%";
   }
-  if (n > 4) {
+  if (n > 3) {
       document.getElementById("next").disabled = true;
       document.getElementById("next").style.display = 'none';
       document.getElementById("finish").style.display = 'block';
-      return;
 }
 else {
     document.getElementById("next").disabled = false;
@@ -240,6 +235,7 @@ const dashboardInfo = async (Info) => {
         }else if (response.data == "Files have been uploaded.") {
           document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
           document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
+          localStorage.setItem("submission", true);
         } else if (response.data == "Dashboard Submission Failed") {
           showLoginAlert("Unable to submit files.", "error");
         }else if (response.data == 'Invalid Token') {
@@ -256,3 +252,10 @@ const dashboardInfo = async (Info) => {
 
     .catch((error) => console.error(error.message));
 };
+
+if ( localStorage.getItem("submission") == true ) {
+	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
+	document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
+}else{
+	formEvent;
+}
