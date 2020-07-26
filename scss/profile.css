@@ -27,7 +27,7 @@ html {
 .inner_firsta{
 	width: 100%;
 	background-color: white;
-	
+	padding-bottom: 12px;
 }
 .image_1{
 	width: 130px;
@@ -51,14 +51,15 @@ html {
 	width: 70%;
 	margin: auto;
 	text-align: center;
-	margin-top: -30px;
+    margin-top: -30px;
+    justify-content: center;
 }
 .inner_texta h3,.inner_texta h4{
 	margin-bottom: 5px;
 	font-family: 'Nunito Sans', sans-serif;
 }
 button.btna,input[type="submit"]{
-	width: 70%;
+	width: 40%;
 	margin: auto;
 	padding: 10px;
 	border-radius: 7px;
@@ -69,7 +70,21 @@ button.btna,input[type="submit"]{
 	color: white;
 
 }
-	.firsta {
+.btn {
+    width: 40%;
+	margin: auto;
+	padding: 10px;
+	border-radius: 7px;
+	border: transparent;
+    background-color: white;
+    font-weight: 600;
+    font-size: 20px;
+	font-family: 'Nunito Sans', sans-serif;
+	 margin-bottom: 15px;
+	color: #0080FB;
+
+}
+.firsta {
 		text-align: center;
 	}
    .seconda{
@@ -89,7 +104,6 @@ button.btna,input[type="submit"]{
 	   text-align: center;
 	   color: white;
    }
-   
    form{
 	text-align: center;
     background-image: radial-gradient( #4ea2f1,#4ea2f1, #4ea2f1, #4ea2f1, #0080FB);
@@ -129,4 +143,25 @@ button.btna,input[type="submit"]{
        color: white;
        font-family: 'Nuito Sans', sans-serif;
        text-align: center;
+   }
+   .usernameUpdate {
+    width: 60%;
+    color: black;
+    font-family: 'Nuito Sans', sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+   @media (max-width: 400px) {
+    button.btna, .btn {
+        width: 60%;
+    }
+   }
+   @media (min-width: 768px) {
+       .firsta, .seconda { 
+           width: 70%;
+           margin: 6% 15%;
+       }
+       .usernameUpdate {
+        width: 40%;
+    }
    }
