@@ -32,18 +32,11 @@
 										Dashboard
 									</button>
 									<div class="dropDown-content">
-										<a class="filter" href="#">Timeline</a>
-										<a class="filter" href="#">Announcements</a>
-										<a class="filter" href="#">Overview</a>
+										<a class="filter" href="#timelineBtn">Timeline</a>
+										<a id="announDropBtn" class="filter" href="#announBtn">Announcements</a>
+										<a class="filter" href="#overviewBtn">Overview</a>
 									</div> 
 								</div>
-								<div class="nav-item br30">
-									<a href="#">
-										<img class="message" src="../assets/images/dashboard/inbox-logo.png" alt="Logo">
-										<img class="unread" src="../assets/images/Ellipse 16.png" alt="">
-										Inbox
-									</a>
-								</div>  
 								<div class="nav-item br30">
 									<a href="#">
 										<img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
@@ -64,12 +57,12 @@
 										<button class="dropdownBtn">
 											<img src="../assets/images/dashboard/dropdown-logo.svg">
 											<div class="dropdownProfile" id="dropdownProfile">
-												<div class="username">Signed in as Keazzy </div>
+												<div class="username">Signed in as <span class="user_username">Keazzy</span> </div>
 												<hr class="ddHr">
 												<div class="accountState">Flying Solo</div>
 												<hr class="ddHr">
 												<div class="navigationLink">
-													<a>Your Profile</a>
+													<a href="profile-page.html">Your Profile</a>
 													<a>Your submissions</a>
 													<a>Your Teams</a>
 												</div>
@@ -77,7 +70,7 @@
 												<div class="otherNavs">
 													<a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
 													<a>Settings</a>
-													<a>Logout</a>
+													<a id="logout_user">Logout</a>
 												</div>
 											</div>                                    
 										</button>
@@ -87,7 +80,7 @@
 							</div>
 						</div>
 						<div class="logout-wrapper">
-							<a href="#" class="logout-btn"><button>LOGOUT</button></a>
+							<a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
 						</div>
 					</div>
 				</div>
