@@ -27,9 +27,9 @@ axios
     usernameCnt.innerHTML = username;
     lastnameCnt.innerHTML = response.data.lastname;
     emailCnt.innerHTML = response.data.email;
-    trackCnt = response.data.dashboard.track;
-    ageCnt = response.data.dashboard.age;
-    institutionCnt = response.data.dashboard.institution;
+    trackCnt = response.data.dashboard[0];
+    ageCnt = response.data.dashboard[1];
+    institutionCnt = response.data.dashboard[2];
     console.log(response.data);
 })
 .catch((error) => console.error(error));
