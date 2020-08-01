@@ -13,21 +13,21 @@ const showLoginAlert = (message, className) => {
 };
 
 
-const username = localStorage.getItem("username");
 const email = localStorage.getItem("email");
-const usernameUpdate = document.querySelector('#usernameUpdate');
-
-const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
-    'withCredentials': true, 
-}
+var usernameUpdate = document.querySelector('#usernameUpdate');
+const username = usernameUpdate;
 
 const submitData = usernameUpdate.addEventListener("submit", async (event) => {
     event.preventDefault();
-    const Info = await { username, email };
+    const Info = await { email, username };
     infoStuff(Info);
 });
+
+const headers = {
+  'Content-Type': 'application/json',
+  'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
+  'withCredentials': true, 
+}
 
 const infoStuff = async (Info) => {
     axios
