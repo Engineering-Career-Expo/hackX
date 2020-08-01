@@ -169,26 +169,32 @@ button:hover, input:hover, textarea:hover {
     padding: .85%;
 } 
 .dashboard-submission-form .subForm .inputCnt .imgCnt {
-    margin: 0 4% 0 4%;
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer {
-    width: auto;
-    height: auto;
+    width: 260px;
+    height: 360px;
     border-radius: 5px;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
+    justify-content: space-evenly;
     margin: 2% 1.5%;
     font-family: 'Montserrat', Tahoma, Geneva, Verdana, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 1.4vw;
+}
+.dashboard-submission-form .subForm .inputCnt .imgCnt .imgDiCont1, 
+.dashboard-submission-form .subForm .inputCnt .imgCnt .imgDiCont2, 
+.dashboard-submission-form .subForm .inputCnt .imgCnt .imgDiCont3, 
+.dashboard-submission-form .subForm .inputCnt .imgCnt .imgDiCont4 {
+    display: none;
 }
 .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer .imageUpload {
     width: inherit;
@@ -209,7 +215,7 @@ button:hover, input:hover, textarea:hover {
 .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer .imagePreview {
     display: none;
     width: inherit;
-    height: auto;
+    height: 300px;
     overflow: hidden;
     text-align: center;
     border: 1px solid rgba(0,0,0,0.01);
@@ -219,6 +225,7 @@ button:hover, input:hover, textarea:hover {
     display: none;
     color: #1071F3;
     margin: 2% 0;
+    font-size: 18px;
 }
 .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer .deleteImage {
     display: none;
@@ -382,6 +389,13 @@ button:hover, input:hover, textarea:hover {
         font-size: 4vw;
         padding: 3%;
     }
+    .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer {
+        width: 210px;
+        height: 280px;
+    }
+    .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer .imagePreview {
+        height: 190px;
+    }
 }
 @media (min-width: 401px) and (max-width: 570px) {
     .dashboard-submission-form .subForm {
@@ -429,6 +443,13 @@ button:hover, input:hover, textarea:hover {
     }
     .dashboard-submission-form .submitBtn .submit:disabled {
         font-size: 3vw;
+    }
+    .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer {
+        width: 270px;
+        height: 340px;
+    }
+    .dashboard-submission-form .subForm .inputCnt .imgCnt .imageDialogContainer .imagePreview {
+        height: 230px;
     }
 }
 @media (min-width: 570px) and (max-width: 768px) {
