@@ -362,6 +362,9 @@ a.view {
 		display: none;
 		opacity: 1;
 	}
+	#dropdownLogo {
+		display: none;
+	}
 	.responsive {
 		display: block;
 		animation: fade 1s ease;
