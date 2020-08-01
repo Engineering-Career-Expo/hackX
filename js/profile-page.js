@@ -50,3 +50,7 @@ axios
     console.log(response.data);
 })
 .catch((error) => console.error(error));
+
+function direct() {
+  window.location.href = 'https://hackx.netlify.app/pages/profile-username-update';
+}
