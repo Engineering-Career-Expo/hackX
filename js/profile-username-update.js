@@ -48,7 +48,3 @@ const infoStuff = async (Info) => {
     })
     .catch((error) => console.error(error));
 };
-
-function direct() {
-  window.location.href = 'https://hackx.netlify.app/pages/profile-username-update';
-}
