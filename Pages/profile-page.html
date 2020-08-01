@@ -40,13 +40,6 @@
                         </div>
                         <div class="nav-item br30">
                             <a href="#">
-                                <img class="message" src="../assets/images/dashboard/inbox-logo.png" alt="Logo">
-                                <img class="unread" src="../assets/images/Ellipse 16.png" alt="">
-                                Inbox
-                            </a>
-                        </div>  
-                        <div class="nav-item br30">
-                            <a href="#">
                                 <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
                                 Submission
                             </a>
@@ -70,7 +63,7 @@
                                         <div class="accountState">Flying Solo</div>
                                         <hr class="ddHr">
                                         <div class="navigationLink">
-                                            <a>Your Profile</a>
+                                            <a href="profile-page.html">Your Profile</a>
                                             <a>Your submissions</a>
                                             <a>Your Teams</a>
                                         </div>
@@ -78,7 +71,7 @@
                                         <div class="otherNavs">
                                             <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
                                             <a>Settings</a>
-                                            <a>Logout</a>
+                                            <a id="logout_user">Logout</a>
                                         </div>
                                     </div>                                    
                                 </button>
@@ -88,7 +81,7 @@
                     </div>
                 </div>
                 <div class="logout-wrapper">
-                    <a href="#" class="logout-btn"><button>LOGOUT</button></a>
+                    <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
                 </div>
             </div>
         </div>
@@ -102,19 +95,20 @@
         <div class="inner_firsta">
            <div class="image_1">
                 <div class="image_2">
-                    <img src="../../assets/images/Ellipse 1.png" alt="">
+                    <img src="../assets/images/Ellipse 1.png" alt="">
                 </div>
            </div>
            <div class="inner_texta">
                <h3 id ="fullName">Dummy Noobie</h3>
                <h4 id = "usernameHd">Dunoo</h4>
            </div>
+           <button class="btna" onclick="direct()">Change username</button>
         </div>
     </div>
 
-    <div class="seconda">
+    <div class="seconda login-container">
         <h2>Profile</h2>
-        <form action="">
+        <form action="" class="login-form">
             <div class="over_space">
                 <h3>Username</h3>
                 <div id= "username" class="info"></div>
