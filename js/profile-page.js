@@ -28,14 +28,14 @@ var institutionCnt = document.getElementById('institution');
 
 // GETTING THE DATA FROM THE BACKEND
 const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
-    'withCredentials': true, 
+  'Content-Type': 'application/json',
+  'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
+  'withCredentials': true, 
 }
 const username = localStorage.getItem("username");
 
 axios
-.get("https://hackxbackend.herokuapp.com/getuser/", { headers: headers},  username)
+.get("https://hackxbackend.herokuapp.com/getuser/",  username, { headers: headers })
 .then((response) => {
     usernameCntHd.innerHTML = username;
     usernameCnt.innerHTML = username;
