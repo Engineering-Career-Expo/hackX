@@ -186,39 +186,27 @@ document.querySelector("#deleteImage").addEventListener('click', function(e) {
 document.querySelector("#deleteImage1").addEventListener('click', function(e) {
     e.preventDefault();
     URL.revokeObjectURL(imageUrl);
-    document.querySelector("#imageUpload1").style.display = 'block';
+    document.querySelector(".imgDiCont1").style.display = 'none';
     document.querySelector("#imageFile1").value = '';
-    document.querySelector("#imageName1").style.display = 'none';
-    document.querySelector("#imagePreview1").style.display = 'none';
-    document.querySelector("#deleteImage1").style.display = 'none';
 });
 //DELETE 3
 document.querySelector("#deleteImage2").addEventListener('click', function(e) {
     e.preventDefault();
     URL.revokeObjectURL(imageUrl);
-    document.querySelector("#imageUpload2").style.display = 'block';
+    document.querySelector(".imgDiCont2").style.display = 'none';
     document.querySelector("#imageFile2").value = '';
-    document.querySelector("#imageName2").style.display = 'none';
-    document.querySelector("#imagePreview2").style.display = 'none';
-    document.querySelector("#deleteImage2").style.display = 'none';
 });
 //DELETE 4
 document.querySelector("#deleteImage3").addEventListener('click', function(e) {
     e.preventDefault();
     URL.revokeObjectURL(imageUrl);
-    document.querySelector("#imageUpload3").style.display = 'block';
+    document.querySelector(".imgDiCont3").style.display = 'none';
     document.querySelector("#imageFile3").value = '';
-    document.querySelector("#imageName3").style.display = 'none';
-    document.querySelector("#imagePreview3").style.display = 'none';
-    document.querySelector("#deleteImage3").style.display = 'none';
 });
 //DELETE 5
 document.querySelector("#deleteImage4").addEventListener('click', function(e) {
     e.preventDefault();
     URL.revokeObjectURL(imageUrl);
-    document.querySelector("#imageUpload4").style.display = 'block';
+    document.querySelector(".imgDiCont4").style.display = 'none';
     document.querySelector("#imageFile4").value = '';
-    document.querySelector("#imageName4").style.display = 'none';
-    document.querySelector("#imagePreview4").style.display = 'none';
-    document.querySelector("#deleteImage4").style.display = 'none';
 });
