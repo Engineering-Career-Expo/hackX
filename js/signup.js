@@ -26,7 +26,7 @@ let confirmPassword = "";
 var checked = false;
 var checkbox = document.querySelector('#policy');
 document.querySelector('#policy-set').addEventListener('click', function() {
-  if ( checkbox.checked) {
+  if (checkbox.checked) {
     checkbox.checked = true;
   } else {
     checkbox.checked = false;
