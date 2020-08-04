@@ -21,6 +21,26 @@ let email = "";
 let username = "";
 let password = "";
 let confirmPassword = "";
+
+// THIS CODE MAKES A BOOLEAN IF THE CONDITION IS MET
+var checked = false;
+var checkbox = document.querySelector('#policy');
+document.querySelector('#policy-set').addEventListener('click', function() {
+  if ( checkbox.checked) {
+    checkbox.checked = true;
+  } else {
+    checkbox.checked = false;
+  }
+  if (checkbox.checked === false) {
+    checked = true;
+    console.log('yeah, it worked :) ' + checked);
+  } else {
+    checked = false;
+    console.log('Nah, it didn\'t work :( ' + checked);
+  }
+});
+
+
 const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
   event.preventDefault();
 
@@ -46,17 +66,22 @@ const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
     email === "" ||
     username === "" ||
     password === "" ||
-    confirmPassword === ""
+    confirmPassword === "" ||
+    checked === false
+    
   ) {
     showAlert_signup("Please Fill All Fields", "error");
+    console.log('error message');
   } else if (password != confirmPassword) {
     showAlert_signup("Passwords Don't Match", "error");
+    console.log('password mismatch');
   } 
   else {
-  	signup_btn.disabled = true
-   createSignup(signupInfo);
+  	signup_btn.disabled = true;
    enableSignup()
-   signup_btn.style.backgroundColor = "blue";
+   signup_btn.style.backgroundColor = "#FF3232";
+   console.log('success');
+    createSignup(signupInfo);
   }
 });
 
