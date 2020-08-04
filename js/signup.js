@@ -97,12 +97,12 @@ const createSignup = async (signupInfo) => {
 
   console.log("meeee")
   if(response.status != ""){
-	     signup_btn.disabled = false
-	     clearInterval(enable)
+	     signup_btn.disabled = false;
+	     clearInterval(enable);
 	     signup_btn.style.backgroundColor = "green";
 		 }
 		 if(response.status == ""){
-	     signup_btn.disabled = true
+	     signup_btn.disabled = true;
 	     signup_btn.style.backgroundColor = "lime";
 		 }
 
