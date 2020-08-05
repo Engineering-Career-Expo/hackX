@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="../scss/component/new-profile.css">
+    <link href="../scss/component/Dashboard2-section.css" rel="stylesheet">
+    <link href="../scss/page/popup.css" rel="stylesheet">
     <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
-    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>   
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../scss/profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
@@ -59,7 +63,9 @@
                                         <div class="accountState">Flying Solo</div>
                                         <hr class="ddHr">
                                         <div class="navigationLink">
+
                                             <a href="profile-page.html">Your Profile</a>
+
                                             <a>Your submissions</a>
                                             <a>Your Teams</a>
                                         </div>
@@ -67,7 +73,9 @@
                                         <div class="otherNavs">
                                             <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
                                             <a>Settings</a>
+
                                             <a id="logout_user">Logout</a>
+
                                         </div>
                                     </div>                                    
                                 </button>
@@ -77,7 +85,9 @@
                     </div>
                 </div>
                 <div class="logout-wrapper">
+
                     <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
+
                 </div>
             </div>
         </div>
@@ -86,72 +96,30 @@
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
-    </div>
-    <main class="profile-page-section">
-        <header class="hackx-dashboard">hackX <b>> Profile</b></header>
-        <div class="first-flex">
-            <div class="item-one">
-                <div class="image-row">
+    </div> 
+    <div class="firsta">
+        <div class="inner_firsta">
+           <div class="image_1">
+                <div class="image_2">
                     <img src="../assets/images/Ellipse 1.png" alt="">
                 </div>
-                <div class="content-row">
-                    <h4 id="full-name" class="full-name">Balogun Abdulazeez</h4>
-                    <h4 id="user-name" class="user-name">Keazzy</h4>
-                    <button class="edit-avatar" id="change-avatar">change avatar</button>
-                </div>
-            </div>
-            <div class="item-two desktop-bio">
-                <header class="head">BIO</header>
-                <div class="bio-text-content"></div>
-            </div>
+           </div>
+           <div class="inner_texta">
+               <h3 id ="fullName">Dummy Noobie</h3>
+           </div>
         </div>
-        <header class="flex-two-header">Basic Information</header>
-        
-        <div class="next-row login-container">
-            <div class="second-flex">
-                <div class="item-one login-form">
-                    <div class="details-cnt">
-                        <h5 class="input-title">USERNAME</h5>
-                        <h5 class="user-name input" id="user_name">username shows here</h5>
-                    </div>
-                    <div class="details-cnt">
-                        <h5 class="input-title">EMAIL ADDRESS</h5>
-                        <h5 class="email-address input" id="email-address">email shows here</h5>
-                    </div>
-                    <div class="details-cnt">
-                        <h5 class="input-title">FIRSTNAME</h5>
-                        <h5 class="first-name input" id="first-name">firstname shows here</h5>
-                    </div>
-                </div>
-                <div class="item-two">
-                    <div class="details-cnt">
-                        <h5 class="input-title">LASTNAME</h5>
-                        <h5 class="last-name input" id="last-name">lastname shows here</h5>
-                    </div>
-                    <div class="details-cnt">
-                        <h5 class="input-title">TRACK</h5>
-                        <h5 class="track input" id="track">track shows here</h5>
-                    </div>
-                    <div class="details-cnt">
-                        <h5 class="input-title">INSTITUTION</h5>
-                        <h5 class="institution input" id="institution">Institution shows here</h5>
-                    </div>
-                </div>
-            </div>
-            <button class="edit-profile">EDIT PROFILE</button>
-        </div>
-        <div class="row-three">
-            <header class="main-header">About me</header>
-            <div class="mobile-bio">
-                <header class="head">BIO</header>
-                <div class="bio-text-content"></div>
-            </div>
-        </div>
-    </main>
-    
-    <script src="../js/logout.js"></script>
-    <script src="../js/dashboard-navbar.js"></script>
-    <script src="../js/profile-page.js"></script>
-    <script src="../js/get_user.js"></script>
+    </div>
+
+    <div class="seconda login-container">
+        <h2>Profile</h2>
+        <form action="" class="login-form">
+            <div class="over_space">
+                <h3>Username</h3>
+                <input type="text" id= "newUsername" class="usernameUpdate" placeholder="new username">
+                <button type="submit" class="btn" id="usernameUpdate">update</button>   
+            </div>           
+        </form>
+    </div>
+    <script src="../js/profile-username-update.js"></script>
 </body>
 </html>
