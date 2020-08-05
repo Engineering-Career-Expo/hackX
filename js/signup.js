@@ -1,6 +1,7 @@
 // signup 1
 const signup = document.querySelector(".signup");
 const signup_btn = document.querySelector(".signup-btnn");
+let enable;
 
 const showAlert_signup = (message, className) => {
   const div = document.createElement("div");
@@ -25,7 +26,7 @@ let confirmPassword = "";
 var checked = false;
 var checkbox = document.querySelector('#policy');
 document.querySelector('#policy-set').addEventListener('click', function() {
-  if ( checkbox.checked) {
+  if (checkbox.checked) {
     checkbox.checked = true;
   } else {
     checkbox.checked = false;
@@ -42,6 +43,8 @@ document.querySelector('#policy-set').addEventListener('click', function() {
 
 const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
   event.preventDefault();
+
+//signup_btn.style.backgroundColor = "blue";
 
   firstname = document.querySelector("#first_name").value;
   lastname = document.querySelector("#last_name").value;
@@ -74,8 +77,11 @@ const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
     console.log('password mismatch');
   } 
   else {
-   createSignup(signupInfo);
+  	signup_btn.disabled = true;
+   enableSignup()
+   signup_btn.style.backgroundColor = "#FF3232";
    console.log('success');
+    createSignup(signupInfo);
   }
 });
 
@@ -85,6 +91,24 @@ const createSignup = async (signupInfo) => {
     .post("https://hackxbackend.herokuapp.com/signup", signupInfo)
     .then((response) => {
       response.data;
+
+
+//Disabling Button Code Starts
+
+  console.log("meeee")
+  if(response.status != ""){
+	     signup_btn.disabled = false;
+	     clearInterval(enable);
+	     signup_btn.style.backgroundColor = "green";
+		 }
+		 if(response.status == ""){
+	     signup_btn.disabled = true;
+	     signup_btn.style.backgroundColor = "lime";
+		 }
+
+//Disabling Button Code Ends		 
+
+
       if (response.status == "200") {
         if (response.data == "Failed to signup") {
           showAlert_signup("Email used already. ", "error");
@@ -94,7 +118,8 @@ const createSignup = async (signupInfo) => {
           window.location.href = 'https://hackx.netlify.app/pages/dashboard_page'; 
         } else if (response.data == "Session Redirection To Dashboard"){
           window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
-        }else {
+        }
+        else {
           showAlert_signup(response.data, "error");
         }
       } else {
@@ -103,3 +128,11 @@ const createSignup = async (signupInfo) => {
     })
     .catch((error) => console.error(error));
 };
+
+
+//Disabling Button Code Starts
+
+const enableSignup = () =>{
+enable = setInterval(createSignup,1000)
+  }
+//Disabling Button Code Ends		    
