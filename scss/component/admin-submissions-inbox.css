@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #E5E5E5;
+}
+button, button:hover {
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 80px;
+    padding: 7px 0;
+    font-family: 'Montserrat', sans-serif;
+}
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.submission-page {
+    width: 86%;
+    margin: 0 7%;
+    font-family: 'Montserrat', sans-serif;
+}
+.button-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2.3% 0;
+}
+.button-header .head-one {
+    width: 280px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.all-submissions {
+    background: #1071F3;
+    color: #FFFFFF;
+}
+.unread-submissions {
+    background: #6dabfc;
+    color: #FFFFFF;
+}
+.filter-submissions {
+    background: #ffffff;
+    color: #000000;
+}
+.delete-submission {
+    background: #E5193B;
+    color: #FFFFFF;
+}
+input[type="checkbox"] {
+    display: none;
+}
+.checkbox {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    background: #E5E5E5;
+    margin-right: 10%;
+}
+.submissions-section {
+    background: white;
+    padding: 1% 1.5%;
+    border-radius: 5px;
+}
+.submission-detail {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4.5% 0 2%;
+}
+.submission-detail .column-one {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+h5 {
+    margin: 2.5% 0;
+}
+.time, .submission-tag {
+    color: rgba(0,0,0,0.6);
+    font-size: 14px;
+}
+.participant-name {
+    color: #000000;
+    font-size: 15px;
+}
