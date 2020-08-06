@@ -35,6 +35,20 @@ input::placeholder {
 	outline: none;
 	border: none;
 }
+/* THE GENDER AND PHONE NO STYLE */
+#telNo{
+		padding:20px 0px 10px 0px;
+		}
+#phoneNo{
+		width: 80%;
+	margin: 2% 0;
+	height: 50px;
+	outline: none;
+	border: none;
+	background: whitesmoke;
+	padding: 5%;
+	border: 4px;
+		}
 
 /* NAVBAR STYLE */
 .nav_section {

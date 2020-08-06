@@ -56,11 +56,12 @@
 		
 		<div class="participant-info">
 			<div class="head">
-				Fill the following profile information as<br> required by the organizers of <b>hackX</b>
+				Fill the following information
 			</div>
 			<div class="response-bar">
 				<div class="circles">
 					<span class="dot" onclick="currentSlide(1)"></span>
+					<span class="dot" onclick="currentSlide(5)"></span>
 					<span class="dot" onclick="currentSlide(2)"></span>
 					<span class="dot" onclick="currentSlide(3)"></span>
 					<span class="dot" onclick="currentSlide(4)"></span>
@@ -75,6 +76,23 @@
 					<textarea class="inputarea" id="bio" placeholder="Write something about yourself"></textarea>
 				</div>
 			</div>
+			
+			
+			<div class="infoSlide">
+				<div class="reply">
+					<div>
+					<label class="contestant-bio">Gender</label><br>
+					 <input type="radio" name="gender" value="male">Male<br>
+					 <input type="radio" name="gender" value="female">Female
+					</div>
+					
+					<div id="telNo">
+					 <label class="contestant-bio">Phone Number</label>
+					 <input type="tel" placeholder="Phone No" id="phoneNo">
+					</div>
+				</div>
+			</div>
+			
 		
 			<div class="infoSlide">
 				<div class="reply">

@@ -67,7 +67,7 @@ function showSlides(n) {
   	b.style.marginTop = "0px";
   	b.innerHTML = "4";
   }
-  if (n > 3) {
+  if (n > 4) {
       document.getElementById("next").disabled = true;
       document.getElementById("next").style.display = 'none';
       document.getElementById("finish").style.display = 'block';
