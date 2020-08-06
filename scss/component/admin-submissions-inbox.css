@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap');
 html, body {
     width: 100%;
     height: 100%;
@@ -12,7 +12,7 @@ button, button:hover {
     outline: none;
     width: 80px;
     padding: 7px 0;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 *{
     box-sizing: border-box;
@@ -22,7 +22,7 @@ button, button:hover {
 .submission-page {
     width: 86%;
     margin: 0 7%;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 .button-header {
     width: 100%;
