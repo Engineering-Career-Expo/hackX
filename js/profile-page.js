@@ -27,31 +27,37 @@ var institution = document.getElementById('institution');
 
 
 // GETTING THE DATA FROM THE BACKEND
-const headers = {
-  'Content-Type': 'application/json',
-  'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
-  'withCredentials': true, 
-}
+const header = {
+  headers: {
+    'Content-Type': 'application/json',
+    'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
+    'withCredentials': true, 
+  }
+};
+
 const username = localStorage.getItem('username');
 console.log(username);
 user_name.innerHTML = username;
 user_Name.innerHTML = username;
 
-axios
-.get("https://hackxbackend.herokuapp.com/getuser/",  username, { headers: headers })
-.then((response) => {
-    full_name.innerHTML = response.data.lastname + " " + response.data.firstname;
-    first_name.innerHTML = response.data.firstname;
-    last_name.innerHTML = response.data.lastname;
-    email.innerHTML = response.data.email;
-    track = response.data.dashboard[0];
-    //ageCnt = response.data.dashboard[1];
-    institution = response.data.dashboard[2];
-    localStorage.setItem("email", response.data.email);
-    console.log(response.data);
-})
-.catch((error) => console.error(error));
+function axiosRequest() {
+  axios
+  .get("https://hackxbackend.herokuapp.com/getuser/", username, header)
+  .then((response) => {
+      full_name.innerHTML = response.data.lastname + " " + response.data.firstname;
+      first_name.innerHTML = response.data.firstname;
+      last_name.innerHTML = response.data.lastname;
+      email.innerHTML = response.data.email;
+      track.innerHTML = response.data.dashboard[0];
+      //age.innerHTML = response.data.dashboard[1];
+      institution.innerHTML = response.data.dashboard[2];
+      localStorage.setItem("email", response.data.email);
+      console.log(response.data);
+  })
+  .catch((error) => console.error(error));
+};
+axiosRequest();
 
-function direct() {
-  window.location.href = 'https://hackx.netlify.app/pages/profile-username-update';
-}
+// function direct() {
+//   window.location.href = 'https://hackx.netlify.app/pages/profile-username-update';
+// }
