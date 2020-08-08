@@ -35,6 +35,32 @@ input::placeholder {
 	outline: none;
 	border: none;
 }
+/* THE GENDER AND PHONE NO STYLE */
+
+#genderInfo{
+		display:flex;
+		justify-content: space-around;
+		height:300px;
+		}
+.one{
+  	width:80%;
+  	padding:0px 10px;
+				}
+#telNo{
+		align-self:flex-start;
+		margin-top:0px;
+		padding:0px;
+		}
+#phoneNo{
+		width: 90%;
+	margin: 2% 0;
+	height: 50px;
+	outline: none;
+	border: none;
+	background: whitesmoke;
+	padding: 5%;
+	border: 4px;
+		}
 
 /* NAVBAR STYLE */
 .nav_section {
@@ -863,9 +889,9 @@ input::placeholder {
 		border-radius: 5px;
 		cursor: pointer;
 	}
-	.selectarea {
+	.selectarea , #genderInfo{
 		width: 100%;
-		background: white;
+		background:white;
 		height: 400px;
 		padding: 4% 0;
 		border-radius: 8px;
@@ -877,6 +903,12 @@ input::placeholder {
 		font-weight: 600;
 		font-size: 1em;
 	}
+	#telNo{
+			padding:0px;
+			}
+	.one{
+			padding:0px 10px;
+			}
 	.selectarea .inst {
 		float: left;
 		width: 50%;
