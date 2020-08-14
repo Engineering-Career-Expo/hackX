@@ -6,17 +6,17 @@ var reg1 = document.getElementsByClassName("navbar_reg1");
 head_drop[0].addEventListener("click",myfunc1)
 var a = 0;
 function myfunc1(){
-		
-head_section3[0].style.height ="365px"		
-head_section3[0].style.width ="auto"				
-head_drop[0].innerHTML ="X"	
+    
+head_section3[0].style.height ="365px"    
+head_section3[0].style.width ="auto"        
+head_drop[0].innerHTML ="X" 
 a++;
 
-if(a%2 === 0){		
-head_section3[0].style.height ="0px"		
-head_section3[0].style.overflow ="hidden"		
+if(a%2 === 0){    
+head_section3[0].style.height ="0px"    
+head_section3[0].style.overflow ="hidden"   
 head_drop[0].innerHTML ="&#9776"
-		}
+    }
  }
  
 var slideIndex = 1;
@@ -43,33 +43,33 @@ function showSlides(n) {
   var b = document.querySelector('.progress_bar__circleFour');
   
   if (n == 1) {
-  	m.style.backgroundColor = "#1071f3";
-  	m.style.height = "40px";
-  	m.style.width = "40px";
-  	m.style.marginTop = "0px";
-  	m.innerHTML = "1";
-  	y.innerHTML = "25%";
+    m.style.backgroundColor = "#1071f3";
+    m.style.height = "40px";
+    m.style.width = "40px";
+    m.style.marginTop = "0px";
+    m.innerHTML = "1";
+    y.innerHTML = "25%";
   }else if (n == 2) {
-  	x.style.backgroundColor = "#1071f3";
-  	x.style.height = "40px";
-  	x.style.width = "40px";
-  	x.style.marginTop = "0px";
-  	x.innerHTML = "2";
-  	y.innerHTML = "50%";
+    x.style.backgroundColor = "#1071f3";
+    x.style.height = "40px";
+    x.style.width = "40px";
+    x.style.marginTop = "0px";
+    x.innerHTML = "2";
+    y.innerHTML = "50%";
   }else if(n == 3) {
-  	a.style.backgroundColor = "#1071f3";
-  	a.style.height = "40px";
-  	a.style.width = "40px";
-  	a.style.marginTop = "0px";
-  	a.innerHTML = "3";
-  	y.innerHTML = "75%";
+    a.style.backgroundColor = "#1071f3";
+    a.style.height = "40px";
+    a.style.width = "40px";
+    a.style.marginTop = "0px";
+    a.innerHTML = "3";
+    y.innerHTML = "75%";
   }else{
-  	b.style.backgroundColor = "#1071f3";
-  	b.style.height = "40px";
-  	b.style.width = "40px";
-  	b.style.marginTop = "0px";
-  	b.innerHTML = "4";
-  	y.innerHTML = "100%";
+    b.style.backgroundColor = "#1071f3";
+    b.style.height = "40px";
+    b.style.width = "40px";
+    b.style.marginTop = "0px";
+    b.innerHTML = "4";
+    y.innerHTML = "100%";
   }
   if (n > 4) {
       document.getElementById("next").disabled = true;
@@ -110,54 +110,54 @@ var headerTwoPrize = document.querySelector('.header_two__prize');
 var headerTwoOver = document.querySelector('.header_two__over');
 var headerTwo = [headerTwoTime, headerTwoPrize, headerTwoOver];
 var x;
-	
+  
 headerTwoTime.onclick = () => {
-	noDisplay.style.display = "block";
-	participantInfo.style.display = "none";
-	document.querySelector('.line').style.display = "none";
-	document.querySelector('.lineActive1').style.visibility = "visible";
-	document.querySelector('.lineActive2').style.visibility = "hidden";
-	document.querySelector('.lineActive3').style.visibility = "hidden";
+  noDisplay.style.display = "block";
+  participantInfo.style.display = "none";
+  document.querySelector('.line').style.display = "none";
+  document.querySelector('.lineActive1').style.visibility = "visible";
+  document.querySelector('.lineActive2').style.visibility = "hidden";
+  document.querySelector('.lineActive3').style.visibility = "hidden";
 }
 headerTwoPrize.onclick = () => {
-	noDisplay.style.display = "block";
-	participantInfo.style.display = "none";
-	document.querySelector('.line').style.display = "none";
-	document.querySelector('.lineActive2').style.visibility = "visible";
-	document.querySelector('.lineActive1').style.visibility = "hidden";
-	document.querySelector('.lineActive3').style.visibility = "hidden";
+  noDisplay.style.display = "block";
+  participantInfo.style.display = "none";
+  document.querySelector('.line').style.display = "none";
+  document.querySelector('.lineActive2').style.visibility = "visible";
+  document.querySelector('.lineActive1').style.visibility = "hidden";
+  document.querySelector('.lineActive3').style.visibility = "hidden";
 }
 headerTwoOver.onclick = () => {
-	noDisplay.style.display = "block";
-	participantInfo.style.display = "none";
-	document.querySelector('.line').style.display = "none";
-	document.querySelector('.lineActive3').style.visibility = "visible";
-	document.querySelector('.lineActive1').style.visibility = "hidden";
-	document.querySelector('.lineActive2').style.visibility = "hidden";
+  noDisplay.style.display = "block";
+  participantInfo.style.display = "none";
+  document.querySelector('.line').style.display = "none";
+  document.querySelector('.lineActive3').style.visibility = "visible";
+  document.querySelector('.lineActive1').style.visibility = "hidden";
+  document.querySelector('.lineActive2').style.visibility = "hidden";
 }
 
 headerOneApp.onclick = () => {
-	noDisplay.style.display = "none";
-	participantInfo.style.display = "block";
-	participantInfo.classList.add('participant-infoAdd_class');
-	document.querySelector('.line').style.display = "block"
-	document.querySelector('.lineActive1').style.visibility = "hidden";
-	document.querySelector('.lineActive2').style.visibility = "hidden";
-	document.querySelector('.lineActive3').style.visibility = "hidden";
+  noDisplay.style.display = "none";
+  participantInfo.style.display = "block";
+  participantInfo.classList.add('participant-infoAdd_class');
+  document.querySelector('.line').style.display = "block"
+  document.querySelector('.lineActive1').style.visibility = "hidden";
+  document.querySelector('.lineActive2').style.visibility = "hidden";
+  document.querySelector('.lineActive3').style.visibility = "hidden";
 }
 
 // Submit question
 var submitPopup = document.querySelector('#submit_popup');
 var closePopup = document.querySelector('#close_popup');
 document.querySelector('#finish').onclick = () => {
-	submitPopup.style.display = "block";
-	document.querySelector('.dashboard_all__opacity').style.height = "100%";
-	document.querySelector('.dashboard_all__opacity').style.overflow = "hidden";
+  submitPopup.style.display = "block";
+  document.querySelector('.dashboard_all__opacity').style.height = "100%";
+  document.querySelector('.dashboard_all__opacity').style.overflow = "hidden";
 };
 closePopup.addEventListener('click', () => {
-	submitPopup.style.display = "none";
-	document.querySelector('.dashboard_all__opacity').style.height = "100%";
-	document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
+  submitPopup.style.display = "none";
+  document.querySelector('.dashboard_all__opacity').style.height = "100%";
+  document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
 });
 
 // backend connection
@@ -193,6 +193,7 @@ const showLoginAlert = (message, className) => {
   }, 12000);
 };
 
+if (localStorage.getItem('bio') !== undefined ) {
 const formEvent = Submit.addEventListener("click", async (event) => {
   event.preventDefault();
   document.querySelector('#submit_popup').style.display = "none";
@@ -224,6 +225,7 @@ const headers = {
 }
 const id = window.localStorage.getItem("id");
  // https://hackxbackend.herokuapp.com
+var result = [];
 const dashboardInfo = async (Info) => {
   axios
     .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, Info, { headers: headers})
@@ -238,6 +240,7 @@ const dashboardInfo = async (Info) => {
         } else if (response.data == "Error when trying to upload files.") {
           showLoginAlert("Error when trying to upload files.", "error");
         }else if (response.data == "Files have been uploaded.") {
+          result.push("Files Submiited");
           document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
           document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
         } else if (response.data == "Dashboard Submission Failed") {
@@ -254,5 +257,12 @@ const dashboardInfo = async (Info) => {
       }
     })
 
-    .catch((error) => console.error(error.message));
+    .catch((error) => console.error(error.message)); 
+  };
 };
+
+if (result[0] == "Files Submiited") {
+  console.log(result[0]);
+  document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
+  document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
+};  

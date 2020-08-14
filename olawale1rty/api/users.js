@@ -22,7 +22,9 @@ router.post("/signup", (req, res) => {
   let role_pass = (role) => {
     if (role == undefined) {
       return Role.User
-    }else {
+    }else if(role == Role.Judge){
+      return Role.Judge
+    }else{
       return Role.Admin
     }
   };
@@ -130,6 +132,8 @@ const {
 bio,
 track,
 link,
+age,
+number,
 institution,
 department,
 } = req.body;
@@ -137,6 +141,8 @@ let inputData = new Dashboard({
 bio: bio,
 track: track,
 link: link,
+age: age,
+number: number,
 institution: institution,
 department: department
 });
