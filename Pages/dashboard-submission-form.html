@@ -28,18 +28,11 @@
                                 Dashboard
                             </button>
                             <div class="dropDown-content">
-                                <a class="filter" href="main_dashboard_page.html #timelineBtn">Timeline</a>
-                                <a class="filter" href="main_dashboard_page.html #announBtn">Announcements</a>
-                                <a class="filter" href="main_dashboard_page.html #overviewBtn">Overview</a>
+                                <a class="filter" href="#timelineBtn">Timeline</a>
+                                <a id="announDropBtn" class="filter" href="#announBtn">Announcements</a>
+                                <a class="filter" href="#overviewBtn">Overview</a>
                             </div> 
                         </div>
-                        <div class="nav-item br30">
-                            <a href="#">
-                                <img class="message" src="../assets/images/dashboard/inbox-logo.png" alt="Logo">
-                                <img class="unread" src="../assets/images/Ellipse 16.png" alt="">
-                                Inbox
-                            </a>
-                        </div>  
                         <div class="nav-item br30">
                             <a href="#">
                                 <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
@@ -65,7 +58,7 @@
                                         <div class="accountState">Flying Solo</div>
                                         <hr class="ddHr">
                                         <div class="navigationLink">
-                                            <a>Your Profile</a>
+                                            <a href="profile-page.html">Your Profile</a>
                                             <a>Your submissions</a>
                                             <a>Your Teams</a>
                                         </div>
@@ -95,7 +88,7 @@
     </div> 
     <div class="dashboard-submission-form">
         <div class="heading">
-            <div class="headForm"><b> < Finish Later </b></div>
+            <div class="headForm"><a href="dashboard-submission-page.html"><b> &lt; Finish Later </b></a></div>
             <div class="headMain">
                 <div class="Hd">HACK<span class="X">X</span></div>
                 <div class="cnt">Submitting project to HackX</div>
@@ -187,7 +180,7 @@
                         <div id="imageName" class="imageName" title="image name"></div>
                         <button id="deleteImage" class="deleteImage">Delete</button>
                     </div>
-                    <div id="preview-container1" class="imageDialogContainer">
+                    <div id="preview-container1" class="imageDialogContainer imgDiCont1">
                         <img src="" id="imageUpload1" class="imageUpload">
                         <input type="file" id="imageFile1" class="imageFile" name="image" accept="image/jpg,image/png" />
                         <img id="imagePreview1" class="imagePreview" />
@@ -195,7 +188,7 @@
                         <button id="deleteImage1" class="deleteImage">Delete</button>
                     </div>
                 
-                    <div id="preview-container2" class="imageDialogContainer">
+                    <div id="preview-container2" class="imageDialogContainer imgDiCont2">
                         <img src="" id="imageUpload2" class="imageUpload">
                         <input type="file" id="imageFile2" class="imageFile" name="image" accept="image/jpg,image/png" />
                         <img id="imagePreview2" class="imagePreview" />
@@ -203,7 +196,7 @@
                         <button id="deleteImage2" class="deleteImage">Delete</button>
                     </div>
                 
-                    <div id="preview-container3" class="imageDialogContainer">
+                    <div id="preview-container3" class="imageDialogContainer imgDiCont3">
                         <img src="" id="imageUpload3" class="imageUpload">
                         <input type="file" id="imageFile3" class="imageFile" name="image" accept="image/jpg,image/png" />
                         <img id="imagePreview3" class="imagePreview" />
@@ -211,7 +204,7 @@
                         <button id="deleteImage3" class="deleteImage">Delete</button>
                     </div>
                 
-                    <div id="preview-container4" class="imageDialogContainer">
+                    <div id="preview-container4" class="imageDialogContainer imgDiCont4">
                         <img src="" id="imageUpload4" class="imageUpload">
                         <input type="file" id="imageFile4" class="imageFile" name="image" accept="image/jpg,image/png,image/gif" />
                         <img id="imagePreview4" class="imagePreview" />

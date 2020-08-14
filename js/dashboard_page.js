@@ -41,41 +41,43 @@ function showSlides(n) {
   var x = document.querySelector('.progress_bar__circleTwo');
   var a = document.querySelector('.progress_bar__circleThree');
   var b = document.querySelector('.progress_bar__circleFour');
+  var zz = document.querySelector('.progress_bar__circleFive');
   
   if (n == 1) {
-    m.style.backgroundColor = "#1071f3";
-    m.style.height = "40px";
-    m.style.width = "40px";
-    m.style.marginTop = "0px";
-    m.innerHTML = "1";
-    y.innerHTML = "25%";
+  	m.style.backgroundColor = "#1071f3";
+  	m.style.height = "40px";
+  	m.style.width = "40px";
+  	m.style.marginTop = "0px";
+  	m.innerHTML = "1";
   }else if (n == 2) {
-    x.style.backgroundColor = "#1071f3";
-    x.style.height = "40px";
-    x.style.width = "40px";
-    x.style.marginTop = "0px";
-    x.innerHTML = "2";
-    y.innerHTML = "50%";
+  	x.style.backgroundColor = "#1071f3";
+  	x.style.height = "40px";
+  	x.style.width = "40px";
+  	x.style.marginTop = "0px";
+  	x.innerHTML = "2";
   }else if(n == 3) {
-    a.style.backgroundColor = "#1071f3";
-    a.style.height = "40px";
-    a.style.width = "40px";
-    a.style.marginTop = "0px";
-    a.innerHTML = "3";
-    y.innerHTML = "75%";
+  	a.style.backgroundColor = "#1071f3";
+  	a.style.height = "40px";
+  	a.style.width = "40px";
+  	a.style.marginTop = "0px";
+  	a.innerHTML = "3";
+  }else if(n == 4) {
+  	a.style.backgroundColor = "#1071f3";
+  	a.style.height = "40px";
+  	a.style.width = "40px";
+  	a.style.marginTop = "0px";
+  	a.innerHTML = "4";
   }else{
-    b.style.backgroundColor = "#1071f3";
-    b.style.height = "40px";
-    b.style.width = "40px";
-    b.style.marginTop = "0px";
-    b.innerHTML = "4";
-    y.innerHTML = "100%";
+  	b.style.backgroundColor = "#1071f3";
+  	b.style.height = "40px";
+  	b.style.width = "40px";
+  	b.style.marginTop = "0px";
+  	b.innerHTML = "4";
   }
   if (n > 4) {
       document.getElementById("next").disabled = true;
       document.getElementById("next").style.display = 'none';
       document.getElementById("finish").style.display = 'block';
-      return;
 }
 else {
     document.getElementById("next").disabled = false;
@@ -243,6 +245,7 @@ const dashboardInfo = async (Info) => {
           result.push("Files Submiited");
           document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
           document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
+          localStorage.setItem("submission", true);
         } else if (response.data == "Dashboard Submission Failed") {
           showLoginAlert("Unable to submit files.", "error");
         }else if (response.data == 'Invalid Token') {
@@ -256,13 +259,12 @@ const dashboardInfo = async (Info) => {
         showLoginAlert("Something Went Wrong. Try Again Later", "error");
       }
     })
-
-    .catch((error) => console.error(error.message)); 
-  };
+    .catch((error) => console.error(error.message));
 };
 
-if (result[0] == "Files Submiited") {
-  console.log(result[0]);
-  document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
-  document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
-};  
+if ( localStorage.getItem("submission") == true ) {
+	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
+	document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
+}else{
+	formEvent;
+}

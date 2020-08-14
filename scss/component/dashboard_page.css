@@ -35,6 +35,32 @@ input::placeholder {
 	outline: none;
 	border: none;
 }
+/* THE GENDER AND PHONE NO STYLE */
+
+#genderInfo{
+		display:flex;
+		justify-content: space-around;
+		height:300px;
+		}
+.one{
+  	width:80%;
+  	padding:0px 10px;
+				}
+#telNo{
+		align-self:flex-start;
+		margin-top:0px;
+		padding:0px;
+		}
+#phoneNo{
+		width: 90%;
+	margin: 2% 0;
+	height: 50px;
+	outline: none;
+	border: none;
+	background: whitesmoke;
+	padding: 5%;
+	border: 4px;
+		}
 
 /* NAVBAR STYLE */
 .nav_section {
@@ -165,6 +191,7 @@ input::placeholder {
 	.head_logout{
 		color: #1071f3;
 		background: none;
+		cursor: pointer;
 	}
 	.head_logout:active{
 		color: #ffffff;
@@ -862,9 +889,9 @@ input::placeholder {
 		border-radius: 5px;
 		cursor: pointer;
 	}
-	.selectarea {
+	.selectarea , #genderInfo{
 		width: 100%;
-		background: white;
+		background:white;
 		height: 400px;
 		padding: 4% 0;
 		border-radius: 8px;
@@ -876,6 +903,12 @@ input::placeholder {
 		font-weight: 600;
 		font-size: 1em;
 	}
+	#telNo{
+			padding:0px;
+			}
+	.one{
+			padding:0px 10px;
+			}
 	.selectarea .inst {
 		float: left;
 		width: 50%;
@@ -1085,7 +1118,7 @@ input::placeholder {
 	}
 	#submit_popup{
 		width: 60%;
-		border: 1px solid #ffffff;
+		border: 1px solid #000000;
 		border-radius: 5px;
 		position: absolute;
 		top: 50%;
@@ -1136,7 +1169,7 @@ input::placeholder {
 		font-size: 14px;
 		font-style: normal;
 		font-weight: bold;
-		color: #ffffff;
+		color: #000000;
 		display: none;
 	}
 }
@@ -1156,7 +1189,7 @@ input::placeholder {
 		display: block;
 		text-align: center;
 		width: 70%;
-		margin-top: -45%;
+		margin-top: -37%;
 	}
 	.display_txt__one, .display_txt__two{
 		font-family: 'Montserrat', sans-serif;
@@ -1199,7 +1232,7 @@ input::placeholder {
 	}
 	#submit_popup{
 		width: 350px;
-		border: 1px solid #ffffff;
+		border: 1px solid #000000;
 		border-radius: 5px;
 		position: absolute;
 		top: 50%;
@@ -1251,10 +1284,10 @@ input::placeholder {
 		transform: translate(-50%, -50%);
 		text-align: center;
 		font-family: 'Montserrat', sans-serif;
-		font-size: 14px;
+		font-size: 18px;
 		font-style: normal;
 		font-weight: bold;
-		color: #ffffff;
+		color: #000000;
 		display: none;
 	}
 }

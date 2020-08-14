@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard submission page</title>
-    <link rel="stylesheet" href="../scss/component/dashboard-submission-page.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dashboard</title>
+    <link rel="stylesheet" type="text/css" href="../scss/component/new-profile.css">
     <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
-    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>   
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
@@ -85,28 +86,72 @@
         <div class="line1"></div>
         <div class="line2"></div>
         <div class="line3"></div>
-    </div> 
-    <div class="dashboard-submission-page">
-        <header>hackX <b> > Dashboard</b></header>
-        <div class="shareDiv">
-            <div class="shareTxtHd">Share what you built</div>
-            <div class="shareTxtcnt">Your submission will appear here for referencing, to enable you to invite collaboration and inspire other builders.</div>
-            <div class="shareImg">
-                <a href="dashboard-submission-form.html"><img src="../assets/images/submission-page-submit.svg" class="subSubmit"></a>
-            </div>
-        </div>
-        <div class="inspiration">
-            <img src="../assets/images/submission-page-bulb.svg" class="subBulb">
-            <div class="insp0">
-                <div class="inspoHd">Need ideas?</div>
-                <div class="inspoTxt">Projects are a great way to learn new technologies and even to sharpen the ones you already know. Need ideas for your next project? Smauch the button below</div>
-                <button class="inspoBtn">inspire me</button>
-            </div>
-            <img src="../assets/images/submission-page-book.svg" class="subBook">
-        </div>
     </div>
-    <script src="../js/dashboard-navbar.js"></script>
-    <script src="../js/get_user.js"></script>
+    <main class="profile-page-section">
+        <header class="hackx-dashboard">hackX <b>> Profile</b></header>
+        <div class="first-flex">
+            <div class="item-one">
+                <div class="image-row">
+                    <img src="../assets/images/Ellipse 1.png" alt="">
+                </div>
+                <div class="content-row">
+                    <h4 id="full-name" class="full-name">Balogun Abdulazeez</h4>
+                    <h4 id="user-name" class="user-name">Keazzy</h4>
+                    <button class="edit-avatar" id="change-avatar">change avatar</button>
+                </div>
+            </div>
+            <div class="item-two desktop-bio">
+                <header class="head">BIO</header>
+                <div class="bio-text-content"></div>
+            </div>
+        </div>
+        <header class="flex-two-header">Basic Information</header>
+        
+        <div class="next-row login-container">
+            <div class="second-flex">
+                <div class="item-one login-form">
+                    <div class="details-cnt">
+                        <h5 class="input-title">USERNAME</h5>
+                        <h5 class="user-name input" id="user_name">username shows here</h5>
+                    </div>
+                    <div class="details-cnt">
+                        <h5 class="input-title">EMAIL ADDRESS</h5>
+                        <h5 class="email-address input" id="email-address">email shows here</h5>
+                    </div>
+                    <div class="details-cnt">
+                        <h5 class="input-title">FIRSTNAME</h5>
+                        <h5 class="first-name input" id="first-name">firstname shows here</h5>
+                    </div>
+                </div>
+                <div class="item-two">
+                    <div class="details-cnt">
+                        <h5 class="input-title">LASTNAME</h5>
+                        <h5 class="last-name input" id="last-name">lastname shows here</h5>
+                    </div>
+                    <div class="details-cnt">
+                        <h5 class="input-title">TRACK</h5>
+                        <h5 class="track input" id="track">track shows here</h5>
+                    </div>
+                    <div class="details-cnt">
+                        <h5 class="input-title">INSTITUTION</h5>
+                        <h5 class="institution input" id="institution">Institution shows here</h5>
+                    </div>
+                </div>
+            </div>
+            <button class="edit-profile">EDIT PROFILE</button>
+        </div>
+        <div class="row-three">
+            <header class="main-header">About me</header>
+            <div class="mobile-bio">
+                <header class="head">BIO</header>
+                <div class="bio-text-content"></div>
+            </div>
+        </div>
+    </main>
+    
     <script src="../js/logout.js"></script>
+    <script src="../js/dashboard-navbar.js"></script>
+    <script src="../js/profile-page.js"></script>
+    <script src="../js/get_user.js"></script>
 </body>
 </html>

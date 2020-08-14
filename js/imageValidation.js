@@ -28,15 +28,17 @@ document.querySelector("#imageFile").addEventListener('change', function() {
     document.querySelector("#imagePreview").style.display = 'block';
     // sHOW DELETE BUTTON
     document.querySelector("#deleteImage").style.display = 'block';
-});
 
+    // SO AS NOT TO SHOW UNNECESSARY SCREEN, I MADE A SMALL VALIDATION FOR IT
+});
+    
 // IMAGE 2
 document.querySelector("#imageFile").addEventListener('change', function() {
     // USER'S SELECTED IMAGE
     var file = this.files[1];
     // VALIDATE IMAGE SIZE
     try{
-        if(file.size > 2*1024*1024) {
+        if (file.size > 2*1024*1024) {
             alert('Error : Exceeded size 2MB');
             return;
         }
@@ -53,6 +55,13 @@ document.querySelector("#imageFile").addEventListener('change', function() {
         document.querySelector("#imagePreview1").style.display = 'block';
         // sHOW DELETE BUTTON
         document.querySelector("#deleteImage1").style.display = 'block';
+        var imageUpload1 = document.querySelector('#imageUpload1');
+        var imgDiCont1 = document.querySelector('.imgDiCont1');
+        if (imageUpload1.src === "") {
+            imgDiCont1.style.display = "none";
+        } else {
+            imgDiCont1.style.display = "block";
+        }
     }catch(error){
         let output = "No picture here."
     }
@@ -81,6 +90,13 @@ document.querySelector("#imageFile").addEventListener('change', function() {
         document.querySelector("#imagePreview2").style.display = 'block';
         // sHOW DELETE BUTTON
         document.querySelector("#deleteImage2").style.display = 'block';
+        var imageUpload2 = document.querySelector('#imageUpload2');
+        var imgDiCont2 = document.querySelector('.imgDiCont2');
+        if (imageUpload2.src === "") {
+            imgDiCont2.style.display = "none";
+        } else {
+            imgDiCont2.style.display = "block";
+        }
     }catch(error){
         let output = "No picture here."
     }
@@ -108,6 +124,13 @@ document.querySelector("#imageFile").addEventListener('change', function() {
         document.querySelector("#imagePreview3").style.display = 'block';
         // sHOW DELETE BUTTON
         document.querySelector("#deleteImage3").style.display = 'block';
+        var imageUpload3 = document.querySelector('#imageUpload3');
+        var imgDiCont3 = document.querySelector('.imgDiCont3');
+        if (imageUpload3.src === "") {
+            imgDiCont3.style.display = "none";
+        } else {
+            imgDiCont3.style.display = "block";
+        }
     }catch(error){
         let output = "No picture here."
     }
@@ -135,6 +158,13 @@ document.querySelector("#imageFile").addEventListener('change', function() {
         document.querySelector("#imagePreview4").style.display = 'block';
         // sHOW DELETE BUTTON
         document.querySelector("#deleteImage4").style.display = 'block';
+        var imageUpload4 = document.querySelector('#imageUpload4');
+        var imgDiCont4 = document.querySelector('.imgDiCont4');
+        if (imageUpload4.src === "") {
+            imgDiCont4.style.display = "none";
+        } else {
+            imgDiCont4.style.display = "block";
+        }
     }catch(error){
         let output = "No picture here."
     }
@@ -156,39 +186,27 @@ document.querySelector("#deleteImage").addEventListener('click', function(e) {
 document.querySelector("#deleteImage1").addEventListener('click', function(e) {
     e.preventDefault();
     URL.revokeObjectURL(imageUrl);
-    document.querySelector("#imageUpload1").style.display = 'block';
+    document.querySelector(".imgDiCont1").style.display = 'none';
     document.querySelector("#imageFile1").value = '';
-    document.querySelector("#imageName1").style.display = 'none';
-    document.querySelector("#imagePreview1").style.display = 'none';
-    document.querySelector("#deleteImage1").style.display = 'none';
 });
 //DELETE 3
 document.querySelector("#deleteImage2").addEventListener('click', function(e) {
     e.preventDefault();
     URL.revokeObjectURL(imageUrl);
-    document.querySelector("#imageUpload2").style.display = 'block';
+    document.querySelector(".imgDiCont2").style.display = 'none';
     document.querySelector("#imageFile2").value = '';
-    document.querySelector("#imageName2").style.display = 'none';
-    document.querySelector("#imagePreview2").style.display = 'none';
-    document.querySelector("#deleteImage2").style.display = 'none';
 });
 //DELETE 4
 document.querySelector("#deleteImage3").addEventListener('click', function(e) {
     e.preventDefault();
     URL.revokeObjectURL(imageUrl);
-    document.querySelector("#imageUpload3").style.display = 'block';
+    document.querySelector(".imgDiCont3").style.display = 'none';
     document.querySelector("#imageFile3").value = '';
-    document.querySelector("#imageName3").style.display = 'none';
-    document.querySelector("#imagePreview3").style.display = 'none';
-    document.querySelector("#deleteImage3").style.display = 'none';
 });
 //DELETE 5
 document.querySelector("#deleteImage4").addEventListener('click', function(e) {
     e.preventDefault();
     URL.revokeObjectURL(imageUrl);
-    document.querySelector("#imageUpload4").style.display = 'block';
+    document.querySelector(".imgDiCont4").style.display = 'none';
     document.querySelector("#imageFile4").value = '';
-    document.querySelector("#imageName4").style.display = 'none';
-    document.querySelector("#imagePreview4").style.display = 'none';
-    document.querySelector("#deleteImage4").style.display = 'none';
 });
