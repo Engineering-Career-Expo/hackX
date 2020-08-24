@@ -16,8 +16,15 @@ let dashboard = new mongoose.Schema({
 		    maxlength: 50
 		},
 		link: {
-		    type: String,
-		    minlength: 2,
+		    type: Array
+		},
+		age: {
+		    type: Number,
+		},
+		number: {
+		    type: Number,
+		    minlength: 10,
+		    maxlength: 12,
 		},
 		institution: {
 		    type: String,
@@ -96,7 +103,7 @@ function validateDashboard(user) {
 	        });
 	        return errors;
       	}),
-  	link: Joi.string()
+  	link: Joi.array().items(Joi.string() 
   		.min(2)
   		.error((errors) => {
 	        errors.forEach((err) => {
@@ -112,6 +119,55 @@ function validateDashboard(user) {
 	              break;
 	            case "number.base":
 	              err.message = "Links should be a string.";
+	              break;
+	            default:
+	              break;
+	          	}
+	        });
+	        return errors;
+      	})),
+  	age: Joi.number()
+	    .error((errors) => {
+	        errors.forEach((err) => {
+	          switch (err.code) {
+	          	case "number.empty":
+	              err.message = "Age should not be empty!";
+	              break;
+	            case "any.empty":
+	              err.message = "Age should not be empty!";
+	              break;
+	            case "number.max":
+	              err.message = "Age should have at most 3 characters!";
+	              break;
+	            case "number.base":
+	              err.message = "Age should be a number.";
+	              break;
+	            default:
+	              break;
+	          	}
+	        });
+	        return errors;
+      	}),
+  	number: Joi.string()
+	    .min(10)
+	    .max(12)
+	    .error((errors) => {
+	        errors.forEach((err) => {
+	          switch (err.code) {
+	          	case "number.empty":
+	              err.message = "Number should not be empty!";
+	              break;
+	            case "any.empty":
+	              err.message = "Number should not be empty!";
+	              break;
+	            case "number.min":
+	              err.message = "Number should have at least 10 characters!";
+	              break;
+	            case "number.max":
+	              err.message = "Number should have at most 12 characters!";
+	              break;
+	            case "number.base":
+	              err.message = "Number should be a number.";
 	              break;
 	            default:
 	              break;

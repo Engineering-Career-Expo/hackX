@@ -19,6 +19,8 @@
     "npm": "6.9.0"
   },
   "dependencies": {
+    "@dicebear/avatars": "^4.2.5",
+    "@dicebear/avatars-bottts-sprites": "^4.2.5",
     "@hapi/joi": "^17.1.1",
     "bcryptjs": "^2.4.3",
     "chai": "^4.2.0",

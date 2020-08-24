@@ -1,4 +1,4 @@
-		var head_drop = document.getElementsByClassName("head_drop");
+var head_drop = document.getElementsByClassName("head_drop");
 var head_section3 = document.getElementsByClassName("navbar_second");
 var reg1 = document.getElementsByClassName("navbar_reg1");
 
@@ -6,17 +6,17 @@ var reg1 = document.getElementsByClassName("navbar_reg1");
 head_drop[0].addEventListener("click",myfunc1)
 var a = 0;
 function myfunc1(){
-		
-head_section3[0].style.height ="365px"		
-head_section3[0].style.width ="auto"				
-head_drop[0].innerHTML ="X"	
+    
+head_section3[0].style.height ="365px"    
+head_section3[0].style.width ="auto"        
+head_drop[0].innerHTML ="X" 
 a++;
 
-if(a%2 === 0){		
-head_section3[0].style.height ="0px"		
-head_section3[0].style.overflow ="hidden"		
+if(a%2 === 0){    
+head_section3[0].style.height ="0px"    
+head_section3[0].style.overflow ="hidden"   
 head_drop[0].innerHTML ="&#9776"
-		}
+    }
  }
  
 var slideIndex = 1;
@@ -112,54 +112,54 @@ var headerTwoPrize = document.querySelector('.header_two__prize');
 var headerTwoOver = document.querySelector('.header_two__over');
 var headerTwo = [headerTwoTime, headerTwoPrize, headerTwoOver];
 var x;
-	
+  
 headerTwoTime.onclick = () => {
-	noDisplay.style.display = "block";
-	participantInfo.style.display = "none";
-	document.querySelector('.line').style.display = "none";
-	document.querySelector('.lineActive1').style.visibility = "visible";
-	document.querySelector('.lineActive2').style.visibility = "hidden";
-	document.querySelector('.lineActive3').style.visibility = "hidden";
+  noDisplay.style.display = "block";
+  participantInfo.style.display = "none";
+  document.querySelector('.line').style.display = "none";
+  document.querySelector('.lineActive1').style.visibility = "visible";
+  document.querySelector('.lineActive2').style.visibility = "hidden";
+  document.querySelector('.lineActive3').style.visibility = "hidden";
 }
 headerTwoPrize.onclick = () => {
-	noDisplay.style.display = "block";
-	participantInfo.style.display = "none";
-	document.querySelector('.line').style.display = "none";
-	document.querySelector('.lineActive2').style.visibility = "visible";
-	document.querySelector('.lineActive1').style.visibility = "hidden";
-	document.querySelector('.lineActive3').style.visibility = "hidden";
+  noDisplay.style.display = "block";
+  participantInfo.style.display = "none";
+  document.querySelector('.line').style.display = "none";
+  document.querySelector('.lineActive2').style.visibility = "visible";
+  document.querySelector('.lineActive1').style.visibility = "hidden";
+  document.querySelector('.lineActive3').style.visibility = "hidden";
 }
 headerTwoOver.onclick = () => {
-	noDisplay.style.display = "block";
-	participantInfo.style.display = "none";
-	document.querySelector('.line').style.display = "none";
-	document.querySelector('.lineActive3').style.visibility = "visible";
-	document.querySelector('.lineActive1').style.visibility = "hidden";
-	document.querySelector('.lineActive2').style.visibility = "hidden";
+  noDisplay.style.display = "block";
+  participantInfo.style.display = "none";
+  document.querySelector('.line').style.display = "none";
+  document.querySelector('.lineActive3').style.visibility = "visible";
+  document.querySelector('.lineActive1').style.visibility = "hidden";
+  document.querySelector('.lineActive2').style.visibility = "hidden";
 }
 
 headerOneApp.onclick = () => {
-	noDisplay.style.display = "none";
-	participantInfo.style.display = "block";
-	participantInfo.classList.add('participant-infoAdd_class');
-	document.querySelector('.line').style.display = "block"
-	document.querySelector('.lineActive1').style.visibility = "hidden";
-	document.querySelector('.lineActive2').style.visibility = "hidden";
-	document.querySelector('.lineActive3').style.visibility = "hidden";
+  noDisplay.style.display = "none";
+  participantInfo.style.display = "block";
+  participantInfo.classList.add('participant-infoAdd_class');
+  document.querySelector('.line').style.display = "block"
+  document.querySelector('.lineActive1').style.visibility = "hidden";
+  document.querySelector('.lineActive2').style.visibility = "hidden";
+  document.querySelector('.lineActive3').style.visibility = "hidden";
 }
 
 // Submit question
 var submitPopup = document.querySelector('#submit_popup');
 var closePopup = document.querySelector('#close_popup');
 document.querySelector('#finish').onclick = () => {
-	submitPopup.style.display = "block";
-	document.querySelector('.dashboard_all__opacity').style.height = "100%";
-	document.querySelector('.dashboard_all__opacity').style.overflow = "hidden";
+  submitPopup.style.display = "block";
+  document.querySelector('.dashboard_all__opacity').style.height = "100%";
+  document.querySelector('.dashboard_all__opacity').style.overflow = "hidden";
 };
 closePopup.addEventListener('click', () => {
-	submitPopup.style.display = "none";
-	document.querySelector('.dashboard_all__opacity').style.height = "100%";
-	document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
+  submitPopup.style.display = "none";
+  document.querySelector('.dashboard_all__opacity').style.height = "100%";
+  document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
 });
 
 // backend connection
@@ -179,7 +179,7 @@ function ValidateTrack()
       return false;  
     }  
 }  
-
+ 
 const popUp = document.querySelector(".response-bar");
 const Submit = document.querySelector(".submit_popup__btn");
 
@@ -195,29 +195,31 @@ const showLoginAlert = (message, className) => {
   }, 12000);
 };
 
-const formEvent = Submit.addEventListener("click", async (event) => {
-  event.preventDefault();
-  document.querySelector('#submit_popup').style.display = "none";
-  const bio = document.querySelector("#bio").value;
-  let track = "";
-  if (document.querySelector("#customCheckbox").checked){
-    track = document.querySelector("#customCheckbox").value
-  }else if(document.querySelector("#customCheckbox2").checked){
-    track = document.querySelector("#customCheckbox2").value
-  }else if(document.querySelector("#customCheckbox3").checked){
-    track = document.querySelector("#customCheckbox3").value
-  }else if(document.querySelector("#customCheckbox4").checked){
-    track = document.querySelector("#customCheckbox4").value
-  }
-  setTimeout(function () {
-    Submit.disabled = true;
-  }, 2000);
-  const link = document.querySelector("#link").value;
-  const institution = document.querySelector("#institution").value;
-  const department = document.querySelector("#department").value;
-  const Info = await { bio, track, link, institution, department };
-  dashboardInfo(Info); 
-});
+if (localStorage.getItem('bio') !== undefined ) {
+  const formEvent = Submit.addEventListener("click", async (event) => {
+    event.preventDefault();
+    document.querySelector('#submit_popup').style.display = "none";
+    const bio = document.querySelector("#bio").value;
+    let track = "";
+    if (document.querySelector("#customCheckbox").checked){
+      track = document.querySelector("#customCheckbox").value
+    }else if(document.querySelector("#customCheckbox2").checked){
+      track = document.querySelector("#customCheckbox2").value
+    }else if(document.querySelector("#customCheckbox3").checked){
+      track = document.querySelector("#customCheckbox3").value
+    }else if(document.querySelector("#customCheckbox4").checked){
+      track = document.querySelector("#customCheckbox4").value
+    }
+    setTimeout(function () {
+      Submit.disabled = true;
+    }, 2000);
+    const link = document.querySelector("#link").value;
+    const institution = document.querySelector("#institution").value;
+    const department = document.querySelector("#department").value;
+    const Info = await { bio, track, link, institution, department };
+    dashboardInfo(Info); 
+  });
+};
 
 const headers = {
   'Content-Type': 'application/json',
@@ -226,6 +228,7 @@ const headers = {
 }
 const id = window.localStorage.getItem("id");
  // https://hackxbackend.herokuapp.com
+var result = [];
 const dashboardInfo = async (Info) => {
   axios
     .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, Info, { headers: headers})
@@ -240,6 +243,7 @@ const dashboardInfo = async (Info) => {
         } else if (response.data == "Error when trying to upload files.") {
           showLoginAlert("Error when trying to upload files.", "error");
         }else if (response.data == "Files have been uploaded.") {
+          result.push("Files Submiited");
           document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
           document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
           localStorage.setItem("submission", true);
@@ -256,15 +260,12 @@ const dashboardInfo = async (Info) => {
         showLoginAlert("Something Went Wrong. Try Again Later", "error");
       }
     })
-
     .catch((error) => console.error(error.message));
-};
+};       
 
-if ( localStorage.getItem("submission") == true ) {
-	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
-	document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
-}else{
-	formEvent;
-}
-
-		
+// if ( localStorage.getItem("submission") == true ) {
+// 	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
+// 	document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
+// }else{
+// 	formEvent;
+// }

@@ -22,7 +22,9 @@ router.post("/signup", (req, res) => {
   let role_pass = (role) => {
     if (role == undefined) {
       return Role.User
-    }else {
+    }else if(role == Role.Judge){
+      return Role.Judge
+    }else{
       return Role.Admin
     }
   };
@@ -130,6 +132,8 @@ const {
 bio,
 track,
 link,
+age,
+number,
 institution,
 department,
 } = req.body;
@@ -137,6 +141,8 @@ let inputData = new Dashboard({
 bio: bio,
 track: track,
 link: link,
+age: age,
+number: number,
 institution: institution,
 department: department
 });
@@ -531,12 +537,12 @@ router.get("/getContacts", authorize(Role.Admin), (req, res) => {
     });
 });
 
-//transactions
+     
 router.get("/getAllContacts/", authorize(Role.Admin), (req, res) => {
   contact
     .find()
     .sort([["updatedAt", -1]])
-    .then((doc) => {
+    .then((doc) => {    
       //console.log(doc);
       res.json({
         doc,
@@ -548,4 +554,15 @@ router.get("/getAllContacts/", authorize(Role.Admin), (req, res) => {
     });
 });
 
-module.exports = router;
+// router.get("/avatar", (req, res) => {
+//   import Avatars from '@dicebear/avatars';
+//   import sprites from '@dicebear/avatars-bottts-sprites';
+    
+//   let avatars = new Avatars(sprites());
+//   let svg = avatars.create('custom-seed');  
+//   res.json(svg);  
+             
+// });               
+
+module.exports = router; 
+    
