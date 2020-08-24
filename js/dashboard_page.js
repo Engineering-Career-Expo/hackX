@@ -179,7 +179,7 @@ function ValidateTrack()
       return false;  
     }  
 }  
-
+ 
 const popUp = document.querySelector(".response-bar");
 const Submit = document.querySelector(".submit_popup__btn");
 
@@ -196,29 +196,30 @@ const showLoginAlert = (message, className) => {
 };
 
 if (localStorage.getItem('bio') !== undefined ) {
-const formEvent = Submit.addEventListener("click", async (event) => {
-  event.preventDefault();
-  document.querySelector('#submit_popup').style.display = "none";
-  const bio = document.querySelector("#bio").value;
-  let track = "";
-  if (document.querySelector("#customCheckbox").checked){
-    track = document.querySelector("#customCheckbox").value
-  }else if(document.querySelector("#customCheckbox2").checked){
-    track = document.querySelector("#customCheckbox2").value
-  }else if(document.querySelector("#customCheckbox3").checked){
-    track = document.querySelector("#customCheckbox3").value
-  }else if(document.querySelector("#customCheckbox4").checked){
-    track = document.querySelector("#customCheckbox4").value
-  }
-  setTimeout(function () {
-    Submit.disabled = true;
-  }, 2000);
-  const link = document.querySelector("#link").value;
-  const institution = document.querySelector("#institution").value;
-  const department = document.querySelector("#department").value;
-  const Info = await { bio, track, link, institution, department };
-  dashboardInfo(Info); 
-});
+  const formEvent = Submit.addEventListener("click", async (event) => {
+    event.preventDefault();
+    document.querySelector('#submit_popup').style.display = "none";
+    const bio = document.querySelector("#bio").value;
+    let track = "";
+    if (document.querySelector("#customCheckbox").checked){
+      track = document.querySelector("#customCheckbox").value
+    }else if(document.querySelector("#customCheckbox2").checked){
+      track = document.querySelector("#customCheckbox2").value
+    }else if(document.querySelector("#customCheckbox3").checked){
+      track = document.querySelector("#customCheckbox3").value
+    }else if(document.querySelector("#customCheckbox4").checked){
+      track = document.querySelector("#customCheckbox4").value
+    }
+    setTimeout(function () {
+      Submit.disabled = true;
+    }, 2000);
+    const link = document.querySelector("#link").value;
+    const institution = document.querySelector("#institution").value;
+    const department = document.querySelector("#department").value;
+    const Info = await { bio, track, link, institution, department };
+    dashboardInfo(Info); 
+  });
+};
 
 const headers = {
   'Content-Type': 'application/json',
@@ -260,11 +261,11 @@ const dashboardInfo = async (Info) => {
       }
     })
     .catch((error) => console.error(error.message));
-};
+};       
 
-if ( localStorage.getItem("submission") == true ) {
-	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
-	document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
-}else{
-	formEvent;
-}
+// if ( localStorage.getItem("submission") == true ) {
+// 	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
+// 	document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
+// }else{
+// 	formEvent;
+// }
