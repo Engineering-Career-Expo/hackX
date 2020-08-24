@@ -214,9 +214,10 @@ if (localStorage.getItem('bio') !== undefined ) {
       Submit.disabled = true;
     }, 2000);
     const link = document.querySelector("#link").value;
+    const linkContainer = [ link ];
     const institution = document.querySelector("#institution").value;
     const department = document.querySelector("#department").value;
-    const Info = await { bio, track, link, institution, department };
+    const Info = await { bio, track, linkContainer, institution, department };
     dashboardInfo(Info); 
   });
 };
