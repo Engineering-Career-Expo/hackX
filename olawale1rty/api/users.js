@@ -131,8 +131,8 @@ if (error) return res.json(error.details[0].message);
 const {
 bio,
 track,
-link,
-age,
+link, 
+gender,
 number,
 institution,
 department,
@@ -141,8 +141,8 @@ let inputData = new Dashboard({
 bio: bio,
 track: track,
 link: link,
-age: age,
-number: number,
+gender: gender,
+number: number,      
 institution: institution,
 department: department
 });
@@ -260,15 +260,15 @@ router.post("/submission/:id", authorize(), (req, res) => {
       
         
 
-    }); 
+    });    
 });
 
 router.get("/logout", (req, res) => {
   res.json("Clear localStorage");  
 });
-
-router.get("/getuser", authorize(), (req, res) => {  
-  const { username } = req.body;
+  
+router.get("/getuser", authorize(), (req, res) => {                             
+  const { username } = req.query;      
   User.find({
     username: username,
   })
@@ -285,7 +285,7 @@ router.get("/getuser", authorize(), (req, res) => {
       let dashboard = index.dashboard;
       let submission = index.submission;
       res.json({
-        firstname,
+        firstname,    
         lastname,
         email,
         username,
@@ -343,7 +343,7 @@ router.get("/dashboardVideo", authorize(), (req, res) => {
 
 router.get("/submissionImages", authorize(), (req, res) => {  
   const { id } = req.query;
-  const { name } = req.body;
+  const { name } = req.query;
   Submission.find({
     _id: id, 
   })
@@ -362,7 +362,7 @@ router.get("/submissionImages", authorize(), (req, res) => {
 
 router.get("/submissionVideo", authorize(), (req, res) => {  
   const { id } = req.query;
-  const { name } = req.body;
+  const { name } = req.query;     
   Submission.find({
     _id: id, 
   })
@@ -445,7 +445,7 @@ router.put("/updateSubmission", authorize(), (req, res) => {
         tagline: tagline,
         problem: problem,
         challenges: challenges,
-        technologies: technologies,
+        technologies: technologies,           
         links: links,
       },
       { new: true }
@@ -481,7 +481,7 @@ router.post("/forgotPassword", (req, res) => {
 router.put("/updatePassword", (req, res) => {
   const { email, password } = req.body;   
   User.findOneAndUpdate(
-    {
+    {     
       email: email,
     },
     {
@@ -508,7 +508,7 @@ router.get("/alluser", authorize(Role.Admin), (req, res) => {
     .then((doc) => {
       //console.log(doc);
       res.json({
-        doc,
+        doc,  
       });
     })
     .catch((err) => {
@@ -518,7 +518,7 @@ router.get("/alluser", authorize(Role.Admin), (req, res) => {
 });
 
 router.get("/getContacts", authorize(Role.Admin), (req, res) => {
-  const { email } = req.body;
+  const { email } = req.query;            
   contact
     .find({
       email: { $eq: email.toString() },
