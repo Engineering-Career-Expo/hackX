@@ -15,14 +15,14 @@ let dashboard = new mongoose.Schema({
 		    minlength: 3,
 		    maxlength: 50
 		},
-		link: {
+		link: { 
 		    type: Array
 		},
-		age: {
-		    type: Number,
+		gender: {
+		    type: String,
 		},
 		number: {
-		    type: Number,
+		    type: Number,    
 		    minlength: 10,
 		    maxlength: 12,
 		},
@@ -126,28 +126,25 @@ function validateDashboard(user) {
 	        });
 	        return errors;
       	})),
-  	age: Joi.number()
+  	gender: Joi.string()  
 	    .error((errors) => {
 	        errors.forEach((err) => {
 	          switch (err.code) {
-	          	case "number.empty":
-	              err.message = "Age should not be empty!";
+	          	case "string.empty":
+	              err.message = "Gender should not be empty!";
 	              break;
 	            case "any.empty":
-	              err.message = "Age should not be empty!";
+	              err.message = "Gender should not be empty!";
 	              break;
-	            case "number.max":
-	              err.message = "Age should have at most 3 characters!";
-	              break;
-	            case "number.base":
-	              err.message = "Age should be a number.";
+	            case "string.base":
+	              err.message = "Gender should be a string.";
 	              break;
 	            default:
 	              break;
 	          	}
 	        });
 	        return errors;
-      	}),
+      	}), 
   	number: Joi.string()
 	    .min(10)
 	    .max(12)
@@ -169,7 +166,7 @@ function validateDashboard(user) {
 	            case "number.base":
 	              err.message = "Number should be a number.";
 	              break;
-	            default:
+	            default: 
 	              break;
 	          	}
 	        });

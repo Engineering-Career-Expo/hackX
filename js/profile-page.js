@@ -32,26 +32,26 @@ const headers = {
   'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
   'withCredentials': true, 
 }
-const username = localStorage.getItem('username');
-console.log(username);
+const username =  localStorage.getItem('username');
+// console.log(username);
 user_name.innerHTML = username;
-user_Name.innerHTML = username;
+user_Name.innerHTML = username; 
 
 axios
-.get("https://hackxbackend.herokuapp.com/getuser/",  username, { headers: headers })
+.get("https://hackxbackend.herokuapp.com/getuser?username=" + username , { headers: headers })
 .then((response) => {
     full_name.innerHTML = response.data.lastname + " " + response.data.firstname;
     first_name.innerHTML = response.data.firstname;
     last_name.innerHTML = response.data.lastname;
-    email.innerHTML = response.data.email;
-    track = response.data.dashboard[0];
+    email.innerHTML = response.data.email;  
+    track = response.data.dashboard[0];  
     //ageCnt = response.data.dashboard[1];
     institution = response.data.dashboard[2];
     localStorage.setItem("email", response.data.email);
-    console.log(response.data);
+    // console.log(response.data);  
 })
 .catch((error) => console.error(error));
 
 function direct() {
   window.location.href = 'https://hackx.netlify.app/pages/profile-username-update';
-}
+}        
