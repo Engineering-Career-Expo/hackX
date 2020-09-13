@@ -64,8 +64,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 nav {
@@ -81,16 +81,16 @@ nav {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
 }
 
 .navbar_ecx {
   padding: 10px;
   text-align: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   margin-bottom: -.3pc;
 }
 
@@ -99,8 +99,8 @@ nav {
   text-align: center;
   font-size: 14px;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
   background-color: #e5193b;
   color: white;
   -webkit-transition: opacity .7s ease-out;
@@ -115,8 +115,8 @@ nav {
   padding: 10px;
   text-align: center;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .navbar_second {
@@ -209,8 +209,8 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     width: 95%;
   }
   .navbar_second {
@@ -220,8 +220,8 @@ a:hover {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+    justify-content: space-evenly;
   }
   .navbar_sep {
     display: none;
@@ -232,14 +232,14 @@ a:hover {
   .navbar_reg2,
   .navbar_log {
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
   .navbar_ecx {
     margin: .5pc auto auto -7.5pc;
     -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-grid-row-align: center;
+    align-self: center;
   }
   .navbar_reg2,
   .navbar_log {
