@@ -17,7 +17,9 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
       `<div class="submission-detail">
           <input type="checkbox">
           <div class="column-one">
-              <div class="checkbox" id="checkbox-one"></div>
+              <div class="checkbox" id="checkbox-one">
+                <img src="../assets/images/dashboard/checkmark.svg" class="false-check" id="false-check">
+              </div>
               <div class="real-submission">
                   <h5 class="submission-tag">Application ${id}</h5>
                   <h5 class="participant-name">${doc[i].firstname + " "} ${doc[i].lastname}</h5>
