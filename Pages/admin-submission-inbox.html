@@ -3,10 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Submissions</title>
+    <title>Project Submissions</title>
     <link rel="stylesheet" type="text/css" href="../scss/component/admin-submissions-inbox.css">
+    <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
+    <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
+    <nav> 
+        <div class="head_section1">
+            <div class="head_info0">
+                <a href="#">
+                    <div class="head_pic0">
+                        <img src="../assets/ECX.svg"/>
+                    </div>
+                </a>
+            </div>
+            <div class="nav-content">
+                <div class="nav-content-flex">
+                    <div class="nav-links">
+                        <div class="nav-item">
+                            <button class="drop-btn">
+                                <img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">
+                                Dashboard
+                            </button>
+                            <div class="dropDown-content">
+                                <a class="filter" href="#timelineBtn">Timeline</a>
+                                <a id="announDropBtn" class="filter" href="#announBtn">Announcements</a>
+                                <a class="filter" href="#overviewBtn">Overview</a>
+                            </div> 
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="#">   
+                                <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
+                                Submission
+                            </a>
+                        </div>
+                    </div>
+                    <div class="i100">
+                        <div class="head_section2">
+                            <div class="head_logout">
+                                <p class="name">KEAZZY</p>
+                                <a href="#" class="view">VIEW PROFILE</a>
+                            </div>
+                            <div class="head_pic1">
+                                <div class="head_pic2"><img src="" class="head_pic02"/></div>
+                            </div>
+                            <div class="dropdown_button">
+                                <button class="dropdownBtn">
+                                    <img src="../assets/images/dashboard/dropdown-logo.svg">
+                                    <div class="dropdownProfile" id="dropdownProfile">
+                                        <div class="username">Signed in as <span class="user_username">Keazzy</span> </div>
+                                        <hr class="ddHr">
+                                        <div class="accountState">Flying Solo</div>
+                                        <hr class="ddHr">
+                                        <div class="navigationLink">
+                                            <a href="profile-page.html">Your Profile</a>
+                                            <a>Your submissions</a>
+                                            <a>Your Teams</a>
+                                        </div>
+                                        <hr class="ddHr">
+                                        <div class="otherNavs">
+                                            <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
+                                            <a>Settings</a>
+                                            <a id="logout_user">Logout</a>
+                                        </div>
+                                    </div>                                    
+                                </button>
+                            </div>    
+                        </div>
+                        <div class="linedivide"></div>
+                    </div>
+                </div>
+                <div class="logout-wrapper">
+                    <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="hamburger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
     <main class="submission-page">
         <header class="button-header">
             <div class="head-one">
@@ -16,8 +95,8 @@
             </div>
             <button class="delete-submission">Delete</button>
         </header>
-        <div class="submissions-section">
-            <div class="submission-detail">
+        <div class="submissions-section" id="appliContainer">
+            <!--<div class="submission-detail">
                 <input type="checkbox">
                 <div class="column-one">
                     <div class="checkbox" id="checkbox-one"></div>
@@ -99,8 +178,14 @@
                     </div>
                 </div>
                 <h5 class="time">a day ago</h5>
-            </div>
+            </div>-->
         </div>
     </main>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/dashboard-navbar.js"></script>
+    <script src="../js/get_user.js"></script>
+    <script src="../js/avatar.js"></script>
+    <script src="../js/logout.js"></script>
+    <script src="../js/admin-submission-inbox.js"></script>
 </body>
 </html>

@@ -15,6 +15,11 @@
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../scss/main.css"/>
     <title>Login</title>
+    <style>
+      .title .snd:hover {
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -58,8 +63,8 @@
       <div class="register-form-container login-container">
         <form class="login-form">
           <div class="title" style="display: flex; justify-content: space-between;">
-            <h2 style="cursor: pointer" onclick="window.location.assign('Login.html')"><b>PARTICIPANTS LOGIN</b></h2>
-            <h2><a href="admin-login.html"> go to ADMIN</a></h2>
+            <h2><a href="admin-login.html"><b>ADMIN LOGIN</b></a></h2>
+            <h2 class="snd" style="cursor: pointer" onclick="window.location.assign('login.html')">go to PARTICIPANTS</h2>
           </div>
           <p class="come">Welcome Back</p>
           <legend>Email</legend>
@@ -108,6 +113,6 @@
       </div>
     </main>
     <aside> <div class="device-compatibility"></div></aside>
-    <script src="../js/login.js"></script>
+    <script src="../js/admin-login.js"></script>
   </body>
 </html>
