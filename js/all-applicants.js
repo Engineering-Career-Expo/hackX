@@ -12,7 +12,7 @@ axios.get("https://hackxbackend.herokuapp.com/getAllContacts" , { headers: heade
     let newCont = () => {
         let newPane = 
         `<div class="submission-detail">
-            <input type="checkbox">
+            <input type="checkbox" id="checky">
             <div class="column-one">
                 <div class="checkbox" id="checkbox-one"></div>
                 <div class="real-submission">
