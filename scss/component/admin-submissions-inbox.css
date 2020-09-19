@@ -2,10 +2,9 @@
 html, body {
     width: 100%;
     margin: 0;
-    padding: 0;
     background: #E5E5E5;
 }
-button, button:hover {
+main button, main button:hover {
     border: none;
     border-radius: 5px;
     outline: none;
