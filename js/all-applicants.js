@@ -5,39 +5,35 @@ const headers = {
     'withCredentials': true, 
   }
   let emArr = [];
-axios.get("https://hackxbackend.herokuapp.com/getAllContacts" , { headers: headers })
+
+axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
 .then((response) => {
-    var doc = response.data.doc;
-    console.log(doc); 
-    let newCont = () => {
-        let id = i;
-        console.log(i);
-        let newPane = 
-        `<div class="submission-detail">
-            <input type="checkbox" id="checky">
-            <div class="column-one">
-                <div class="checkbox" id="checkbox-one"></div>
-                <div class="real-submission">
-                    <h5 class="submission-tag">Application ${(i + 1)}</h5>
-                    <h5 class="participant-name">${doc[i].name}</h5>
-                </div>
-            </div>
-            <h5 class="time">${doc[i].createdAt}</h5>
-        </div>
-        <hr class="submission-hr"></hr>`;
-        emArr.push(doc[i].email);
-        applicont.innerHTML += newPane;
+  var doc = response.data.doc;
+  console.log(doc); 
+  let newCont = () => {
+    let id = i;
+    console.log(id);
+      let newPane = 
+      `<div class="submission-detail">
+          <input type="checkbox">
+          <div class="column-one">
+              <div class="checkbox" id="checkbox-one"></div>
+              <div class="real-submission">
+                  <h5 class="submission-tag">Application ${(i + 1)}</h5>
+                  <h5 class="participant-name">${doc[i].firstname + " "} ${doc[i].lastname}</h5>
+              </div>
+          </div>
+          <h5 class="time">${doc[i].createdAt}</h5>
+      </div>
+      <hr class="submission-hr"></hr>`;
+      applicont.innerHTML += newPane;
+      emArr.push(doc[i].email);
     }
     for(var i = 0; i < doc.length; i++) {
-        var bigDocument = JSON.stringify(doc[i]) + "<br><br><br><br>";
-        newCont();
-        console.log('boo');
+      newCont();
+      console.log('boo');
     }
     console.log(emArr);
     localStorage.setItem('emailArray', emArr);
 })
 .catch((error) => console.error(error));
-
-
-
-
