@@ -48,7 +48,7 @@ axios
     //ageCnt = response.data.dashboard[1];
     institution = response.data.dashboard[2];
     localStorage.setItem("email", response.data.email);
-    // console.log(response.data);  
+     console.log(response.data.dashboard[0].institution);  
 })
 .catch((error) => console.error(error));
 
