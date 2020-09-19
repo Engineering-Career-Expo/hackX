@@ -4,12 +4,14 @@ const headers = {
     'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
     'withCredentials': true, 
   }
-  
+  let emArr = [];
 axios.get("https://hackxbackend.herokuapp.com/getAllContacts" , { headers: headers })
 .then((response) => {
     var doc = response.data.doc;
     console.log(doc); 
     let newCont = () => {
+        let id = i;
+        console.log(i);
         let newPane = 
         `<div class="submission-detail">
             <input type="checkbox" id="checky">
@@ -23,14 +25,16 @@ axios.get("https://hackxbackend.herokuapp.com/getAllContacts" , { headers: heade
             <h5 class="time">${doc[i].createdAt}</h5>
         </div>
         <hr class="submission-hr"></hr>`;
+        emArr.push(doc[i].email);
         applicont.innerHTML += newPane;
     }
     for(var i = 0; i < doc.length; i++) {
         var bigDocument = JSON.stringify(doc[i]) + "<br><br><br><br>";
         newCont();
         console.log('boo');
-
     }
+    console.log(emArr);
+    localStorage.setItem('emailArray', emArr);
 })
 .catch((error) => console.error(error));
 
