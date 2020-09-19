@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../scss/component/admin-submissions-inbox.css">
     <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <nav> 
@@ -94,8 +95,8 @@
             </div>
             <button class="delete-submission">Delete</button>
         </header>
-        <div class="submissions-section">
-            <div class="submission-detail">
+        <div class="submissions-section" id="appliContainer">
+            <!--<div class="submission-detail">
                 <input type="checkbox">
                 <div class="column-one">
                     <div class="checkbox" id="checkbox-one"></div>
@@ -177,10 +178,9 @@
                     </div>
                 </div>
                 <h5 class="time">a day ago</h5>
-            </div>
+            </div>-->
         </div>
     </main>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="../js/avatar.js"></script>
     <script src="../js/dashboard-navbar.js"></script>
     <script src="../js/get_user.js"></script>
