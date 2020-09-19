@@ -10,9 +10,9 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
 .then((response) => {
   var doc = response.data.doc;
   console.log(doc); 
+  var id = 0;
   let newCont = () => {
     console.log(id);
-    var id;
       let newPane = 
       `<div class="submission-detail">
           <input type="checkbox">
@@ -29,7 +29,7 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
       applicont.innerHTML += newPane;
       emArr.push(doc[i].email);
     }
-    for(var i = 0; i < doc.length; i++) {
+    for(var i = doc.length - 1; i > -1; i--) {
       id++;
       newCont();
       console.log('boo');
