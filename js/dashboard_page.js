@@ -1,3 +1,36 @@
+// let un, deux, trois, quarte, quinze, six;
+// un = document.querySelector('#un');
+// deux = document.querySelector('#deux');
+// trois = document.querySelector('#trois');
+// quarte = document.querySelector('#quarte');
+// quinze = document.querySelector('#quinze');
+// six = document.querySelector('#six');
+
+// un.onclick = function() {
+// 	j = 0;
+// 	document.querySelector('.progress_percent').innerHTML = j + "%";
+// }
+// duex.onclick = function() {
+// 	j = 20;
+// 	document.querySelector('.progress_percent').innerHTML = j + "%";
+// }
+// trois.onclick = function() {
+// 	j = 40;
+// 	document.querySelector('.progress_percent').innerHTML = j + "%";
+// }
+// quarte.onclick = function() {
+// 	j = 60;
+// 	document.querySelector('.progress_percent').innerHTML = j + "%";
+// }
+// quinze.onclick = function() {
+// 	j = 80;
+// 	document.querySelector('.progress_percent').innerHTML = j + "%";
+// }
+// six.onclick = function() {
+// 	j = 100;
+// 	document.querySelector('.progress_percent').innerHTML = j + "%";
+// }
+
 var head_drop = document.getElementsByClassName("head_drop");
 var head_section3 = document.getElementsByClassName("navbar_second");
 var reg1 = document.getElementsByClassName("navbar_reg1");
@@ -66,7 +99,13 @@ function showSlides(n) {
   	a.style.height = "40px";
   	a.style.width = "40px";
   	a.style.marginTop = "0px";
-  	a.innerHTML = "4";
+  	a.innerHTML = "3";
+  }else if(n == 5) {
+  	a.style.backgroundColor = "#1071f3";
+  	a.style.height = "40px";
+  	a.style.width = "40px";
+  	a.style.marginTop = "0px";
+  	a.innerHTML = "3";
   }else{
   	b.style.backgroundColor = "#1071f3";
   	b.style.height = "40px";
@@ -74,7 +113,7 @@ function showSlides(n) {
   	b.style.marginTop = "0px";
   	b.innerHTML = "4";
   }
-  if (n > 4) {
+  if (n > 5) {
       document.getElementById("next").disabled = true;
       document.getElementById("next").style.display = 'none';
       document.getElementById("finish").style.display = 'block';
@@ -163,6 +202,52 @@ closePopup.addEventListener('click', () => {
 });
 
 // backend connection
+
+
+var imageUrl;
+
+// CALLING THE IMAGE UPLOAD
+
+document.querySelector("#imageUpload").addEventListener('click', function() {
+    document.querySelector("#imageFile").click();
+});
+
+var file;
+// IMAGE UPLOAD SEQUENCE
+document.querySelector("#imageFile").addEventListener('change', function() {
+    file = this.files[0];
+    // VALIDATE IMAGE SIZE
+    if(file.size > 2*1024*1024) {
+        alert('Error : Exceeded size 2MB');
+        return;
+    }
+    // WHEN IMAGE VALIDATION IS SUCCESSFUL
+    // HIDE THE UPLOAD IMAGE 
+    document.querySelector("#imageUpload").style.display = 'none';
+    // SET THE FILE NAME
+    document.querySelector("#imageName").innerText = file.name;
+    document.querySelector("#imageName").style.display = 'block';
+    // GET THE LOCAL URL
+    imageUrl = URL.createObjectURL(file);
+    // SET THE LOCAL URL AS THE IMAGE SRC
+    document.querySelector("#imagePreview").setAttribute('src', imageUrl);
+    document.querySelector("#imagePreview").style.display = 'block';
+    // sHOW DELETE BUTTON
+    document.querySelector("#deleteImage").style.display = 'block';
+
+    // SO AS NOT TO SHOW UNNECESSARY SCREEN, I MADE A SMALL VALIDATION FOR IT
+});
+
+// DELETE IMAGE
+document.querySelector("#deleteImage").addEventListener('click', function(e) {
+    e.preventDefault();
+    URL.revokeObjectURL(imageUrl);
+    document.querySelector("#imageUpload").style.display = 'block';
+    document.querySelector("#imageFile").value = '';
+    document.querySelector("#imageName").style.display = 'none';
+    document.querySelector("#imagePreview").style.display = 'none';
+    document.querySelector("#deleteImage").style.display = 'none';
+});
 
 function ValidateTrack()  
 {  
