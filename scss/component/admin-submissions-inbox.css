@@ -72,6 +72,9 @@ main button, main button:hover {
     margin-right: 10%;
     cursor: pointer;
 }
+.false-check {
+    display: none;
+}
 .submission-page .submissions-section {
     background: white;
     padding: 1% 1.5%;
