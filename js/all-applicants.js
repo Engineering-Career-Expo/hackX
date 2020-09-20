@@ -9,10 +9,14 @@ const headers = {
 axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
 .then((response) => {
   var doc = response.data.doc;
-  console.log(doc); 
+  console.log(doc);
+  var b = JSON.stringify(doc) + "<br><br><br>";
+  applicont.innerHTML += b; 
   var id = 0;
   let newCont = () => {
     console.log(id);
+    let dateCreated = doc[i].createdAt;
+    let editedDate = moment(new Date(dateCreated)).format('YYYY-MM-DD');
       let newPane = 
       `<div class="submission-detail">
           <input type="checkbox">
@@ -25,7 +29,7 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
                   <h5 class="participant-name">${doc[i].firstname + " "} ${doc[i].lastname}</h5>
               </div>
           </div>
-          <h5 class="time">${doc[i].createdAt}</h5>
+          <h5 class="time">${editedDate}</h5>
       </div>
       <hr class="submission-hr"></hr>`;
       applicont.innerHTML += newPane;
@@ -34,9 +38,11 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
     for(var i = doc.length - 1; i > -1; i--) {
       id++;
       newCont();
-      console.log('boo');
+      console.log(doc[i].username);
+      console.log(doc[i].submission);
     }
     console.log(emArr);
     localStorage.setItem('emailArray', emArr);
+    
 })
 .catch((error) => console.error(error));
