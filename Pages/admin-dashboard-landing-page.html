@@ -59,17 +59,17 @@
                                     <div class="dropdownProfile" id="dropdownProfile">
                                         <div class="username">Signed in as <span class="user_username">Keazzy</span> </div>
                                         <hr class="ddHr">
-                                        <div class="accountState">Flying Solo</div>
+                                        <br>
+                                        <div class="accountState">ADMIN</div>
                                         <hr class="ddHr">
                                         <div class="navigationLink">
                                             <a href="profile-page.html">Your Profile</a>
-                                            <a>Your submissions</a>
-                                            <a>Your Teams</a>
+                                            <a href="admin-submission-inbox.html">view submissions</a>
+                                            <a href="teams.html">view Teams</a>
                                         </div>
                                         <hr class="ddHr">
                                         <div class="otherNavs">
                                             <a href="mailto:ecxunilag@gmail.com?subject=Dear%20ECX%20,%20my%20name%20is%20 %20and%20I%20help%20with" target="_blank">Help</a>
-                                            <a>Settings</a>
                                             <a id="logout_user">Logout</a>
                                         </div>
                                     </div>                                    
@@ -112,28 +112,17 @@
                 <div class="welcome_info__flex">
                     <p class="welcome_info__head">Welcome <span class="welcome_username">Anonymous</span>!</p>
                     <p class="welcome_info__txt">As an Admin, you'll be able to access all submissions and 
-                        applications from this dashboard. Welcom once again.
+                        applications from this dashboard. Welcome once again.
                     </p>
                 </div>
             </div>
         </div>
     </aside>
+    <script src="../js/poppy.js"></script>
     <script src="../js/avatar.js"></script>
     <script src="../js/dashboard-navbar.js"></script>
     <script src="../js/get_user.js"></script>
     <script src="../js/avatar.js"></script>
-    <script src="../js/popup.js"></script>
     <script src="../js/logout.js"></script>
-    <script>
-        let closeBtn = document.querySelector('#close_image');
-        let  popUp = document.querySelector('#close-cont');
-
-        closeBtn.onclick = function() {
-            console.log('close');
-            popUp.style.transition = '.5s ease-in-out';
-            popUp.style.opacity = '0';
-            popUp.style.display = 'none';
-        }
-    </script>
 </body>
 </html>
