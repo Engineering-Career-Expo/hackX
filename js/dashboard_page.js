@@ -217,7 +217,7 @@ if (localStorage.getItem('bio') !== undefined ) {
     const linkContainer = [ link ];
     const institution = document.querySelector("#institution").value;
     const department = document.querySelector("#department").value;
-    const Info = await { bio, track, linkContainer, institution, department };
+    const Info = await { picture, bio, track, linkContainer, gender, number, institution, department };
     dashboardInfo(Info); 
   });
 };
