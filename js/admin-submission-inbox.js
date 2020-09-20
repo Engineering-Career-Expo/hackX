@@ -7,7 +7,7 @@ const headers = {
 }
 let username = "";
 let getUser = () => {
-    axios.get("https://hackxbackend.herokuapp.com/getuser?username=bamix" , { headers: headers })
+    axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username , { headers: headers })
     .then((response) => {
       var doc = response.data;
       console.log(doc); 
