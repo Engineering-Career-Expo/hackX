@@ -46,3 +46,13 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
     
 })
 .catch((error) => console.error(error));
+
+
+const deleteUser = () => {
+  axios.get("https://hackxbackend.herokuapp.com/deleteuser?username?" + username , { headers: headers })
+  .then((response) => {
+    if(response.data == "olax has been deleted.");
+    console.log('successfully deleted');
+  })
+  .catch((error) => console.error(error));
+}
