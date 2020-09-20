@@ -60,11 +60,12 @@
 			</div>
 			<div class="response-bar">
 				<div class="circles">
-					<span class="dot" onclick="currentSlide(1)"></span>
-					<span class="dot" onclick="currentSlide(2)"></span>
-					<span class="dot" onclick="currentSlide(3)"></span>
-					<span class="dot" onclick="currentSlide(4)"></span>
-					<span class="dot" onclick="currentSlide(5)"></span>
+					<span class="dot" onclick="currentSlide(1)" id="un"></span>
+					<span class="dot" onclick="currentSlide(2)" id="duex"></span>
+					<span class="dot" onclick="currentSlide(3)" id="trois"></span>
+					<span class="dot" onclick="currentSlide(4)" id="quarte"></span>
+					<span class="dot" onclick="currentSlide(5)" id="quinze"></span>
+					<span class="dot" onclick="currentSlide(6)" id="six"></span>
 					<button class="prev" id="prev" onclick="plusSlides(-1)">PREVIOUS</button>
 					<button class="next" id="finish" type="submit">FINISH</button>
 					<button class="next" id="next" onclick="plusSlides(1)">NEXT</button>
@@ -77,7 +78,20 @@
 				</div>
 			</div>
 			
-			
+			<div class="infoSlide">
+				<div class="reply biodata-img" id="biodata-img">
+					<div id="preview-container" class="imageDialogContainer">
+                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload" class="imageUpload">
+                        <input type="file" id="imageFile" class="imageFile" name="picture" accept=".gif, .jpg, .png" multiple />
+                        <img id="imagePreview" class="imagePreview" />
+                        <div id="imageName" class="imageName" title="image name"></div>
+                        <button id="deleteImage" class="deleteImage">Delete</button>
+                    </div>
+				</div>
+			</div>
+
+
+
 			<div class="infoSlide">
 				<div class="reply" id="genderInfo">
 					<div class="one">
@@ -182,7 +196,7 @@
 		
 		<div class="progress_section">
 			<p class="progress_head">PROGRESS</p>
-			<p class="progress_percent">25%</p>
+			<p class="progress_percent">0%</p>
 			<div class="progress_bar">
 				<div class="progress_bar__circleOne">1</div><div class="progress_bar__line"></div>
 				<div class="progress_bar__circleTwo"></div><div class="progress_bar__line"></div>
@@ -206,7 +220,6 @@
 		</div>
 		</div>
 		<p class="dashboard_submissionSuccessful">We've Received Your Details<br> Please Check Back Later.</p>
-		</body>
 		<script src="../js/avatar.js"></script>
 		<script src="../js/dashboard-navbar.js"></script>
 		<script src="../js/dashboard_page.js"></script>
@@ -214,5 +227,6 @@
 		<script src="../js/progress.js"></script>
 		<script src="../js/add_link.js"></script>
 		<script src="../js/avatar.js"></script>
-	</body>
+		<script src="../js/imageValidation.js"></script>
+	</body> 
 </html>
