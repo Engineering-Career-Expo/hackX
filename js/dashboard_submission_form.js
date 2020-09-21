@@ -87,6 +87,7 @@ const submissionInfo = async () => {
           showLoginAlert("Error when trying to upload files.", "error");
         }else if (response.data == "Files have been uploaded.") {
           showLoginAlert("Submitted Successfully.", "success");
+          window.location.replace('https://hackx.netlify.app/pages/main_dashboard_page');
         } else if (response.data == "Submission Failed") {
           showLoginAlert("Unable to submit files.", "error");
         }else if (response.data == 'Invalid Token') {
