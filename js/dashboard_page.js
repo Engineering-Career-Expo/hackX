@@ -289,7 +289,7 @@ if (localStorage.getItem('bio') !== undefined ) {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
     const bio = document.querySelector("#bio").value;
-    const picture = file;
+    const picture = imageUrl;
     let track = "";
     if (document.querySelector("#customCheckbox").checked){
       track = document.querySelector("#customCheckbox").value
@@ -302,14 +302,15 @@ if (localStorage.getItem('bio') !== undefined ) {
     }
     setTimeout(function () {
       Submit.disabled = true;
+      //document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
     }, 2000);
-    const link = document.querySelector("#link").value;
-    const linkContainer = [ link ];
+    const linky = document.querySelector("#link").value;
+    const link = [ linky ];
     const gender = genderValue;
     const number = phoneNo.value;
     const institution = document.querySelector("#institution").value;
     const department = document.querySelector("#department").value;
-    const Info = await { picture, bio, track, linkContainer, gender, number, institution, department };
+    const Info = await { picture, bio, track, link, gender, number, institution, department };
     dashboardInfo(Info); 
   });
 };
