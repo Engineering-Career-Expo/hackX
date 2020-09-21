@@ -14,7 +14,7 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
   applicont.innerHTML += b; 
   var id = 0;
   var usersId = [];
-  var demId = `${"pane" + id}`;
+  var demId = "";
   let newCont = () => {
     console.log(id);
     let dateCreated = doc[i].createdAt;
@@ -38,17 +38,19 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
     userNameArr.push(doc[i].username);
     let viewApplication = () => {
       console.log("this.id");
-      //window.location.assign('admin-participant-review.html');
+      window.location.assign('admin-participant-review.html');
     }
   }
-    userID.onclick = viewApplication();
     for(var i = doc.length - 1; i > -1; i--) {
       id++;
+      demId = `${"pane" + id}`;
       newCont();
       console.log(doc[i].username);
       console.log(doc[i].submission);
-      //usersId[i] = ;
+      usersId[i] = `${"id" + id}`;
+      //.onclick = viewApplication();
     }
+    console.log(usersId);
     console.log(userNameArr);
     localStorage.setItem('usernameArray', userNameArr);
 })
