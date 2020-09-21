@@ -1,8 +1,12 @@
-var j = 25;
+
+
+
+var j = 0;
 document.querySelector('#next').addEventListener('click', function() {
-	j += 25;
+	j += 20;
 	document.querySelector('.progress_percent').innerHTML = j + "%";
 });
 document.querySelector("#prev").addEventListener('click', function() {
-	j -= 25;
+	j -= 20;
+	document.querySelector('.progress_percent').innerHTML = j + "%";
 });
