@@ -1,35 +1,29 @@
-// let un, deux, trois, quarte, quinze, six;
-// un = document.querySelector('#un');
-// deux = document.querySelector('#deux');
-// trois = document.querySelector('#trois');
-// quarte = document.querySelector('#quarte');
-// quinze = document.querySelector('#quinze');
-// six = document.querySelector('#six');
+let un, deux, trois, quarte, quinze, six;
+un = document.querySelector('#un');
+deux = document.querySelector('#deux');
+trois = document.querySelector('#trois');
+quarte = document.querySelector('#quarte');
+quinze = document.querySelector('#quinze');
+six = document.querySelector('#six');
 
-// un.onclick = function() {
-// 	j = 0;
-// 	document.querySelector('.progress_percent').innerHTML = j + "%";
-// }
-// duex.onclick = function() {
-// 	j = 20;
-// 	document.querySelector('.progress_percent').innerHTML = j + "%";
-// }
-// trois.onclick = function() {
-// 	j = 40;
-// 	document.querySelector('.progress_percent').innerHTML = j + "%";
-// }
-// quarte.onclick = function() {
-// 	j = 60;
-// 	document.querySelector('.progress_percent').innerHTML = j + "%";
-// }
-// quinze.onclick = function() {
-// 	j = 80;
-// 	document.querySelector('.progress_percent').innerHTML = j + "%";
-// }
-// six.onclick = function() {
-// 	j = 100;
-// 	document.querySelector('.progress_percent').innerHTML = j + "%";
-// }
+un.onclick = function() {
+	console.log("nobody");
+}
+duex.onclick = function() {
+	console.log("nobody");
+}
+trois.onclick = function() {
+	console.log("nobody");
+}
+quarte.onclick = function() {
+	console.log("nobody");
+}
+quinze.onclick = function() {
+	console.log("nobody");
+}
+six.onclick = function() {
+	console.log("nobody");
+}
 
 var head_drop = document.getElementsByClassName("head_drop");
 var head_section3 = document.getElementsByClassName("navbar_second");
@@ -312,7 +306,7 @@ if (localStorage.getItem('bio') !== undefined ) {
     const link = document.querySelector("#link").value;
     const linkContainer = [ link ];
     const gender = genderValue;
-    number = phoneNo.value;
+    const number = phoneNo.value;
     const institution = document.querySelector("#institution").value;
     const department = document.querySelector("#department").value;
     const Info = await { picture, bio, track, linkContainer, gender, number, institution, department };
