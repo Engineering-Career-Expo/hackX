@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>View Submission</title>
+  <link rel="stylesheet" href="../scss/page/view_submission.css">
+  <link rel="stylesheet" href="../scss/component/dashboard-navbar-desktop.css">
+  <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body class="view_submission_body">
+  <section class="head_section1">
+    <section class="head_info0">
+      <div class="head_pic0"><img src="../../assets/ECX.svg" /></div>
+      <div class="head_dashboard"><img class="dashboard_pic" src="../../assets/images/dashboard-pic.png" />
+        <div class="b"><a href="#">Dashboard</a></div>
+        </< /div>
+      </div>
+
+      <div class="head_inbox"><img class="inbox_pic" src="../../assets/images/inbox-pic.png" />
+        <div class="b"><a href="#">Inbox</a></div>
+      </div>
+
+      <div class="head_submission"><img class="submission_pic" src="../../assets/images/submit-pic.png" />
+        <div class="b"><a href="#">Submission</a></div>
+      </div>
+    </section>
+
+    <section class="head_section2">
+      <div class="head_logout"><a href="#">KEAZZY</a></div>
+      <div class="head_pic1">
+        <a href="#">
+          <div class="head_pic2"><img src="../../assets/images/sample.jpg" class="head_pic02" /></div>
+      </div>
+      </a>
+    </section>
+  </section>
+  <section class="view_submission__all">
+    <p class="view_back"><span>&lt;</span> <a href="admin-submission-inbox.html">Go back to submissions</a></p>
+    <section class="view_submissionDetails">
+      <p class="view_teamDetails">Team details</p>
+      <div class="teamDetails_box"></div>
+      <p class="view_projectDetails">Project details</p>
+      <div class="projectDetails_box">
+        <p><span class="projectDetails_bigOne">HackX</span> <br><span class="projectDetails_smallOne">An hacked web
+            solution</span></p>
+      </div>
+      <div class="projectDetails_box">
+        <p><span class="projectDetails_big">The problem HackX solves</span> <br><span class="projectDetails_smallTwo">HackX
+            is made for hackers to hack the industry without hacking literally.</span></p>
+      </div>
+      <div class="projectDetails_box">
+        <p><span class="projectDetails_big">Challenges I ran into</span> <br><span class="projectDetails_smallThree">I guess
+            I ran into some challenges but I can't explain them all</span></p>
+      </div>
+      <div class="projectDetails_box">
+        <p><span class="projectDetails_big">Technologies I used</span> <br><span
+            class="projectDetails_small__flex"><span class="box_blue">HTML</span><span class="box_green">Vue
+              js</span><span class="box_purple">Vue js</span></span></p>
+      </div>
+      <div class="projectDetails_box">
+        <p><span class="projectDetails_big">Links</span> <br><span
+            class="projectDetails_smallFour"><a href="#">https://hackx.github.io</a></span></p>
+      </div>
+      <div class="projectDetails_box__submission">
+        <img src="../../assets/images/Rectangle_119.png" alt="img" class="projectDetails_box__submissionImageOne">
+        <img src="../../assets/images/Play.png" alt="img" class="projectDetails_box__submissionPlayBtn">
+        <video class="project_video" controls>
+          <source src="" type="video/mp4">
+          <source src="" type="video/ogg">
+          Your browser does not suport the video tag.
+        </video>
+      </div>
+      <div class="projectDetails_box__submissionTwo">
+        <div class="projectDetails_box__light"><img src="../../assets/images/Rectangle_53.png" alt="img"></div>
+        <div class="projectDetails_box__light"><img src="../../assets/images/Rectangle_53.png" alt="img"></div>
+        <div class="projectDetails_box__light"><img src="../../assets/images/Rectangle_54.png" alt="img"></div>
+        <div class="projectDetails_box__light"><img src="../../assets/images/Rectangle_54.png" alt="img"></div>
+      </div>
+    </section>
+    <button type="submit" class="gradeSubmission">Grade Submission</button>
+  </section><br>
+  <form class="gradeform">
+    <label for="grade">Grade</label><br>
+    <input type="text" name="grade" id="grade" placeholder="Enter a grade here 1-10"><br>
+    <label for="comment">Comment:</label><br>
+    <textarea name="comment" id="comment" cols="28" rows="10"></textarea><br>
+    <button type="submit" class="submit_gradeform">Submit</button>
+  </form>
+</body>
+
+</html>
