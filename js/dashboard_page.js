@@ -280,11 +280,22 @@ const showLoginAlert = (message, className) => {
   }, 12000);
 };
 
+var radioOne = document.querySelector('#rad1');
+var radioTwo = document.querySelector('#rad2');
+var genderValue;
+const radioValue = () => {
+  genderVal = this.value;
+}
+radioOne.onclick = radioValue();
+radioTwo.onclick = radioValue();
+var phoneNo = document.querySelector('#phoneNo');
+
 if (localStorage.getItem('bio') !== undefined ) {
   const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
     const bio = document.querySelector("#bio").value;
+    const picture = file;
     let track = "";
     if (document.querySelector("#customCheckbox").checked){
       track = document.querySelector("#customCheckbox").value
@@ -300,6 +311,8 @@ if (localStorage.getItem('bio') !== undefined ) {
     }, 2000);
     const link = document.querySelector("#link").value;
     const linkContainer = [ link ];
+    const gender = genderValue;
+    number = phoneNo.value;
     const institution = document.querySelector("#institution").value;
     const department = document.querySelector("#department").value;
     const Info = await { picture, bio, track, linkContainer, gender, number, institution, department };
