@@ -4,7 +4,7 @@ const headers = {
     'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
     'withCredentials': true, 
   }
-  let emArr = [];
+  let userNameArr = [];
 
 axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
 .then((response) => {
@@ -13,12 +13,13 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
   var b = JSON.stringify(doc) + "<br><br><br>";
   applicont.innerHTML += b; 
   var id = 0;
+  var demId = `${"pane" + id}`;
   let newCont = () => {
     console.log(id);
     let dateCreated = doc[i].createdAt;
     let editedDate = moment(new Date(dateCreated)).format('YYYY-MM-DD');
       let newPane = 
-      `<div class="submission-detail">
+      `<div class="submission-detail" id= ${demId}>
           <input type="checkbox">
           <div class="column-one">
               <div class="checkbox" id="checkbox-one">
@@ -33,7 +34,13 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
       </div>
       <hr class="submission-hr"></hr>`;
       applicont.innerHTML += newPane;
-      emArr.push(doc[i].email);
+      userNameArr.push(doc[i].username);
+      var userID = document.querySelector('#demId');
+      let viewApplication = () => {
+        console.log("this.id");
+        //window.location.assign('admin-participant-review.html');
+      }
+    userID.onclick = viewApplication();
     }
     for(var i = doc.length - 1; i > -1; i--) {
       id++;
@@ -41,9 +48,8 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
       console.log(doc[i].username);
       console.log(doc[i].submission);
     }
-    console.log(emArr);
-    localStorage.setItem('emailArray', emArr);
-    
+    console.log(userNameArr);
+    localStorage.setItem('usernameArray', userNameArr);
 })
 .catch((error) => console.error(error));
 
