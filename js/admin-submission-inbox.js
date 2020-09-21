@@ -28,6 +28,8 @@ let getUser = () => {
       localStorage.setItem("submissionsArray", subArr);
       let id = 0;
       let newCont = () => {
+        let dateCreated = doc[i].createdAt;
+        let editedDate = moment(new Date(dateCreated)).format('YYYY-MM-DD');
           let newPane = 
           `<div class="submission-detail">
               <input type="checkbox">
@@ -38,7 +40,7 @@ let getUser = () => {
                       <h5 class="participant-name">${doc[i].firstname + " "} ${doc[i].lastname}</h5>
                   </div>
               </div>
-              <h5 class="time">${doc[i].createdAt}</h5>
+              <h5 class="time">${editedDate}</h5>
           </div>
           <hr class="submission-hr"></hr>`;
           applicont.innerHTML += newPane;
