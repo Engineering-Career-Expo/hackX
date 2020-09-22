@@ -15,7 +15,7 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
-    <nav>
+    <nav> 
         <div class="head_section1">
             <div class="head_info0">
                 <a href="#">
@@ -28,20 +28,21 @@
                 <div class="nav-content-flex">
                     <div class="nav-links">
                         <div class="nav-item">
-                            <button class="drop-btn">
-                                <img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">
+                            <button class="drop-btn" onclick="window.location.replace('admin-dashboard-landing-page.html')">
+                                <!--<img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">-->
                                 Dashboard
                             </button>
-                            <div class="dropDown-content">
-                                <a class="filter" href="#timelineBtn">Timeline</a>
-                                <a id="announDropBtn" class="filter" href="#announBtn">Announcements</a>
-                                <a class="filter" href="#overviewBtn">Overview</a>
-                            </div> 
                         </div>
                         <div class="nav-item br30">
-                            <a href="#">
-                                <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
-                                Submission
+                            <a href="admin-application-submission.html">   
+                                <!--<img src="../assets/images/dashboard/submit-logo.png" alt="Logo">-->
+                                <b>Applications</b>
+                            </a>
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="admin-submission-inbox.html">   
+                                <!--<img src="../assets/images/dashboard/submit-logo.png" alt="Logo">-->
+                                Submissions
                             </a>
                         </div>
                     </div>
@@ -52,7 +53,7 @@
                                 <a href="#" class="view">VIEW PROFILE</a>
                             </div>
                             <div class="head_pic1">
-                                <div class="head_pic2"><img src="../assets/images/sample.jpg" class="head_pic02"/></div>
+                                <div class="head_pic2"><img src="" class="head_pic02"/></div>
                             </div>
                             <div class="dropdown_button">
                                 <button class="dropdownBtn">
@@ -60,11 +61,9 @@
                                     <div class="dropdownProfile" id="dropdownProfile">
                                         <div class="username">Signed in as <span class="user_username">Keazzy</span> </div>
                                         <hr class="ddHr">
-                                        <br>
                                         <div class="accountState">ADMIN</div>
                                         <hr class="ddHr">
                                         <div class="navigationLink">
-                                            <a href="profile-page.html">Your Profile</a>
                                             <a href="admin-submission-inbox.html">view submissions</a>
                                             <a href="teams.html">view Teams</a>
                                         </div>
@@ -75,15 +74,13 @@
                                         </div>
                                     </div>                                    
                                 </button>
-                            </div>
+                            </div>    
                         </div>
                         <div class="linedivide"></div>
                     </div>
                 </div>
                 <div class="logout-wrapper">
-
                     <a href="#" class="logout-btn" id="logout_user"><button class="logout_user">LOGOUT</button></a>
-
                 </div>
             </div>
         </div>
