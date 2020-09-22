@@ -7,7 +7,7 @@
     <title>ADMIN Dashboard</title>
     <link href="../scss/component/admin-dashboard.css" rel="stylesheet">
     <link href="../scss/page/popup.css" rel="stylesheet">
-    <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
+    <link rel="stylesheet" href="../scss/component/admin-dashboard-navbar.css">
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;700&display=swap" rel="stylesheet">    
@@ -17,7 +17,7 @@
     <nav> 
         <div class="head_section1">
             <div class="head_info0">
-                <a href="#">
+                <a href="#" onclick="window.location.replace('../index.html')">
                     <div class="head_pic0">
                         <img src="../assets/ECX.svg"/>
                     </div>
@@ -27,20 +27,21 @@
                 <div class="nav-content-flex">
                     <div class="nav-links">
                         <div class="nav-item">
-                            <button class="drop-btn">
-                                <img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">
-                                Dashboard
+                            <button class="drop-btn" onclick="window.location.replace('admin-dashboard-landing-page.html')">
+                                <!--<img src="../assets/images/dashboard/dashboard-logo.png" alt="Logo">-->
+                                <b>Dashboard</b>
                             </button>
-                            <div class="dropDown-content">
-                                <a class="filter" href="#timelineBtn">Timeline</a>
-                                <a id="announDropBtn" class="filter" href="#announBtn">Announcements</a>
-                                <a class="filter" href="#overviewBtn">Overview</a>
-                            </div> 
                         </div>
                         <div class="nav-item br30">
-                            <a href="#">   
-                                <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
-                                Submission
+                            <a href="admin-application-submission.html">   
+                                <!--<img src="../assets/images/dashboard/submit-logo.png" alt="Logo">-->
+                                Applications
+                            </a>
+                        </div>
+                        <div class="nav-item br30">
+                            <a href="admin-submission-inbox.html">   
+                                <!--<img src="../assets/images/dashboard/submit-logo.png" alt="Logo">-->
+                                Submissions
                             </a>
                         </div>
                     </div>
@@ -59,11 +60,9 @@
                                     <div class="dropdownProfile" id="dropdownProfile">
                                         <div class="username">Signed in as <span class="user_username">Keazzy</span> </div>
                                         <hr class="ddHr">
-                                        <br>
                                         <div class="accountState">ADMIN</div>
                                         <hr class="ddHr">
                                         <div class="navigationLink">
-                                            <a href="profile-page.html">Your Profile</a>
                                             <a href="admin-submission-inbox.html">view submissions</a>
                                             <a href="teams.html">view Teams</a>
                                         </div>
