@@ -2630,7 +2630,7 @@ body {
   .schedule_txt__head {
     font-size: 18px;
     color: #E5193B;
-    font-family: "Gilroy-Regular", serif;
+    font-family: "Gilroy-Regular", sans-serif;
   }
   #schedule_txt__paragraph,
   #schedule_txt__short,
@@ -2638,7 +2638,7 @@ body {
   #schedule_txt__on {
     font-size: 14px;
     margin-top: 6px;
-    font-family: "Gilroy-Regular", serif;
+    font-family: "Gilroy-Regular", sans-serif;
     width: 80%;
     margin-bottom: 30px;
   }
