@@ -1,39 +1,48 @@
 const formElement = document.querySelector('#formElement');
 let finishBtn = document.querySelector('#finish');
-
-// Submit question
-var submitPopup = document.querySelector('#submit_popup');
-var closePopup = document.querySelector('#close_popup');
+let sureToSubmit = document.querySelector('#submit_popup');
+let closeSubmitPopUp = document.querySelector('#close_popup');
+//let Submit = document.querySelector('#submit_popup__btn');
 finishBtn.onclick = () => {
-  submitPopup.style.display = "block";
-  document.querySelector('.dashboard_all__opacity').style.height = "100%";
-  document.querySelector('.dashboard_all__opacity').style.overflow = "hidden";
-};
-let reDo = () => {
-    submitPopup.style.display = "none";
-    document.querySelector('.dashboard_all__opacity').style.height = "100%";
-    document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
+    sureToSubmit.style.display = "block";
+    console.log("opened submit popup");
 }
-closePopup.addEventListener('click', () => {
-    submitPopup.style.display = "none";
-    document.querySelector('.dashboard_all__opacity').style.height = "100%";
-    document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
-});
+closeSubmitPopUp.onclick = () => {
+    console.log('closed submit popup');
+}
+// // Submit question
+// var submitPopup = document.querySelector('#submit_popup');
+// var closePopup = document.querySelector('#close_popup');
+// finishBtn.onclick = () => {
+//   submitPopup.style.display = "block";
+//   document.querySelector('.dashboard_all__opacity').style.height = "100%";
+//   document.querySelector('.dashboard_all__opacity').style.overflow = "hidden";
+// };
+// let reDo = () => {
+//     submitPopup.style.display = "none";
+//     document.querySelector('.dashboard_all__opacity').style.height = "100%";
+//     document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
+// }
+// closePopup.addEventListener('click', () => {
+//     submitPopup.style.display = "none";
+//     document.querySelector('.dashboard_all__opacity').style.height = "100%";
+//     document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
+// });
 
-const popUp = document.querySelector(".response-bar");
-const Submit = document.querySelector(".submit_popup__btn");
+// const popUp = document.querySelector(".response-bar");
+// const Submit = document.querySelector(".submit_popup__btn");
 
-const showLoginAlert = (message, className) => {
-  const div = document.createElement("div");
-  div.className = `alert ${className}`;
-  div.appendChild(document.createTextNode(message));
-  const container = document.querySelector(".participant-info");
-  container.insertBefore(div, popUp);
+// const showLoginAlert = (message, className) => {
+//   const div = document.createElement("div");
+//   div.className = `alert ${className}`;
+//   div.appendChild(document.createTextNode(message));
+//   const container = document.querySelector(".participant-info");
+//   container.insertBefore(div, popUp);
 
-  setTimeout(function () {
-    document.querySelector(".alert").remove();
-  }, 12000);
-};
+//   setTimeout(function () {
+//     document.querySelector(".alert").remove();
+//   }, 12000);
+// };
 
 const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
