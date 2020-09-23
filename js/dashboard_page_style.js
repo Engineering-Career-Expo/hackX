@@ -76,31 +76,31 @@ function showSlides(n) {
   	m.style.width = "40px";
   	m.style.marginTop = "0px";
   	m.innerHTML = "1";
-  }else if (n == 2) {
+  } else if (n == 2) {
   	x.style.backgroundColor = "#1071f3";
   	x.style.height = "40px";
   	x.style.width = "40px";
   	x.style.marginTop = "0px";
   	x.innerHTML = "2";
-  }else if(n == 3) {
+  } else if(n == 3) {
   	a.style.backgroundColor = "#1071f3";
   	a.style.height = "40px";
   	a.style.width = "40px";
   	a.style.marginTop = "0px";
   	a.innerHTML = "3";
-  }else if(n == 4) {
+  } else if(n == 4) {
   	a.style.backgroundColor = "#1071f3";
   	a.style.height = "40px";
   	a.style.width = "40px";
   	a.style.marginTop = "0px";
   	a.innerHTML = "3";
-  }else if(n == 5) {
+  } else if(n == 5) {
   	a.style.backgroundColor = "#1071f3";
   	a.style.height = "40px";
   	a.style.width = "40px";
   	a.style.marginTop = "0px";
   	a.innerHTML = "3";
-  }else{
+  } else{
   	b.style.backgroundColor = "#1071f3";
   	b.style.height = "40px";
   	b.style.width = "40px";
@@ -108,28 +108,28 @@ function showSlides(n) {
   	b.innerHTML = "4";
   }
   if (n > 5) {
-      document.getElementById("next").disabled = true;
-      document.getElementById("next").style.display = 'none';
-      document.getElementById("finish").style.display = 'block';
-}
-else {
+    document.getElementById("next").disabled = true;
+    document.getElementById("next").style.display = 'none';
+    document.getElementById("finish").style.display = 'block';
+  }
+  else {
     document.getElementById("next").disabled = false;
     document.getElementById("next").style.display = 'block';
     document.getElementById("finish").style.display = 'none';
-}
+  }
   if (n < 2) {
-      document.getElementById("prev").disabled = true;
-      document.getElementById("prev").style.visibility = 'hidden';
-}
-else {
+    document.getElementById("prev").disabled = true;
+    document.getElementById("prev").style.visibility = 'hidden';
+  }
+  else {
     document.getElementById("prev").disabled = false;
     document.getElementById("prev").style.visibility = 'visible';
-}
+  }
   for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
+    slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].className = dots[i].className.replace(" active", "");
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
