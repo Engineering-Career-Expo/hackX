@@ -1,4 +1,5 @@
 var imageUrl;
+var file;
 
 // CALLING THE IMAGE UPLOAD
 
@@ -9,7 +10,7 @@ document.querySelector("#imageUpload").addEventListener('click', function() {
 
 // IMAGE UPLOAD SEQUENCE
 document.querySelector("#imageFile").addEventListener('change', function() {
-    var file = this.files[0];
+    file = this.files[0];
     // VALIDATE IMAGE SIZE
     if(file.size > 2*1024*1024) {
         alert('Error : Exceeded size 2MB');
