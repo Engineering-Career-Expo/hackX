@@ -68,7 +68,7 @@
 					<span class="dot" onclick="currentSlide(6)" id="six"></span>
 					<button class="prev" id="prev" onclick="plusSlides(-1)">PREVIOUS</button>
 					<button class="next" id="finish" type="submit">FINISH</button>
-					<button class="next" id="next" onclick="plusSlides(1)">NEXT</button>
+					<button class="next" id="next" onclick="plusSlides(1); return validateInput();">NEXT</button>
 				</div>
 			</div>
 			<form id="formElement">
@@ -228,7 +228,7 @@
 		<div id="submit_popup">
 			<img src="../assets/images/Rectangle.png" alt="close" id="close_popup">
 			<p class="submit_question">Are you sure you want to submit?</p>
-			<button class="submit_popup__btn" type="submit">Submit</button>
+			<button class="submit_popup__btn">Submit</button>
 		</div>
 		</div>
 		<p class="dashboard_submissionSuccessful">We've Received Your Details<br> Please Check Back Later.</p>
