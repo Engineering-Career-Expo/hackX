@@ -1,3 +1,29 @@
+
+
+function validateInput() {
+    if(bioCntInput.length < 5 && bioCntInput.length > 50 && genderValue.length < 1 && phoneNoVal.length < 10 && 
+       phoneNoVal.length > 11 && trackVal.length < 1 && institutionCntVal.length < 1 && departmentCntVal.length < 1 && 
+      biodataImg.value.length < 1) {
+        document.querySelector('#finish').disabled = true;
+        console.log("nothing here");
+        console.log(bioCntInput);
+        console.log(genderValue);
+        console.log(phoneNoVal);
+        console.log(trackVal);
+        console.log(institutionCntVal);
+        console.log(departmentCntVal);
+        console.log(biodataImg,value);
+    } else {
+        document.querySelector('#finish').disabled = false;
+        console.log("filled here");
+    }
+    console.log("validated");
+};
+
+
+
+
+
 // for Image
 var imageUrl;
 var file;
@@ -85,9 +111,9 @@ function validateInput() {
     if(bioCntInput.length < 5 && bioCntInput.length > 50 && genderValue.length < 1 && phoneNoVal.length < 10 && 
        phoneNoVal.length > 11 && trackVal.length < 1 && institutionCntVal.length < 1 && departmentCntVal.length < 1 && 
       biodataImg.value.length < 1) {
-        document.querySelector('#finish').disabled = false;
-    } else {
         document.querySelector('#finish').disabled = true;
+    } else {
+        document.querySelector('#finish').disabled = false;
     }
 };
 
@@ -107,6 +133,21 @@ let ValidateTrack = () => {
       return false;  
     }  
 } 
+const popUp = document.querySelector(".response-bar");
+const Submit = document.querySelector(".submit_popup__btn");
+
+const showLoginAlert = (message, className) => {
+  const div = document.createElement("div");
+  div.className = `alert ${className}`;
+  div.appendChild(document.createTextNode(message));
+  const container = document.querySelector(".participant-info");
+  container.insertBefore(div, popUp);
+
+  setTimeout(function () {
+    document.querySelector(".alert").remove();
+  }, 12000);
+};
+
 // if (document.querySelector("#customCheckbox").checked){
 //   trackVal = document.querySelector("#customCheckbox").value
 // }else if(document.querySelector("#customCheckbox2").checked){
