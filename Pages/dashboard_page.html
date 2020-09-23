@@ -4,7 +4,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" intial-scale="1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-		<link rel="stylesheet" type="text/css" href="../scss/component/dashboard_page.css ">		
+		<link rel="stylesheet" type="text/css" href="../scss/component/dashboard_page.css">		
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
@@ -71,115 +71,126 @@
 					<button class="next" id="next" onclick="plusSlides(1)">NEXT</button>
 				</div>
 			</div>
-			<div class="infoSlide">
-				<div class="reply">
-					<header class="contestant-bio"><b>BIO</b></header>
-					<textarea class="inputarea" id="bio" placeholder="Write something about yourself in less than 50 words"></textarea>
-				</div>
-			</div>
-			
-			<div class="infoSlide">
-				<div class="reply biodata-img" id="biodata-img">
-					<header class="contestant-bio"><b>BIODATA IMAGE</b></header>
-					<div id="preview-container" class="imageDialogContainer">
-                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload" class="imageUpload">
-                        <input type="file" id="imageFile" class="imageFile" name="picture" accept=".gif, .jpg, .png" multiple />
-                        <img id="imagePreview" class="imagePreview" />
-                        <div id="imageName" class="imageName" title="image name"></div>
-                        <button id="deleteImage" class="deleteImage">Delete</button>
-                    </div>
-				</div>
-			</div>
-
-
-
-			<div class="infoSlide">
-				<div class="reply" id="genderInfo">
-					<div class="one">
-					<label class="contestant-bio">Gender</label><br>
-					 <input type="radio" id="rad1" name="gender" value="male">Male<br>
-					 <input type="radio" id="rad2" name="gender" value="female">Female
-					</div>
-					
-					<div id="telNo">
-					 <label class="contestant-bio">Phone Number</label>
-					 <input type="tel" placeholder="Phone No" id="phoneNo">
+			<form id="formElement">
+				<div class="infoSlide">
+					<div class="reply">
+						<header class="contestant-bio" style="display: flex; justify-content: space-between; padding: 2% 3% 0 3%;">
+							<b>BIO</b>
+							<span id="count">0 / 50 words</span>
+						</header>
+						<textarea class="inputarea" id="bio" placeholder="Write something about yourself in less than 50 words"></textarea>
 					</div>
 				</div>
-			</div>
-			
-		
-			<div class="infoSlide">
-				<div class="reply">
-					<header class="contestant-bio">WHICH OF THE FOLLOWING DESCRIBES YOU BEST?</header>
-					<form class="inputarea2">
-						<div class="contestant-description">
-							<input type="checkbox" name="track" id="customCheckbox" value="Designer" onclick="return ValidateTrack()"  />
-							<label  for="customCheckbox">Designer</label>
+				
+				<div class="infoSlide">
+					<div class="reply biodata-img" id="biodata-img">
+						<header class="contestant-bio"><b>BIODATA IMAGE</b></header>
+						<div id="preview-container" class="imageDialogContainer">
+							<img src="../assets/images/dashboard/add-image.svg" id="imageUpload" class="imageUpload">
+							<input type="file" id="imageFile" class="imageFile" name="picture" accept=".gif, .jpg, .png" multiple />
+							<img id="imagePreview" class="imagePreview" />
+							<div id="imageName" class="imageName" title="image name"></div>
+							<button id="deleteImage" class="deleteImage">Delete</button>
 						</div>
-						<div class="contestant-description">
-							<input type="checkbox" name="track" id="customCheckbox2" value="Frontend Developer" onclick="return ValidateTrack()"/>
-							<label  for="customCheckbox2">Frontend Developer</label>
-						</div>
-						<div class="contestant-description">
-							<input type="checkbox" name="track" id="customCheckbox3" value="Backend Developer" onclick="return ValidateTrack()"/>
-							<label  for="customCheckbox3">Backend Developer</label>
-						</div>
-						<div class="contestant-description">
-							<input type="checkbox" name="track" id="customCheckbox4" value="Mobile Developer" onclick="return ValidateTrack()"/>
-							<label  for="customCheckbox4">Mobile Developer</label>
-						</div>
-					</form>
+					</div>
 				</div>
-			</div>
-		
-			<div class="infoSlide">
-				<div class="reply">
-					<header class="contestant-bio">Add link to your website, blog, Github, LinkedIn, Dribble, Kaggle or anywhere your work stands out</header>
-					<div class="inputlink">
-						<div class="link-head">GITHUB</div>
-						<div class="link-address">
-							<input type="text" name="Github" id="link">
-							<div class="red-circle">
-								<div></div>
+
+				<div class="infoSlide">
+					<div class="reply" id="genderInfo">
+						<header class="contestant-bio"></header>
+						<div class="selectarea">
+							<div class="inst">
+								<legend>GENDER</legend>
+								<div style="display: flex; flex-direction: row; align-items: center; margin-bottom: -10%;">
+									<input style="width: auto; display: inline-block;" type="radio" id="rad1" name="gender" value="male" onchange = "radioValueM()">
+									<label style="margin-left: 20px" for="rad1">Male</label>
+								</div>
+								<div style="display: flex; flex-direction: row; align-items: center;">
+									<input style="width: auto; display: inline-block;" type="radio" id="rad2" name="gender" value="female" onchange = "radioValueF()">
+									<label style="margin-left: 20px" for="rad2">female</label>
+								</div>
+							</div>
+							<div class="dept">
+								<label class="contestant-bio">Phone Number</label><br>
+								<input type="tel" placeholder="Phone No" id="phoneNo">
 							</div>
 						</div>
-						<button class="new-profile"><b>+Add new profile</b></button>
 					</div>
 				</div>
-			</div>
+				
 			
-			<div class="infoSlide">
-				<div class="reply">
-					<header class="contestant-bio">Select your Institution</header>
-					<form class="selectarea">
-					<div class="inst">
-						<legend>INSTITUTION</legend>
-						<input type="text" name="contestant-institution" list="const-inst-list" id="institution" placeholder="Institution"/>
-						<datalist id="const-inst-list">
-							<option>YABATECH</option>
-							<option>University of Ibadan</option>
-							<option>Obafemi Awolowo University</option>
-							<option>University of Lagos</option>
-							<option>University of Ilorin</option>
-							<option>Convenant University</option>
-							<option>Babcock/Bells University</option>
-							<option>Ibadan polytechnic</option>
-							<option>Federal University of Technology, Akure</option>
-							<option>Federal University of Agriculture, Abeokuta</option>
-							<option>Kwara State University</option>
-							<option>Lagos State University</option>
-							<option>Adekunle Ajasin University, Akungba</option>
-							<option>University of Ado-ekiti</option>
-						</datalist>
+				<div class="infoSlide">
+					<div class="reply">
+						<header class="contestant-bio">WHICH OF THE FOLLOWING DESCRIBES YOU BEST?</header>
+						<form class="inputarea2">
+							<div class="contestant-description">
+								<input type="checkbox" name="track" id="customCheckbox" value="Designer" onclick="return ValidateTrack()"  />
+								<label  for="customCheckbox">Designer</label>
+							</div>
+							<div class="contestant-description">
+								<input type="checkbox" name="track" id="customCheckbox2" value="Frontend Developer" onclick="return ValidateTrack()"/>
+								<label  for="customCheckbox2">Frontend Developer</label>
+							</div>
+							<div class="contestant-description">
+								<input type="checkbox" name="track" id="customCheckbox3" value="Backend Developer" onclick="return ValidateTrack()"/>
+								<label  for="customCheckbox3">Backend Developer</label>
+							</div>
+							<div class="contestant-description">
+								<input type="checkbox" name="track" id="customCheckbox4" value="Mobile Developer" onclick="return ValidateTrack()"/>
+								<label  for="customCheckbox4">Mobile Developer</label>
+							</div>
+						</form>
 					</div>
-					<div class="dept">
-						<legend>DEPARTMENT</legend>
-						<input type="text" name="contestant-department" id="department" placeholder="Department">
-					</div>
-					</form>
 				</div>
-			</div>
+			
+				<div class="infoSlide">
+					<div class="reply">
+						<header class="contestant-bio">Add link to your website, blog, Github, LinkedIn, Dribble, Kaggle or anywhere your work stands out</header>
+						<div class="inputlink">
+							<div class="link-head">GITHUB</div>
+							<div class="link-address">
+								<input type="text" name="Github" id="link">
+								<div class="red-circle">
+									<div></div>
+								</div>
+							</div>
+							<button class="new-profile"><b>+Add new profile</b></button>
+						</div>
+					</div>
+				</div>
+				
+				<div class="infoSlide">
+					<div class="reply">
+						<header class="contestant-bio">Select your Institution</header>
+						<div class="selectarea">
+							<div class="inst">
+								<legend>INSTITUTION</legend>
+								<!--<input type="text" name="contestant-institution" list="const-inst-list" id="institution" placeholder="Institution"/>-->
+								<select class="sel" id="institution" placeholder="Institution">
+									<option>YABATECH</option>
+									<option>University of Ibadan</option>
+									<option>Obafemi Awolowo University</option>
+									<option>University of Lagos</option>
+									<option>University of Ilorin</option>
+									<option>Convenant University</option>
+									<option>Babcock/Bells University</option>
+									<option>Ibadan polytechnic</option>
+									<option>Federal University of Technology, Akure</option>
+									<option>Federal University of Agriculture, Abeokuta</option>
+									<option>Kwara State University</option>
+									<option>Lagos State University</option>
+									<option>Adekunle Ajasin University, Akungba</option>
+									<option>University of Ado-ekiti</option>
+								</select>
+							</div>
+							<div class="dept">
+								<legend>DEPARTMENT</legend>
+								<input type="text" name="contestant-department" id="department" placeholder="Department">
+							</div>
+						</div>
+					</div>
+				</div>
+			</form>
 		</div>
 		</div>
 		
@@ -221,9 +232,11 @@
 		</div>
 		</div>
 		<p class="dashboard_submissionSuccessful">We've Received Your Details<br> Please Check Back Later.</p>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 		<script src="../js/avatar.js"></script>
 		<script src="../js/dashboard-navbar.js"></script>
-		<script src="../js/dashboard_page.js"></script>
+		<script src="../js/dashboard_page_style.js"></script>
+		<script src="../js/dashboard_page_val_submit.js"></script>
 		<script src="../js/logout.js"></script>
 		<script src="../js/progress.js"></script>
 		<script src="../js/add_link.js"></script>
