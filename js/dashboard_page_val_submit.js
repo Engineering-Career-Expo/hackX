@@ -1,22 +1,3 @@
-// Submit question
-var submitPopup = document.querySelector('#submit_popup');
-var closePopup = document.querySelector('#close_popup');
-document.querySelector('#finish').onclick = () => {
-  submitPopup.style.display = "block";
-  document.querySelector('.dashboard_all__opacity').style.height = "100%";
-  document.querySelector('.dashboard_all__opacity').style.overflow = "hidden";
-};
-let reDo = () => {
-    submitPopup.style.display = "none";
-    document.querySelector('.dashboard_all__opacity').style.height = "100%";
-    document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
-}
-closePopup.addEventListener('click', () => {
-    submitPopup.style.display = "none";
-    document.querySelector('.dashboard_all__opacity').style.height = "100%";
-    document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
-});
-
 // for Image
 var imageUrl;
 var file;
@@ -65,7 +46,6 @@ bioCnt.value = bioCnt.value.replace(/^\s*|\s*$/g,'');
 let counter = document.querySelector('#count');
 var bioCntInput = "";
 
-
 bioCnt.oninput = () => {
     bioCntInput = bioCnt.value;
     bioCntInput = bioCntInput.replace(/(^\s*)|(\s*$)/gi,"");
@@ -99,8 +79,20 @@ phoneNo.oninput = () => {
     phoneNoVal = phoneNo.value;
     console.log(phoneNoVal);
 }
+let biodataImg = document.querySelector('#imageFile');
+
+function validateInput() {
+    if(bioCntInput.length < 5 && bioCntInput.length > 50 && genderValue.length < 1 && phoneNoVal.length < 10 && 
+       phoneNoVal.length > 11 && trackVal.length < 1 && institutionCntVal.length < 1 && departmentCntVal.length < 1 && 
+      biodataImg.value.length < 1) {
+        document.querySelector('#finish').disabled = false;
+    } else {
+        document.querySelector('#finish').disabled = true;
+    }
+};
 
 // track
+let trackVal = "";
 let ValidateTrack = () => {  
     var checkboxes = document.getElementsByName("track");  
     var numberOfCheckedItems = 0;  
@@ -115,6 +107,17 @@ let ValidateTrack = () => {
       return false;  
     }  
 } 
+// if (document.querySelector("#customCheckbox").checked){
+//   trackVal = document.querySelector("#customCheckbox").value
+// }else if(document.querySelector("#customCheckbox2").checked){
+//   trackVal = document.querySelector("#customCheckbox2").value
+// }else if(document.querySelector("#customCheckbox3").checked){
+//   trackVal = document.querySelector("#customCheckbox3").value
+// }else if(document.querySelector("#customCheckbox4").checked){
+//   trackVal = document.querySelector("#customCheckbox4").value
+// }
+
+
 var institution;
 // institution
 let institutionCnt = document.querySelector('#institution');
@@ -123,6 +126,7 @@ institutionCnt.oninput = () => {
     institutionCntVal = institutionCnt.value;
     institution = institutionCntVal;
     console.log(institutionCntVal);
+    validateInput();
 }
 // departments
 let departmentCnt = document.querySelector('#department');
@@ -130,91 +134,23 @@ var departmentCntVal = "";
 departmentCnt.oninput = () => {
     departmentCntVal = departmentCnt.value;
     console.log(departmentCntVal);
+    validateInput();
 }
- 
-const popUp = document.querySelector(".response-bar");
-const Submit = document.querySelector(".submit_popup__btn");
 
-const showLoginAlert = (message, className) => {
-  const div = document.createElement("div");
-  div.className = `alert ${className}`;
-  div.appendChild(document.createTextNode(message));
-  const container = document.querySelector(".participant-info");
-  container.insertBefore(div, popUp);
 
-  setTimeout(function () {
-    document.querySelector(".alert").remove();
-  }, 12000);
-};
-
-if (localStorage.getItem('bio') !== undefined ) {
-  const formEvent = Submit.addEventListener("click", async (event) => {
-    event.preventDefault();
-    document.querySelector('#submit_popup').style.display = "none";
-    const bio = bioCntInput;
-    const picture = file;
-    let track = "";
-    if (document.querySelector("#customCheckbox").checked){
-      track = document.querySelector("#customCheckbox").value
-    }else if(document.querySelector("#customCheckbox2").checked){
-      track = document.querySelector("#customCheckbox2").value
-    }else if(document.querySelector("#customCheckbox3").checked){
-      track = document.querySelector("#customCheckbox3").value
-    }else if(document.querySelector("#customCheckbox4").checked){
-      track = document.querySelector("#customCheckbox4").value
-    }
-    setTimeout(function () {
-      Submit.disabled = true;
-    }, 2000);
-    const linky = document.querySelector("#link").value;
-    const link = [ linky ];
-    const gender = genderValue;
-    const number = phoneNoVal;
-    const institution = institutionCntVal;
-    const department = departmentCntVal;
-    const Info = await { picture, bio, track, link, gender, number, institution, department };
-    dashboardInfo(); 
-  });
-};
-
-const headers = {
-  'Content-Type': 'application/json',
-  'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
-  'withCredentials': true, 
-}
-const id = window.localStorage.getItem("id");
- // https://hackxbackend.herokuapp.com
-var result = [];
-const dashboardInfo = async () => {
-  axios
-    .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, new FormData(formElement), { headers: headers})
-    .then((response) => {
-      response.data;
-      // console.log(response)
-      if (response.status == "200") {
-        if (response.data == "Redirect To login") {
-          window.location.href = 'https://hackx.netlify.app/pages/login';
-        } else if (response.data == "Too many files to upload.") {
-          showLoginAlert("Too many files to upload.", "error");
-        } else if (response.data == "Error when trying to upload files.") {
-          showLoginAlert("Error when trying to upload files.", "error");
-        }else if (response.data == "Files have been uploaded.") {
-          result.push("Files Submiited");
-          document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
-          document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
-          localStorage.setItem("submission", true);
-        } else if (response.data == "Dashboard Submission Failed") {
-          showLoginAlert("Unable to submit files.", "error");
-        }else if (response.data == 'Invalid Token') {
-          showLoginAlert("Unable to submit files.", "error");
-        }else if (response.data == 'You are not allowed to access this page.') {
-          showLoginAlert('You are not allowed to access this page.', "error");
-        } else { 
-          showLoginAlert(response.data, "error");
-        }
-      } else {
-        showLoginAlert("Something Went Wrong. Try Again Later", "error");
-      }
-    })
-    .catch((error) => console.error(error.message));
-};
+// if (localStorage.getItem('bio') !== undefined ) {
+//   const formEvent = Submit.addEventListener("click", async (event) => {
+//     event.preventDefault();
+//     setTimeout(function () {
+//       Submit.disabled = true;
+//     }, 2000);
+//     const linky = document.querySelector("#link").value;
+//     const link = [ linky ];
+//     const gender = genderValue;
+//     const number = phoneNoVal;
+//     const institution = institutionCntVal;
+//     const department = departmentCntVal;
+//     const Info = await { picture, bio, track, link, gender, number, institution, department };
+//     dashboardInfo(); 
+//   });
+// };
