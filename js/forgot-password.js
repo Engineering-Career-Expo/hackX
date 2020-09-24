@@ -65,7 +65,7 @@ const userDetails = async (forgotPasswordInfo) => {
         if (response.data == "Forgot password redirect.") {
           window.location.href = 'https://hackx.netlify.app/pages/password-update';
         } else {
-          showLoginAlert("Credentials does not match", "error");
+          showLoginAlert("Credentials do not match", "error");
         }
       } else {
         showLoginAlert("Something Went Wrong. Try Again Later", "error");
@@ -74,3 +74,4 @@ const userDetails = async (forgotPasswordInfo) => {
 
     .catch((error) => console.error(error));
 };
+

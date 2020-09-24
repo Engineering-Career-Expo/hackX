@@ -28,14 +28,14 @@
 	  </div>
 		
 		<section class="navbar_second">
-			<div class="navbar_about"><a href="#">Home</a></div>
-			<div class="navbar_about"><a href="#">About</a></div>
+			<div class="navbar_about"><a href="../index.html">Home</a></div>
+			<div class="navbar_about"><a href="../Pages/About.html">About</a></div>
 			<!--<div class="navbar_ment"><a href="#">Mentors</a></div> -->
-			<div class="navbar_sch"><a href="#">Schedule</a></div>
-			<div class="navbar_sch"><a href="#">Contact</a></div>
-			<div class="navbar_inbox"><a href="#">Inbox</a></div>
-			<div class="navbar_reg2"><a class="navbar_reg3" href="#">REGISTER</a></div>
-			<div class="navbar_log"><a class="navbar_log2" href="#">LOGIN</a></div>
+			<div class="navbar_sch"><a href="../index.html#schedule">Schedule</a></div>
+			<div class="navbar_sch"><a href="../index.html#contact">Contact</a></div>
+			<!-- <div class="navbar_inbox"><a href="../Pages/dashboard-submissions.html">Inbox</a></div> -->
+			<div class="navbar_reg2"><a class="navbar_reg3" href="../Pages/Register.html">REGISTER</a></div>
+			<div class="navbar_log"><a class="navbar_log2" href="../Pages/Login.html">LOGIN</a></div>
 		</section>
 		
 		<header class="dashboard_header">hackX<b> > Dashboard</b></header>
@@ -107,7 +107,7 @@
 								</div>
 								<div style="display: flex; flex-direction: row; align-items: center;">
 									<input style="width: auto; display: inline-block;" type="radio" id="rad2" name="gender" value="female" onchange = "radioValueF()">
-									<label style="margin-left: 20px" for="rad2">female</label>
+									<label style="margin-left: 20px" for="rad2">Female</label>
 								</div>
 							</div>
 							<div class="dept">
@@ -118,6 +118,7 @@
 					</div>
 				</div>
 			
+
 				<div class="infoSlide">
 					<div class="reply">
 						<header class="contestant-bio">WHICH OF THE FOLLOWING DESCRIBES YOU BEST?</header>
@@ -125,6 +126,7 @@
 							<div class="contestant-description">
 								<input type="checkbox" name="track" id="customCheckbox" value="Designer" onclick="return ValidateTrack()"  />
 								<label  for="customCheckbox">Designer</label>
+
 							</div>
 							<div class="contestant-description">
 								<input type="checkbox" name="track" id="customCheckbox2" value="Frontend Developer" onclick="return ValidateTrack()"/>
@@ -146,7 +148,7 @@
 					<div class="reply">
 						<header class="contestant-bio">Add link to your website, blog, Github, LinkedIn, Dribbble, Kaggle or anywhere your work stands out</header>
 						<div class="inputlink">
-							<div class="link-head">GITHUB</div>
+							<div class="link-head">LINK</div>
 							<div class="link-address">
 								<input type="text" name="link" id="link">
 								<div class="red-circle">

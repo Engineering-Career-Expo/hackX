@@ -11,7 +11,6 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../scss/main.css"/>
     <title>Login - ADMIN login</title>
@@ -43,14 +42,15 @@
         <section class="navbar_second">
           <div class="navbar_about"><a href="../index.html">Home</a></div>
           <div class="navbar_about"><a href="About.html">About</a></div>
-  
+  		  <!--
           <div class="navbar_ment">
             <a href="../index.html#mentors">Mentors</a>
           </div>
+          -->
           <div class="navbar_sch">
             <a href="../index.html#schedule">Schedule</a>
           </div>
-          <div class="navbar_sch"><a href="../index.html #contact">Contact</a></div>
+          <div class="navbar_sch"><a href="../index.html#contact">Contact</a></div>
           <div class="navbar_reg2" onclick="window.location.assign('register.html')">
             <a class="navbar_reg3" href="Register.html">REGISTER</a>
           </div>
@@ -67,7 +67,7 @@
           </div>
           <p class="come">Welcome Back</p>
           <legend>Email</legend>
-          <div class="row_1">
+          <div class="row_1" style="display: flex">
           <input
             type="email"
             id="email"
@@ -77,7 +77,7 @@
           /><i class="fa fa-envelope"></i>
           </div>
           <legend>Password</legend>
-          <div class="row_2">
+          <div class="row_2" style="display: flex">
           <input
             id="password"
             type="password"

@@ -22,18 +22,31 @@ function myfunc1() {
 myham[0].addEventListener("click", myfunc1);
 
 // JS FILE FOR THE PASSWORD RESET HTML PAGE
-function viewPassword() {
-    var passwordInput = document.getElementById('password');
-    var passStatus = document.getElementById('pass');
+function viewNewPassword() {
+    var passwordInputNew = document.querySelector('#newPassword');
+    var passStatusNew = document.getElementById('passNew');
    
-    if (passwordInput.type == 'password'){
-      passwordInput.type='text';
-      passStatus.className='fa fa-eye';
+    if (passwordInputNew.type == 'password'){
+      passwordInputNew.type='text';
+      passStatusNew.className='fa fa-eye';
       
     }
     else{
-      passwordInput.type='password';
-      passStatus.className='fa fa-eye-slash';
+      passwordInputNew.type='password';
+      passStatusNew.className='fa fa-eye-slash';
+    }
+  }
+function viewConfirmPassword() {
+    var passwordInputConfirm = document.querySelector('#confirmPassword');
+    var passStatusConfirm = document.getElementById('passConfirm');
+   
+    if (passwordInputConfirm.type == 'password'){
+      passwordInputConfirm.type='text';
+      passStatusConfirm.className='fa fa-eye';
+    }
+    else{
+      passwordInputConfirm.type='password';
+      passStatusConfirm.className='fa fa-eye-slash';
     }
   }
 
