@@ -6,6 +6,9 @@ quarte = document.querySelector('#quarte');
 quinze = document.querySelector('#quinze');
 six = document.querySelector('#six');
 
+var user = localStorage.getItem("username");
+console.log(user);
+
 un.onclick = function() {
 	console.log("nobody");
 }
@@ -277,19 +280,22 @@ const showLoginAlert = (message, className) => {
 var radioOne = document.querySelector('#rad1');
 var radioTwo = document.querySelector('#rad2');
 var genderValue;
-const radioValue = () => {
-  genderVal = this.value;
-}
-radioOne.onclick = radioValue();
-radioTwo.onclick = radioValue();
+radioOne.onchange = () => {
+  genderVal = "male";
+  console.log(genderVal);
+};
+radioTwo.onchange = () => {
+  genderVal = "female";
+  console.log(genderVal);
+};
 var phoneNo = document.querySelector('#phoneNo');
-
+const formData = new FormData();
 if (localStorage.getItem('bio') !== undefined ) {
   const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
     const bio = document.querySelector("#bio").value;
-    const picture = imageUrl;
+    const picture = file;
     let track = "";
     if (document.querySelector("#customCheckbox").checked){
       track = document.querySelector("#customCheckbox").value
@@ -301,7 +307,7 @@ if (localStorage.getItem('bio') !== undefined ) {
       track = document.querySelector("#customCheckbox4").value
     }
     setTimeout(function () {
-      Submit.disabled = true;
+      //Submit.disabled = true;
       //document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
     }, 2000);
     const linky = document.querySelector("#link").value;
@@ -310,11 +316,19 @@ if (localStorage.getItem('bio') !== undefined ) {
     const number = phoneNo.value;
     const institution = document.querySelector("#institution").value;
     const department = document.querySelector("#department").value;
-    const Info = await { picture, bio, track, link, gender, number, institution, department };
-    dashboardInfo(Info); 
+    formData.append("picture", picture);
+    formData.append("bio", bio);
+    formData.append("track", track);
+    formData.append("link", link);
+    formData.append("gender", gender);
+    formData.append("number", number);
+    formData.append("institution", institution);
+    formData.append("department", department);
+    //const Info = await { formData };
+    dashboardInfo(); 
   });
 };
-
+const formElement = document.querySelector('#formElement');
 const headers = {
   'Content-Type': 'application/json',
   'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
@@ -323,9 +337,9 @@ const headers = {
 const id = window.localStorage.getItem("id");
  // https://hackxbackend.herokuapp.com
 var result = [];
-const dashboardInfo = async (Info) => {
+const dashboardInfo = async () => {
   axios
-    .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, Info, { headers: headers})
+    .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, new FormData(formElement), { headers: headers})
     .then((response) => {
       response.data;
       // console.log(response)
