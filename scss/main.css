@@ -32,6 +32,7 @@ html {
 }
 body, html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 body {
   font-family: 'Gilroy', sans-serif;
@@ -3068,14 +3069,18 @@ html {
 .text_one__head {
   text-align: center;
   font-size: 24px;
-  font-family: "Gilroy";
+  font-family: "Gilroy", sans-serif;
   font-weight: 800;
+  font-style: normal;
+  line-height: 29px;
 }
 
 .text_one p {
   font-size: 18px;
-  font-family: "Poppins";
-  line-height: 25px;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 27px;
 }
 
 .image_two {
@@ -3090,36 +3095,40 @@ html {
   padding: 30px;
   color: white;
   font-size: 24px;
-  font-family: "Gilroy";
-}
-
-.text_two__icon {
-  font-size: 28px;
-  margin-top: -13px;
+  font-family: "Gilroy", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 29px;
 }
 
 .text_two__first {
   font-size: 18px;
-  font-family: "Gilroy";
+  font-weight: normal;
+  font-style: normal;
+  font-family: "Gilroy-Medium", sans-serif;
+  line-height: 21px;
 }
 
 .text_two__paragraph {
+  font-size: 18px;
+  font-family: "Gilroy-Regular", sans-serif;
+  line-height: 21px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 18px;
-  font-family: "Gilroy";
 }
 
+
 .text_two__second {
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .text_two__list {
   font-size: 14px;
-  font-family: "Gilroy";
+  font-family: "Gilroy-Medium", sans-serif;
   list-style-type: none;
   padding: 25px;
+  line-height: 16px;
 }
 
 .text_two__list li {
@@ -3127,7 +3136,7 @@ html {
 }
 
 .text_two__txt {
-  padding-left: 10px;
+  margin-left: 10px;
 }
 
 .text_two__wrap {
@@ -3137,7 +3146,7 @@ html {
 }
 
 .text_two__txtwrap {
-  padding-left: 4px;
+  margin-left: 4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -3145,14 +3154,23 @@ html {
     height: 400px;
   }
   .text_one__head {
+  	font-family: "Gilroy", sans-serif;
+  	font-weight: 800;
+  	font-style: normal;
     font-size: 48px;
+    line-height: 59px;
+    margin-bottom: 30px;
   }
   .text_one {
     padding: 0px 150px;
     margin-bottom: 50px;
   }
   .text_one p {
-    line-height: 35px;
+  	font-family: "Poppins", sans-serif;
+  	font-weight: normal;
+  	font-style: normal;
+  	font-size: 18px;
+    line-height: 27px;
   }
   .image_two {
     height: 180px;
@@ -3161,10 +3179,26 @@ html {
     text-align: center;
     padding-top: 55px;
     font-size: 48px;
+    font-family: "Gilroy", sans-serif;
+    font-weight: 800;
+    font-style: normal;
   }
   .text_two {
     padding: 0px 150px;
     margin-top: 50px;
+  }
+  .text_two__first{
+  	font-family: "Gilroy-Medium", sans-serif;
+  	font-size: 18px;
+  	line-height: 21px;
+  }
+  .text_two__paragraph{
+  	display: block;
+  	font-size: 16px;
+  }
+  
+  .text_two__wrap{
+  	display: block;
   }
   .text_two__list {
     display: -ms-grid;
@@ -3175,6 +3209,9 @@ html {
   }
   .text_two__list li {
     margin-bottom: 10px;
+    font-family: "Gilroy-Medium", sans-serif;
+    font-size: 14px;
+    line-height: 16px;
   }
   #text_two__seven {
     -ms-grid-row: 7;

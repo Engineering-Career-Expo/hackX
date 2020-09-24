@@ -14,7 +14,7 @@
             <div class="head_info0">
                 <a href="#">
                     <div class="head_pic0">
-                        <img src="../assets/ECX.svg"/>
+                        <a href="../index.html" ><img src="../assets/ECX.svg"/></a>
                     </div>
                 </a>
             </div>
@@ -27,13 +27,13 @@
                                 Dashboard
                             </button>
                             <div class="dropDown-content">
-                                <a class="filter" href="main_dashboard_page.html #timelineBtn">Timeline</a>
-                                <a class="filter" href="main_dashboard_page.html #announBtn">Announcements</a>
-                                <a class="filter" href="main_dashboard_page.html #overviewBtn">Overview</a>
+                                <a class="filter" href="main_dashboard_page.html#timelineBtn">Timeline</a>
+                                <a class="filter" href="main_dashboard_page.html#announBtn">Announcements</a>
+                                <a class="filter" href="main_dashboard_page.html#overviewBtn">Overview</a>
                             </div> 
                         </div>
                         <div class="nav-item br30">
-                            <a href="#">
+                            <a href="dashboard-submissions.html">
                                 <img src="../assets/images/dashboard/submit-logo.png" alt="Logo">
                                 Submission
                             </a>
@@ -43,7 +43,7 @@
                         <div class="head_section2">
                             <div class="head_logout">
                                 <p class="name">KEAZZY</p>
-                                <a href="#" class="view">VIEW PROFILE</a>
+                                <a href="profile-page.html" class="view">VIEW PROFILE</a>
                             </div>
                             <div class="head_pic1">
                                 <div class="head_pic2"><img src="../assets/images/sample.jpg" class="head_pic02"/></div>
@@ -57,13 +57,13 @@
                                     <hr class="ddHr">
                                     <div class="navigationLink">
                                         <a>Your Profile</a>
-                                        <a>Your submissions</a>
+                                        <a href="dashboard-submissions.html">Your submissions</a>
                                         <a>Your Teams</a>
                                     </div>
                                     <hr class="ddHr">
                                     <div class="otherNavs">
                                         <a>Help</a>
-                                        <a>Settings</a>
+                                        <!-- <a>Settings</a> -->
                                         <a>Logout</a>
                                     </div>
                                 </div>
@@ -85,8 +85,9 @@
     </div>
     <div class="Dashboard2-section mobileView">
         <header class="mobileDashLink">
-            <a class="dashLinks" href="Dashboard2-section.html">Dashboard</a> > <b>Announcement</b>
+            <a class="dashLinks" href="main_dashboard_page.html">Dashboard</a> > <b>Announcement</b>
         </header>
+        <!--
         <div class="sectionbar">
             <section class="announcement">
                 <div class="blueHead">ANNOUNCEMENT</div>
@@ -118,6 +119,30 @@
             </section>
         </div>
     </div>
+    -->
+    <div id="displayy_mobile">
+    	<div class="display_txt">
+    		<p class="display_txt__one">Nothing to display now</p>
+   			 <p class="display_txt__two">Check back soon</p>
+    		<img src="../assets/images/dashboard/code-shape-1-1.png" alt="NoDisplay">
+    	</div>
+    </div>
+    <style type="text/css">
+    	.display_txt{
+    		display: block;
+    		text-align: center;
+    		width: 100%;
+    		margin-top: 100px;
+    	}
+    	.display_txt__one, .display_txt__two{
+    		font-family: 'Montserrat', sans-serif;
+    		font-style: normal;
+    		font-weight: 600;
+    		font-size: 16px;
+    		color: rgba(0, 0, 0, 0.6);
+    		text-transform: capitalize;
+    	}
+    </style>
     <script src="../js/dashboard-navbar.js"></script>
     <script src="../js/avatar.js"></script>
     <script src="../js/get_user.js"></script>
