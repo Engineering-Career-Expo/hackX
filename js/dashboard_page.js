@@ -364,13 +364,14 @@ const dashboardInfo = async (Info) => {
 // 	formEvent;
 // }
 
-var uusername = localStorage.getItem('username');
+var uusername = 'olax';
 axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + uusername, {headers: headers})
 .then((response) => {
-	return response.data;
-})
-.then((response) => {
-	if (response.bio !== null) {
+  let docu = response.data;
+	console.log(docu);
+  console.log(docu.dashboard[0]);
+  console.log(uusername);
+	if (docu.dashboard[0].bio !== null) {
 		document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
 		document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
 	}
