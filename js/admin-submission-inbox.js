@@ -10,7 +10,9 @@ let getUser = () => {
     axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username , { headers: headers })
     .then((response) => {
       var doc = response.data;
-      console.log(doc); 
+      console.log(doc);
+      var bes = doc.dashboard[0].bio; 
+      document.body.innerHTML += JSON.stringify(bes);
       var dee = JSON.stringify(doc.submission[0]);
       var userSubmission = dee;
       let subName = doc.submission[0].name;
@@ -22,7 +24,7 @@ let getUser = () => {
       let subLinks = doc.submission[0].links;
       let subVidLinks = doc.submission[0].vidLinks;
       let subPictures = doc.submission[0].pictures;
-      document.body.innerHTML = userSubmission;
+      document.body.innerHTML += "<br><br><br>" + userSubmission;
       let subArr = [ subName, subTagline, subProblem, subChallenges, subTechnologies, subLinks, subVidLinks, subPictures ];
       console.log(subArr);
       localStorage.setItem("submissionsArray", subArr);
