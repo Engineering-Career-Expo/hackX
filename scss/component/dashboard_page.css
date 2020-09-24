@@ -37,31 +37,6 @@ input::placeholder {
 }
 /* THE GENDER AND PHONE NO STYLE */
 
-#genderInfo{
-		display:flex;
-		justify-content: space-around;
-		height:300px;
-		}
-.one{
-  	width:80%;
-  	padding:0px 10px;
-				}
-#telNo{
-		align-self:flex-start;
-		margin-top:0px;
-		padding:0px;
-		}
-#phoneNo{
-		width: 90%;
-	margin: 2% 0;
-	height: 50px;
-	outline: none;
-	border: none;
-	background: whitesmoke;
-	padding: 5%;
-	border: 4px;
-		}
-
 /* NAVBAR STYLE */
 .nav_section {
 	background: #ffffff;
@@ -422,8 +397,8 @@ input::placeholder {
 	}
 	.participant-info .response-bar .circles .dot {
 	cursor: pointer;
-	height: 15px;
-	width: 15px;
+	height: 10px;
+	width: 10px;
 	margin: 10px 2px;
 	background-color: whitesmoke;
 	border-radius: 50%;
@@ -432,12 +407,12 @@ input::placeholder {
 	}
 	.participant-info .next,.participant-info .prev {
 	border-radius: 5px;
-	width: 60px;
+	width: 40px;
 	height: 40px;
 	background: #1071F3;
 	color: white;
 	border: none;
-	font-size: 14px;
+	font-size: 12px;
 	font-style: normal;
 	font-weight: normal;
 	margin-top: -0.9%;
@@ -446,11 +421,14 @@ input::placeholder {
 	transition: .6s ease-out;
 	cursor: pointer;
 	}
+	.participant-info .next{
+		width: 60px;
+	}
 	.participant-info button {
 	outline: none;
 	}
 	.participant-info .prev {
-	width:90px;
+	width:80px;
 	background: rgba(16, 113, 243, 0.4);
 	float: left;
 	color: #ffffff;
@@ -467,7 +445,7 @@ input::placeholder {
 	.participant-info .next:hover, .participant-info .prev:hover {
 	border: none;
 	outline: none;
-	font-size: 15px;
+	font-size: 14px;
 	}
 	.participant-info .reply {
 	display: block;
@@ -646,11 +624,28 @@ input::placeholder {
 	height: 50px;
 	outline: none;
 	border: none;
-	background: whitesmoke;
+	background: #f5f5f5;
 	padding: 5%;
 	border: 4px;
 	}
+	.sel {
+		width: 80%;
+		margin: 2% 0;
+		padding: 3% 5%;
+		background: #f5f5f5;
+		height: 50px;
+		color: rgba(0, 0, 0, 0.863);
+		font-weight: 500;
+		font-family: 'Montserrat', sans-serif;
+	}
+	option {
+		font-size: 15px;
+		color: rgba(0, 0, 0, 0.863);
+		font-weight: 500;
+		font-family: 'Montserrat', sans-serif;
+	}
 }
+
 @media screen and (min-width: 769px) {
 	.participant_info__body{
 		background: #ffffff;
@@ -928,6 +923,22 @@ input::placeholder {
 		background: whitesmoke;
 		padding: 5%;
 		border: 4px;
+	}
+	.sel {
+		width: 80%;
+		margin: 2% 0;
+		padding: 3% 5%;
+		background: #f5f5f5;
+		height: 50px;
+		color: rgba(0, 0, 0, 0.863);
+		font-weight: 500;
+		font-family: 'Montserrat', sans-serif;
+	}
+	option {
+		font-size: 15px;
+		color: rgba(0, 0, 0, 0.863);
+		font-weight: 500;
+		font-family: 'Montserrat', sans-serif;
 	}
 }
 .dashboard-info {

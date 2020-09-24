@@ -363,16 +363,3 @@ const dashboardInfo = async (Info) => {
 // }else{
 // 	formEvent;
 // }
-
-var uusername = localStorage.getItem('username');
-axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + uusername, {headers: headers})
-.then((response) => {
-	return response.data;
-})
-.then((response) => {
-	if (response.bio !== null) {
-		document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
-		document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
-	}
-})
-.catch((err) => {console.error(err.message)});
