@@ -38,6 +38,12 @@ let dashboard = new mongoose.Schema({
 		    minlength: 3,
 		    maxlength: 50
 		},
+		media: {
+		    type: Array,
+		},
+		picture: {
+		    type: Array,
+		},
 		
 		
 
@@ -221,6 +227,44 @@ function validateDashboard(user) {
 	              break;
 	            case "string.base":
 	              err.message = "Department should be a string.";
+	              break;
+	            default:
+	              break;
+	          	}
+	        });
+	        return errors;
+      	}),
+  	media: Joi.string()
+	    .error((errors) => {
+	        errors.forEach((err) => {
+	          switch (err.code) {
+	          	case "string.empty":
+	              err.message = "Media should not be empty!";
+	              break;
+	            case "any.empty":
+	              err.message = "Media sshould not be empty!";
+	              break;
+	            case "string.base":
+	              err.message = "Media should be a string.";
+	              break;
+	            default:
+	              break;
+	          	}
+	        });
+	        return errors;
+      	}),
+  	picture: Joi.string()
+	    .error((errors) => {
+	        errors.forEach((err) => {
+	          switch (err.code) {
+	          	case "string.empty":
+	              err.message = "Picture should not be empty!";
+	              break;
+	            case "any.empty":
+	              err.message = "Picture should not be empty!";
+	              break;
+	            case "string.base":
+	              err.message = "Picture should be a string.";
 	              break;
 	            default:
 	              break;
