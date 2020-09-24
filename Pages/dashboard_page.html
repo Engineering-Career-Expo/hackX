@@ -15,7 +15,7 @@
 	  <div class="nav_section">
 		<section class="head_section1">
 			<section class="head_info0">
-				<div class="head_pic0"><img src="../assets/ECX.svg"/></div>
+				<div class="head_pic0"><a href="../index.html" ><img src="../assets/ECX.svg"/></a></div>
 			</section>
 			<section class="head_section2">
 				<button class="head_logout" id="logout_user">LOGOUT</button>
@@ -30,7 +30,7 @@
 		<section class="navbar_second">
 			<div class="navbar_about"><a href="#">Home</a></div>
 			<div class="navbar_about"><a href="#">About</a></div>
-			<div class="navbar_ment"><a href="#">Mentors</a></div>
+			<!--<div class="navbar_ment"><a href="#">Mentors</a></div> -->
 			<div class="navbar_sch"><a href="#">Schedule</a></div>
 			<div class="navbar_sch"><a href="#">Contact</a></div>
 			<div class="navbar_inbox"><a href="#">Inbox</a></div>
@@ -60,11 +60,12 @@
 			</div>
 			<div class="response-bar">
 				<div class="circles">
-					<span class="dot" onclick="currentSlide(1)"></span>
-					<span class="dot" onclick="currentSlide(2)"></span>
-					<span class="dot" onclick="currentSlide(3)"></span>
-					<span class="dot" onclick="currentSlide(4)"></span>
-					<span class="dot" onclick="currentSlide(5)"></span>
+					<span class="dot" onclick="currentSlide(1)" id="un"></span>
+					<span class="dot" onclick="currentSlide(2)" id="duex"></span>
+					<span class="dot" onclick="currentSlide(3)" id="trois"></span>
+					<span class="dot" onclick="currentSlide(4)" id="quarte"></span>
+					<span class="dot" onclick="currentSlide(5)" id="quinze"></span>
+					<span class="dot" onclick="currentSlide(6)" id="six"></span>
 					<button class="prev" id="prev" onclick="plusSlides(-1)">PREVIOUS</button>
 					<button class="next" id="finish" type="submit">FINISH</button>
 					<button class="next" id="next" onclick="plusSlides(1)">NEXT</button>
@@ -73,17 +74,31 @@
 			<div class="infoSlide">
 				<div class="reply">
 					<header class="contestant-bio"><b>BIO</b></header>
-					<textarea class="inputarea" id="bio" placeholder="Write something about yourself"></textarea>
+					<textarea class="inputarea" id="bio" placeholder="Write something about yourself in less than 50 words"></textarea>
 				</div>
 			</div>
 			
-			
+			<div class="infoSlide">
+				<div class="reply biodata-img" id="biodata-img">
+					<header class="contestant-bio"><b>BIODATA IMAGE</b></header>
+					<div id="preview-container" class="imageDialogContainer">
+                        <img src="../assets/images/dashboard/add-image.svg" id="imageUpload" class="imageUpload">
+                        <input type="file" id="imageFile" class="imageFile" name="picture" accept=".gif, .jpg, .png" multiple />
+                        <img id="imagePreview" class="imagePreview" />
+                        <div id="imageName" class="imageName" title="image name"></div>
+                        <button id="deleteImage" class="deleteImage">Delete</button>
+                    </div>
+				</div>
+			</div>
+
+
+
 			<div class="infoSlide">
 				<div class="reply" id="genderInfo">
 					<div class="one">
 					<label class="contestant-bio">Gender</label><br>
-					 <input type="radio" name="gender" value="male">Male<br>
-					 <input type="radio" name="gender" value="female">Female
+					 <input type="radio" id="rad1" name="gender" value="male">Male<br>
+					 <input type="radio" id="rad2" name="gender" value="female">Female
 					</div>
 					
 					<div id="telNo">
@@ -120,7 +135,7 @@
 		
 			<div class="infoSlide">
 				<div class="reply">
-					<header class="contestant-bio">Add link to your website, blog, Github, LinkedIn, Dribble, Kaggle or anywhere your work stands out</header>
+					<header class="contestant-bio">Add link to your website, blog, Github, LinkedIn, Dribbble, Kaggle or anywhere your work stands out</header>
 					<div class="inputlink">
 						<div class="link-head">GITHUB</div>
 						<div class="link-address">
@@ -182,7 +197,7 @@
 		
 		<div class="progress_section">
 			<p class="progress_head">PROGRESS</p>
-			<p class="progress_percent">25%</p>
+			<p class="progress_percent">0%</p>
 			<div class="progress_bar">
 				<div class="progress_bar__circleOne">1</div><div class="progress_bar__line"></div>
 				<div class="progress_bar__circleTwo"></div><div class="progress_bar__line"></div>
@@ -206,7 +221,6 @@
 		</div>
 		</div>
 		<p class="dashboard_submissionSuccessful">We've Received Your Details<br> Please Check Back Later.</p>
-		</body>
 		<script src="../js/avatar.js"></script>
 		<script src="../js/dashboard-navbar.js"></script>
 		<script src="../js/dashboard_page.js"></script>

@@ -26,7 +26,7 @@
             /></a>
           </div>
           <div class="navbar_sep">
-            <div class="navbar_reg1">
+            <div class="navbar_reg1" onclick="window.location.assign('register.html')">
               <a class="navbar_reg4" href="Register.html">REGISTER</a>
             </div>
             <div class="navbar_ham">
@@ -39,17 +39,18 @@
           <div class="navbar_about"><a href="../index.html">Home</a></div>
           <div class="navbar_about"><a href="About.html">About</a></div>
   
-          <div class="navbar_ment">
+         <!-- <div class="navbar_ment">
             <a href="../index.html#mentors">Mentors</a>
           </div>
+          -->
           <div class="navbar_sch">
             <a href="../index.html#schedule">Schedule</a>
           </div>
           <div class="navbar_sch"><a href="../index.html #contact">Contact</a></div>
-          <div class="navbar_reg2">
+          <div class="navbar_reg2" onclick="window.location.assign('register.html')">
             <a class="navbar_reg3" href="Register.html">REGISTER</a>
           </div>
-          <div class="navbar_log">
+          <div class="navbar_log" onclick="window.location.assign('Login.html')">
             <a class="navbar_log2" href="Login.html">LOGIN</a>
           </div>
         </section>
@@ -57,7 +58,9 @@
     <main class="register-main-container">
       <div class="register-form-container login-container">
         <form class="login-form">
-          <h2>LOGIN</h2>
+          <div class="title" style="display: flex; justify-content: space-between;">
+            <h2 style="cursor: pointer" onclick="window.location.assign('Login.html')"><b>LOGIN</b></h2>
+          </div>
           <p class="come">Welcome Back</p>
           <legend>Email</legend>
           <div class="row_1">
@@ -99,7 +102,7 @@
       <br />
       <div class="register-call-to-action">
         <h1>
-          HACK<span class="X">X</span> <span class="hack">HACKATHON</span> 2019
+          hack<span class="X">X</span> <span class="hack">HACKATHON</span> 2019
         </h1>
         <button><span class="btn-cnt"><a href="About.html">Competition Guidelines</a></span></button>
       </div>

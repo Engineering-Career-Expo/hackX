@@ -1,3 +1,30 @@
+let un, deux, trois, quarte, quinze, six;
+un = document.querySelector('#un');
+deux = document.querySelector('#deux');
+trois = document.querySelector('#trois');
+quarte = document.querySelector('#quarte');
+quinze = document.querySelector('#quinze');
+six = document.querySelector('#six');
+
+un.onclick = function() {
+	console.log("nobody");
+}
+duex.onclick = function() {
+	console.log("nobody");
+}
+trois.onclick = function() {
+	console.log("nobody");
+}
+quarte.onclick = function() {
+	console.log("nobody");
+}
+quinze.onclick = function() {
+	console.log("nobody");
+}
+six.onclick = function() {
+	console.log("nobody");
+}
+
 var head_drop = document.getElementsByClassName("head_drop");
 var head_section3 = document.getElementsByClassName("navbar_second");
 var reg1 = document.getElementsByClassName("navbar_reg1");
@@ -66,7 +93,13 @@ function showSlides(n) {
   	a.style.height = "40px";
   	a.style.width = "40px";
   	a.style.marginTop = "0px";
-  	a.innerHTML = "4";
+  	a.innerHTML = "3";
+  }else if(n == 5) {
+  	a.style.backgroundColor = "#1071f3";
+  	a.style.height = "40px";
+  	a.style.width = "40px";
+  	a.style.marginTop = "0px";
+  	a.innerHTML = "3";
   }else{
   	b.style.backgroundColor = "#1071f3";
   	b.style.height = "40px";
@@ -74,7 +107,7 @@ function showSlides(n) {
   	b.style.marginTop = "0px";
   	b.innerHTML = "4";
   }
-  if (n > 4) {
+  if (n > 5) {
       document.getElementById("next").disabled = true;
       document.getElementById("next").style.display = 'none';
       document.getElementById("finish").style.display = 'block';
@@ -164,6 +197,52 @@ closePopup.addEventListener('click', () => {
 
 // backend connection
 
+
+var imageUrl;
+
+// CALLING THE IMAGE UPLOAD
+
+document.querySelector("#imageUpload").addEventListener('click', function() {
+    document.querySelector("#imageFile").click();
+});
+
+var file;
+// IMAGE UPLOAD SEQUENCE
+document.querySelector("#imageFile").addEventListener('change', function() {
+    file = this.files[0];
+    // VALIDATE IMAGE SIZE
+    if(file.size > 2*1024*1024) {
+        alert('Error : Exceeded size 2MB');
+        return;
+    }
+    // WHEN IMAGE VALIDATION IS SUCCESSFUL
+    // HIDE THE UPLOAD IMAGE 
+    document.querySelector("#imageUpload").style.display = 'none';
+    // SET THE FILE NAME
+    document.querySelector("#imageName").innerText = file.name;
+    document.querySelector("#imageName").style.display = 'block';
+    // GET THE LOCAL URL
+    imageUrl = URL.createObjectURL(file);
+    // SET THE LOCAL URL AS THE IMAGE SRC
+    document.querySelector("#imagePreview").setAttribute('src', imageUrl);
+    document.querySelector("#imagePreview").style.display = 'block';
+    // sHOW DELETE BUTTON
+    document.querySelector("#deleteImage").style.display = 'block';
+
+    // SO AS NOT TO SHOW UNNECESSARY SCREEN, I MADE A SMALL VALIDATION FOR IT
+});
+
+// DELETE IMAGE
+document.querySelector("#deleteImage").addEventListener('click', function(e) {
+    e.preventDefault();
+    URL.revokeObjectURL(imageUrl);
+    document.querySelector("#imageUpload").style.display = 'block';
+    document.querySelector("#imageFile").value = '';
+    document.querySelector("#imageName").style.display = 'none';
+    document.querySelector("#imagePreview").style.display = 'none';
+    document.querySelector("#deleteImage").style.display = 'none';
+});
+
 function ValidateTrack()  
 {  
     var checkboxes = document.getElementsByName("track");  
@@ -195,11 +274,22 @@ const showLoginAlert = (message, className) => {
   }, 12000);
 };
 
+var radioOne = document.querySelector('#rad1');
+var radioTwo = document.querySelector('#rad2');
+var genderValue;
+const radioValue = () => {
+  genderVal = this.value;
+}
+radioOne.onclick = radioValue();
+radioTwo.onclick = radioValue();
+var phoneNo = document.querySelector('#phoneNo');
+
 if (localStorage.getItem('bio') !== undefined ) {
   const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
     const bio = document.querySelector("#bio").value;
+    const picture = imageUrl;
     let track = "";
     if (document.querySelector("#customCheckbox").checked){
       track = document.querySelector("#customCheckbox").value
@@ -212,12 +302,15 @@ if (localStorage.getItem('bio') !== undefined ) {
     }
     setTimeout(function () {
       Submit.disabled = true;
+      //document.querySelector('.dashboard_all__opacity').style.overflow = "auto";
     }, 2000);
-    const link = document.querySelector("#link").value;
-    const linkContainer = [ link ];
+    const linky = document.querySelector("#link").value;
+    const link = [ linky ];
+    const gender = genderValue;
+    const number = phoneNo.value;
     const institution = document.querySelector("#institution").value;
     const department = document.querySelector("#department").value;
-    const Info = await { bio, track, linkContainer, institution, department };
+    const Info = await { picture, bio, track, link, gender, number, institution, department };
     dashboardInfo(Info); 
   });
 };

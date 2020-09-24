@@ -5,7 +5,9 @@ const Avatar = async () => {
 	const avatar = document.querySelector(".head_pic02"); 
 	let avatarArray = ["amber", "blue", "blueGrey", "brown", "cyan", "deepOrange", "deepPurple", "green", "grey", "indigo", "lightBlue", "lightGreen", "lime", "orange", "pink", "purple", "red", "teal", "yellow"]
 	let avatarId = localStorage.getItem("id");
-	avatar.src = "https://avatars.dicebear.com/api/bottts/example.svg?options[colors][]=" + avatarArray[avatarId[0]];      
+	avatar.src = "https://avatars.dicebear.com/api/bottts/example.svg?options[colors][]=" + avatarArray[avatarId[0]];           
+	const avatar2 = document.querySelector(".head_pic03"); 
+	avatar2.src = avatar.src;
 };  
 
 // avatarArray[randomRange(0, 19)]

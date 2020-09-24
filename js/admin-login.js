@@ -1,26 +1,3 @@
-//navbar
-var myham = document.getElementsByClassName("navbar_myham");
-var second = document.getElementsByClassName("navbar_second");
-var reg1 = document.getElementsByClassName("navbar_reg1");
-
-var a = 0;
-function myfunc1() {
-  reg1[0].style.opacity = "0";
-
-  second[0].style.height = "325px";
-  second[0].style.width = "auto";
-  myham[0].innerHTML = "X";
-  a++;
-
-  if (a % 2 === 0) {
-    second[0].style.height = "0px";
-    second[0].style.overflow = "hidden";
-    myham[0].innerHTML = "&#9776";
-    reg1[0].style.opacity = "1";
-  }
-}
-myham[0].addEventListener("click", myfunc1);
-
 const loginForm = document.querySelector(".login-form");
 
 const showLoginAlert = (message, className) => {
@@ -68,13 +45,13 @@ const userLogin = async (loginInfo) => {
         } else if (response.data == "Password Incorrect.") {
           showLoginAlert("Email or password entered is incorrect", "error");
         } else if (response.data == "Session Redirection To Dashboard"){
-          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
+          window.location.href = 'https://hackx.netlify.app/pages/admin-dashboard-landing-page';
         }else {
           showLoginAlert("Login Successfully", "success");
           localStorage.setItem("pass", response.data.token);
           localStorage.setItem("id", response.data.id);
           localStorage.setItem("username", response.data.username);
-          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
+          window.location.href = 'https://hackx.netlify.app/pages/admin-dashboard-landing-page';
 
         }
       } else {

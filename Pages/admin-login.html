@@ -8,12 +8,18 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
     <link rel="stylesheet" href="../scss/main.css"/>
-    <link rel="shortcut icon" href="assets/ECX.svg" type="image/x-icon"/>
-    <title>Password Reset</title>
+    <title>Login - ADMIN login</title>
+    <style>
+      .title .snd:hover {
+        font-weight: bold;
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -25,7 +31,7 @@
             /></a>
           </div>
           <div class="navbar_sep">
-            <div class="navbar_reg1">
+            <div class="navbar_reg1" onclick="window.location.assign('register.html')">
               <a class="navbar_reg4" href="Register.html">REGISTER</a>
             </div>
             <div class="navbar_ham">
@@ -38,18 +44,17 @@
           <div class="navbar_about"><a href="../index.html">Home</a></div>
           <div class="navbar_about"><a href="About.html">About</a></div>
   
-          <!-- <div class="navbar_ment">
+          <div class="navbar_ment">
             <a href="../index.html#mentors">Mentors</a>
           </div>
-          -->
           <div class="navbar_sch">
             <a href="../index.html#schedule">Schedule</a>
           </div>
           <div class="navbar_sch"><a href="../index.html #contact">Contact</a></div>
-          <div class="navbar_reg2">
+          <div class="navbar_reg2" onclick="window.location.assign('register.html')">
             <a class="navbar_reg3" href="Register.html">REGISTER</a>
           </div>
-          <div class="navbar_log">
+          <div class="navbar_log" onclick="window.location.assign('Login.html')">
             <a class="navbar_log2" href="Login.html">LOGIN</a>
           </div>
         </section>
@@ -57,33 +62,56 @@
     <main class="register-main-container">
       <div class="register-form-container login-container">
         <form class="login-form">
-          <h2>FORGOT PASSWORD</h2>
-          <div id="forgotPassword">
-            <legend>Enter your Username</legend>
-          <input type="text" name="Username" placeholder="Username" id="username"/>
-            <legend>Enter your Email</legend>
-            <input
-              type="email"
-              id="email"
-              name="Email"
-              placeholder="Email"
-            /><i class="fa fa-envelope"></i>
-  
-            <button type="submit" class="signup-btn  reset-btn" id="resetBtn">
-                <span class="btn-txt">Reset</span>
-            </button>
+          <div class="title" style="display: flex; justify-content: space-between;">
+            <h2><a href="admin-login.html"><b>ADMIN</b></a></h2>
           </div>
+          <p class="come">Welcome Back</p>
+          <legend>Email</legend>
+          <div class="row_1">
+          <input
+            type="email"
+            id="email"
+            name="Email"
+            placeholder="Email"
+            required
+          /><i class="fa fa-envelope"></i>
+          </div>
+          <legend>Password</legend>
+          <div class="row_2">
+          <input
+            id="password"
+            type="password"
+            name="	Password"
+            placeholder="•••••••••"
+            required
+          /><i
+            id="pass"
+            class="fa fa-fw fa-eye-slash"
+            onclick="viewPassword()"
+          ></i>
+		  </div>
+		  
+		  <button class="previous-btn" type="submit">
+		 	 <span class="btn-txt">Sign In</span>
+		  </button>
+		  
+          <button type="button" class="signup-btn">
+            <a href="Register.html" style="color: #FA0048;">
+              <span class="btn-txt"
+                >Sign Up</span>
+            </a>
+          </button>
         </form>
       </div>
       <br />
       <div class="register-call-to-action">
         <h1>
-          hack<span class="X">X</span> <span class="hack">HACKATHON</span> 2019
+          HACK<span class="X">X</span> <span class="hack">HACKATHON</span> 2019
         </h1>
-        <button><span class="btn-cnt">Competition Guidelines</span></button>
+        <button><span class="btn-cnt"><a href="About.html">Competition Guidelines</a></span></button>
       </div>
     </main>
     <aside> <div class="device-compatibility"></div></aside>
-    <script src="../js/forgot-password.js"></script>
+    <script src="../js/admin-login.js"></script>
   </body>
 </html>
