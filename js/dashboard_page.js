@@ -316,14 +316,14 @@ if (localStorage.getItem('bio') !== undefined ) {
     const number = phoneNo.value;
     const institution = document.querySelector("#institution").value;
     const department = document.querySelector("#department").value;
-    formData.append("picture", picture);
-    formData.append("bio", bio);
-    formData.append("track", track);
-    formData.append("link", link);
-    formData.append("gender", gender);
-    formData.append("number", number);
-    formData.append("institution", institution);
-    formData.append("department", department);
+    // formData.append("picture", picture);
+    // formData.append("bio", bio);
+    // formData.append("track", track);
+    // formData.append("link", link);
+    // formData.append("gender", gender);
+    // formData.append("number", number);
+    // formData.append("institution", institution);
+    // formData.append("department", department);
     //const Info = await { formData };
     dashboardInfo(); 
   });
@@ -339,7 +339,7 @@ const id = window.localStorage.getItem("id");
 var result = [];
 const dashboardInfo = async () => {
   axios
-    .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, new FormData(formElement), { headers: headers})
+    .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, formData, { headers: headers})
     .then((response) => {
       response.data;
       // console.log(response)
@@ -369,11 +369,4 @@ const dashboardInfo = async () => {
       }
     })
     .catch((error) => console.error(error.message));
-};       
-
-// if ( localStorage.getItem("submission") == true ) {
-// 	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
-// 	document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
-// }else{
-// 	formEvent;
-// }
+};
