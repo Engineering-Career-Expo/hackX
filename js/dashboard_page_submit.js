@@ -47,7 +47,7 @@ closeSubmitPopUp.onclick = () => {
 const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
-    dashboardInfo(); 
+    dashboardInfo();
   });
 
 const headers = {
@@ -58,19 +58,22 @@ const headers = {
 const id = window.localStorage.getItem("id");
 
 const dashboardInfo = async () => {
+  const institution = document.querySelector("#institution").value;
+  const department = document.querySelector("#department").value;
+  var formData = new FormData(formElement);
+  formData.append("institution", institution);
+  formData.append("department", department);
   axios
-    .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, new FormData(formElement), { headers: headers})
+    .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, formData, { headers: headers})
     .then((response) => {
       // console.log(response)
       if (response.status == "200") {
-        if (response.data == "Redirect To login") {
-          window.location.href = 'https://hackx.netlify.app/pages/login';
-        } else if (response.data == "Too many files to upload.") {
+        if (response.data == "Too many files to upload.") {
           showLoginAlert("Too many files to upload.", "error");
         } else if (response.data == "Error when trying to upload files.") {
           showLoginAlert("Error when trying to upload files.", "error");
         }else if (response.data == "Files have been uploaded.") {
-          result.push("Files Submiited");
+          showLoginAlert("Submitted Successfully.", "success");
           document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
           document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
           localStorage.setItem("submission", true);

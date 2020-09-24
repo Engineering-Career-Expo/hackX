@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -15,7 +15,7 @@
 	  <div class="nav_section">
 		<section class="head_section1">
 			<section class="head_info0">
-				<div class="head_pic0"><img src="../assets/ECX.svg"/></div>
+				<div class="head_pic0"><a href="../index.html" ><img src="../assets/ECX.svg"/></a></div>
 			</section>
 			<section class="head_section2">
 				<button class="head_logout" id="logout_user">LOGOUT</button>
@@ -30,7 +30,7 @@
 		<section class="navbar_second">
 			<div class="navbar_about"><a href="#">Home</a></div>
 			<div class="navbar_about"><a href="#">About</a></div>
-			<div class="navbar_ment"><a href="#">Mentors</a></div>
+			<!--<div class="navbar_ment"><a href="#">Mentors</a></div> -->
 			<div class="navbar_sch"><a href="#">Schedule</a></div>
 			<div class="navbar_sch"><a href="#">Contact</a></div>
 			<div class="navbar_inbox"><a href="#">Inbox</a></div>
@@ -78,7 +78,7 @@
 							<b>BIO</b>
 							<span id="count">0 / 50 words</span>
 						</header>
-						<textarea class="inputarea" id="bio" placeholder="Write something about yourself in less than 50 words"></textarea>
+						<textarea class="inputarea" id="bio" placeholder="Write something about yourself in less than 50 words" name="bio"></textarea>
 					</div>
 				</div>
 				
@@ -112,12 +112,11 @@
 							</div>
 							<div class="dept">
 								<label class="contestant-bio">Phone Number</label><br>
-								<input type="tel" placeholder="Phone No" id="phoneNo">
+								<input type="tel" placeholder="Phone No" name="number" id="phoneNo">
 							</div>
 						</div>
 					</div>
 				</div>
-				
 			
 				<div class="infoSlide">
 					<div class="reply">
@@ -149,7 +148,7 @@
 						<div class="inputlink">
 							<div class="link-head">GITHUB</div>
 							<div class="link-address">
-								<input type="text" name="Github" id="link">
+								<input type="text" name="link" id="link">
 								<div class="red-circle">
 									<div></div>
 								</div>
@@ -165,8 +164,8 @@
 						<div class="selectarea">
 							<div class="inst">
 								<legend>INSTITUTION</legend>
-								<!--<input type="text" name="contestant-institution" list="const-inst-list" id="institution" placeholder="Institution"/>-->
-								<select class="sel" id="institution" placeholder="Institution">
+								<!-- <input type="text" name="institution" list="const-inst-list" id="institution" placeholder="Institution"/> -->
+								<select class="sel" id="institution" name="institution" placeholder="Institution">
 									<option>YABATECH</option>
 									<option>University of Ibadan</option>
 									<option>Obafemi Awolowo University</option>
@@ -185,7 +184,7 @@
 							</div>
 							<div class="dept">
 								<legend>DEPARTMENT</legend>
-								<input type="text" name="contestant-department" id="department" placeholder="Department">
+								<input type="text" name="department" id="department" placeholder="Department">
 							</div>
 						</div>
 					</div>

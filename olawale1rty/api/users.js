@@ -123,53 +123,100 @@ router.post("/login", (req, res) => {
 });
 
 router.post("/dashboard/:id", authorize(),  (req, res) => {
-    
-const { error } = validateDashboard(req.body);
-if (error) return res.json(error.details[0].message); 
+    Picture(req, res,(error) => {
+      // if (req.files.length <= 0) {
+      //           return res.json("You must select at least 1 file.");
+      //         }
+      if (error === "LIMIT_UNEXPECTED_FILE") {
+            return res.json("Too many files to upload.");
+            }
+      if (error) return res.json("Error when trying to upload files.");
 
+          let OUTPUT = () => {
+          console.log(req)
+          const { error } = validateDashboard(req.body);
+          if (error) return res.json(error.details[0].message); 
 
-const {
-bio,
-track,
-link, 
-gender,
-number,
-institution,
-department,
-} = req.body;
-let inputData = new Dashboard({
-bio: bio,
-track: track,
-link: link,
-gender: gender,
-number: number,      
-institution: institution,
-department: department
-});
-inputData
-.save()
-.then((doc) => {
+          
+            const {
+              bio,
+              track,
+              link, 
+              gender,
+              number,
+              institution,
+              department,
+            } = req.body;
+            let VIDEO = [];
+            if (req.files["media"] === undefined){
+              VIDEO = req.files["media"]
+            }else {
+              req.files["media"].forEach((image)=>{
+                VIDEO.push(image.filename);
 
-    return User.findOneAndUpdate(
-          {
-            _id:  new ObjectId(req.params.id),
-          },
-          {
-            $push: {dashboard: doc._id}
-          },
-          { new: true }
-        )
-          .then((doc) => {
-            // console.log(doc);
-            res.json("Files have been uploaded.");
-            // res.json("Redirect back to Dashboard");
-            // res.redirect('https://hackx.netlify.app/dashboard');
-          })
-          .catch((err) => {
-            // console.log(err)
-            res.json("Dashboard Submission Failed");
-          });
-})
+              });
+            }
+
+            let PICTURE = [];
+            if (req.files["picture"] === undefined){
+              PICTURE = req.files["picture"]
+            }else {
+              req.files["picture"].forEach((image)=>{
+                PICTURE.push(image.filename);
+
+              });
+            }
+
+            let media =  VIDEO; 
+            let picture =  PICTURE;
+            // console.log(media)
+            // console.log(picture)
+            let inputData = new Dashboard({
+              bio: bio,
+              track: track,
+              link: link,
+              gender: gender,
+              number: number,      
+              institution: institution,
+              department: department,
+              media: media,
+              picture: picture
+            });
+            inputData
+              .save()
+              .then((doc) => {
+            
+                  return User.findOneAndUpdate(
+                        {
+                          _id:  new ObjectId(req.params.id),
+                        },
+                        {
+                          $push: {dashboard: doc._id}
+                        },
+                        { new: true }
+                      )
+                        .then((doc) => {
+                          // console.log(doc);
+                          res.json("Files have been uploaded.");
+                          // res.json("Redirect back to Dashboard");
+                          // res.redirect('https://hackx.netlify.app/dashboard');
+                        })
+                        .catch((err) => {
+                          // console.log(err)
+                          res.json("Dashboard Submission Failed");
+                        });
+              })
+        };
+
+      if(req.files == undefined){
+          OUTPUT()
+      }else(
+        OUTPUT()
+      );
+      
+        
+
+    });
 });
 
 router.post("/submission/:id", authorize(), (req, res) => {
