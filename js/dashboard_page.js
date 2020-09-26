@@ -1,3 +1,4 @@
+let loader  = document.querySelector('#loadCont');
 let un, deux, trois, quarte, quinze, six;
 un = document.querySelector('#un');
 deux = document.querySelector('#deux');
@@ -286,6 +287,7 @@ var phoneNo = document.querySelector('#phoneNo');
 
 if (localStorage.getItem('bio') !== undefined ) {
   const formEvent = Submit.addEventListener("click", async (event) => {
+    loader.style.display = "flex";
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
     const bio = document.querySelector("#bio").value;
@@ -311,7 +313,9 @@ if (localStorage.getItem('bio') !== undefined ) {
     const institution = document.querySelector("#institution").value;
     const department = document.querySelector("#department").value;
     const Info = await { picture, bio, track, link, gender, number, institution, department };
-    dashboardInfo(Info); 
+    setTimeout(() => {
+      dashboardInfo(Info); 
+    }, 7000);
   });
 };
 
@@ -327,6 +331,7 @@ const dashboardInfo = async (Info) => {
   axios
     .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, Info, { headers: headers})
     .then((response) => {
+      loader.style.display = "none";
       response.data;
       // console.log(response)
       if (response.status == "200") {

@@ -77,8 +77,9 @@ main button, main button:hover {
 }
 .submission-page .submissions-section {
     background: white;
-    padding: 1% 1.5%;
+    padding: 1.5%;
     border-radius: 5px;
+    margin-bottom: 4%;
 }
 .submission-page .submissions-section .submission-detail {
     display: flex;
@@ -86,14 +87,14 @@ main button, main button:hover {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4.5% 0 2%;
+    padding: 0 6% 0 6%;
     cursor: pointer;
 }
 .submission-page .submissions-section .submission-detail input[type="checkbox"] {
     display: none;
 }
 .submission-page .submissions-section .submission-detail .column-one {
-    width: 80%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
