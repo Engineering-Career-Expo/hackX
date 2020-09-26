@@ -752,15 +752,16 @@ input::placeholder {
 		width: 100%;
 		background: whitesmoke;
 		height: 400px;
-		padding: 4% 2%;
+		padding: 5%;
 		border-radius: 8px;
 		margin: 1% 0;
-		border: none;
+		border: 2px solid transparent;
 		resize: none;
 		text-align: left;
 		font-family: 'Nunito Sans', sans-serif;
 		font-size: 1em;
 		outline: none;
+		transition: .5s ease-in-out;
 	}
 	.participant-info .reply .inputarea2 {
 		width: 100%;
