@@ -1,3 +1,4 @@
+let loader  = document.querySelector('.loadCont');
 let un, deux, trois, quarte, quinze, six;
 un = document.querySelector('#un');
 deux = document.querySelector('#deux');
