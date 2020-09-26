@@ -1,4 +1,9 @@
+let loader  = document.querySelector('#loadCont');
 let applicont = document.querySelector('#appliContainer');
+let main = document.querySelector('main');
+loader.style.display = "flex";
+main.style.visibility = "hidden";
+
 const headers = {
     'Content-Type': 'application/json',
     'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
@@ -13,6 +18,8 @@ const headers = {
 
 axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
 .then((response) => {
+  loader.style.display = "none";
+  main.style.visibility = "visible";
   var doc = response.data.doc;
   console.log(doc);
   var id = 0;
