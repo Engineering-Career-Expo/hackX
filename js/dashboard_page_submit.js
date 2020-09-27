@@ -8,8 +8,8 @@ finishBtn.onclick = () => {
     console.log("opened submit popup");
 }
 closeSubmitPopUp.onclick = () => {
-    console.log('closed submit popup');
     sureToSubmit.style.display = "none";
+    console.log('closed submit popup');
 }
 // // Submit question
 // var submitPopup = document.querySelector('#submit_popup');
