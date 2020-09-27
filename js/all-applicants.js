@@ -5,10 +5,10 @@ loader.style.display = "flex";
 main.style.visibility = "hidden";
 
 const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
-    'withCredentials': true, 
-  }
+  'Content-Type': 'application/json',
+  'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
+  'withCredentials': true, 
+}
   let userNameArr = [];
  let usersId = [];
  let gotten = true;
@@ -69,6 +69,7 @@ var logButtonIndex = (buttonIndex) => {
   var con = window.localStorage.getItem('partName');
   //console.log(data);
   console.log(con);
+  window.location.assign('admin-participant-review.html');
 }
 for (let j = 0; j < allViewButtonsOnPage.length; j++) { 
   let viewButton = allViewButtonsOnPage[j]; 
