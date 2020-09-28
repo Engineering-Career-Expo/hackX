@@ -154,3 +154,8 @@ main button, main button:hover {
         font-size: 12px;
     }
 }
+
+main button#applhover, main button#applhover:hover {
+    cursor: auto;
+    width: 150px;
+}
