@@ -1,5 +1,7 @@
 let avatarSubmissionFlex = document.querySelector('.avatar-submission-flex');
 let id = window.localStorage.getItem('myId');
+const imgId = window.localStorage.getItem('usersImageId');
+var imageId;
 var fullname; var time; var bio; var picture; var gender; var number; var track; var link; var institution; var department;
 
 const username = window.localStorage.getItem('partName');
@@ -20,7 +22,7 @@ const dataField = () => {
           <p class="details-text">
             Bio: ${bio}
             <br>
-            Biodata: <img alt="biodata" src=${picture} >
+            Biodata: 
             <br>
             Gender: ${gender}
             <br>
@@ -37,6 +39,11 @@ const dataField = () => {
           </div>
         </div>
       </div>
+      <div class="date-submitted-container">
+        <p class="date-submitted">
+          Jul 19, 2020, 10:09AM (16 hours ago)
+        </p>
+      </div>
     `;
     avatarSubmissionFlex.innerHTML = panes;
 }
@@ -48,7 +55,7 @@ axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username, {he
   lastname = docu.lastname;
   fullname = firstname + " " + lastname;
   bio = docu.dashboard[0].bio;
-  picture = docu.dashboard[0].picture;
+  //picture = docu.dashboard[0].picture.;
   gender = docu.dashboard[0].gender;
   number = docu.dashboard[0].number;
   track = docu.dashboard[0].track;
@@ -59,5 +66,25 @@ axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username, {he
   console.log(username);
   console.log(id);
   dataField();
+  console.log(imgId);
+  imageId = imgId;
+
+  
 })
 .catch((err) => {console.error(err.message)});
+
+axios.get("https://hackxbackend.herokuapp.com/dashboardImages?id=5f5e762c52ddc7001785c836", {headers: headers})
+  .then((response) => {
+    console.log(response.data);
+  }).catch((err) => {console.error(err.message)});
+
+ // localhost:8080/dashboardImages?id=5efbab83e79ce11900ad71cf
+
+ const deleteUser = () => {
+  axios.get("https://hackxbackend.herokuapp.com/deleteuser?username?" + username , { headers: headers })
+  .then((response) => {
+    if(response.data == "olax has been deleted.");
+    console.log('user admission has been rejected and successfully deleted');
+  })
+  .catch((error) => console.error(error));
+}
