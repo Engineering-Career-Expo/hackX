@@ -15,26 +15,26 @@ const dataField = () => {
     <div class="user-details-flex">
       <div class="submission-img-container"></div>
       <div class="submission-details-container">
-        <p class="application-no">Application #${id}</p>
-        <p class="user-fullname">${fullname}</p>
-        <p class="mobile-date-submitted">${time}</p>
+        <p class="application-no"><b class="spannybolder">Application #${id}</b></p>
+        <p class="user-fullname"><b class="spannybolder">${fullname}</b></p>
+        <p class="mobile-date-submitted"><b class="spannybolder">${time}</b></p>
         <div class="my-details">
           <p class="details-text">
-            Bio: ${bio}
+            <span class="spannybold">Bio:</span> <span class="unspannyB">${bio}</span>
             <br>
-            Biodata: 
+            <span class="spannybold">Biodata:</span> 
             <br>
-            Gender: ${gender}
+            <span class="spannybold">Gender:</span> <span class="unspannyB">${gender}</span>
             <br>
-            Number: ${number}
+            <span class="spannybold">Number:</span> <span class="unspannyB">${number}</span>
             <br>
-            Track: ${track}
+            <span class="spannybold">Track:</span> <span class="unspannyB">${track}</span>
             <br>
-            Link to past projects: ${link}
+            <span class="spannybold">Link to past projects:</span> <span class="unspannyB">${link}</span>
             <br>
-            Instiution: ${institution}
+            <span class="spannybold">Instiution:</span> <span class="unspannyB">${institution}</span>
             <br>
-            Department: ${department}
+            <span class="spannybold">Department:</span> <span class="unspannyB">${department}</span>
             </p>
           </div>
         </div>
@@ -44,6 +44,7 @@ const dataField = () => {
           Jul 19, 2020, 10:09AM (16 hours ago)
         </p>
       </div>
+    </div>
     `;
     avatarSubmissionFlex.innerHTML = panes;
 }
