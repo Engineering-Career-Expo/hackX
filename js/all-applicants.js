@@ -62,19 +62,23 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
 var logButtonIndex = (buttonIndex) => { 
   //console.log('buttonIndex:', buttonIndex); 
   usernname = userNameArr[buttonIndex];
-  console.log(usernname); 
-  var data = window.localStorage.setItem('partName', usernname);
+  //console.log(usernname); 
+  //var data = window.localStorage.setItem('partName', usernname);
   //console.log(data);
+ // window.localStorage.setItem('partName', usernname);
   window.localStorage.setItem('partName', usernname);
-  var con = window.localStorage.getItem('partName');
+  //var con = window.localStorage.getItem('partName');
   //console.log(data);
-  console.log(con);
+  //console.log(con);
   window.location.assign('admin-participant-review.html');
 }
 for (let j = 0; j < allViewButtonsOnPage.length; j++) { 
   let viewButton = allViewButtonsOnPage[j]; 
   viewButton.addEventListener('click', () => { 
     logButtonIndex(j);
+    var myId = (j + 1);
+    //console.log(myId);
+    window.localStorage.setItem('myId', myId);
   }); 
 }
 })
