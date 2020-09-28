@@ -8,6 +8,7 @@ finishBtn.onclick = () => {
     // console.log("opened submit popup");
 }
 closeSubmitPopUp.onclick = () => {
+    sureToSubmit.style.display = "none";
     // console.log('closed submit popup');
 }
 // // Submit question
@@ -71,7 +72,7 @@ const dashboardInfo = async () => {
         if (response.data == "Too many files to upload.") {
           showLoginAlert("Too many files to upload.", "error");
         } else if (response.data == "Error when trying to upload files.") {
-          showLoginAlert("Error when trying to upload files.", "error");
+          showLoginAlert("Error when trying to upload biodata.", "error");
         }else if (response.data == "Files have been uploaded.") {
           showLoginAlert("Submitted Successfully.", "success");
           document.querySelector('.dashboard_submissionSuccessful').style.display = "block";

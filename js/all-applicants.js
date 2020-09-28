@@ -1,11 +1,17 @@
+let loader  = document.querySelector('#loadCont');
 let applicont = document.querySelector('#appliContainer');
+let main = document.querySelector('main');
+loader.style.display = "flex";
+main.style.visibility = "hidden";
+
 const headers = {
-    'Content-Type': 'application/json',
-    'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
-    'withCredentials': true, 
-  }
+  'Content-Type': 'application/json',
+  'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
+  'withCredentials': true, 
+}
   let userNameArr = [];
  let usersId = [];
+ let usersImgId = [];
  let gotten = true;
  const getUserDetails = () => {
  // console.log('bull shit 4 bull eye');
@@ -13,12 +19,14 @@ const headers = {
 
 axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
 .then((response) => {
+  loader.style.display = "none";
+  main.style.visibility = "visible";
   var doc = response.data.doc;
   console.log(doc);
   var id = 0;
   var demId = "";
   let newCont = () => {
-    console.log(id);
+    //console.log(id);
     let dateCreated = doc[i].createdAt;
     let editedDate = moment(new Date(dateCreated)).format('YYYY-MM-DD');
     let newPane = 
@@ -31,11 +39,12 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
         </div>
         <div class="col" style="display: flex; flex-direction: column;">
         <h5 class="time">${editedDate}</h5>
-        <button style="font-weight: bold"  id= ${demId}>View</button>
+        <button style="font-weight: bold" class="view-button" id= ${demId}>View</button>
     </div>
     <hr class="submission-hr"></hr>`;
     applicont.innerHTML += newPane;
     userNameArr.push(doc[i].username);
+    usersImgId.push(doc[i]._id);
   }
   for(var i = doc.length - 1; i > -1; i--) {
     id++;
@@ -44,22 +53,39 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
     // console.log(doc[i].username);
     usersId.push(window['pane'+i]);
   }
-  // console.log(userNameArr);
+  //console.log(userNameArr);
   localStorage.setItem('usernameArray', userNameArr);
-  // console.log(usersId);
-  for (var i=0; i<usersId.length; i++) {
-    usersId[i].addEventListener('click', getUserDetails());
+  //console.log(usersId);
+  //for (var i=0; i<usersId.length; i++) {
+  //  usersId[i].addEventListener('click', getUserDetails());
+  //}
+  var allViewButtonsOnPage = document.querySelectorAll('.view-button');
+  var usernname = "";
+  var logButtonIndex = (buttonIndex) => { 
+  //console.log('buttonIndex:', buttonIndex); 
+  usernname = userNameArr[buttonIndex];
+  userImgId = usersImgId[buttonIndex];
+  //console.log(usernname); 
+  //var data = window.localStorage.setItem('partName', usernname);
+  //console.log(data);
+ // window.localStorage.setItem('partName', usernname);
+ window.localStorage.setItem('usersImageId', userImgId);
+  window.localStorage.setItem('partName', usernname);
+  //var con = window.localStorage.getItem('partName');
+  //console.log(data);
+  //console.log(con);
+  window.location.assign('admin-participant-review.html');
   }
+  for (let j = 0; j < allViewButtonsOnPage.length; j++) { 
+  let viewButton = allViewButtonsOnPage[j]; 
+  viewButton.addEventListener('click', () => { 
+    logButtonIndex(j);
+    var myId = (j + 1);
+    //console.log(myId);
+    window.localStorage.setItem('myId', myId);
+  }); 
+  }
+  // console.log(usersImgId);
+  // console.log(userNameArr);
 })
 .catch((error) => console.error(error));
-
-const deleteUser = () => {
-  axios.get("https://hackxbackend.herokuapp.com/deleteuser?username?" + username , { headers: headers })
-  .then((response) => {
-    if(response.data == "olax has been deleted.");
-    // console.log('successfully deleted');
-  })
-  .catch((error) => console.error(error));
-}
-
-

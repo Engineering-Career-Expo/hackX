@@ -7,6 +7,7 @@
     <title>Application Submissions</title>
     <link rel="stylesheet" type="text/css" href="../scss/component/admin-submissions-inbox.css">
     <link rel="stylesheet" href="../scss/component/admin-dashboard-navbar.css">
+    <link rel="stylesheet" href="../scss/component/loader.css">
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>   
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
@@ -86,14 +87,17 @@
         <div class="line2"></div>
         <div class="line3"></div>
     </div> 
-    <main class="submission-page">
+    <div class="loadCont" id="loadCont">
+        <div class="loadingCircle"></div>
+    </div>
+    <main class="submission-page" style="visibility:hidden;">
         <header class="button-header">
             <div class="head-one">
-                <button class="all-submissions">All</button>
-                <button class="unread-submissions">Unread</button>
-                <button class="filter-submissions">Filter By <img src="../assets/images/dashboard/arrow-down.svg" class="img-down"></button>
+                <button class="all-submissions">Back</button>
+                <!--<button class="unread-submissions">Unread</button>
+                <button class="filter-submissions">Filter By <img src="../assets/images/dashboard/arrow-down.svg" class="img-down"></button>-->
             </div>
-            <button class="delete-submission">Delete</button>
+            <button class="delete-submission" id="applhover">All Applications</button>
         </header>
         <div class="submissions-section" id="appliContainer">
             <!--<div class="submission-detail">
