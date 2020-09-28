@@ -3433,7 +3433,7 @@ html {
 @media (min-width: 400px) and (max-width: 500px) {
   .criteria-section-h1 {
     width: 100%;
-    margin: 0;
+    margin: 3% 0 0 0;
     padding: 5%;
     text-align: center;
     font-size: 5.7vw;
@@ -3557,7 +3557,7 @@ html {
 @media (min-width: 501px) and (max-width: 768px) {
   .criteria-section-h1 {
     width: 100%;
-    margin: 0;
+    margin: 3% 0 0 0;
     padding: 5%;
     text-align: center;
     font-size: 4vw;
