@@ -11,6 +11,7 @@ const headers = {
 }
   let userNameArr = [];
  let usersId = [];
+ let usersImgId = [];
  let gotten = true;
  const getUserDetails = () => {
   console.log('bull shit 4 bull eye');
@@ -43,12 +44,13 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
     <hr class="submission-hr"></hr>`;
     applicont.innerHTML += newPane;
     userNameArr.push(doc[i].username);
+    usersImgId.push(doc[i]._id);
   }
   for(var i = doc.length - 1; i > -1; i--) {
     id++;
     demId = `${"pane" + i}`;
     newCont();
-    //console.log(doc[i].username);
+    console.log(doc[i].username);
     usersId.push(window['pane'+i]);
   }
   //console.log(userNameArr);
@@ -59,20 +61,22 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
   //}
   var allViewButtonsOnPage = document.querySelectorAll('.view-button');
   var usernname = "";
-var logButtonIndex = (buttonIndex) => { 
+  var logButtonIndex = (buttonIndex) => { 
   //console.log('buttonIndex:', buttonIndex); 
   usernname = userNameArr[buttonIndex];
+  userImgId = usersImgId[buttonIndex];
   //console.log(usernname); 
   //var data = window.localStorage.setItem('partName', usernname);
   //console.log(data);
  // window.localStorage.setItem('partName', usernname);
+ window.localStorage.setItem('usersImageId', userImgId);
   window.localStorage.setItem('partName', usernname);
   //var con = window.localStorage.getItem('partName');
   //console.log(data);
   //console.log(con);
   window.location.assign('admin-participant-review.html');
-}
-for (let j = 0; j < allViewButtonsOnPage.length; j++) { 
+  }
+  for (let j = 0; j < allViewButtonsOnPage.length; j++) { 
   let viewButton = allViewButtonsOnPage[j]; 
   viewButton.addEventListener('click', () => { 
     logButtonIndex(j);
@@ -80,15 +84,8 @@ for (let j = 0; j < allViewButtonsOnPage.length; j++) {
     //console.log(myId);
     window.localStorage.setItem('myId', myId);
   }); 
-}
+  }
+  console.log(usersImgId);
+  console.log(userNameArr);
 })
 .catch((error) => console.error(error));
-
-const deleteUser = () => {
-  axios.get("https://hackxbackend.herokuapp.com/deleteuser?username?" + username , { headers: headers })
-  .then((response) => {
-    if(response.data == "olax has been deleted.");
-    console.log('successfully deleted');
-  })
-  .catch((error) => console.error(error));
-}
