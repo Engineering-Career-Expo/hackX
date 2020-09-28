@@ -26,7 +26,7 @@ let getUser = () => {
       let subPictures = doc.submission[0].pictures;
       document.body.innerHTML += "<br><br><br>" + userSubmission;
       let subArr = [ subName, subTagline, subProblem, subChallenges, subTechnologies, subLinks, subVidLinks, subPictures ];
-      console.log(subArr);
+      // console.log(subArr);
       localStorage.setItem("submissionsArray", subArr);
       let id = 0;
       let newCont = () => {
@@ -50,7 +50,7 @@ let getUser = () => {
       for(var i = 0; i < doc.length; i++) {
           id++;
           newCont();
-          console.log('boo');
+          // console.log('boo');
     
       }
     })
@@ -61,6 +61,6 @@ let inputCnt = document.querySelector('#inputVal');
 let userBtn = document.querySelector('#btn-user');
 userBtn.onclick = function () {
     username = inputCnt.value;
-    console.log(username);
+    // console.log(username);
     getUser();
 }

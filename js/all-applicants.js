@@ -14,7 +14,7 @@ const headers = {
  let usersImgId = [];
  let gotten = true;
  const getUserDetails = () => {
-  console.log('bull shit 4 bull eye');
+ // console.log('bull shit 4 bull eye');
 }
 
 axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
@@ -50,7 +50,7 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
     id++;
     demId = `${"pane" + i}`;
     newCont();
-    console.log(doc[i].username);
+    // console.log(doc[i].username);
     usersId.push(window['pane'+i]);
   }
   //console.log(userNameArr);
@@ -85,7 +85,7 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
     window.localStorage.setItem('myId', myId);
   }); 
   }
-  console.log(usersImgId);
-  console.log(userNameArr);
+  // console.log(usersImgId);
+  // console.log(userNameArr);
 })
 .catch((error) => console.error(error));
