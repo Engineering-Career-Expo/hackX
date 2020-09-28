@@ -55,7 +55,7 @@ const showLoginAlert = (message, className) => {
   div.className = `alert ${className}`;
   div.appendChild(document.createTextNode(message));
   const container = document.querySelector(".subForm");
-  container.insertBefore(div, popUp);
+  container.appendChild(div);
 
   setTimeout(function () {
     document.querySelector(".alert").remove();

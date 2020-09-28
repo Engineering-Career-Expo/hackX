@@ -8,7 +8,7 @@ const headers = {
  let usersId = [];
  let gotten = true;
  const getUserDetails = () => {
-  console.log('bull shit 4 bull eye');
+ // console.log('bull shit 4 bull eye');
 }
 
 axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
@@ -41,12 +41,12 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
     id++;
     demId = `${"pane" + i}`;
     newCont();
-    console.log(doc[i].username);
+    // console.log(doc[i].username);
     usersId.push(window['pane'+i]);
   }
-  console.log(userNameArr);
+  // console.log(userNameArr);
   localStorage.setItem('usernameArray', userNameArr);
-  console.log(usersId);
+  // console.log(usersId);
   for (var i=0; i<usersId.length; i++) {
     usersId[i].addEventListener('click', getUserDetails());
   }
@@ -57,10 +57,9 @@ const deleteUser = () => {
   axios.get("https://hackxbackend.herokuapp.com/deleteuser?username?" + username , { headers: headers })
   .then((response) => {
     if(response.data == "olax has been deleted.");
-    console.log('successfully deleted');
+    // console.log('successfully deleted');
   })
   .catch((error) => console.error(error));
 }
-
 
 

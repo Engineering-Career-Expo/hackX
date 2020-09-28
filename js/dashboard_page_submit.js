@@ -5,10 +5,10 @@ let closeSubmitPopUp = document.querySelector('#close_popup');
 //let Submit = document.querySelector('#submit_popup__btn');
 finishBtn.onclick = () => {
     sureToSubmit.style.display = "block";
-    console.log("opened submit popup");
+    // console.log("opened submit popup");
 }
 closeSubmitPopUp.onclick = () => {
-    console.log('closed submit popup');
+    // console.log('closed submit popup');
 }
 // // Submit question
 // var submitPopup = document.querySelector('#submit_popup');
@@ -97,12 +97,12 @@ var uusername = localStorage.getItem('username');
 axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + uusername, {headers: headers})
 .then((response) => {
   let docu = response.data;
-	console.log(docu);
-  console.log(docu.dashboard[0]);
-  console.log(uusername);
+	// console.log(docu);
+  // console.log(docu.dashboard[0]);
+  // console.log(uusername);
 	if (docu.dashboard[0].bio !== null) {
 		document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
-		document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
+		document.querySelector('.participant-info').classList.add('stop_scroll');
 	}
 })
 .catch((err) => {console.error(err.message)});
