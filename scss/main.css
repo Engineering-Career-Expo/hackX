@@ -3686,7 +3686,7 @@ html {
   }
   .criteria-section-h1 {
     width: 100%;
-    margin: 0;
+    margin: 2% 0 0 0;
     padding: 5%;
     text-align: center;
     font-size: 4.4vw;
@@ -3702,13 +3702,15 @@ html {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     margin: 0 15%;
   }
   .criteria-section .ul1 {
-    width: 50%;
+    width: 49%;
   }
   .criteria-section .ul2 {
-    width: 50%;
+    width: 49%;
   }
   .criteria-section li {
     font-family: Gilroy-Regular, sans-serif;
@@ -3815,12 +3817,15 @@ html {
     display: -ms-flexbox;
     display: flex;
     margin: 0 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
   .criteria-section .ul1 {
-    width: 50%;
+    width: 49%;
   }
   .criteria-section .ul2 {
-    width: 50%;
+    width: 49%;
   }
   .criteria-section li {
     font-family: Gilroy-Regular, sans-serif;
