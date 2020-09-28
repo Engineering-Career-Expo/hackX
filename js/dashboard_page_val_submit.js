@@ -5,7 +5,7 @@ function validateInput() {
        phoneNoVal.length > 11 && trackVal.length < 1 && institutionCntVal.length < 1 && departmentCntVal.length < 1 && 
       biodataImg.value.length < 1) {
         document.querySelector('#finish').disabled = true;
-        console.log("nothing here");
+        /* console.log("nothing here");
         console.log(bioCntInput);
         console.log(genderValue);
         console.log(phoneNoVal);
@@ -13,11 +13,12 @@ function validateInput() {
         console.log(institutionCntVal);
         console.log(departmentCntVal);
         console.log(biodataImg,value);
+        */
     } else {
         document.querySelector('#finish').disabled = false;
-        console.log("filled here");
+        // console.log("filled here");
     }
-    console.log("validated");
+    // console.log("validated");
 };
 
 
@@ -93,17 +94,17 @@ let radioOne = document.querySelector('#rad1');
 let radioTwo = document.querySelector('#rad2');
 let radioValueM = () => {
     genderValue = "male";
-    console.log(genderValue);
+    // console.log(genderValue);
 }
 let radioValueF = () => {
     genderValue = "female";
-    console.log(genderValue);
+    // console.log(genderValue);
 }
 var phoneNo = document.querySelector('#phoneNo');
 var phoneNoVal = "";
 phoneNo.oninput = () => {
     phoneNoVal = phoneNo.value;
-    console.log(phoneNoVal);
+    // console.log(phoneNoVal);
 }
 let biodataImg = document.querySelector('#imageFile');
 
@@ -166,7 +167,7 @@ var institutionCntVal = "";
 institutionCnt.oninput = () => {
     institutionCntVal = institutionCnt.value;
     institution = institutionCntVal;
-    console.log(institutionCntVal);
+    // console.log(institutionCntVal);
     validateInput();
 }
 // departments
@@ -174,7 +175,7 @@ let departmentCnt = document.querySelector('#department');
 var departmentCntVal = "";
 departmentCnt.oninput = () => {
     departmentCntVal = departmentCnt.value;
-    console.log(departmentCntVal);
+    // console.log(departmentCntVal);
     validateInput();
 }
 
