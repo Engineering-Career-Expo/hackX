@@ -11,7 +11,6 @@ const headers = {
 }
   let userNameArr = [];
  let usersId = [];
- let usersImgId = [];
  let gotten = true;
  const getUserDetails = () => {
  // console.log('bull shit 4 bull eye');
@@ -44,7 +43,6 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
     <hr class="submission-hr"></hr>`;
     applicont.innerHTML += newPane;
     userNameArr.push(doc[i].username);
-    usersImgId.push(doc[i]._id);
   }
   for(var i = doc.length - 1; i > -1; i--) {
     id++;
@@ -64,12 +62,10 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
   var logButtonIndex = (buttonIndex) => { 
   //console.log('buttonIndex:', buttonIndex); 
   usernname = userNameArr[buttonIndex];
-  userImgId = usersImgId[buttonIndex];
   //console.log(usernname); 
   //var data = window.localStorage.setItem('partName', usernname);
   //console.log(data);
  // window.localStorage.setItem('partName', usernname);
- window.localStorage.setItem('usersImageId', userImgId);
   window.localStorage.setItem('partName', usernname);
   //var con = window.localStorage.getItem('partName');
   //console.log(data);

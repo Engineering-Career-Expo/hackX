@@ -164,7 +164,7 @@ axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + uusername, {h
 			clicks();
 		});
 	} else {
-    console.log('nothing');
+    //console.log('nothing');
   }
 })
 .catch((err) => {console.error(err.message)});
