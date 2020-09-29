@@ -7,22 +7,22 @@ quinze = document.querySelector('#quinze');
 six = document.querySelector('#six');
 
 un.onclick = function() {
-	console.log("nobody");
+	//console.log("nobody");
 }
 duex.onclick = function() {
-	console.log("nobody");
+	//console.log("nobody");
 }
 trois.onclick = function() {
-	console.log("nobody");
+	//console.log("nobody");
 }
 quarte.onclick = function() {
-	console.log("nobody");
+	//console.log("nobody");
 }
 quinze.onclick = function() {
-	console.log("nobody");
+	//console.log("nobody");
 }
 six.onclick = function() {
-	console.log("nobody");
+	//console.log("nobody");
 }
 
 var head_drop = document.getElementsByClassName("head_drop");
