@@ -69,7 +69,7 @@ const dashboardInfo = async () => {
   const department = document.querySelector("#department").value;
   const linkooo = [];
   let linko = document.querySelector('#link');
-  let addedLink = "";
+  var addedLink = "";
   let newProfile = document.querySelector(".new-profile");
   newProfile.addEventListener('click', () => {
     if (linko.innerHTM.length > 0) {
