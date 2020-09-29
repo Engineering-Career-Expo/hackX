@@ -9,6 +9,11 @@
     <title>Register</title>
     <link rel="stylesheet" href="../scss/main.css"/>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <style>
+      #abbclick:hover {
+        text-decoration: underline;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -47,7 +52,7 @@
     </nav>
 
     <main class="register-main-container">
-      <div class="register-form-container">
+      <div class="register-form-container" style="padding-bottom: 3%;">
         <form class="signup">
           <h2>Registration</h2>
           <legend>First name</legend>
@@ -63,9 +68,13 @@
           <legend>Confirm password</legend>
           <input type="password" id="confirm_password" name="Confirm password" placeholder="•••••••••"/>
         </form>
-        <div>
-        	<input type="checkbox" id="policy" required/>
-        	<label  for="policy" class="policy" id="policy-set" onclick="window.location.assign('about.html')">I have read and agreed to the term and condition of the Privacy policy of this competition</label>
+        <div style="margin-bottom: 5%;">
+        	<input type="checkbox" id="policy" required checked="false"/>
+        	<label  for="policy" class="policy" id="policy-set" style="margin: 1% 0;">I have read and agreed to the term and condition of this competition.
+          </label>
+          <span>
+            <em id="abbclick" onclick="window.location.assign('about.html');" style="font-weight: bold; cursor: pointer;">View the Terms and Conditions</em>.
+          </span>
         </div>
         <button class="signup-btnn">
           <span class="btn-txt">Sign Up</span>
