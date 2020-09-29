@@ -20,28 +20,37 @@ const dataField = () => {
         <p class="mobile-date-submitted"><b class="spannybolder">${time}</b></p>
         <div class="my-details">
           <p class="details-text">
-            <span class="spannybold">Bio:</span> <span class="unspannyB">${bio}</span>
-            <br>
-            <span class="spannybold">Biodata:</span> 
-            <br>
-            <span class="spannybold">Gender:</span> <span class="unspannyB">${gender}</span>
-            <br>
-            <span class="spannybold">Number:</span> <span class="unspannyB">${number}</span>
-            <br>
-            <span class="spannybold">Track:</span> <span class="unspannyB">${track}</span>
-            <br>
-            <span class="spannybold">Link to past projects:</span> <span class="unspannyB">${link}</span>
-            <br>
-            <span class="spannybold">Instiution:</span> <span class="unspannyB">${institution}</span>
-            <br>
-            <span class="spannybold">Department:</span> <span class="unspannyB">${department}</span>
+            <p>
+              <span class="spannybold">Bio:</span> <span class="unspannyB">${bio}</span>
             </p>
+            <p style="display: flex; flex-direction: row; align-items: flex-start;">
+              <span class="spannybold">Biodata:</span> <img alt="biodata image" width="80%" height="auto" src=${picture}>
+            </p>
+            <p>
+              <span class="spannybold">Gender:</span> <span class="unspannyB">${gender}</span>
+            </p>
+            <p>
+              <span class="spannybold">Number:</span> <span class="unspannyB">${number}</span>
+            </p>
+            <p>
+              <span class="spannybold">Track:</span> <span class="unspannyB">${track}</span>
+            </p>
+            <p>
+              <span class="spannybold">Link to past projects:</span> <span class="unspannyB">${link}</span>
+            </p>
+            <p>
+              <span class="spannybold">Institution:</span> <span class="unspannyB">${institution}</span>
+            </p>
+            <p>
+              <span class="spannybold">Department:</span> <span class="unspannyB">${department}</span>
+            </p>
+          </p>
           </div>
         </div>
       </div>
       <div class="date-submitted-container">
         <p class="date-submitted">
-          Jul 19, 2020, 10:09AM (16 hours ago)
+        <b class="spannybolder">${time}</b>
         </p>
       </div>
     </div>
@@ -52,11 +61,14 @@ axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username, {he
 .then((response) => {
   let docu = response.data;
   console.log(docu);
+  let dateCreated = docu.dashboard[0].createdAt;
+  time = moment(new Date(dateCreated)).format('YYYY-MM-DD');
   firstname = docu.firstname;
   lastname = docu.lastname;
   fullname = firstname + " " + lastname;
   bio = docu.dashboard[0].bio;
-  //picture = docu.dashboard[0].picture.;
+  picture = docu.dashboard[0].picture[0];
+  console.log(picture);
   gender = docu.dashboard[0].gender;
   number = docu.dashboard[0].number;
   track = docu.dashboard[0].track;

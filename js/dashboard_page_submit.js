@@ -2,6 +2,7 @@ const formElement = document.querySelector('#formElement');
 let finishBtn = document.querySelector('#finish');
 let sureToSubmit = document.querySelector('#submit_popup');
 let closeSubmitPopUp = document.querySelector('#close_popup');
+let loader = document.querySelector('.loadCont');
 //let Submit = document.querySelector('#submit_popup__btn');
 finishBtn.onclick = () => {
     sureToSubmit.style.display = "block";
@@ -48,6 +49,7 @@ closeSubmitPopUp.onclick = () => {
 const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
+    loader.style.display = 'block';
     dashboardInfo();
   });
 
@@ -65,12 +67,25 @@ var headOver = document.querySelector('.header_two__over');
 const dashboardInfo = async () => {
   const institution = document.querySelector("#institution").value;
   const department = document.querySelector("#department").value;
+  const linkooo = [];
+  let linko = document.querySelector('#link');
+  let addedLink = "";
+  let newProfile = document.querySelector(".new-profile");
+  newProfile.addEventListener('click', () => {
+    if (linko.innerHTM.length > 0) {
+      addedLink = linko.value;
+      linkooo.push(addedLink);
+      linko.innerHTML = "";
+    }
+  });
   var formData = new FormData(formElement);
   formData.append("institution", institution);
   formData.append("department", department);
+  formData.append("link", linkooo);
   axios
     .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, formData, { headers: headers})
     .then((response) => {
+      loader.style.display = 'none';
       // console.log(response)
       if (response.status == "200") {
         if (response.data == "Too many files to upload.") {

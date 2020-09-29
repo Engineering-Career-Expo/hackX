@@ -10,6 +10,45 @@
 	<link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 	<title>Dashboard</title>
+	<style>
+		.loadCont {
+			  display: none;
+			  position: absolute;
+			  top: 38%;
+			  left: 45%;
+  			flex-direction: row;
+			background: transparent;
+  			justify-content: center;
+  			align-items: center;
+		}
+		@media (max-width: 700px) {
+  			.loadCont {
+    			margin-top: 40%;
+  			}
+		}
+		.loadingCircle {
+  			border: 22px solid #ececec;
+  			border-radius: 50%;
+			border-top: 22px solid #1c90dd;
+			box-shadow: 2px 2px 2px solid black;
+  			width: 150px;
+  			height: 150px;
+  			-webkit-animation: spin 2s linear infinite; /* Safari */
+  			animation: spin 2s linear infinite;
+		}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+	</style>
 </head>
 
 <body>
@@ -40,7 +79,9 @@
 	</section>
 
 	<header class="dashboard_header">hackX<b> > Dashboard</b></header>
-
+	<div class="loadCont">
+		<div class="loadingCircle"></div>
+	</div>
 	<div class="d_all">
 		<div class="d_all__one">
 			<div class="header_head">
@@ -67,7 +108,7 @@
 			</div>
 
 			<div class="dashboard_all__opacity">
-				<div class="participant-info">
+				<div class="participant-info contrel">
 					<div class="head">
 						Fill the following information
 					</div>
@@ -275,7 +316,6 @@
 	<script src="../js/dashboard_page_submit.js"></script>
 	<script src="../js/logout.js"></script>
 	<script src="../js/progress.js"></script>
-	<script src="../js/add_link.js"></script>
 	<script src="../js/avatar.js"></script>
 </body>
 
