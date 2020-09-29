@@ -72,7 +72,7 @@ const dashboardInfo = async () => {
   var addedLink = "";
   let newProfile = document.querySelector(".new-profile");
   newProfile.addEventListener('click', () => {
-    if (linko.innerHTM.length > 0) {
+    if (linko.innerHTML.length > 0) {
       addedLink = linko.value;
       linkooo.push(addedLink);
       linko.innerHTML = "";
