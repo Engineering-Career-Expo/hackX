@@ -81,7 +81,8 @@ bioCnt.oninput = () => {
     var count = (bioCntInput.split(" ").length);
     counter.innerHTML = count + ' / 50 Words';
     if(count > 50) {
-        bioCnt.disabled = true;
+        //bioCnt.disabled = true;
+        showLoginAlert("You can't type in more than 50 words", "error"); 
     }
     if (bioCnt.value.length == 0) {
         counter.innerHTML = '0 / 50 Words';

@@ -95,7 +95,7 @@
 								</header>
 								<textarea class="inputarea" id="bio"
 									placeholder="Write something about yourself in less than 50 words"
-									name="bio"></textarea>
+									name="bio" required></textarea>
 							</div>
 						</div>
 
@@ -107,7 +107,7 @@
 									<img src="../assets/images/dashboard/add-image.svg" id="imageUpload"
 										class="imageUpload">
 									<input type="file" id="imageFile" class="imageFile" name="picture"
-										accept=".gif, .jpg, .png" multiple />
+										accept=".gif, .jpg, .png" multiple required/>
 									<img id="imagePreview" class="imagePreview" />
 									<div id="imageName" class="imageName" title="image name"></div>
 									<button id="deleteImage" class="deleteImage">Delete</button>
@@ -136,7 +136,7 @@
 									</div>
 									<div class="dept">
 										<label class="contestant-bio">Phone Number</label><br>
-										<input type="tel" placeholder="Phone No" name="number" id="phoneNo">
+										<input type="tel" placeholder="Phone No" name="number" id="phoneNo" required>
 									</div>
 								</div>
 							</div>
@@ -179,12 +179,12 @@
 								<div class="inputlink">
 									<div class="link-head">LINK</div>
 									<div class="link-address">
-										<input type="text" name="link" id="link">
+										<input type="text" name="link" id="link" required>
 										<div class="red-circle">
 											<div></div>
 										</div>
 									</div>
-									<!--<button class="new-profile"><b>+Add new profile</b></button>-->
+									<button class="new-profile"><b>+Add new profile</b></button>
 								</div>
 							</div>
 						</div>
@@ -197,7 +197,7 @@
 										<legend>INSTITUTION</legend>
 										<!-- <input type="text" name="institution" list="const-inst-list" id="institution" placeholder="Institution"/> -->
 										<select class="sel" id="institution" name="institution"
-											placeholder="Institution">
+											placeholder="Institution" required>
 											<option>YABATECH</option>
 											<option>University of Ibadan</option>
 											<option>Obafemi Awolowo University</option>
@@ -216,7 +216,7 @@
 									</div>
 									<div class="dept">
 										<legend>DEPARTMENT</legend>
-										<input type="text" name="department" id="department" placeholder="Department">
+										<input type="text" name="department" id="department" placeholder="Department" required>
 									</div>
 								</div>
 							</div>
