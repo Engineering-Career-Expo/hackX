@@ -57,6 +57,10 @@ const headers = {
   'withCredentials': true, 
 }
 const id = window.localStorage.getItem("id");
+var headApp = document.querySelector('.header_one__app');
+var headTime = document.querySelector('.header_two__time');
+var headPrize = document.querySelector('.header_two__prize');
+var headOver = document.querySelector('.header_two__over');
 
 const dashboardInfo = async () => {
   const institution = document.querySelector("#institution").value;
@@ -77,6 +81,23 @@ const dashboardInfo = async () => {
           showLoginAlert("Submitted Successfully.", "success");
           document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
           document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
+          headApp.addEventListener('click', ()=> {
+          	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
+          	document.querySelector('.dashboard_all__opacity').style.display = "none";
+          	document.querySelector('#displayy_mobile').style.display = "none";
+          });
+          function clicks() {
+          	document.querySelector('.dashboard_submissionSuccessful').style.display = 'none';
+          }
+          headTime.addEventListener('click', ()=> {
+         	clicks();
+          });
+          headPrize.addEventListener('click', ()=> {
+         	clicks();
+          });
+          headOver.addEventListener('click', ()=> {
+         	clicks();
+          });
           localStorage.setItem("submission", true);
         } else if (response.data == "Dashboard Submission Failed") {
           showLoginAlert("Unable to submit files.", "error");
@@ -104,6 +125,23 @@ axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + uusername, {h
 	if (docu.dashboard[0].bio !== null) {
 		document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
 		document.querySelector('.participant-info').classList.add('stop_scroll');
+		headApp.addEventListener('click', ()=> {
+			document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
+			document.querySelector('.dashboard_all__opacity').style.display = "none";
+			document.querySelector('#displayy_mobile').style.display = "none";
+		});
+		function clicks() {
+			document.querySelector('.dashboard_submissionSuccessful').style.display = 'none';
+		}
+		headTime.addEventListener('click', ()=> {
+			clicks();
+		});
+		headPrize.addEventListener('click', ()=> {
+			clicks();
+		});
+		headOver.addEventListener('click', ()=> {
+			clicks();
+		});
 	}
 })
 .catch((err) => {console.error(err.message)});
