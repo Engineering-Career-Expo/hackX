@@ -84,7 +84,8 @@ const dashboardInfo = async () => {
           headApp.addEventListener('click', ()=> {
           	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
           	document.querySelector('.dashboard_all__opacity').style.display = "none";
-          	document.querySelector('#displayy_mobile').style.display = "none";
+            document.querySelector('#displayy_mobile').style.display = "none";
+            window.location.href = "https://hackx.netlify.app/index.html";
           });
           function clicks() {
           	document.querySelector('.dashboard_submissionSuccessful').style.display = 'none';
