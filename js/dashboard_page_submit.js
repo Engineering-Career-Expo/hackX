@@ -45,12 +45,11 @@ closeSubmitPopUp.onclick = () => {
 //     document.querySelector(".alert").remove();
 //   }, 12000);
 // };
-let bee = document.querySelector('.d_all');
+
 const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
-    loader.style.display = 'block'; 
-    bee.style.opacity = ".3";
+    loader.style.display = 'block';
     dashboardInfo();
   });
 
@@ -65,78 +64,81 @@ var headTime = document.querySelector('.header_two__time');
 var headPrize = document.querySelector('.header_two__prize');
 var headOver = document.querySelector('.header_two__over');
 
-const dashboardInfo = async () => {
-  const institution = document.querySelector("#institution").value;
-  const department = document.querySelector("#department").value;
-};
 const linkooo = [];
 let newProfile = document.querySelector(".new-profile");
 newProfile.addEventListener('click', () => {
   let linko = document.querySelector('#link');
   var addedLink = linko.value;
-if (addedLink.length > 0) {
-  linkooo.push(addedLink);
-  showLoginAlert("link has been added successfully", "success");
-  //console.log(addedLink.length);
-  //console.log(linkooo);
-} else {
-  //console.log(addedLink.length);
-}
-linko.value = ""; 
-})
-var formData = new FormData(formElement);
-formData.append("institution", institution);
-formData.append("department", department);
-formData.append("link", linkooo);
-axios
-.post("https://hackxbackend.herokuapp.com/dashboard/"+ id, formData, { headers: headers})
-.then((response) => {
-  loader.style.display = 'none';
-  bee.style.opacity = "1";
-  // console.log(response)
-  if (response.status == "200") {
-    if (response.data == "Too many files to upload.") {
-      showLoginAlert("Too many files to upload.", "error");
-    } else if (response.data == "Error when trying to upload files.") {
-      showLoginAlert("Error when trying to upload biodata.", "error");
-    }else if (response.data == "Files have been uploaded.") {
-      showLoginAlert("Submitted Successfully.", "success");
-      document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
-      document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
-      headApp.addEventListener('click', ()=> {
-      	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
-      	document.querySelector('.dashboard_all__opacity').style.display = "none";
-        document.querySelector('#displayy_mobile').style.display = "none";
-        window.location.href = "https://hackx.netlify.app/index.html";
-      });
-      function clicks() {
-       	document.querySelector('.dashboard_submissionSuccessful').style.display = 'none';
-      }
-      headTime.addEventListener('click', ()=> {
-        clicks();
-      });
-      headPrize.addEventListener('click', ()=> {
-       	clicks();
-      });
-      headOver.addEventListener('click', ()=> {
-       	clicks();
-      });
-      localStorage.setItem("submission", true);
-    } else if (response.data == "Dashboard Submission Failed") {
-      showLoginAlert("Unable to submit files.", "error");
-    }else if (response.data == 'Invalid Token') {
-      showLoginAlert("Unable to submit files.", "error");
-    }else if (response.data == 'You are not allowed to access this page.') {
-      showLoginAlert('You are not allowed to access this page.', "error");
-    } else { 
-      showLoginAlert(response.data, "error");
-    }
+  if (addedLink.length > 0) {
+    linkooo.push(addedLink);
+    showLoginAlert("link has been added successfully", "success");
+    //console.log(addedLink.length);
+    //console.log(linkooo);
   } else {
-    showLoginAlert("Something Went Wrong. Try Again Later", "error");
+    //console.log(addedLink.length);
   }
-})
-.catch((error) => console.error(error.message));
-
+  linko.value = ""; 
+});
+let bee = document.querySelector('.d_all');
+const dashboardInfo = async () => {
+  bee.style.opacity = ".3";
+  const institution = document.querySelector("#institution").value;
+  const department = document.querySelector("#department").value;
+  var formData = new FormData(formElement);
+  console.log(linkooo);
+  formData.append("institution", institution);
+  formData.append("department", department);
+  formData.append("link", linkooo);
+  axios
+    .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, formData, { headers: headers})
+    .then((response) => {
+      console.log(linkooo);
+      loader.style.display = 'none';
+      bee.style.opacity = "1";
+      // console.log(response)
+      if (response.status == "200") {
+        if (response.data == "Too many files to upload.") {
+          showLoginAlert("Too many files to upload.", "error");
+        } else if (response.data == "Error when trying to upload files.") {
+          showLoginAlert("Error when trying to upload biodata.", "error");
+        }else if (response.data == "Files have been uploaded.") {
+          showLoginAlert("Submitted Successfully.", "success");
+          document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
+          document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
+          headApp.addEventListener('click', ()=> {
+          	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
+          	document.querySelector('.dashboard_all__opacity').style.display = "none";
+            document.querySelector('#displayy_mobile').style.display = "none";
+            window.location.href = "https://hackx.netlify.app/index.html";
+          });
+          function clicks() {
+          	document.querySelector('.dashboard_submissionSuccessful').style.display = 'none';
+          }
+          headTime.addEventListener('click', ()=> {
+         	clicks();
+          });
+          headPrize.addEventListener('click', ()=> {
+         	clicks();
+          });
+          headOver.addEventListener('click', ()=> {
+         	clicks();
+          });
+          localStorage.setItem("submission", true);
+        } else if (response.data == "Dashboard Submission Failed") {
+          showLoginAlert("Unable to submit files.", "error");
+        }else if (response.data == 'Invalid Token') {
+          showLoginAlert("Unable to submit files.", "error");
+        }else if (response.data == 'You are not allowed to access this page.') {
+          showLoginAlert('You are not allowed to access this page.', "error");
+        } else { 
+          showLoginAlert(response.data, "error");
+        }
+      } else {
+        showLoginAlert("Something Went Wrong. Try Again Later", "error");
+      }
+    })
+    .catch((error) => console.error(error.message));
+};
 
 var uusername = localStorage.getItem('username');
 axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + uusername, {headers: headers})
@@ -165,8 +167,6 @@ axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + uusername, {h
 		headOver.addEventListener('click', ()=> {
 			clicks();
 		});
-	} else {
-    //console.log('nothing');
-  }
+	}
 })
 .catch((err) => {console.error(err.message)});
