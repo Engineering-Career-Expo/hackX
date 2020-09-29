@@ -45,11 +45,12 @@ closeSubmitPopUp.onclick = () => {
 //     document.querySelector(".alert").remove();
 //   }, 12000);
 // };
-
+let bee = document.querySelector('.d_all');
 const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
-    loader.style.display = 'block';
+    loader.style.display = 'block'; 
+    bee.style.opacity = ".3";
     dashboardInfo();
   });
 
@@ -91,6 +92,7 @@ axios
 .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, formData, { headers: headers})
 .then((response) => {
   loader.style.display = 'none';
+  bee.style.opacity = "1";
   // console.log(response)
   if (response.status == "200") {
     if (response.data == "Too many files to upload.") {
