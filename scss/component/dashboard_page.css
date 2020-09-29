@@ -1607,16 +1607,15 @@ input::placeholder {
 		width: 100%;
 		background: whitesmoke;
 		height: 400px;
-		padding: 5%;
+		padding: 4% 2%;
 		border-radius: 8px;
 		margin: 1% 0;
-		border: 2px solid transparent;
+		border: none;
 		resize: none;
 		text-align: left;
 		font-family: 'Nunito Sans', sans-serif;
 		font-size: 1em;
 		outline: none;
-		transition: .5s ease-in-out;
 	}
 	.participant-info .reply .inputarea2 {
 		width: 100%;
@@ -1979,7 +1978,7 @@ input::placeholder {
 .error {
   background: #E5193B;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 669px) {
 	#displayy_mobile{
 		display: none;
 	}
@@ -2027,10 +2026,7 @@ input::placeholder {
 		display: none;
 	}
 	.dashboard_submissionSuccessful{
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
+		margin-top: 40%;
 		text-align: center;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 14px;
@@ -2040,6 +2036,65 @@ input::placeholder {
 		display: none;
 	}
 }
+@media screen and (min-width: 670px) and (max-width: 768px) {
+	#displayy_mobile{
+		display: none;
+	}
+	#submit_popup{
+		width: 60%;
+		border: 1px solid #000000;
+		border-radius: 5px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background: #ffffff;
+		display: none;
+	}
+	#close_popup{
+		width: 20px;
+		height: 20px;
+		float: right;
+		margin-top: 10px;
+		margin-right: 3%;
+	}
+	.submit_question{
+		margin-top: 35px;
+		text-align: center;
+		font-family: 'montserrat', sans-serif;
+		font-weight: bold;
+		font-style: normal;
+		font-size: 14px;
+	}
+	.submit_popup__btn{
+		padding: 5px;
+		background: #1071f3;
+		color: #ffffff;
+		width: 30%;
+		margin-left: 35%;
+		margin-bottom: 15px;
+	}
+	.submit_popup__btn:active{
+		color: #1071f3;
+		background: #ffffff;	
+	}
+	.stop_scroll{
+		height: 100%;
+		overflow-x: hidden;
+		display: none;
+	}
+	.dashboard_submissionSuccessful{
+		margin-top: 40%;
+		text-align: center;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 14px;
+		font-style: normal;
+		font-weight: bold;
+		color: #000000;
+		display: none;
+	}
+}
+
 @media screen and (min-width: 969px) {
 	.display_body{
 		background: #E5E5E5;
@@ -2140,10 +2195,8 @@ input::placeholder {
 		display: none;
 	}
 	.dashboard_submissionSuccessful{
-		position: absolute;
-		top: 50%;
-		left: 40%;
-		transform: translate(-40%, -50%);
+		width: 80%;
+		margin-top: -30%;
 		text-align: center;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 18px;
@@ -2253,10 +2306,8 @@ input::placeholder {
 		display: none;
 	}
 	.dashboard_submissionSuccessful{
-		position: absolute;
-		top: 50%;
-		left: 40%;
-		transform: translate(-40%, -50%);
+		width: 80%;
+		margin-top: -35%;
 		text-align: center;
 		font-family: 'Montserrat', sans-serif;
 		font-size: 14px;

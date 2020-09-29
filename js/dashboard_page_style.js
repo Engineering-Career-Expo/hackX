@@ -7,22 +7,22 @@ quinze = document.querySelector('#quinze');
 six = document.querySelector('#six');
 
 un.onclick = function() {
-	// console.log("nobody");
+	console.log("nobody");
 }
 duex.onclick = function() {
-	// console.log("nobody");
+	console.log("nobody");
 }
 trois.onclick = function() {
-	// console.log("nobody");
+	console.log("nobody");
 }
 quarte.onclick = function() {
-	// console.log("nobody");
+	console.log("nobody");
 }
 quinze.onclick = function() {
-	// console.log("nobody");
+	console.log("nobody");
 }
 six.onclick = function() {
-	// console.log("nobody");
+	console.log("nobody");
 }
 
 var head_drop = document.getElementsByClassName("head_drop");
@@ -149,7 +149,7 @@ var x;
 headerTwoTime.onclick = () => {
   noDisplay.style.display = "block";
   participantInfo.style.display = "none";
-  document.querySelector('.line').style.display = "none";
+  document.querySelector('.line').style.visibility = "hidden";
   document.querySelector('.lineActive1').style.visibility = "visible";
   document.querySelector('.lineActive2').style.visibility = "hidden";
   document.querySelector('.lineActive3').style.visibility = "hidden";
@@ -157,7 +157,7 @@ headerTwoTime.onclick = () => {
 headerTwoPrize.onclick = () => {
   noDisplay.style.display = "block";
   participantInfo.style.display = "none";
-  document.querySelector('.line').style.display = "none";
+  document.querySelector('.line').style.visibility = "hidden";
   document.querySelector('.lineActive2').style.visibility = "visible";
   document.querySelector('.lineActive1').style.visibility = "hidden";
   document.querySelector('.lineActive3').style.visibility = "hidden";
@@ -165,7 +165,7 @@ headerTwoPrize.onclick = () => {
 headerTwoOver.onclick = () => {
   noDisplay.style.display = "block";
   participantInfo.style.display = "none";
-  document.querySelector('.line').style.display = "none";
+  document.querySelector('.line').style.visibility = "hidden";
   document.querySelector('.lineActive3').style.visibility = "visible";
   document.querySelector('.lineActive1').style.visibility = "hidden";
   document.querySelector('.lineActive2').style.visibility = "hidden";
@@ -175,7 +175,7 @@ headerOneApp.onclick = () => {
   noDisplay.style.display = "none";
   participantInfo.style.display = "block";
   participantInfo.classList.add('participant-infoAdd_class');
-  document.querySelector('.line').style.display = "block"
+  document.querySelector('.line').style.visibility = "visible";
   document.querySelector('.lineActive1').style.visibility = "hidden";
   document.querySelector('.lineActive2').style.visibility = "hidden";
   document.querySelector('.lineActive3').style.visibility = "hidden";
