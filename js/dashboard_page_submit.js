@@ -88,10 +88,11 @@ const dashboardInfo = async () => {
   console.log(linkooo);
   formData.append("institution", institution);
   formData.append("department", department);
-  formData.append("link", linkooo);
+  formData.set("link", linkooo);
   axios
     .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, formData, { headers: headers})
     .then((response) => {
+      console.log(formData);
       console.log(linkooo);
       loader.style.display = 'none';
       bee.style.opacity = "1";
