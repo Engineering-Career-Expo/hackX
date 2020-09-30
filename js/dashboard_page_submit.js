@@ -6,11 +6,10 @@ let loader = document.querySelector('.loadCont');
 //let Submit = document.querySelector('#submit_popup__btn');
 finishBtn.onclick = () => {
     sureToSubmit.style.display = "block";
-    // console.log("opened submit popup");
+    //console.log("opened submit popup");
 }
 closeSubmitPopUp.onclick = () => {
-    sureToSubmit.style.display = "none";
-    // console.log('closed submit popup');
+    //console.log('closed submit popup');
 }
 // // Submit question
 // var submitPopup = document.querySelector('#submit_popup');
@@ -49,7 +48,6 @@ closeSubmitPopUp.onclick = () => {
 const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
-    loader.style.display = 'block';
     dashboardInfo();
   });
 
@@ -79,52 +77,47 @@ newProfile.addEventListener('click', () => {
   }
   linko.value = ""; 
 });
+
 let bee = document.querySelector('.d_all');
 const dashboardInfo = async () => {
-  bee.style.opacity = ".3";
+    loader.style.display = 'block';
+    bee.style.opacity = ".3";
   const institution = document.querySelector("#institution").value;
   const department = document.querySelector("#department").value;
   var formData = new FormData(formElement);
-  console.log(linkooo);
   formData.append("institution", institution);
   formData.append("department", department);
-  formData.set("link", linkooo);
   axios
     .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, formData, { headers: headers})
     .then((response) => {
-      console.log(formData);
-      console.log(linkooo);
+      // console.log(response)
       loader.style.display = 'none';
       bee.style.opacity = "1";
-      // console.log(response)
       if (response.status == "200") {
         if (response.data == "Too many files to upload.") {
           showLoginAlert("Too many files to upload.", "error");
         } else if (response.data == "Error when trying to upload files.") {
-          showLoginAlert("Error when trying to upload biodata.", "error");
+          showLoginAlert("Error when trying to upload files.", "error");
         }else if (response.data == "Files have been uploaded.") {
           showLoginAlert("Submitted Successfully.", "success");
           document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
           document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
-          headApp.addEventListener('click', ()=> {
-          	document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
-          	document.querySelector('.dashboard_all__opacity').style.display = "none";
-            document.querySelector('#displayy_mobile').style.display = "none";
-            window.location.href = "https://hackx.netlify.app/index.html";
-          });
+          localStorage.setItem("submission", true);
           function clicks() {
-          	document.querySelector('.dashboard_submissionSuccessful').style.display = 'none';
+            document.querySelector('.dashboard_submissionSuccessful').style.display = 'none';
           }
           headTime.addEventListener('click', ()=> {
-         	clicks();
+            clicks();
           });
           headPrize.addEventListener('click', ()=> {
-         	clicks();
+            clicks();
           });
           headOver.addEventListener('click', ()=> {
-         	clicks();
+            clicks();
           });
-          localStorage.setItem("submission", true);
+          setTimeout (() => {
+            window.location.href = "https://hackx.netlify.app/index.html";
+          }, 1000);
         } else if (response.data == "Dashboard Submission Failed") {
           showLoginAlert("Unable to submit files.", "error");
         }else if (response.data == 'Invalid Token') {
@@ -140,6 +133,7 @@ const dashboardInfo = async () => {
     })
     .catch((error) => console.error(error.message));
 };
+
 
 var uusername = localStorage.getItem('username');
 axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + uusername, {headers: headers})

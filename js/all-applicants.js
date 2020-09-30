@@ -23,13 +23,13 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
   var doc = response.data.doc;
   console.log(doc);
   var id = 0;
-  var demId = "";
+  var demId = `${"pane" + id}`;
   let newCont = () => {
     //console.log(id);
     let dateCreated = doc[i].createdAt;
     let editedDate = moment(new Date(dateCreated)).format('YYYY-MM-DD');
     let newPane = 
-    `<div class="submission-detail">
+    `<div class="submission-detail" id= ${demId}>
         <div class="column-one">
             <div class="real-submission">
                 <h5 class="submission-tag">Application ${id}</h5>
@@ -38,18 +38,19 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
         </div>
         <div class="col" style="display: flex; flex-direction: column;">
         <h5 class="time">${editedDate}</h5>
-        <button style="font-weight: bold" class="view-button" id= ${demId}>View</button>
+        <button style="font-weight: bold" class="view-button">View</button>
     </div>
     <hr class="submission-hr"></hr>`;
     applicont.innerHTML += newPane;
     userNameArr.push(doc[i].username);
+    demId = `${"pane" + id}`;
+    usersId.push(window['pane'+id]);
   }
   for(var i = doc.length - 1; i > -1; i--) {
     id++;
-    demId = `${"pane" + i}`;
+    
     newCont();
     // console.log(doc[i].username);
-    usersId.push(window['pane'+i]);
   }
   //console.log(userNameArr);
   localStorage.setItem('usernameArray', userNameArr);
