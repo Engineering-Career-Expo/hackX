@@ -103,7 +103,21 @@ const dashboardInfo = async () => {
           document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
           document.querySelector('.dashboard_all__opacity').classList.add('stop_scroll');
           localStorage.setItem("submission", true);
-          window.location.href = "https://hackx.netlify.app/index.html";
+          function clicks() {
+            document.querySelector('.dashboard_submissionSuccessful').style.display = 'none';
+          }
+          headTime.addEventListener('click', ()=> {
+            clicks();
+          });
+          headPrize.addEventListener('click', ()=> {
+            clicks();
+          });
+          headOver.addEventListener('click', ()=> {
+            clicks();
+          });
+          setTimeout (() => {
+            window.location.href = "https://hackx.netlify.app/index.html";
+          }, 1000);
         } else if (response.data == "Dashboard Submission Failed") {
           showLoginAlert("Unable to submit files.", "error");
         }else if (response.data == 'Invalid Token') {
