@@ -69,7 +69,7 @@ newProfile.addEventListener('click', () => {
   var addedLink = linko.value;
   if (addedLink.length > 0) {
     linkooo.push(addedLink);
-    showLoginAlert("link has been added successfully", "success");
+    showLoginAlert("Link has been added successfully", "success");
     //console.log(addedLink.length);
     //console.log(linkooo);
   } else {
@@ -85,6 +85,9 @@ const dashboardInfo = async () => {
   const institution = document.querySelector("#institution").value;
   const department = document.querySelector("#department").value;
   var formData = new FormData(formElement);
+  for (var i = 0; i < linkooo.length; i++) {
+    formData.append("link[]", linkooo[i]);
+  }
   formData.append("institution", institution);
   formData.append("department", department);
   axios

@@ -133,7 +133,7 @@ router.post("/dashboard/:id", authorize(),  (req, res) => {
       if (error) return res.json("Error when trying to upload files.");
 
           let OUTPUT = () => {
-          console.log(req)
+          // console.log(req)
           const { error } = validateDashboard(req.body);
           if (error) return res.json(error.details[0].message); 
 
@@ -152,7 +152,8 @@ router.post("/dashboard/:id", authorize(),  (req, res) => {
               VIDEO = req.files["media"]
             }else {
               req.files["media"].forEach((image)=>{
-                VIDEO.push(image.filename);
+                // console.log(image.details['Key'])
+                VIDEO.push(`https://hackx-bucket.s3.us-east-2.amazonaws.com/${image.details['Key']}`);
 
               });
             }
@@ -162,7 +163,7 @@ router.post("/dashboard/:id", authorize(),  (req, res) => {
               PICTURE = req.files["picture"]
             }else {
               req.files["picture"].forEach((image)=>{
-                PICTURE.push(image.filename);
+                PICTURE.push(`https://hackx-bucket.s3.us-east-2.amazonaws.com/${image.details['Key']}`);
 
               });
             }
@@ -246,7 +247,7 @@ router.post("/submission/:id", authorize(), (req, res) => {
               VIDEO = req.files["media"]
             }else {
               req.files["media"].forEach((image)=>{
-                VIDEO.push(image.filename);
+                VIDEO.push(`https://hackx-bucket.s3.us-east-2.amazonaws.com/${image.details['Key']}`);
 
               });
             }
@@ -256,7 +257,7 @@ router.post("/submission/:id", authorize(), (req, res) => {
               PICTURE = req.files["picture"]
             }else {
               req.files["picture"].forEach((image)=>{
-                PICTURE.push(image.filename);
+                PICTURE.push(`https://hackx-bucket.s3.us-east-2.amazonaws.com/${image.details['Key']}`);
 
               });
             }
