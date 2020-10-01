@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"></script>
 </head>
 <body>
     <nav>
@@ -61,7 +62,7 @@
                                         <div class="navigationLink">
                                             <a href="profile-page.html">Your Profile</a>
                                             <a href="dashboard-submissions.html">Your Submissions</a>
-                                            <a href="teams.html">Your Team</a>
+                                            <a>Your Team</a>
                                         </div>
                                         <hr class="ddHr">
                                         <div class="otherNavs">
@@ -89,54 +90,54 @@
     </div> 
     <div class="dashboard-submissions">
         <header>hackX<b> > Dashboard</b></header>
-        <section class="submittedScreen">
+        <section class="submittedScreen" id="screenOne">
             <div class="Hello">Hello</div>
             <div class="description">No Description</div>
             <hr>
             <div class="status">
-                <span class="submission-state">Submitted: 05-03-2020</span>
-                <span class="update-state">Last updated: 05-07-2020</span>
-                <span class="grade-status">Grading Status: Pending</span>
+                <span class="submission-state">Submitted: <span class="date_submitted">05-03-2020</span></span>
+                <span class="update-state">Last updated: <span class="date_updated">05-07-2020</span></span>
+                <span class="grade-status">Grading Status: <span class="pending">Pending</span></span>
             </div>
         </section>
-        <section class="submittedScreen">
+        <section class="submittedScreen" id="screenTwo">
             <div class="Hello">Hello</div>
             <div class="description">No Description</div>
             <hr>
             <div class="status">
-                <span class="submission-state">Submitted: 05-03-2020</span>
-                <span class="update-state">Last updated: 05-07-2020</span>
-                <span class="grade-status">Grading Status: Pending</span>
+                <span class="submission-state">Submitted: <span class="date_submitted">05-03-2020</span></span>
+                <span class="update-state">Last updated: <span class="date_updated">05-07-2020</span></span>
+                <span class="grade-status">Grading Status: <span class="pending">Pending</span></span>
             </div>
         </section>
-        <section class="submittedScreen">
+        <section class="submittedScreen" id="screenThree">
             <div class="Hello">Hello</div>
             <div class="description">No Description</div>
             <hr>
             <div class="status">
-                <span class="submission-state">Submitted: 05-03-2020</span>
-                <span class="update-state">Last updated: 05-07-2020</span>
-                <span class="grade-status">Grading Status: Pending</span>
+                <span class="submission-state">Submitted: <span class="date_submitted">05-03-2020</span></span>
+                <span class="update-state">Last updated: <span class="date_updated">05-07-2020</span></span>
+                <span class="grade-status">Grading Status: <span class="pending">Pending</span></span>
             </div>
         </section>
-        <section class="submittedScreen">
+        <section class="submittedScreen" id="screenFour">
             <div class="Hello">Hello</div>
             <div class="description">No Description</div>
             <hr>
             <div class="status">
-                <span class="submission-state">Submitted: 05-03-2020</span>
-                <span class="update-state">Last updated: 05-07-2020</span>
-                <span class="grade-status">Grading Status: Pending</span>
+                <span class="submission-state">Submitted: <span class="date_submitted">05-03-2020</span></span>
+                <span class="update-state">Last updated: <span class="date_updated">05-07-2020</span></span>
+                <span class="grade-status">Grading Status: <span class="pending">Pending</span></span>
             </div>
         </section>
-        <section class="submittedScreen">
+        <section class="submittedScreen" id="screenFive">
             <div class="Hello">Hello</div>
             <div class="description">No Description</div>
             <hr>
             <div class="status">
-                <span class="submission-state">Submitted: 05-03-2020</span>
-                <span class="update-state">Last updated: 05-07-2020</span>
-                <span class="grade-status">Grading Status: Pending</span>
+                <span class="submission-state">Submitted: <span class="date_submitted">05-03-2020</span></span>
+                <span class="update-state">Last updated: <span class="date_updated">05-07-2020</span></span>
+                <span class="grade-status">Grading Status: <span class="pending">Pending</span></span>
             </div>
         </section>
     </div>
@@ -144,5 +145,6 @@
     <script src="../js/avatar.js"></script>
     <script src="../js/get_user.js"></script>
     <script src="../js/logout.js"></script>
+    <script src="../js/participant_submission.js"></script>
 </body>
 </html>
