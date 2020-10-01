@@ -12,20 +12,15 @@
 	<title>Dashboard</title>
 	<style>
 		.loadCont {
-			  display: none;
-			  position: absolute;
-			  top: 50%;
-			  left: 50%;
-			  transform: translate(-50%, -50%);
+			display: none;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
   			flex-direction: row;
 			background: transparent;
   			justify-content: center;
   			align-items: center;
-		}
-		@media (max-width: 700px) {
-  			.loadCont {
-    			margin-top: 40%;
-  			}
 		}
 		.loadingCircle {
   			border: 22px solid #ececec;
@@ -42,18 +37,16 @@
 				top: 15%;
 			}
 		}
+		/* Safari */
+		@-webkit-keyframes spin {
+  			0% { -webkit-transform: rotate(0deg); }
+  			100% { -webkit-transform: rotate(360deg); }
+		}
 
-/* Safari */
-@-webkit-keyframes spin {
-  0% { -webkit-transform: rotate(0deg); }
-  100% { -webkit-transform: rotate(360deg); }
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
+		@keyframes spin {
+ 			0% { transform: rotate(0deg); }
+  			100% { transform: rotate(360deg); }
+		}
 	</style>
 </head>
 
