@@ -138,9 +138,9 @@ const createSignup = async (signupInfo) => {
         } else if(response.data.message == "Successfully Signed Up"){
           localStorage.setItem("username", response.data.username);
           showAlert_signup("Signup Successfully", "success");
-          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page'; 
+          window.location.href = 'https://hackx.netlify.app/pages/login'; 
         } else if (response.data == "Session Redirection To Dashboard"){
-          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
+          window.location.href = 'https://hackx.netlify.app/pages/login';
         }
         else {
           showAlert_signup(response.data, "error");

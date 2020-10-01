@@ -8,7 +8,9 @@ finishBtn.onclick = () => {
     sureToSubmit.style.display = "block";
     //console.log("opened submit popup");
 }
+closeSubmitPopUp.style.cursor = 'pointer';
 closeSubmitPopUp.onclick = () => {
+  sureToSubmit.style.display = "none";
     //console.log('closed submit popup');
 }
 // // Submit question
@@ -44,7 +46,7 @@ closeSubmitPopUp.onclick = () => {
 //     document.querySelector(".alert").remove();
 //   }, 12000);
 // };
-
+Submit.style.cursor = 'pointer';
 const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
