@@ -9,6 +9,7 @@ finishBtn.onclick = () => {
     //console.log("opened submit popup");
 }
 closeSubmitPopUp.onclick = () => {
+  sureToSubmit.style.display = "none";
     //console.log('closed submit popup');
 }
 // // Submit question
