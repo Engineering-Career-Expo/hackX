@@ -49,7 +49,7 @@ const headers = {
 let username = localStorage.getItem('username');
 axios.get('https://hackxbackend.herokuapp.com/getuser?username=' + username, { headers: headers })
     .then((response) => {
-        console.log(response.data)
+        // console.log(response.data)
         let resp = response.data;
         for (var k = 0; k < resp.submission.length; k++) {
             let subName = resp.submission[k].name;

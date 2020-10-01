@@ -1,7 +1,9 @@
 // SUBMIT BUTTON
 const submitBtn = document.querySelector('#previewSubmissionDetails');
-
-submitBtn.disabled = true;
+const popUpBtn = document.querySelector('.submit_popup__btn');
+const closePopUp = document.querySelector('#close_popup');
+const submitPopUp = document.querySelector('#submit_popup');
+ submitBtn.disabled = true;
 
 // VALIDATION FUNCTION
 function validateInput() {
@@ -14,10 +16,20 @@ function validateInput() {
   }
 };
 
+// WHEN CLOSE POPUP IS CLICKED
+closePopUp.addEventListener('click', function() {
+  submitPopUp.style.display = 'none'
+})
 // WHEN SUBMIT BUTTON IS CLICKED
 submitBtn.addEventListener('click', function() {
-  submitBtn.disabled = 'true';
+  submitPopUp.style.display = 'block';
   // console.log('response has been submitted and button disabled');
+})
+//WHEN THE POPUP BTN IS CLICKED 
+popUpBtn.disabled = false;
+popUpBtn.addEventListener('click', function() {
+  popUpBtn.disabled = true;
+  submitPopUp.style.display = 'none';
 })
 
 // INPUT VALIDATION
@@ -43,7 +55,6 @@ projectVideoLink.addEventListener('keyup', function() {
   validateInput();
 });
 
-
 //////// BACCK END CONNECT
 // backend connection
 // THE SUBMISSION BUTTON
@@ -63,7 +74,7 @@ const showLoginAlert = (message, className) => {
 };
 
 
-const formEvent = submitBtn.addEventListener("click", async (event) => {
+const formEvent = popUpBtn.addEventListener("click", async (event) => {
   event.preventDefault();
   submissionInfo(); 
 });
