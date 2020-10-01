@@ -37,7 +37,7 @@ for (let a = 0; a < subScreen.length; a++) {
         let num = [0];
         let numbers = num.push(a);
         localStorage.setItem('numbers', num);
-        location.assign('submission-submitted-screen.html');
+        location.assign('dashboard-submitted-screen.html');
     })
 }
 
