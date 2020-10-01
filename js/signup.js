@@ -1,3 +1,8 @@
+const loader = document.querySelector('#loader');
+const regLoadCont = document.querySelector('#reg-load-cont');
+loader.style.display = "none";
+regLoadCont.style.opacity = "1";
+
 //navbar
 var myham = document.getElementsByClassName("navbar_myham");
 var second = document.getElementsByClassName("navbar_second");
@@ -31,8 +36,9 @@ const showAlert_signup = (message, className) => {
   div.className = `alert ${className}`;
   div.appendChild(document.createTextNode(message));
   const container = document.querySelector(".register-form-container");
-  container.insertBefore(div, signup);
-
+  container.insertBefore(div, regLoadCont);
+  loader.style.display = "none";
+  regLoadCont.style.opacity = "1";
   setTimeout(function () {
     document.querySelector(".alert").remove();
   }, 9000);
@@ -56,17 +62,18 @@ document.querySelector('#policy-set').addEventListener('click', function() {
   }
   if (checkbox.checked === false) {
     checked = true;
-    console.log('yeah, it worked :) ' + checked);
+    //console.log('yeah, it worked :) ' + checked);
   } else {
     checked = false;
-    console.log('Nah, it didn\'t work :( ' + checked);
+    //console.log('Nah, it didn\'t work :( ' + checked);
   }
 });
 
 
 const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
   event.preventDefault();
-
+  loader.style.display = "block";
+  regLoadCont.style.opacity = ".3";
 //signup_btn.style.backgroundColor = "blue";
 
   firstname = document.querySelector("#first_name").value;
@@ -113,6 +120,8 @@ const createSignup = async (signupInfo) => {
   axios
     .post("https://hackxbackend.herokuapp.com/signup", signupInfo)
     .then((response) => {
+      loader.style.display = "none";
+      regLoadCont.style.opacity = "1";
       response.data;
 
 
