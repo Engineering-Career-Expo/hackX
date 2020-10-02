@@ -6,6 +6,9 @@ const headers = {
 }
 const username = window.localStorage.getItem('teamLeadSubName');
 let vidLink = "";
+let imageContainer = document.querySelector('.projectDetails_box__submissionTwo');
+let imgSrc = "";
+
 let getUser = () => {
     axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username , { headers: headers })
     .then((response) => {
@@ -27,6 +30,15 @@ let getUser = () => {
       let subVidLinks = doc.submission[0].vidLinks;
       vidLink  = subVidLinks;
       let subPictures = doc.submission[0].pictures;
+        for(var i=0; i<subPictures.length; i++) {
+            imgSrc = subPictures[i];
+            let imgPane = `
+            <div class="projectDetails_box__light">
+                <img alt="img" src=${imgSrc}>
+            </div>
+            `;
+            imageContainer.innerHTML += imgPane;
+        }
       let id = 0;
     })
     .catch((error) => console.error(error));
