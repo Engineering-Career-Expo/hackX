@@ -94,14 +94,14 @@
             <p class="view_projectDetails">Project details</p>
             <div class="projectDetails_box">
                 <p>
-                    <span class="projectDetails_bigOne">HackX</span> <br>
-                    <span class="projectDetails_smallOne">An hacked web solution</span>
+                    <span class="projectDetails_bigOne" id="proName">Name</span> <br>
+                    <span class="projectDetails_smallOne" id="proTag">An hacked web solution</span>
                 </p>
             </div>
             <div class="projectDetails_box">
                 <p>
                     <span class="projectDetails_big">The problem HackX solves</span> <br>
-                    <span class="projectDetails_smallTwo">
+                    <span class="projectDetails_smallTwo" id="proSolves">
                         HackX is made for hackers to hack the industry without hacking literally.
                     </span>
                 </p>
@@ -109,7 +109,7 @@
             <div class="projectDetails_box">
                 <p>
                     <span class="projectDetails_big">Challenges I ran into</span> <br>
-                    <span class="projectDetails_smallThree">
+                    <span class="projectDetails_smallThree" id="proChallenge">
                         I guess I ran into some challenges but I can't explain them all
                     </span>
                 </p>
@@ -127,13 +127,13 @@
             <div class="projectDetails_box">
                 <p>
                     <span class="projectDetails_big">Links</span> <br>
-                    <span class="projectDetails_smallFour"><a href="#">https://hackx.github.io</a></span>
+                    <span class="projectDetails_smallFour" id="proLink"><a href="#">https://hackx.github.io</a></span>
                 </p>
             </div>
             <div class="projectDetails_box__submission">
                 <img src="../../assets/images/Rectangle_119.png" alt="img" class="projectDetails_box__submissionImageOne">
                 <img src="../../assets/images/Play.png" alt="img" class="projectDetails_box__submissionPlayBtn">
-                <video class="project_video" controls>
+                <video class="project_video" controls onclick="goToVideoLink()">
                     <source src="" type="video/mp4">
                     <source src="" type="video/ogg">
                     Your browser does not suport the video tag.
@@ -146,7 +146,7 @@
                 <div class="projectDetails_box__light"><img src="../../assets/images/Rectangle_54.png" alt="img"></div>
             </div>
         </section>
-        <button type="submit" class="gradeSubmission">Grade Submission</button>
+        <button type="submit" class="gradeSubmission" id="gradeBtn">Grade Submission</button>
     </section><br>
     <form class="gradeform">
         <label for="grade">Grade</label><br>
