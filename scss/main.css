@@ -3647,6 +3647,9 @@ html {
 }
 .marker {
   display: none;
+  width: 40px;
+  height: 40px;
+  fill: rgb(16,113,243);
 }
 @media (max-width: 399px) {
   .criteria-section-h1 {
@@ -3778,7 +3781,7 @@ html {
   .criteria-section .btn2 {
     width: 60%;
     border: none;
-    background-color: #ffe032;
+    background-color: rgb(16,113,242);
     height: 57px;
     font-size: 6vw;
     font-family: Gilroy-Regular, sans-serif;
@@ -3926,7 +3929,7 @@ html {
   .criteria-section .btn2 {
     width: 58%;
     border: none;
-    background-color: #ffe032;
+    background-color: rgb(16,113,242);
     height: 60px;
     font-size: 3.8vw;
     font-family: Gilroy-Regular, sans-serif;
@@ -4073,7 +4076,7 @@ html {
   .criteria-section .btn2 {
     width: 58%;
     border: none;
-    background-color: #ffe032;
+    background-color: rgb(16,113,242);
     height: 60px;
     font-size: 3vw;
     font-family: Gilroy-Regular, sans-serif;
@@ -4215,7 +4218,7 @@ html {
     border: none;
     font-size: 1.9vw;
     border-radius: 5px;
-    background-color: #ffc916;
+    background-color: rgb(16,113,242);
     height: 50px;
     color: white;
   }
@@ -4345,7 +4348,7 @@ html {
     border: none;
     font-size: 1.7vw;
     border-radius: 5px;
-    background-color: #ffc916;
+    background-color: rgb(16,113,242);
     height: 50px;
     color: white;
   }
