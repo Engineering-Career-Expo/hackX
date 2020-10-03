@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="../scss/component/red-loader.css">
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Register</title>
     <link rel="stylesheet" href="../scss/main.css"/>
@@ -19,8 +20,9 @@
     <nav>
       <section class="navbar_first">
         <div class="navbar_ecx">
-          <a href="../index.html"
-            ><img class="navbar_0ecx1" src="../assets/ECX.svg" alt="ECX_LOGO"/></a>
+          <a href="../index.html">
+            <img class="navbar_0ecx1" src="../assets/ECX.svg" alt="ECX_LOGO"/>
+          </a>
         </div>
         <div class="navbar_sep">
           <div class="navbar_reg1" onclick="window.location.assign('register.html')">
@@ -50,42 +52,46 @@
         </div>
       </section>
     </nav>
-
     <main class="register-main-container">
-      <div class="register-form-container" style="padding-bottom: 3%;">
-        <form class="signup">
-          <h2>Registration</h2>
-          <legend>First name</legend>
-          <input type="text" name="FirstName" placeholder="First Name" required id="first_name"/>
-          <legend>Last name</legend>
-          <input type="text" name="LastName" placeholder="Last Name" required id="last_name"/>
-          <legend>Username</legend>
-          <input type="text" name="Username" placeholder="Username" required id="username"/>
-          <legend>Email</legend>
-          <input type="email" required name="email" id="signup_email" placeholder="Email"/>
-          <legend>Password</legend>
-          <input type="password" id="password" name="password" placeholder="•••••••••"/>
-          <legend>Confirm password</legend>
-          <input type="password" id="confirm_password" name="Confirm password" placeholder="•••••••••"/>
-        </form>
-        <div style="margin-bottom: 5%;">
-        	<input type="checkbox" id="policy" required/>
-        	<label  for="policy" class="policy" id="policy-set" style="margin: 1% 0;">I have read and agreed to the term and condition of this competition.
-          </label>
-          <span>
-            <em id="abbclick" onclick="window.location.assign('about.html');" style="font-weight: bold; cursor: pointer;">View the Terms and Conditions</em>.
-          </span>
+      <div class="register-form-container" style="padding-bottom: 3%; position: relative;">
+        <div class="loadCont" id="loader" style="top: 18%;">
+          <div class="loadingCircle"></div>
         </div>
-        <button class="signup-btnn">
-          <span class="btn-txt">Sign Up</span>
-        </button>
-        <button class="previous-btnn">
-          <a href="Login.html"><span class="btn-txt">Sign In</span> </a>
-        </button>
+        <div id="reg-load-cont">
+          <form class="signup">
+            <h2>Registration</h2>
+            <legend>First name</legend>
+            <input type="text" name="FirstName" placeholder="First Name" required id="first_name"/>
+            <legend>Last name</legend>
+            <input type="text" name="LastName" placeholder="Last Name" required id="last_name"/>
+            <legend>Username</legend>
+            <input type="text" name="Username" placeholder="Username" required id="username"/>
+            <legend>Email</legend>
+            <input type="email" required name="email" id="signup_email" placeholder="Email"/>
+            <legend>Password</legend>
+            <input type="password" id="password" name="password" placeholder="•••••••••"/>
+            <legend>Confirm password</legend>
+            <input type="password" id="confirm_password" name="Confirm password" placeholder="•••••••••"/>
+          </form>
+          <div style="margin-bottom: 5%;">
+            <input type="checkbox" id="policy" required/>
+            <label  for="policy" class="policy" id="policy-set" style="margin: 1% 0;">I have read and agreed to the term and condition of this competition.
+            </label>
+            <span>
+              <em id="abbclick" onclick="window.location.assign('about.html');" style="font-weight: bold; cursor: pointer;">View the Terms and Conditions</em>.
+            </span>
+          </div>
+            <button class="signup-btnn">
+              <span class="btn-txt">Sign Up</span>
+            </button>
+            <button class="previous-btnn">
+              <a href="Login.html"><span class="btn-txt">Sign In</span> </a>
+            </button>
+        </div>
       </div>
       <div class="register-call-to-action">
         <h1>
-          <span style="text-transform: lowercase;">hack</span><span class="X">X</span> <span class="hack">HACKATHON</span> 2020
+          <span style="text-transform: lowercase; font-family: 'Poppins', sans-serif;">hack</span><span class="X">X</span> <span class="hack">HACKATHON</span> 2020
         </h1>
         <button><span class="btn-cnt"><a href="About.html">Competition Guidelines</a></span></button>
       </div>

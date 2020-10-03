@@ -1,3 +1,7 @@
+const loader = document.querySelector('#loader');
+const loginForm = document.querySelector(".login-form");
+loader.style.display = "none";
+loginForm.style.opacity = "1";
 //navbar
 var myham = document.getElementsByClassName("navbar_myham");
 var second = document.getElementsByClassName("navbar_second");
@@ -21,8 +25,6 @@ function myfunc1() {
 }
 myham[0].addEventListener("click", myfunc1);
 
-const loginForm = document.querySelector(".login-form");
-
 const showLoginAlert = (message, className) => {
   const div = document.createElement("div");
   div.className = `alert ${className}`;
@@ -37,6 +39,8 @@ const showLoginAlert = (message, className) => {
 
 const formEvent = loginForm.addEventListener("submit", async (event) => {
   event.preventDefault();
+  loader.style.display = "block";
+  loginForm.style.opacity = ".3";
   const email = document.querySelector("#email").value;
   const password = document.querySelector("#password").value;
   const loginInfo = await { email, password };
@@ -58,6 +62,8 @@ const userLogin = async (loginInfo) => {
   axios
     .post("https://hackxbackend.herokuapp.com/login",  loginInfo, { headers: headers})
     .then((response) => {
+      loader.style.display = "none";
+      loginForm.style.opacity = "1";
       response.data;
       // console.log(response)
       if (response.status == "200") {
