@@ -3730,6 +3730,7 @@ html {
     flex-direction: row;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    align-items: center;
   }
 
   .criteria-section .content .scheme-image {
@@ -3878,6 +3879,7 @@ html {
     flex-direction: row;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    align-items: center;
   }
 
   .criteria-section .content .scheme-image {
@@ -4024,6 +4026,7 @@ html {
     flex-direction: row;
     -ms-flex-wrap: nowrap;
     flex-wrap: nowrap;
+    align-items: center;
   }
 
   .criteria-section .content .scheme-image {
