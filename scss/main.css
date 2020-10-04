@@ -1829,13 +1829,15 @@ body {
     color: black;
     font-family: Poppins, sans-serif;
   }
-
-  .contact-details {
+  .contact-details-dsktp {
+    display: none;
+  }
+  .contact-details-mob {
     margin: 2% 5%;
     font-size: 4.7vw;
     font-weight: 600;
     color: black;
-    text-align: left;
+    text-align: right;
     font-family: Poppins, sans-serif;
   }
 
@@ -1891,7 +1893,7 @@ body {
     border-radius: 5px;
     border: none;
     background: #1178d8;
-    font-size: 3 2vw;
+    font-size: 4.8vw;
     font-family: Poppins, sans-serif;
     color: white;
     vertical-align: middle;
@@ -1912,33 +1914,34 @@ body {
     margin: 3% 0;
     background: white;
     padding-top: 11%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
   .link-to-dashboard .span {
-    float: left;
     margin-bottom: 5%;
     width: 100%;
     height: auto;
     border: none;
     background: transparent;
-    font-size: 12vw;
+    font-size: 11vw;
     font-weight: 600;
     color: black;
     text-align: center;
     font-family: Poppins, sans-serif;
     outline: none;
   }
-
+ 
   .link-to-dashboard .button {
-    float: right;
     width: 72%;
     cursor: pointer;
     height: 45px;
-    margin-right: 14%;
     border-radius: 8px;
     border: none;
     background: #E5193B;
-    font-size: 4.6vw;
+    font-size: 4.5vw;
     font-weight: 600;
     color: white;
     font-family: Poppins, sans-serif;
@@ -1953,9 +1956,9 @@ body {
 
   .link-to-dashboard .button:hover {
     opacity: 1;
-    height: 47px;
+    height: 46px;
     margin-right: 13%;
-    width: 74%;
+    width: 73%;
   }
 }
 
@@ -1977,8 +1980,10 @@ body {
     color: black;
     font-family: Poppins, sans-serif;
   }
-
-  .contact-details {
+  .contact-details-mob {
+    display: none;
+  }
+  .contact-details-dsktp {
     margin: 1.5% 5%;
     font-size: 2.4vw;
     font-weight: 600;
@@ -2061,6 +2066,8 @@ body {
     margin: 2.5% 0;
     background: white;
     padding: 1% 15%;
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   .link-to-dashboard .span {
@@ -2101,7 +2108,7 @@ body {
 
   .link-to-dashboard .button:hover {
     opacity: 1;
-    height: 55px;
+    height: 53px;
     margin-right: 0;
     width: 36%;
   }
@@ -2125,8 +2132,10 @@ body {
     color: black;
     font-family: Poppins, sans-serif;
   }
-
-  .contact-details {
+  .contact-details-mob {
+    display: none;
+  }
+  .contact-details-dsktp {
     margin: 1% 5%;
     font-size: 1.6vw;
     font-weight: 600;
@@ -2209,6 +2218,7 @@ body {
     margin: 3% 0;
     background: white;
     padding: 2.4% 15%;
+    flex-direction: row;
   }
 
   .link-to-dashboard .span {
@@ -2249,7 +2259,7 @@ body {
 
   .link-to-dashboard .button:hover {
     opacity: 1;
-    height: 55px;
+    height: 53px;
     margin-right: 0;
     width: 36%;
   }
@@ -3628,10 +3638,15 @@ html {
 .criteria-section {
   min-width: 100%;
   margin: 0;
-  padding: 8% 0;
-  background: #ffffff;
+  padding: 8% 0 0 0;
+  background: #F4F4F4;
 }
-
+.marker {
+  display: none;
+  width: 40px;
+  height: 40px;
+  fill: rgb(16,113,243);
+}
 @media (max-width: 399px) {
   .criteria_img {
     width: 100%;
@@ -3649,8 +3664,7 @@ html {
   .criteria-section ul {
     width: 80%;
     margin: 0 10%;
-    padding-left: 4%;
-    list-style-image: url("../assets/images/mobile-arrow.png");
+    list-style: none;
   }
 
   .criteria-section .uls {
@@ -3665,7 +3679,15 @@ html {
     font-size: 5.5vw;
     font-family: Gilroy-Regular, sans-serif;
   }
-
+  .limc {
+    display: flex;
+    align-items: flex-start;
+  }
+  .marker {
+    display: block;
+    margin-top: 1%;
+    margin-right: 4%;
+  }
   .criteria-section .ul1 {
     width: 100%;
     margin: 0;
@@ -3735,6 +3757,7 @@ html {
     width: 100%;
     text-align: center;
     padding-top: 15%;
+    padding-bottom: 8%;
   }
 
   .criteria-section .btn1 {
@@ -3753,7 +3776,7 @@ html {
   .criteria-section .btn2 {
     width: 60%;
     border: none;
-    background-color: #ffe032;
+    background-color: rgb(16,113,242);
     height: 57px;
     font-size: 6vw;
     font-family: Gilroy-Regular, sans-serif;
@@ -3788,9 +3811,8 @@ html {
 
   .criteria-section ul {
     width: 70%;
-    margin: 0 10%;
-    padding-left: 4%;
-    list-style-image: url("../assets/images/mobile-arrow.png");
+    margin: 0 15%;
+    list-style: none;
   }
 
   .criteria-section .uls {
@@ -3805,7 +3827,15 @@ html {
     font-size: 4.2vw;
     font-family: Gilroy-Regular, sans-serif;
   }
-
+  .limc {
+    display: flex;
+    align-items: flex-start;
+  }
+  .marker {
+    display: block;
+    margin-top: 1%;
+    margin-right: 4%;
+  }
   .criteria-section .ul1 {
     width: 100%;
     margin: 0;
@@ -3874,6 +3904,7 @@ html {
     width: 100%;
     text-align: center;
     padding-top: 15%;
+    padding-bottom: 8%;
   }
 
   .criteria-section .btn1 {
@@ -3892,7 +3923,7 @@ html {
   .criteria-section .btn2 {
     width: 58%;
     border: none;
-    background-color: #ffe032;
+    background-color: rgb(16,113,242);
     height: 60px;
     font-size: 3.8vw;
     font-family: Gilroy-Regular, sans-serif;
@@ -3910,7 +3941,6 @@ html {
     opacity: 1;
   }
 }
-
 @media (min-width: 501px) and (max-width: 768px) {
   .criteria_img {
     width: 100%;
@@ -3927,9 +3957,8 @@ html {
 
   .criteria-section ul {
     width: 70%;
-    margin: 0 8%;
-    padding-left: 4%;
-    list-style-image: url("../assets/images/mobile-arrow.png");
+    margin: 0 15%;
+    list-style: none;
   }
 
   .criteria-section .uls {
@@ -3944,7 +3973,15 @@ html {
     font-size: 3.6vw;
     font-family: Gilroy-Regular, sans-serif;
   }
-
+  .limc {
+    display: flex;
+    align-items: flex-start;
+  }
+  .marker {
+    display: block;
+    margin-top: 1%;
+    margin-right: 4%;
+  }
   .criteria-section .ul1 {
     width: 100%;
     margin: 0;
@@ -4012,7 +4049,8 @@ html {
   .criteria-section .buttons {
     width: 100%;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 12%;
+    padding-bottom: 10%;
   }
 
   .criteria-section .btn1 {
@@ -4031,7 +4069,7 @@ html {
   .criteria-section .btn2 {
     width: 58%;
     border: none;
-    background-color: #ffe032;
+    background-color: rgb(16,113,242);
     height: 60px;
     font-size: 3vw;
     font-family: Gilroy-Regular, sans-serif;
@@ -4152,7 +4190,7 @@ html {
   .criteria-section .buttons {
     text-align: center;
     width: 80%;
-    margin: 7% 10%;
+    margin: 7% 10% 0 10%;
     padding-bottom: 8%;
   }
 
@@ -4172,7 +4210,7 @@ html {
     border: none;
     font-size: 1.9vw;
     border-radius: 5px;
-    background-color: #ffc916;
+    background-color: rgb(16,113,242);
     height: 50px;
     color: white;
   }
@@ -4281,7 +4319,7 @@ html {
   .criteria-section .buttons {
     text-align: center;
     width: 80%;
-    margin: 7% 10%;
+    margin: 7% 10% 0 10%;
     padding-bottom: 8%;
   }
 
@@ -4301,7 +4339,7 @@ html {
     border: none;
     font-size: 1.7vw;
     border-radius: 5px;
-    background-color: #ffc916;
+    background-color: rgb(16,113,242);
     height: 50px;
     color: white;
   }
