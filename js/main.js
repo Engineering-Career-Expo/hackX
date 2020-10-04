@@ -108,4 +108,3 @@ var largeScreen = document.getElementById('largeScreen');
 		start()
 		}
     setInterval( 5000, 1);
-
