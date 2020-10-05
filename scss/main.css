@@ -315,17 +315,18 @@ footer {
   font-style: normal;
   font-weight: normal;
   font-size: 36px;
-  line-height: 56px;
 }
 
 .register {
   background-color: #e5193b;
   color: #e5e5e5;
+  font-weight: bold
 }
 
 .login {
   background-color: #f2a702;
   color: #e5e5e5;
+  font-weight: bold;
 }
 
 .footer-top .footer-links a {
@@ -372,6 +373,12 @@ footer {
   margin-left: 10px;
 }
 
+@media (min-width: 768px) {
+  #footer-mobile {
+    display: none;
+  }
+}
+
 @media (max-width: 1200px) {
   .footer {
     padding: 30px 30px;
@@ -384,16 +391,20 @@ footer {
     text-align: center;
   }
 
+  #footer-desktop {
+    display: none;
+  }
+
   .footer-top {
     display: initial;
     vertical-align: middle;
   }
 
   .footer .footer-top .ecxx {
-    margin-bottom: 9px;
+    margin-bottom: 30px;
   }
 
-  .ecx-image {
+  .ecx-image-mobile-display {
     float: none;
   }
 
@@ -1728,13 +1739,15 @@ body {
 }
 
 .thirty_30 {
-  font-size: 5rem;
+  font-size: 3.8rem;
   color: #E5193B;
+  display: block;
 }
 
 .hours_30,
 .of_30 {
   font-size: 35px;
+  color: #000000;
 }
 
 .first30,
@@ -1759,7 +1772,11 @@ body {
 .two30 {
   display: none;
 }
-
+@media (max-width: 320px) {
+	.thirty_30 {
+		font-size: 3rem;
+	}
+}
 @media (min-width: 768px) {
   .train0_30 {
     width: 40%;
@@ -1833,11 +1850,12 @@ body {
     display: none;
   }
   .contact-details-mob {
-    margin: 2% 5%;
+    margin: 2% 0%;
     font-size: 4.7vw;
     font-weight: 600;
     color: black;
     text-align: right;
+    width: 100%;
     font-family: Poppins, sans-serif;
   }
 
@@ -1888,7 +1906,7 @@ body {
 
   .contact-submit {
     width: 40%;
-    margin: 1.5% 5%;
+    margin: 1.5% 0%;
     height: 45px;
     border-radius: 5px;
     border: none;
@@ -1903,6 +1921,7 @@ body {
     opacity: .7;
     -webkit-transition: 1s;
     transition: 1s;
+    float: right;
   }
 
   .contact-submit:hover {
