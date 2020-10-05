@@ -1133,7 +1133,7 @@ input::placeholder {
 	width: 25px;
 	height: 25px;
 	transform: translate(50%,50%);
-	border: 3px solid rgb(253,191,209);
+	border: 3px solid #1071F3;
 	background: whitesmoke;
 	}
 	.inputlink .new-profile {
@@ -1437,7 +1437,7 @@ input::placeholder {
 	width: 25px;
 	height: 25px;
 	transform: translate(50%,50%);
-	border: 3px solid rgb(253,191,209);
+	border: 3px solid #1071F3;
 	background: whitesmoke;
 	}
 	.inputlink .new-profile {
@@ -1726,7 +1726,7 @@ input::placeholder {
 		width: 25px;
 		height: 25px;
 		transform: translate(50%,50%);
-		border: 3px solid rgb(253,191,209);
+		border: 3px solid #1071F3;
 		background: whitesmoke;
 	}
 	.inputlink .new-profile {

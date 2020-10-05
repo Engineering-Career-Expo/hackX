@@ -76,7 +76,7 @@ const userLogin = async (loginInfo) => {
         } else if (response.data == "Session Redirection To Dashboard"){
           window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
         }else {
-          showLoginAlert("Login Successfully", "success");
+          showLoginAlert("Login Successful", "success");
           localStorage.setItem("pass", response.data.token);
           localStorage.setItem("id", response.data.id);
           localStorage.setItem("username", response.data.username);
