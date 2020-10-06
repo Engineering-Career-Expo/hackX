@@ -1153,6 +1153,7 @@ body {
     display: inline-block;
     width: 20px;
     height: 20px;
+    margin-top: 8px;
     position: absolute;
     padding: 5px 5px 0 0;
     left: 0;
@@ -1301,7 +1302,7 @@ body {
     cursor: pointer;
     padding-left: 40px;
     position: relative;
-    font-size: 2.7vw;
+    font-size: 2.5vw;
     margin-bottom: 5%;
   }
 
