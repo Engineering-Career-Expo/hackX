@@ -24,8 +24,6 @@ const showLoginAlert = (message, className) => {
 let getUser = () => {
     axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username , { headers: headers })
     .then((response) => {
-        console.log(response);
-        console.log(response.data);
         if (response.status == "200") {
             if (response.data == "Incorrect username") {
                 showLoginAlert("Incorrect username", "error");

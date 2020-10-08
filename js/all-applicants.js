@@ -21,7 +21,7 @@ axios.get("https://hackxbackend.herokuapp.com/alluser" , { headers: headers })
   loader.style.display = "none";
   main.style.visibility = "visible";
   var doc = response.data.doc;
-  console.log(doc);
+  //console.log(doc);
   var id = 0;
   var demId = `${"pane" + id}`;
   let newCont = () => {

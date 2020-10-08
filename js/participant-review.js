@@ -1,7 +1,5 @@
 let avatarSubmissionFlex = document.querySelector('.avatar-submission-flex');
 let id = window.localStorage.getItem('myId');
-const imgId = window.localStorage.getItem('usersImageId');
-var imageId;
 var fullname; var time; var bio; var picture; var gender; var number; var track; var link; var institution; var department;
 
 const username = window.localStorage.getItem('partName');
@@ -60,7 +58,6 @@ const dataField = () => {
 axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username, {headers: headers})
 .then((response) => {
   let docu = response.data;
-  console.log(docu);
   let dateCreated = docu.dashboard[0].createdAt;
   time = moment(new Date(dateCreated)).format('YYYY-MM-DD');
   firstname = docu.firstname;
@@ -68,30 +65,15 @@ axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username, {he
   fullname = firstname + " " + lastname;
   bio = docu.dashboard[0].bio;
   picture = docu.dashboard[0].picture[0];
-  console.log(picture);
   gender = docu.dashboard[0].gender;
   number = docu.dashboard[0].number;
   track = docu.dashboard[0].track;
   link = docu.dashboard[0].link;
   institution = docu.dashboard[0].institution;
   department = docu.dashboard[0].department;
-  console.log(docu.dashboard[0]);
-  console.log(username);
-  console.log(id);
-  dataField();
-  console.log(imgId);
-  imageId = imgId;
-
-  
+  dataField();  
 })
 .catch((err) => {console.error(err.message)});
-
-axios.get("https://hackxbackend.herokuapp.com/dashboardImages?id=5f5e762c52ddc7001785c836", {headers: headers})
-  .then((response) => {
-    console.log(response.data);
-  }).catch((err) => {console.error(err.message)});
-
- // localhost:8080/dashboardImages?id=5efbab83e79ce11900ad71cf
 
  const deleteUser = () => {
   axios.get("https://hackxbackend.herokuapp.com/deleteuser?username?" + username , { headers: headers })

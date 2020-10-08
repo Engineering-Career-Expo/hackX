@@ -17,17 +17,18 @@ function validateInput() {
 };
 
 // WHEN CLOSE POPUP IS CLICKED
-closePopUp.addEventListener('click', function() {
-  submitPopUp.style.display = 'none'
+closePopUp.addEventListener('click', () => {
+  submitPopUp.style.display = 'none';
 })
 // WHEN SUBMIT BUTTON IS CLICKED
-submitBtn.addEventListener('click', function() {
+submitBtn.addEventListener('click', () => {
   submitPopUp.style.display = 'block';
+  popUpBtn.disabled = false;
   // console.log('response has been submitted and button disabled');
 })
 //WHEN THE POPUP BTN IS CLICKED 
-popUpBtn.disabled = false;
-popUpBtn.addEventListener('click', function() {
+
+popUpBtn.addEventListener('click', () => {
   popUpBtn.disabled = true;
   submitPopUp.style.display = 'none';
 })
@@ -90,7 +91,6 @@ const submissionInfo = async () => {
   axios
     .post("https://hackxbackend.herokuapp.com/submission/"+ id, new FormData(formElem), { headers: headers})
     .then((response) => {
-      response.data; 
       if (response.status == "200") {
         if (response.data == "Too many files to upload.") {
           showLoginAlert("Too many files to upload.", "error");

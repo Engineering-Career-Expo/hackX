@@ -1,4 +1,4 @@
-// GETTING THE DATA FROM THE BACKEND
+// GETTING THE DATA FROM THE BACKEND 
 const headers = {
     'Content-Type': 'application/json',
     'Authorization': "Bearer" + ' ' + localStorage.getItem("pass"),
@@ -13,7 +13,8 @@ let getUser = () => {
     axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username , { headers: headers })
     .then((response) => {
       var doc = response.data;
-      console.log(doc.submission[0]);
+      console.log(doc);
+      console.log(response.data.submission[0]);
       let subName = doc.submission[0].name;
       document.querySelector('#proName').innerHTML = subName;
       let subTagline = doc.submission[0].tagline;
@@ -43,9 +44,8 @@ let getUser = () => {
     })
     .catch((error) => console.error(error));
 }
-
-getUser();
-
 const goToVideoLink = () => {
     window.location.href = vidLink;
 }
+getUser();
+
