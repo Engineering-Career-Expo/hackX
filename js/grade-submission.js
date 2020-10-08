@@ -13,8 +13,8 @@ let getUser = () => {
     axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username , { headers: headers })
     .then((response) => {
       var doc = response.data;
-      console.log(doc);
-      console.log(response.data.submission[0]);
+      //console.log(doc);
+      //console.log(response.data.submission[0]);
       let subName = doc.submission[0].name;
       document.querySelector('#proName').innerHTML = subName;
       let subTagline = doc.submission[0].tagline;
