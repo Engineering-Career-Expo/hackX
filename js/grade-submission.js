@@ -25,7 +25,7 @@ let getUser = () => {
       document.querySelector('#proChallenge').innerHTML = subChallenges;
       let subTech = doc.submission[0].technologies;
       let subTechnologies = subTech.split(',');
-      console.log(subTechnologies);
+      //console.log(subTechnologies);
       let subLinks = doc.submission[0].links;
       document.querySelector('#proLink').innerHTML = subLinks;
       let subVidLinks = doc.submission[0].vidLinks;
