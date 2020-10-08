@@ -35,7 +35,7 @@ let getUser = () => {
             imgSrc = subPictures[i];
             let imgPane = `
             <div class="projectDetails_box__light">
-                <img alt="img" src=${imgSrc}>
+                <img alt="img" style="margin: 4%;" src=${imgSrc}>
             </div>
             `;
             imageContainer.innerHTML += imgPane;

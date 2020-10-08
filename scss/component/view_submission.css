@@ -160,21 +160,20 @@ html, .view_submission_body {
 
 .projectDetails_box__submissionTwo {
   width: 100%;
-  height: 500px;
+  height: auto;
   background: #ffffff;
   margin-bottom: 10px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
-  grid-column-gap: 20px;
-  grid-row-gap: 40px;
-  padding: 15px 15px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .projectDetails_box__submissionTwo img {
-  height: 200px;
-  width: 100%;
+  height: 250px;
+  width: auto;
+  margin: 2%;
 }
 
 .gradeSubmission {
@@ -561,17 +560,6 @@ textarea[name='comment'] {
     width: 60%;
     margin-left: 20%;
   }
-  .projectDetails_box__submissionTwo {
-    height: 1000px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto;
-        grid-template-columns: auto;
-    grid-row-gap: 10px;
-  }
-  .projectDetails_box__submissionTwo img {
-    height: 220px;
-  }
   .gradeform {
     width: 80%;
   }
@@ -616,13 +604,6 @@ textarea[name='comment'] {
     font-size: 16px;
     width: 60%;
     margin-left: 20%;
-  }
-  .projectDetails_box__submissionTwo {
-    height: 510px;
-    grid-row-gap: 5px;
-  }
-  .projectDetails_box__submissionTwo img {
-    height: 220px;
   }
   .gradeform {
     width: 60%;
@@ -669,16 +650,6 @@ textarea[name='comment'] {
     width: 60%;
     margin-left: 20%;
   }
-  .projectDetails_box__submissionTwo {
-    height: 230px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto auto auto auto;
-        grid-template-columns: auto auto auto auto;
-  }
-  .projectDetails_box__submissionTwo img {
-    width: 100%;
-  }
 }
 
 @media (min-width: 769px) and (max-width: 969px) {
@@ -693,15 +664,21 @@ textarea[name='comment'] {
     width: 60%;
     display: none;
   }
-  .projectDetails_box__submissionTwo {
-    height: 230px;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: auto auto auto auto;
-        grid-template-columns: auto auto auto auto;
-  }
-  .projectDetails_box__submissionTwo img {
-    width: 100%;
-  }
 }
 /*# sourceMappingURL=view_submission.css.map */
+.projectDetails_box__submissionTwo {
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  margin-bottom: 10px;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projectDetails_box__submissionTwo img {
+  width: 260px;
+  height: auto;
+}
