@@ -3674,10 +3674,12 @@ html {
     width: 100%;
     margin: 0;
     padding: 4%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 6vw;
     font-weight: 800;
-    font-family: Gilroy-Regular, sans-serif;
+    font-family: 'Gilroy-Regular', sans-serif;
     background-image: url(../assets/images/Totel_Photography-7199.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -3686,14 +3688,6 @@ html {
   .criteria_img {
     width: 100%;
     height: 120px;
-  }
-  .criteria-section-h1 {
-    margin: 0;
-    padding: 4%;
-    text-align: center;
-    font-size: 6vw;
-    font-weight: 800;
-    font-family: Gilroy-Regular, sans-serif;
   }
 
   .criteria-section ul {
@@ -3838,7 +3832,9 @@ html {
   }
   .criteria-section-h1 {
     margin: 3% 0 0 0;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 5.7vw;
     font-weight: 800;
     font-family: Gilroy-Regular, sans-serif;
@@ -3983,10 +3979,12 @@ html {
     width: 100%;
     margin: 3% 0 0 0;
     padding: 5%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 4vw;
     font-weight: 800;
-    font-family: Gilroy-Regular, sans-serif;
+    font-family: 'Gilroy-Regular', sans-serif;
     background-image: url(../assets/images/Totel_Photography-7199.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -3996,14 +3994,6 @@ html {
     width: 100%;
     height: 120px;
   }
-  .criteria-section-h1 {
-    margin: 3% 0 0 0;
-    text-align: center;
-    font-size: 4vw;
-    font-weight: 800;
-    font-family: Gilroy-Regular, sans-serif;
-    color: #000000;
-    margin-bottom: -30px;  }
 
   .criteria-section ul {
     width: 70%;
@@ -4152,7 +4142,9 @@ html {
     width: 100%;
     margin: 2% 0 0 0;
     padding: 5%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 4.4vw;
     font-weight: 800;
     font-family: Gilroy-Regular, sans-serif;
@@ -4164,15 +4156,6 @@ html {
   .criteria_img {
     width: 100%;
     height: 120px;
-  }
-  .criteria-section-h1 {
-    margin: 2% 0 0 0;
-    text-align: center;
-    font-size: 4.4vw;
-    font-weight: 800;
-    font-family: Gilroy-Regular, sans-serif;
-    color: #000000;
-    margin-bottom: -50px;
   }
 
   .criteria-section .uls {
@@ -4293,10 +4276,12 @@ html {
     width: 100%;
     margin: 0;
     padding: 5%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 4vw;
     font-weight: 800;
-    font-family: Gilroy-Regular, sans-serif;
+    font-family: 'Gilroy-Regular', sans-serif;
     background-image: url(../assets/images/Totel_Photography-7199.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
@@ -4305,15 +4290,6 @@ html {
   .criteria_img {
     width: 100%;
     height: 200px;
-  }
-  .criteria-section-h1 {
-    margin: 0;
-    text-align: center;
-    font-size: 4vw;
-    font-weight: 800;
-    font-family: Gilroy-Regular, sans-serif;
-    color: #000000;
-    margin-bottom: -100px;
   }
 
   .criteria-section .uls {
