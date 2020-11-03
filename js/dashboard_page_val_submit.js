@@ -2,8 +2,10 @@
 
 function validateInput() {
     if(bioCntInput.length < 5 && bioCntInput.length > 50 && genderValue.length < 1 && phoneNoVal.length < 10 && 
-       phoneNoVal.length > 11 && trackVal.length < 1 && institutionCntVal.length < 1 && departmentCntVal.length < 1 && 
-      biodataImg.value.length < 1) {
+      phoneNoVal.length > 11 && trackVal.length < 1 
+      //&& institutionCntVal.length < 1 && departmentCntVal.length < 1 && 
+    //   biodataImg.value.length < 1
+    ) {
         document.querySelector('#finish').disabled = true;
         /* console.log("nothing here");
         console.log(bioCntInput);

@@ -90,8 +90,8 @@ const dashboardInfo = async () => {
   for (var i = 0; i < linkooo.length; i++) {
     formData.append("link[]", linkooo[i]);
   }
-  formData.append("institution", institution);
-  formData.append("department", department);
+  // formData.append("institution", institution);
+  // formData.append("department", department);
   axios
     .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, formData, { headers: headers})
     .then((response) => {

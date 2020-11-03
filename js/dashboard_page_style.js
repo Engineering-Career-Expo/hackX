@@ -3,8 +3,8 @@ un = document.querySelector('#un');
 deux = document.querySelector('#deux');
 trois = document.querySelector('#trois');
 quarte = document.querySelector('#quarte');
-quinze = document.querySelector('#quinze');
-six = document.querySelector('#six');
+//quinze = document.querySelector('#quinze');
+//six = document.querySelector('#six');
 
 un.onclick = function() {
 	//console.log("nobody");
@@ -18,12 +18,12 @@ trois.onclick = function() {
 quarte.onclick = function() {
 	//console.log("nobody");
 }
-quinze.onclick = function() {
-	//console.log("nobody");
-}
-six.onclick = function() {
-	//console.log("nobody");
-}
+// quinze.onclick = function() {
+// 	//console.log("nobody");
+// }
+// six.onclick = function() {
+// 	//console.log("nobody");
+// }
 
 var head_drop = document.getElementsByClassName("head_drop");
 var head_section3 = document.getElementsByClassName("navbar_second");
@@ -68,7 +68,7 @@ function showSlides(n) {
   var x = document.querySelector('.progress_bar__circleTwo');
   var a = document.querySelector('.progress_bar__circleThree');
   var b = document.querySelector('.progress_bar__circleFour');
-  var zz = document.querySelector('.progress_bar__circleFive');
+  //var zz = document.querySelector('.progress_bar__circleFive');
   
   if (n == 1) {
   	m.style.backgroundColor = "#1071f3";
@@ -88,26 +88,26 @@ function showSlides(n) {
   	a.style.width = "40px";
   	a.style.marginTop = "0px";
   	a.innerHTML = "3";
-  } else if(n == 4) {
-  	a.style.backgroundColor = "#1071f3";
-  	a.style.height = "40px";
-  	a.style.width = "40px";
-  	a.style.marginTop = "0px";
-  	a.innerHTML = "3";
-  } else if(n == 5) {
-  	a.style.backgroundColor = "#1071f3";
-  	a.style.height = "40px";
-  	a.style.width = "40px";
-  	a.style.marginTop = "0px";
-  	a.innerHTML = "3";
-  } else{
+  // } else if(n == 4) {
+  // 	a.style.backgroundColor = "#1071f3";
+  // 	a.style.height = "40px";
+  // 	a.style.width = "40px";
+  // 	a.style.marginTop = "0px";
+  // 	a.innerHTML = "3";
+  // } else if(n == 5) {
+  // 	a.style.backgroundColor = "#1071f3";
+  // 	a.style.height = "40px";
+  // 	a.style.width = "40px";
+  // 	a.style.marginTop = "0px";
+  // 	a.innerHTML = "3";
+   } else{
   	b.style.backgroundColor = "#1071f3";
   	b.style.height = "40px";
   	b.style.width = "40px";
   	b.style.marginTop = "0px";
   	b.innerHTML = "4";
   }
-  if (n > 5) {
+  if (n > 3) {
     document.getElementById("next").disabled = true;
     document.getElementById("next").style.display = 'none';
     document.getElementById("finish").style.display = 'block';
