@@ -3,7 +3,7 @@ let finishBtn = document.querySelector('#finish');
 let sureToSubmit = document.querySelector('#submit_popup');
 let closeSubmitPopUp = document.querySelector('#close_popup');
 let loader = document.querySelector('.loadCont');
-//let Submit = document.querySelector('#submit_popup__btn');
+//let Submit = document.querySelector('.submit_popup__btn');
 finishBtn.onclick = () => {
     sureToSubmit.style.display = "block";
     //console.log("opened submit popup");
@@ -46,7 +46,6 @@ closeSubmitPopUp.onclick = () => {
 //     document.querySelector(".alert").remove();
 //   }, 12000);
 // };
-Submit.style.cursor = 'pointer';
 const formEvent = Submit.addEventListener("click", async (event) => {
     event.preventDefault();
     document.querySelector('#submit_popup').style.display = "none";
@@ -84,14 +83,10 @@ let bee = document.querySelector('.d_all');
 const dashboardInfo = async () => {
     loader.style.display = 'block';
     bee.style.opacity = ".3";
-  const institution = document.querySelector("#institution").value;
-  const department = document.querySelector("#department").value;
   var formData = new FormData(formElement);
   for (var i = 0; i < linkooo.length; i++) {
     formData.append("link[]", linkooo[i]);
   }
-  // formData.append("institution", institution);
-  // formData.append("department", department);
   axios
     .post("https://hackxbackend.herokuapp.com/dashboard/"+ id, formData, { headers: headers})
     .then((response) => {
@@ -144,9 +139,6 @@ var uusername = localStorage.getItem('username');
 axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + uusername, {headers: headers})
 .then((response) => {
   let docu = response.data;
-	// console.log(docu);
-  // console.log(docu.dashboard[0]);
-  // console.log(uusername);
 	if (docu.dashboard[0].bio !== null) {
 		document.querySelector('.dashboard_submissionSuccessful').style.display = "block";
 		document.querySelector('.participant-info').classList.add('stop_scroll');

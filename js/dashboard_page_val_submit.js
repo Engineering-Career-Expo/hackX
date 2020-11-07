@@ -23,52 +23,6 @@ function validateInput() {
     // console.log("validated");
 };
 
-
-
-
-
-// for Image
-var imageUrl;
-var file;
-// CALLING THE IMAGE UPLOAD
-document.querySelector("#imageUpload").addEventListener('click', function() {
-    document.querySelector("#imageFile").click();
-});
-// IMAGE UPLOAD SEQUENCE
-document.querySelector("#imageFile").addEventListener('change', function() {
-    file = this.files[0];
-    // VALIDATE IMAGE SIZE
-    if(file.size > (2 * 1024 * 1024)) {
-        alert('Error : Exceeded size 2MB');
-        return;
-    }
-    // WHEN IMAGE VALIDATION IS SUCCESSFUL
-    // HIDE THE UPLOAD IMAGE 
-    document.querySelector("#imageUpload").style.display = 'none';
-    // SET THE FILE NAME
-    document.querySelector("#imageName").innerText = file.name;
-    document.querySelector("#imageName").style.display = 'block';
-    // GET THE LOCAL URL
-    imageUrl = URL.createObjectURL(file);
-    // SET THE LOCAL URL AS THE IMAGE SRC
-    document.querySelector("#imagePreview").setAttribute('src', imageUrl);
-    document.querySelector("#imagePreview").style.display = 'block';
-    // sHOW DELETE BUTTON
-    document.querySelector("#deleteImage").style.display = 'block';
-    // SO AS NOT TO SHOW UNNECESSARY SCREEN, I MADE A SMALL VALIDATION FOR IT
-});
-// DELETE IMAGE
-document.querySelector("#deleteImage").addEventListener('click', function(e) {
-    e.preventDefault();
-    URL.revokeObjectURL(imageUrl);
-    document.querySelector("#imageUpload").style.display = 'block';
-    document.querySelector("#imageFile").value = '';
-    document.querySelector("#imageName").style.display = 'none';
-    document.querySelector("#imagePreview").style.display = 'none';
-    document.querySelector("#deleteImage").style.display = 'none';
-});
-
-
 // for bio 
 var bioCnt = document.querySelector("#bio");
 bioCnt.value = bioCnt.value.replace(/^\s*|\s*$/g,'');
@@ -151,51 +105,3 @@ const showLoginAlert = (message, className) => {
     document.querySelector(".alert").remove();
   }, 12000);
 };
-
-// if (document.querySelector("#customCheckbox").checked){
-//   trackVal = document.querySelector("#customCheckbox").value
-// }else if(document.querySelector("#customCheckbox2").checked){
-//   trackVal = document.querySelector("#customCheckbox2").value
-// }else if(document.querySelector("#customCheckbox3").checked){
-//   trackVal = document.querySelector("#customCheckbox3").value
-// }else if(document.querySelector("#customCheckbox4").checked){
-//   trackVal = document.querySelector("#customCheckbox4").value
-// }
-
-
-var institution;
-// institution
-let institutionCnt = document.querySelector('#institution');
-var institutionCntVal = "";
-institutionCnt.oninput = () => {
-    institutionCntVal = institutionCnt.value;
-    institution = institutionCntVal;
-    // console.log(institutionCntVal);
-    validateInput();
-}
-// departments
-let departmentCnt = document.querySelector('#department');
-var departmentCntVal = "";
-departmentCnt.oninput = () => {
-    departmentCntVal = departmentCnt.value;
-    // console.log(departmentCntVal);
-    validateInput();
-}
-
-
-// if (localStorage.getItem('bio') !== undefined ) {
-//   const formEvent = Submit.addEventListener("click", async (event) => {
-//     event.preventDefault();
-//     setTimeout(function () {
-//       Submit.disabled = true;
-//     }, 2000);
-//     const linky = document.querySelector("#link").value;
-//     const link = [ linky ];
-//     const gender = genderValue;
-//     const number = phoneNoVal;
-//     const institution = institutionCntVal;
-//     const department = departmentCntVal;
-//     const Info = await { picture, bio, track, link, gender, number, institution, department };
-//     dashboardInfo(); 
-//   });
-// };
