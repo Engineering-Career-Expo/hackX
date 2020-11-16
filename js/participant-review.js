@@ -57,6 +57,7 @@ const dataField = () => {
 }
 axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username, {headers: headers})
 .then((response) => {
+  dataField();
   let docu = response.data;
   let dateCreated = docu.dashboard[0].createdAt;
   time = moment(new Date(dateCreated)).format('YYYY-MM-DD');
@@ -76,7 +77,7 @@ axios.get("https://hackxbackend.herokuapp.com/getuser?username=" + username, {he
 .catch((err) => {console.error(err.message)});
 
  const deleteUser = () => {
-  axios.get("https://hackxbackend.herokuapp.com/deleteuser?username?" + username , { headers: headers })
+  axios.get("https://hackxbackend.herokuapp.com/deleteuser?username=" + username , { headers: headers })
   .then((response) => {
     if(response.data == "olax has been deleted.");
     console.log('user admission has been rejected and successfully deleted');
