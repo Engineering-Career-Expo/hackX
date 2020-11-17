@@ -118,7 +118,7 @@ const signup_1_Event = signup_btn.addEventListener("click", async (event) => {
 
 const createSignup = async (signupInfo) => {
   axios
-    .post("https://hackxbackend.herokuapp.com/signup", signupInfo)
+    .post("nolink", signupInfo)
     .then((response) => {
       loader.style.display = "none";
       regLoadCont.style.opacity = "1";
