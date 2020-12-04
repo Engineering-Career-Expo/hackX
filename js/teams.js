@@ -1,4 +1,3 @@
-fName = localStorage.getItem("fullName");
 const allTeams = [
     {
         teamIndex: "TEAM-1",
@@ -80,6 +79,7 @@ TeamSector = document.querySelector('.sector');
 TeamLead = document.querySelector('.lead');
 TeamMembers = document.querySelector('.tList');
 mainMain = document.querySelector('.dataContainer');
+fName = localStorage.getItem("fullName");
 
 
 // THIS ADDS THE MEMBERS TO THE TEAM TO THE FRONTEND
