@@ -1,3 +1,4 @@
+fName = localStorage.getItem("fullName");
 const allTeams = [
     {
         teamIndex: "TEAM-1",
@@ -123,5 +124,4 @@ let getTeamDetails = (fullname) => {
         mainMain.style.height = "200px";
     }
 }    
-fName = localStorage.getItem("fullName");
 getTeamDetails(fName);
