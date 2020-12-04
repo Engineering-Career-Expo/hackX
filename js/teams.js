@@ -123,4 +123,4 @@ let getTeamDetails = (fullname) => {
     }
 }    
 fName = localStorage.getItem("fullName");
-getTeamDetails("Fele Omolola");
+getTeamDetails(fName);
