@@ -80,7 +80,8 @@ const userLogin = async (loginInfo) => {
           localStorage.setItem("pass", response.data.token);
           localStorage.setItem("id", response.data.id);
           localStorage.setItem("username", response.data.username);
-          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
+          localStorage.setItem( "fullName", response.data.lastname + " " + response.data.firstname); 
+          window.location.href = 'https://hackx.netlify.app/pages/main_dashboard_page';
 
         }
       } else {

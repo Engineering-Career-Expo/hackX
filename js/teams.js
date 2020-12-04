@@ -92,6 +92,7 @@ let addList = (index, length) => {
     }
     while (a < length);
 }
+
 let getTeamDetails = (fullname) => {
     //console.log(fullname);
     for(var i = 0; i < allTeams.length; i++) {

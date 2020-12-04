@@ -8,8 +8,7 @@ const submitPopUp = document.querySelector('#submit_popup');
 // VALIDATION FUNCTION
 function validateInput() {
   if(projectName.value.length > 4 && projectTagline.value.length > 4 && projectUSe.value.length > 4 && 
-    projectChallenge.value.length > 4 && projectTechnology.value.length > 4 && projectLink.value.length > 5 && 
-    projectVideoLink.value.length > 5) {
+    projectChallenge.value.length > 4 && projectTechnology.value.length > 4 && projectLink.value.length > 5) {
       submitBtn.disabled = false;
   } else {
       submitBtn.disabled = true;
