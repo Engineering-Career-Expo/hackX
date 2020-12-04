@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="../scss/component/dashboard-navbar.css">
     <link rel="shortcut icon" href="../assets/ECX.svg" type="image/x-icon"/>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <style>
+        .required {
+            margin: 0 8px;
+            color: rgb(212, 26, 26);
+            font-family: "Poppins", 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -94,7 +102,7 @@
                 <div class="cnt">Submitting project to HackX</div>
             </div>
             <ul class="Ul">
-                <li class="List">Describe your project</li>
+                <li class="List">Describe your project <br> note that all field with the <span class="required"><b><span class="required">*</span></b></span> symbol is required, while the rest are optional</li>
             </ul>
         </div>
         <form class="subForm" id="formElem" >
@@ -108,61 +116,61 @@
                     <span class="vertrule vr1" id="vR1"></span>
                     <span class="titleName">Name</span>
                 </div>
-                <div class="info">WHAT ARE YOU CALLING IT ??</div>
+                <div class="info">WHAT ARE YOU CALLING IT ??<span class="required">*</span></div>
                 <span class="inputCount" id="inputCount1">0 / 50</span>                
-                <input type="text" onkeyup="countInput1(this.value)" id="projectName" name="name" maxlength="50" placeholder="Begin typing....">
+                <input type="text" onkeyup="countInput1(this.value)" id="projectName" name="name" maxlength="50" placeholder="Begin typing...." required>
             </div>
             <div class="inputCnt">
                 <div class="title">
                     <span class="vertrule" id="vR2"></span>
                     <span class="titleName">Tagline</span>
                 </div>
-                <div class="info">WRITE A SHORT, SHARP AND ON-POINT DESCRIPTION OF YOUR PROJECT</div>
+                <div class="info">WRITE A SHORT, SHARP AND ON-POINT DESCRIPTION OF YOUR PROJECT<span class="required">*</span></div>
                 <span class="inputCount"id="inputCount2">0 / 200</span>
-                <textarea class="submissionInputTextarea" onkeyup="countInput2(this.value)" id="projectTagline" name="tagline" maxlength="200" placeholder="Begin typing...."></textarea>
+                <textarea class="submissionInputTextarea" onkeyup="countInput2(this.value)" id="projectTagline" name="tagline" maxlength="200" placeholder="Begin typing...." required></textarea>
             </div>
             <div class="inputCnt">
                 <div class="title">
                     <span class="vertrule" id="vR3"></span>
                     <span class="titleName">The problem it solves</span>
                 </div>
-                <div class="info">DESCRIBE WHAT PEOPLE CAN USE IT FOR, OR HOW IT MAKES EXISTING EASIER/SAFER E.T.C</div>
+                <div class="info">DESCRIBE WHAT PEOPLE CAN USE IT FOR, OR HOW IT MAKES EXISTING EASIER/SAFER E.T.C <span class="required">*</span></div>
                 <span class="inputCount" id="inputCount3">0 / 200</span>
-                <textarea class="submissionInputTextarea" onkeyup="countInput3(this.value)" id="projectUSe" name="problem" maxlength="200" placeholder="Begin typing...."></textarea>            
+                <textarea class="submissionInputTextarea" onkeyup="countInput3(this.value)" id="projectUSe" name="problem" maxlength="200" placeholder="Begin typing...." required></textarea>            
             </div>
             <div class="inputCnt">
                 <div class="title">
                     <span class="vertrule" id="vR4"></span>
                     <span class="titleName">Challenges I ran into</span>
                 </div>
-                <div class="info">TELL US ABOUT ANY SPECIFIC BUG OR HUDDLE YOU RAN INTO WHILE BUILDING THIS PROJECT, HOW DID YOU GET OVER IT?</div>
+                <div class="info">TELL US ABOUT ANY SPECIFIC BUG OR HUDDLE YOU RAN INTO WHILE BUILDING THIS PROJECT, HOW DID YOU GET OVER IT?<span class="required">*</span></div>
                 <span class="inputCount" id="inputCount4">0 / 200</span>
-                <textarea class="submissionInputTextarea" onkeyup="countInput4(this.value)" id="projectChallenge" name="challenges" maxlength="200" placeholder="Begin typing...."></textarea>
+                <textarea class="submissionInputTextarea" onkeyup="countInput4(this.value)" id="projectChallenge" name="challenges" maxlength="200" placeholder="Begin typing...." required></textarea>
             </div>
             <div class="inputCnt">
                 <div class="title">
                     <span class="vertrule" id="vR5"></span>
                     <span class="titleName">Technologies I used</span>
                 </div>
-                <div class="info">WRITE A COMMA SEPARATED LIST OF TECHNOLOGIES YOU USED IN BUILDING THE PROJECT</div>
+                <div class="info">WRITE A COMMA SEPARATED LIST OF TECHNOLOGIES YOU USED IN BUILDING THE PROJECT <span class="required">*</span></div>
                 <span class="inputCount" id="inputCount5">0 / 200</span>
-                <textarea class="submissionInputTextarea" onkeyup="countInput5(this.value)" id="projectTechnology" name="technologies" maxlength="200" placeholder="Begin typing...."></textarea>
+                <textarea class="submissionInputTextarea" onkeyup="countInput5(this.value)" id="projectTechnology" name="technologies" maxlength="200" placeholder="Begin typing...." required></textarea>
             </div>
             <div class="inputCnt">
                 <div class="title">
                     <span class="vertrule" id="vR6"></span>
                     <span class="titleName">Links</span>
                 </div>
-                <div class="info">ADD A GITHUB, WEBSITE, APP STORE E.T.C OR WHEREVER THE PROJECT CAN BE TESTED LIVE</div>
+                <div class="info">ADD A GITHUB, WEBSITE, APP STORE E.T.C OR WHEREVER THE PROJECT CAN BE TESTED LIVE <span class="required">*</span></div>
                 <span class="inputCount" id="inputCount6">0 / 50</span>
-                <input type="url" onkeyup="countInput6(this.value)" id="projectLink" name="links" maxlength="50" placeholder="Paste or type a link (e.g. https:hackX.github.io) and then press 'Enter'">
+                <input type="url" onkeyup="countInput6(this.value)" id="projectLink" name="links" maxlength="50" placeholder="Paste or type a link (e.g. https:hackX.github.io) and then press 'Enter'" required>
             </div>
             <div class="inputCnt">
                 <div class="title">
                     <span class="vertrule" id="vR7"></span>
                     <span class="titleName">Video Demo</span>
                 </div>
-                <div class="info">ADD A GITHUB, WEBSITE, APP STORE E.T.C OR WHEREVER THE PROJECT CAN BE TESTED LIVE</div>
+                <div class="info">ADD A LINK TO YOUTUBE, GOOGLE DRIVE E.T.C SHOWING A DEMO OF YOUR SITE AND WHAT IT ENTAILS</div>
                 <span class="inputCount" id="inputCount7">0 / 50</span>
                 <input type="url" onkeyup="countInput7(this.value)" id="projectVideoLink" name="vidLinks" maxlength="50" placeholder="Paste or type link here">
             </div>
@@ -171,7 +179,7 @@
                     <span class="vertrule"id="vR8"></span>
                     <span class="titleName">Pictures</span>
                 </div>
-                <div class="info">UPLOAD A MAXIMUM OF 5 PICTURES (SIZE: MAX 2MB EACH) SHOWCASING YOUR PROJECT (THE FIRST IMAGE WILL BE USED AS A PREVIEW ON SOCIAL MEDIA) </div>
+                <div class="info">UPLOAD A MAXIMUM OF 5 PICTURES (SIZE: MAX 2MB EACH) SHOWCASING YOUR PROJECT (THE FIRST IMAGE WILL BE USED AS A PREVIEW ON SOCIAL MEDIA)</div>
                 <div class="imgCnt">
                     <div id="preview-container" class="imageDialogContainer">
                         <img src="../assets/images/dashboard/add-image.svg" id="imageUpload" class="imageUpload">

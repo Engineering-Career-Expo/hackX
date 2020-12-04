@@ -46,7 +46,7 @@ axios
     email.innerHTML = response.data.email;  
     track = response.data.dashboard[0];  
     //ageCnt = response.data.dashboard[1];
-    institution = response.data.dashboard[2];
+    institution = response.data.dashboard[0];
     localStorage.setItem("email", response.data.email);
      console.log(response.data.dashboard[0].institution);  
 })

@@ -1,5 +1,5 @@
 window.addEventListener('load', function start() {
-    var countDownDate = new Date("June 23, 2021 17:35:00").getTime();
+    var countDownDate = new Date("November 27, 2020 24:00:00").getTime();
 
     var x = setInterval(function() {
         var todayDate = new Date().getTime();
@@ -11,7 +11,7 @@ window.addEventListener('load', function start() {
         
         if (distance < 0) {
             clearInterval(x);
-            document.querySelector('#sub_section__timeLeft').innerHTML = "EXPIRED";
+            document.querySelector('#sub_section__timeLeft').innerHTML = "0:00:00";
         }
     }, 1000);   
 });
