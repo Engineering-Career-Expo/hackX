@@ -74,7 +74,7 @@ const userLogin = async (loginInfo) => {
         } else if (response.data == "Password Incorrect.") {
           showLoginAlert("Email or password entered is incorrect", "error");
         } else if (response.data == "Session Redirection To Dashboard"){
-          window.location.href = 'https://hackx.netlify.app/pages/dashboard_page';
+          window.location.href = 'https://hackx.netlify.app/pages/main_dashboard_page';
         }else {
           showLoginAlert("Login Successful", "success");
           localStorage.setItem("pass", response.data.token);
