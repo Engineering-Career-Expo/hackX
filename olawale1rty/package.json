@@ -22,7 +22,7 @@
     "@dicebear/avatars": "^4.2.5",
     "@dicebear/avatars-bottts-sprites": "^4.2.5",
     "@hapi/joi": "^17.1.1",
-    "aws-sdk": "^2.761.0",
+    "aws-sdk": "^2.814.0",
     "bcryptjs": "^2.4.3",
     "chai": "^4.2.0",
     "config": "^3.3.1",
